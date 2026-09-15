@@ -186,19 +186,20 @@
 
 <header class="wrap mast">
   <div>
-    <p class="eyebrow">Reserve Bank of India · bank-wise card statistics</p>
+    <p class="eyebrow">RBI bank-wise card statistics · NPCI UPI ecosystem statistics</p>
     <h1>India Card Monitor</h1>
-    <p class="sub">Who issues the cards, where the money moves and what a swipe is worth, bank by bank, every month since April 2011.</p>
+    <p class="sub">Who issues the cards, which apps and banks carry UPI, where the money moves and what a payment is worth, month by month since April 2011.</p>
   </div>
   <div class="stamp" id="stamp"></div>
 </header>
 
 <div class="bar">
   <div class="wrap row" id="filters">
-    <div class="ctl"><span>Card</span>
-      <div class="seg" role="radiogroup" aria-label="Card type">
-        <label><input type="radio" name="ct" id="ct-cc" value="cc" checked><span>Credit</span></label>
-        <label><input type="radio" name="ct" id="ct-dc" value="dc"><span>Debit</span></label>
+    <div class="ctl"><span>Product</span>
+      <div class="seg" role="radiogroup" aria-label="Product">
+        <label><input type="radio" name="ct" id="ct-cc" value="cc" checked><span>Credit card</span></label>
+        <label><input type="radio" name="ct" id="ct-dc" value="dc"><span>Debit card</span></label>
+        <label><input type="radio" name="ct" id="ct-upi" value="upi"><span>UPI</span></label>
       </div>
     </div>
     <div class="ctl"><span>As of</span><select id="asof" aria-label="Month"></select></div>
@@ -210,7 +211,7 @@
         <label><input type="radio" name="range" id="rg-all" value="0"><span>All</span></label>
       </div>
     </div>
-    <div class="ctl"><span>Share by</span><select id="basis" aria-label="Share basis">
+    <div class="ctl card-only"><span>Share by</span><select id="basis" aria-label="Share basis">
       <option value="cards">Cards outstanding</option>
       <option value="payN">Payment transactions</option>
       <option value="payV">Payment value</option>
@@ -222,7 +223,7 @@
         <label><input type="radio" name="topn" id="tn-8" value="8" checked><span>8</span></label>
       </div>
     </div>
-    <div class="ctl"><span>Bank type</span><select id="btype" aria-label="Bank type">
+    <div class="ctl card-only"><span>Bank type</span><select id="btype" aria-label="Bank type">
       <option value="all">All banks</option>
       <option value="0">Public sector</option>
       <option value="1">Private sector</option>
@@ -308,7 +309,7 @@
   </section>
 
   <section id="upi" hidden>
-    <div class="sec-head"><div><p class="eyebrow">UPI · NPCI ecosystem statistics</p><h2>UPI: apps, banks and the shift to merchants</h2></div><p id="upi-sub"></p></div>
+    <div class="sec-head" style="padding-top:8px"><div><p class="eyebrow">UPI · NPCI ecosystem statistics</p><h2>UPI: apps, banks and the shift to merchants</h2></div><p id="upi-sub"></p></div>
     <div class="grid g-kpi" style="margin-bottom:16px">
       <div class="card tile hero"><div class="lbl" id="u0-l"></div><div class="val" id="u0-v"></div><div class="deltas" id="u0-d"></div><svg class="spark" id="u0-s"></svg></div>
       <div class="card tile"><div class="lbl" id="u1-l"></div><div class="val" id="u1-v"></div><div class="deltas" id="u1-d"></div><svg class="spark" id="u1-s"></svg></div>
@@ -378,7 +379,8 @@
     atm:   { label: 'Average ATM withdrawal', hint: 'ATM cash value ÷ number of withdrawals, ₹ per transaction', num: 'atmV', den: 'atmN' },
   };
   const TYPE_NAMES = ['Public sector', 'Private sector', 'Foreign', 'Small finance', 'Payment banks', 'Other'];
-  const S = { ct: 'cc', asOf: 0, range: 60, basis: 'cards', topN: 8, type: 'all', tmetric: 'spend', bank: 0 };
+  const S = { ct: 'cc', asOf: 0, asOfU: 0, range: 60, basis: 'cards', topN: 8, type: 'all', tmetric: 'spend', bank: 0 };
+  const isUpi = () => S.ct === 'upi';
   let D = null, X = null, css = {};
 
   // ---------- formatting ----------
@@ -781,11 +783,11 @@
   function renderUpi() {
     const U = D.upi, sec = $('upi');
     if (!U || !U.months || !U.months.length) { sec.hidden = true; return; }
-    sec.hidden = false;
     const UM = U.months, n = UM.length;
-    // as-of month for UPI = the selected RBI month if NPCI has it, else the latest NPCI month at or before it
-    const want = D.months[S.asOf]; let m = UM.findIndex(x => x === want);
-    if (m < 0) { m = UM.filter(x => x <= want).length - 1; if (m < 0) m = n - 1; }
+    // as-of month: NPCI's own picker in UPI mode; otherwise the selected RBI month or the latest NPCI month before it
+    let m = S.asOfU;
+    if (!isUpi()) { const want0 = D.months[S.asOf]; m = UM.findIndex(x => x === want0); if (m < 0) { m = UM.filter(x => x <= want0).length - 1; if (m < 0) m = n - 1; } }
+    const want = UM[m];
     const len = S.range || n, m0 = Math.max(0, m - len + 1), m1 = m;
     const uLabel = (i, long) => { const [y, mo] = UM[i].split('-'); return MON[+mo - 1] + ' ' + (long ? y : '’' + y.slice(2)); };
     const T = U.totals, at = (arr, i) => (i < 0 || i >= n || arr[i] == null) ? NaN : arr[i];
@@ -858,29 +860,43 @@
   }
 
   // ---------- controls ----------
-  function fillControls() {
+  function fillAsOf() {
     const sel = $('asof'); sel.replaceChildren();
-    for (let m = X.nM - 1; m >= 0; m--) { const o = document.createElement('option'); o.value = m; o.textContent = mLabel(m, true); sel.appendChild(o); }
-    sel.value = S.asOf;
+    const cal = isUpi() ? D.upi.months : D.months;
+    for (let m = cal.length - 1; m >= 0; m--) { const o = document.createElement('option'); o.value = m; o.textContent = calLabel(cal, m, true); sel.appendChild(o); }
+    sel.value = isUpi() ? S.asOfU : S.asOf;
+  }
+  function setMode() {
+    const upi = isUpi();
+    ['kpis', 'share', 'ticket', 'bank', 'country'].forEach(id => { $(id).hidden = upi; });
+    $('upi').hidden = !upi || !(D.upi && D.upi.months && D.upi.months.length);
+    document.querySelectorAll('.card-only').forEach(el => { el.hidden = upi; });
+    fillAsOf();
+  }
+  function fillControls() {
+    if (D.upi && D.upi.months) S.asOfU = D.upi.months.length - 1; else $('ct-upi').closest('label').hidden = true;
+    fillAsOf();
     const bs = $('bank-sel'); bs.replaceChildren();
     D.banks.map((b, i) => [bankName(i), i]).sort((a, b) => a[0].localeCompare(b[0])).forEach(([n, i]) => { const o = document.createElement('option'); o.value = i; o.textContent = n + (D.banks[i].to === D.months[X.nM - 1] ? '' : ` (to ${D.banks[i].to})`); bs.appendChild(o); });
     S.bank = topBanks(1, colOf('cards'), X.nM - 1)[0] || 0; bs.value = S.bank;
     $('filters').addEventListener('change', (e) => {
       const t = e.target; if (!t.name && !t.id) return;
-      if (t.name === 'ct') S.ct = t.value;
+      if (t.name === 'ct') { S.ct = t.value; setMode(); }
       else if (t.name === 'range') S.range = +t.value;
       else if (t.name === 'topn') S.topN = +t.value;
-      else if (t.id === 'asof') S.asOf = +t.value;
+      else if (t.id === 'asof') { if (isUpi()) S.asOfU = +t.value; else S.asOf = +t.value; }
       else if (t.id === 'basis') S.basis = t.value;
       else if (t.id === 'btype') S.type = t.value;
       renderAll();
     });
-    $('tmetric').addEventListener('change', (e) => { S.tmetric = e.target.value; renderTicket(); });
-    bs.addEventListener('change', (e) => { S.bank = +e.target.value; renderBank(); });
+    $('tmetric').addEventListener('change', (e) => { S.tmetric = e.target.value; if (!isUpi()) renderTicket(); });
+    bs.addEventListener('change', (e) => { S.bank = +e.target.value; if (!isUpi()) renderBank(); });
+    setMode();
   }
   function renderAll() {
     readCss();
-    renderKpis(); renderShare(); renderTicket(); renderBank(); renderCountry(); renderUpi();
+    if (isUpi()) renderUpi();
+    else { renderKpis(); renderShare(); renderTicket(); renderBank(); renderCountry(); }
     const last = mLabel(X.nM - 1, true);
     $('stamp').replaceChildren(); const s1 = document.createElement('div'); s1.append('Latest month '); const b1 = document.createElement('b'); b1.textContent = last; s1.appendChild(b1);
     const s2 = document.createElement('div'); s2.append('Data built '); const b2 = document.createElement('b'); b2.textContent = D.generated; s2.appendChild(b2);
