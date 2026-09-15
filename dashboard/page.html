@@ -91,6 +91,10 @@
     background-position: calc(100% - 15px) 55%, calc(100% - 10px) 55%; background-size: 5px 5px; background-repeat: no-repeat;
   }
   select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .btn { font: inherit; font-size: 13px; color: var(--ink); background: var(--surface-2); border: 1px solid var(--hair); border-radius: 8px; padding: 5px 10px; cursor: pointer; }
+  .btn:hover { border-color: var(--muted); }
+  .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .chart path.clickable { cursor: pointer; }
 
   /* sections */
   section { padding-block: 22px 6px; }
@@ -332,7 +336,10 @@
     <div class="grid g-2" style="margin-bottom:16px" id="us-grid">
       <div class="card">
         <div class="card-head"><div><h3 id="us-h3">Where UPI is used</h3><p class="hint" id="us-hint"></p></div>
-          <div class="ctl"><span>Colour by</span><select id="us-metric" aria-label="Map measure"><option value="vol">Transactions</option><option value="val">Value</option></select></div></div>
+          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end">
+            <button type="button" id="us-back" class="btn" hidden>← All states</button>
+            <div class="ctl"><span>Colour by</span><select id="us-metric" aria-label="Map measure"><option value="vol">Transactions</option><option value="val">Value</option></select></div>
+          </div></div>
         <div class="chart" id="us-map"></div>
         <details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="us-table"></div></details>
       </div>
@@ -388,8 +395,9 @@
     atm:   { label: 'Average ATM withdrawal', hint: 'ATM cash value ÷ number of withdrawals, ₹ per transaction', num: 'atmV', den: 'atmN' },
   };
   const TYPE_NAMES = ['Public sector', 'Private sector', 'Foreign', 'Small finance', 'Payment banks', 'Other'];
-  const S = { ct: 'cc', asOf: 0, asOfU: 0, range: 60, basis: 'cards', topN: 8, type: 'all', tmetric: 'spend', bank: 0, usMetric: 'vol' };
+  const S = { ct: 'cc', asOf: 0, asOfU: 0, range: 60, basis: 'cards', topN: 8, type: 'all', tmetric: 'spend', bank: 0, usMetric: 'vol', usState: null };
   let INDIA = null;   // GeoJSON feature collection of states, loaded next to data.json
+  let DIST = null;    // district boundaries, loaded on the first drill-down
   const isUpi = () => S.ct === 'upi';
   let D = null, X = null, css = {};
 
@@ -878,6 +886,8 @@
     const grid = $('us-grid'), ST = U.states;
     if (!ST || !ST.months.length || !INDIA) { grid.hidden = true; return; }
     grid.hidden = false;
+    if (S.usState) { renderDistrictMap(U, want); return; }
+    $('us-back').hidden = true;
     const SM = ST.months; let m = SM.filter(x => x <= want).length - 1; if (m < 0) m = 0;
     const [y, mo] = SM[m].split('-'), label = MON[+mo - 1] + ' ' + y;
     const metric = S.usMetric, fmtV = metric === 'vol' ? (v => fmtCount(v * 1e6)) : (v => fmtInr(v * 10));
@@ -888,7 +898,7 @@
     located.forEach(r => { r.share = tot ? r[metric] / tot : NaN; });
     const byKey = new Map(located.map(r => [r.key, r]));
     $('us-h3').textContent = `Where UPI is used, ${label}`;
-    $('us-hint').textContent = (metric === 'vol' ? 'Transactions' : 'Value') + ' by state, share of transactions whose location NPCI could place';
+    $('us-hint').textContent = (metric === 'vol' ? 'Transactions' : 'Value') + ' by state, share of transactions whose location NPCI could place' + (U.districts ? '. Click a state for its districts.' : '');
     $('usr-h3').textContent = `Top states, ${label}`;
     $('us-note').textContent = uncl && uncl[metric] ? `${fmtPct((uncl[metric] || 0) / all)} of ${metric === 'vol' ? 'transactions' : 'value'} in ${label} carry no location in NPCI's data and are left off the map.` : '';
     // map
@@ -902,12 +912,14 @@
     // quantile bands: shares are heavily skewed (a few big states, a long tail), so equal-width bins bunch everything
     const scale = d3.scaleQuantile().domain(located.map(r => r.share).filter(v => !isNaN(v))).range(ramp);
     const cuts = scale.quantiles();
-    const g = svg.append('g');
+    const g = svg.append('g'), canDrill = !!(U.districts && U.districts.rows && U.districts.rows.length);
     g.selectAll('path').data(INDIA.features).join('path')
       .attr('d', path)
+      .attr('class', canDrill ? 'clickable' : null)
       .attr('fill', f => { const r = byKey.get(stKey(f.properties.st_nm)); return r && !isNaN(r.share) ? scale(r.share) : css.others; })
       .attr('stroke', css.surface).attr('stroke-width', 1).attr('stroke-linejoin', 'round')
       .attr('tabindex', 0)
+      .on('click keydown', (ev, f) => { if (!canDrill || (ev.type === 'keydown' && ev.key !== 'Enter')) return; hideTip(); drillInto(U, f.properties.st_nm, want); })
       .on('pointermove focus', (ev, f) => {
         const r = byKey.get(stKey(f.properties.st_nm));
         const p = ev.clientX != null ? ev : { clientX: el.getBoundingClientRect().left + W / 2, clientY: el.getBoundingClientRect().top + 30 };
@@ -932,6 +944,67 @@
       top.slice(0, 12).map(r => ({ name: r.name, color: css.series[0], share: r.share, value: fmtV(r[metric]), extra: metric === 'vol' ? fmtInr((r.val || 0) * 10) : fmtCount((r.vol || 0) * 1e6) })));
     lazyTable($('us-table').closest('details'), wrap => table(wrap, ['State / UT', 'Transactions', 'Value', 'Share (located)'],
       top.map(r => [r.name, fmtCount((r.vol || 0) * 1e6), fmtInr((r.val || 0) * 10), fmtPct(r.share)]).concat(uncl ? [[ 'Unclassified', fmtCount((uncl.vol || 0) * 1e6), fmtInr((uncl.val || 0) * 10), '–']] : [])));
+  }
+
+  async function drillInto(U, stateName, want) {
+    if (!DIST) {
+      try { const t = await (await fetch('india_districts.json', { cache: 'force-cache' })).json(); DIST = t.type === 'FeatureCollection' ? t : null; }
+      catch (e) { DIST = null; }
+      if (!DIST) return;
+    }
+    S.usState = stateName;
+    renderStateMap(U, want);
+    $('us-back').focus();
+  }
+  function renderDistrictMap(U, want) {
+    const DD = U.districts, metric = S.usMetric, sname = S.usState, skey = stKey(sname);
+    const DM = DD.months; let m = DM.filter(x => x <= want).length - 1;
+    const early = m < 0; if (early) m = 0;
+    const [y, mo] = DM[m].split('-'), label = MON[+mo - 1] + ' ' + y;
+    const fmtV = metric === 'vol' ? (v => fmtCount((v || 0) * 1e6)) : (v => fmtInr((v || 0) * 10));
+    const rows = DD.rows.filter(r => r[0] === m && stKey(r[1]) === skey).map(r => ({ name: r[2], map: r[3], vol: r[4], val: r[5] }));
+    const tot = rows.reduce((s, r) => s + (r[metric] || 0), 0);
+    rows.forEach(r => { r.share = tot ? (r[metric] || 0) / tot : NaN; });
+    const byMap = new Map(rows.filter(r => r.map).map(r => [r.map, r]));
+    const feats = DIST.features.filter(f => f.properties.st_nm === sname);
+    $('us-back').hidden = false;
+    $('us-h3').textContent = `${sname}, districts, ${label}`;
+    $('us-hint').textContent = (metric === 'vol' ? 'Transactions' : 'Value') + ` by district, share of the state's located ${metric === 'vol' ? 'transactions' : 'value'}` + (early ? ` (district data starts ${label})` : '');
+    $('usr-h3').textContent = `Districts of ${sname}, ${label}`;
+    const unmatched = rows.filter(r => !r.map).length;
+    $('us-note').textContent = unmatched ? `${unmatched} of ${rows.length} NPCI districts are newer than the map's boundaries and appear in the list only.` : '';
+    const el = $('us-map'); el.replaceChildren();
+    const W = Math.max(280, el.clientWidth || 600), H = Math.round(Math.min(W * 0.98, 540));
+    const svg = d3.select(el).append('svg').attr('viewBox', `0 0 ${W} ${H}`).attr('width', W).attr('height', H).attr('role', 'img').attr('aria-label', `Districts of ${sname} coloured by UPI share`);
+    const fc = { type: 'FeatureCollection', features: feats };
+    const proj = d3.geoIdentity().reflectY(true).fitExtent([[8, 8], [W - 8, H - 40]], fc), path = d3.geoPath(proj);
+    const ramp = RAMP[isDark() ? 'dark' : 'light'];
+    const shares = rows.map(r => r.share).filter(v => !isNaN(v));
+    const scale = d3.scaleQuantile().domain(shares.length ? shares : [0, 1]).range(ramp), maxShare = d3.max(shares) || 1;
+    svg.append('g').selectAll('path').data(feats).join('path').attr('d', path)
+      .attr('fill', f => { const r = byMap.get(f.properties.district); return r && !isNaN(r.share) ? scale(r.share) : css.others; })
+      .attr('stroke', css.surface).attr('stroke-width', 1).attr('stroke-linejoin', 'round').attr('tabindex', 0)
+      .on('pointermove focus', (ev, f) => {
+        const r = byMap.get(f.properties.district);
+        const p = ev.clientX != null ? ev : { clientX: el.getBoundingClientRect().left + W / 2, clientY: el.getBoundingClientRect().top + 30 };
+        showTip(p.clientX, p.clientY, f.properties.district, r ? [
+          { name: 'Transactions', value: fmtCount((r.vol || 0) * 1e6), color: 'transparent' },
+          { name: 'Value', value: fmtInr((r.val || 0) * 10), color: 'transparent' },
+          { name: 'Share within state', value: fmtPct(r.share), color: 'transparent' },
+        ] : [{ name: 'No NPCI row for this district', value: '', color: 'transparent' }]);
+        d3.select(ev.currentTarget).attr('stroke', css.ink).raise();
+      })
+      .on('pointerleave blur', (ev) => { hideTip(); d3.select(ev.currentTarget).attr('stroke', css.surface); });
+    const lg = svg.append('g').attr('transform', `translate(8,${H - 26})`), bw = Math.min(28, (W - 120) / ramp.length);
+    ramp.forEach((c, i) => lg.append('rect').attr('x', i * (bw + 2)).attr('y', 0).attr('width', bw).attr('height', 10).attr('rx', 2).attr('fill', c));
+    lg.append('text').attr('x', 0).attr('y', 22).text('0%');
+    lg.append('text').attr('x', ramp.length * (bw + 2)).attr('y', 22).attr('text-anchor', 'end').text(fmtPct(maxShare, 0));
+    lg.append('text').attr('x', ramp.length * (bw + 2) + 10).attr('y', 9).text('share within state, quantile bands');
+    const top = rows.slice().sort((a, b) => (b[metric] || 0) - (a[metric] || 0));
+    rankList($('us-rank'), ['District', '', 'Share', metric === 'vol' ? 'Transactions' : 'Value', metric === 'vol' ? 'Value' : 'Transactions'],
+      top.slice(0, 15).map(r => ({ name: r.name, color: css.series[0], share: r.share, value: fmtV(r[metric]), extra: metric === 'vol' ? fmtInr((r.val || 0) * 10) : fmtCount((r.vol || 0) * 1e6) })));
+    lazyTable($('us-table').closest('details'), wrap => table(wrap, ['District', 'Transactions', 'Value', 'Share within state'],
+      top.map(r => [r.name, fmtCount((r.vol || 0) * 1e6), fmtInr((r.val || 0) * 10), fmtPct(r.share)])));
   }
 
   // ---------- controls ----------
@@ -971,6 +1044,7 @@
     });
     $('tmetric').addEventListener('change', (e) => { S.tmetric = e.target.value; if (!isUpi()) renderTicket(); });
     $('us-metric').addEventListener('change', (e) => { S.usMetric = e.target.value; if (isUpi()) renderUpi(); });
+    $('us-back').addEventListener('click', () => { S.usState = null; if (isUpi()) renderUpi(); });
     bs.addEventListener('change', (e) => { S.bank = +e.target.value; if (!isUpi()) renderBank(); });
     setMode();
   }

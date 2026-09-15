@@ -136,6 +136,56 @@ def build_upi():
         upi["states"] = {"months": smonths, "names": names,
                          "vol": [[num(v, 2) for v in row] for row in piv_v.values.tolist()],
                          "val": [[num(v, 2) for v in row] for row in piv_c.values.tolist()]}
+        # district drill-down: NPCI district rows (from Mar 2026) matched to the map's district names
+        dmap = ROOT / "dashboard" / "india_districts.json"
+        if "district" in sw and dmap.exists():
+            import difflib
+            geo = json.loads(dmap.read_text(encoding="utf-8"))
+            norm = lambda x: re.sub(r"[^A-Z]", "", str(x).upper())
+            by_state = {}
+            for f in geo["features"]:
+                p = f["properties"]
+                by_state.setdefault(norm(p["st_nm"]), {})[norm(p["district"])] = p["district"]
+            dd = sw[sw["district"].notna()].copy()
+            dd["state_key"] = (dd.state_union_territory.astype(str).str.replace("&", " AND ").str.replace("#", "").str.upper()
+                        .str.replace(r"\s+", " ", regex=True).str.strip()
+                        .replace({"ANDAMAN AND NICOBAR": "ANDAMAN AND NICOBAR ISLANDS", "NCT OF DELHI": "DELHI"}))
+            dd["volume_in_mn"] = pd.to_numeric(dd.volume_in_mn, errors="coerce")
+            dd["value_in_cr"] = pd.to_numeric(dd.value_in_cr, errors="coerce")
+            dmonths = sorted(dd.period.unique())
+            # districts renamed since the 2011-based boundaries: NPCI's name -> the map's name
+            RENAMED = {"CHHATRAPATISAMBHAJINAGAR": "AURANGABAD", "AHILYANAGAR": "AHMEDNAGAR", "DHARASHIV": "OSMANABAD",
+                       "PRAYAGRAJ": "ALLAHABAD", "AYODHYA": "FAIZABAD", "GURUGRAM": "GURGAON", "NUH": "MEWAT",
+                       "KAMRUPMETRO": "KAMRUPMETROPOLITAN", "KAMRUPRURAL": "KAMRUP", "SIBSAGAR": "SIVASAGAR", "DARANG": "DARRANG",
+                       "SRIBHUMI": "KARIMGANJ", "MARIGAON": "MORIGAON", "KAIMURBHABUA": "KAIMUR", "PASHCHIMCHAMPARAN": "WESTCHAMPARAN",
+                       "PURBACHAMPARAN": "EASTCHAMPARAN", "SRIPOTTISRIRAMULUNELLORE": "SPSNELLORE", "YSR": "YSRKADAPA",
+                       "ANANTHAPURAMU": "ANANTAPUR", "BELAGAVI": "BELGAUM", "BALLARI": "BELLARY", "VIJAYAPURA": "BIJAPUR",
+                       "KALABURAGI": "GULBARGA", "MYSURU": "MYSORE", "SHIVAMOGGA": "SHIMOGA", "TUMAKURU": "TUMKUR",
+                       "CHIKKAMAGALURU": "CHIKMAGALUR", "BENGALURUURBAN": "BANGALORE", "BENGALURURURAL": "BANGALORERURAL",
+                       "HOSHANGABAD": "NARMADAPURAM", "NARMADAPURAM": "HOSHANGABAD", "KOREA": "KORIYA", "GARIYABAND": "GARIABAND",
+                       "BEMETARA": "BAMETARA", "KAWARDHAKABIRDHAM": "KABEERDHAM", "KUTCH": "KACHCHH", "DANG": "DANGS",
+                       "AHMEDABAD": "AHMADABAD", "MEHSANA": "MAHESANA", "PANCHMAHAL": "PANCHMAHALS", "ARAVALLI": "ARVALLI",
+                       "CHHOTAUDAIPUR": "CHHOTAUDEPUR", "SOUTHANDAMANS": "SOUTHANDAMAN", "DIBANGVALLEY": "UPPERDIBANGVALLEY",
+                       "WESTKARBIANAGLONG": "WESTKARBIANGLONG", "SOUTHSALMARA": "SOUTHSALMARAMANKACHAR",
+                       "DAKSHINBASTARDANTEWARA": "DAKSHINBASTARDANTEWADA", "BALESHWAR": "BALASORE", "SUNDARGARH": "SUNDERGARH",
+                       "TIRUCHIRAPPALLI": "TIRUCHIRAPPALLI", "THOOTHUKKUDI": "THOOTHUKUDI", "KANNIYAKUMARI": "KANYAKUMARI"}
+            cache, rows, matched = {}, [], 0
+            for r in dd.itertuples():
+                sk, dn = norm(r.state_key), norm(r.district)
+                key = (sk, dn)
+                if key not in cache:
+                    cands = by_state.get(sk, {})
+                    hit = cands.get(dn) or cands.get(RENAMED.get(dn, ""))
+                    if hit is None and cands:
+                        best = difflib.get_close_matches(dn, list(cands), n=1, cutoff=0.8)
+                        hit = cands[best[0]] if best else None
+                    cache[key] = hit
+                mp = cache[key]
+                matched += mp is not None
+                rows.append([dmonths.index(r.period), r.state_key, re.sub(r"\s+", " ", str(r.district)).strip().title(), mp,
+                             num(r.volume_in_mn, 2), num(r.value_in_cr, 2)])
+            upi["districts"] = {"months": dmonths, "rows": rows}
+            print(f"districts: {len(rows)} rows over {len(dmonths)} months, {matched} matched to map boundaries")
     return upi
 
 
