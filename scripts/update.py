@@ -12,7 +12,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-import crawl_index, download_raw, parse_raw, build_outputs, build_dashboard   # noqa: E402
+import crawl_index, download_raw, parse_raw, build_outputs, build_dashboard, npci_upi   # noqa: E402
 
 ROOT = HERE.parent
 INDEX = ROOT / "data" / "index.csv"
@@ -67,13 +67,21 @@ def main(force=False):
     if download_raw.main():
         LOG.open("a").write(f"{dt.datetime.now():%Y-%m-%d %H:%M} FAIL download failures, outputs not rebuilt\n")
         return 1
+    # NPCI UPI ecosystem statistics (independent source; a failure there must not block the RBI refresh)
+    try:
+        upi_changed = npci_upi.main()
+    except Exception as e:
+        print("npci collection failed:", e)
+        upi_changed = []
     pushed = "skipped"
     if new or changed or force:
         parse_raw.main()
         build_outputs.main()
-        build_dashboard.main()
         pushed = push_sheet()
-    msg = f"new atmids={new or 'none'} revised={changed or 'none'} total_months={len(rows)} gsheet={pushed}"
+    if new or changed or upi_changed or force:
+        build_dashboard.main()
+    msg = (f"new atmids={new or 'none'} revised={changed or 'none'} total_months={len(rows)} "
+           f"upi_changed={len(upi_changed)} gsheet={pushed}")
     LOG.open("a").write(f"{dt.datetime.now():%Y-%m-%d %H:%M} OK {msg}\n")
     print(msg)
     return 0

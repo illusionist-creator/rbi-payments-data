@@ -1,0 +1,826 @@
+period,approved_percent,bd_percent,payer_psp,td_percent,total_volume_in_mn,type_name
+2022-01,98.2,1.79,Yes Bank Ltd,0.01,1822.82,payer
+2022-01,98.1,1.54,Axis Bank Ltd.,0.36,727.18,payer
+2022-01,97.91,1.76,Paytm Payments Bank,0.33,637.22,payer
+2022-01,98.08,1.59,ICICI Bank,0.33,570.85,payer
+2022-01,97.71,1.79,State Bank Of India,0.5,463.35,payer
+2022-01,98.48,0.99,HDFC BANK LTD,0.53,426.94,payer
+2022-01,91.94,7.67,National Payments Corporation of India (BHIM),0.39,28.08,payer
+2022-01,82.46,17.27,Airtel Payments Bank,0.27,10.34,payer
+2022-01,96.67,3.33,Kotak Mahindra Bank,0.0,7.11,payer
+2022-01,96.09,3.83,IDFC FIRST Bank,0.08,3.49,payer
+2022-01,93.07,6.92,India Post Payment Bank,0.01,2.85,payer
+2022-01,93.71,5.29,Jio Payments Bank,1.0,2.19,payer
+2022-01,96.5,3.09,Federal Bank,0.41,1.82,payer
+2022-01,99.91,0.09,Deutsche Bank,0.0,0.94,payer
+2022-01,86.48,13.46,INDUSIND BANK,0.06,0.85,payer
+2022-02,97.87,2.13,Yes Bank Ltd,0.0,1792.1,payer
+2022-02,98.06,1.94,Axis Bank Ltd.,0.0,723.79,payer
+2022-02,98.06,1.92,Paytm Payments Bank,0.02,634.58,payer
+2022-02,97.94,2.06,ICICI Bank,0.0,552.51,payer
+2022-02,97.74,2.24,State Bank Of India,0.02,446.83,payer
+2022-02,98.61,1.39,HDFC BANK LTD,0.0,418.82,payer
+2022-02,91.28,8.57,National Payments Corporation of India (BHIM),0.15,25.47,payer
+2022-02,96.2,3.8,Kotak Mahindra Bank,0.0,7.18,payer
+2022-02,87.23,12.54,Airtel Payments Bank,0.23,6.65,payer
+2022-02,95.0,4.96,IDFC FIRST Bank,0.04,2.86,payer
+2022-02,93.44,6.5,India Post Payment Bank,0.06,2.36,payer
+2022-02,96.84,3.12,Federal Bank,0.04,2.36,payer
+2022-02,95.1,4.4,Jio Payments Bank,0.5,2.07,payer
+2022-02,99.92,0.08,Deutsche Bank,0.0,0.88,payer
+2022-02,94.84,5.15,INDUSIND BANK,0.01,0.81,payer
+2022-03,98.19,1.81,Yes Bank Ltd,0.0,2106.68,payer
+2022-03,98.24,1.76,Axis Bank Ltd.,0.0,865.64,payer
+2022-03,98.13,1.85,Paytm Payments Bank,0.02,753.45,payer
+2022-03,97.97,2.02,State Bank Of India,0.01,547.43,payer
+2022-03,98.72,1.28,HDFC Bank Ltd,0.0,499.24,payer
+2022-03,98.37,1.62,ICICI Bank,0.01,657.73,payer
+2022-03,92.1,7.84,National Payments Corporation of India (BHIM),0.06,27.02,payer
+2022-03,79.57,20.31,Airtel Payments Bank,0.12,10.48,payer
+2022-03,96.51,3.49,Kotak Mahindra Bank,0.0,8.31,payer
+2022-03,95.9,4.09,IDFC FIRST Bank,0.01,3.23,payer
+2022-03,95.39,4.59,India Post Payment Bank,0.02,3.1,payer
+2022-03,97.01,2.98,Federal Bank,0.01,2.61,payer
+2022-03,95.7,3.8,Jio Payments Bank,0.5,2.37,payer
+2022-03,97.29,2.71,IndusInd Bank,0.01,1.07,payer
+2022-03,99.87,0.13,Deutsche Bank,0.0,1.05,payer
+2022-04,98.19,1.76,Yes Bank Ltd,0.05,2152.51,payer
+2022-04,98.27,1.69,Axis Bank Ltd.,0.04,901.78,payer
+2022-04,98.05,1.9,State Bank Of India,0.05,572.75,payer
+2022-04,98.77,1.18,HDFC Bank Ltd,0.06,511.82,payer
+2022-04,98.25,1.7,Paytm Payments Bank,0.05,765.29,payer
+2022-04,98.38,1.56,ICICI Bank,0.05,719.84,payer
+2022-04,92.65,7.27,National Payments Corporation of India (BHIM),0.08,27.73,payer
+2022-04,95.8,4.2,IndusInd Bank,0.01,1.09,payer
+2022-04,96.48,3.52,Kotak Mahindra Bank,0.0,8.26,payer
+2022-04,95.14,4.82,IDFC FIRST Bank,0.03,2.83,payer
+2022-04,95.16,4.65,Airtel Payments Bank,0.19,5.56,payer
+2022-04,96.8,3.15,Federal Bank,0.05,2.85,payer
+2022-04,90.09,9.85,Bank of Baroda,0.06,0.85,payer
+2022-04,94.67,5.3,India Post Payment Bank,0.03,2.96,payer
+2022-04,88.26,11.73,Union Bank of India,0.02,0.47,payer
+2022-05,98.37,1.61,Yes Bank Ltd,0.02,2261.47,payer
+2022-05,98.49,1.49,Axis Bank Ltd,0.02,970.33,payer
+2022-05,98.3,1.68,Paytm Payments Bank,0.03,798.33,payer
+2022-05,98.49,1.49,ICICI Bank,0.02,780.66,payer
+2022-05,98.4,1.58,State Bank Of India,0.03,631.19,payer
+2022-05,98.86,1.12,HDFC Bank Ltd,0.02,544.25,payer
+2022-05,91.38,8.58,National Payments Corporation of India (BHIM),0.04,29.08,payer
+2022-05,96.59,3.41,Kotak Mahindra Bank,0.0,8.8,payer
+2022-05,95.48,4.35,Airtel Payments Bank,0.17,6.39,payer
+2022-05,94.93,5.06,IDFC FIRST Bank,0.01,5.16,payer
+2022-05,97.16,2.82,Federal Bank,0.02,3.58,payer
+2022-05,93.65,6.31,India Post Payment Bank,0.04,3.32,payer
+2022-05,95.37,4.03,Jio Payments Bank,0.6,2.18,payer
+2022-05,99.95,0.05,Deutsche Bank,0.0,1.64,payer
+2022-05,98.55,1.44,IndusInd Bank,0.02,1.05,payer
+2022-06,98.61,1.39,Yes Bank Ltd,0.0,2167.39,payer
+2022-06,98.74,1.26,Axis Bank Ltd,0.01,989.77,payer
+2022-06,98.66,1.33,ICICI Bank,0.01,794.45,payer
+2022-06,98.46,1.52,Paytm Payments Bank,0.01,791.39,payer
+2022-06,98.67,1.3,State Bank Of India,0.03,597.29,payer
+2022-06,98.98,1.02,HDFC Bank Ltd,0.01,540.01,payer
+2022-06,90.24,9.72,National Payments Corporation of India (BHIM),0.03,25.04,payer
+2022-06,96.98,3.02,Kotak Mahindra Bank,0.0,8.6,payer
+2022-06,93.97,6.0,IDFC FIRST Bank,0.02,7.65,payer
+2022-06,95.89,4.01,Airtel Payments Bank,0.11,6.66,payer
+2022-06,96.6,3.39,India Post Payment Bank,0.02,4.12,payer
+2022-06,97.51,2.49,Federal Bank,0.0,3.7,payer
+2022-06,95.65,3.84,Jio Payments Bank,0.5,1.96,payer
+2022-06,99.95,0.05,Deutsche Bank,0.0,1.51,payer
+2022-06,98.47,1.51,IndusInd Bank,0.02,1.04,payer
+2022-07,98.49,1.49,Yes Bank Ltd,0.01,2353.6,payer
+2022-07,98.48,1.51,Axis Bank Ltd,0.01,1046.37,payer
+2022-07,98.41,1.57,ICICI Bank,0.01,871.87,payer
+2022-07,97.95,2.03,Paytm Payments Bank,0.02,846.93,payer
+2022-07,98.39,1.59,State Bank Of India,0.02,624.19,payer
+2022-07,98.86,1.13,HDFC Bank Ltd,0.01,577.08,payer
+2022-07,93.4,6.54,National Payments Corporation of India (BHIM),0.07,26.21,payer
+2022-07,90.11,9.85,IDFC FIRST Bank,0.04,9.39,payer
+2022-07,96.8,3.19,Kotak Mahindra Bank,0.01,9.15,payer
+2022-07,96.0,3.86,Airtel Payments Bank,0.14,7.71,payer
+2022-07,97.33,2.66,India Post Payment Bank,0.01,4.19,payer
+2022-07,97.17,2.81,Federal Bank,0.02,4.03,payer
+2022-07,95.7,3.91,Jio Payments Bank,0.39,1.99,payer
+2022-07,99.95,0.05,Deutsche Bank,0.0,1.88,payer
+2022-07,97.65,2.34,IndusInd Bank,0.01,1.04,payer
+2022-08,98.31,1.69,Yes Bank Ltd,0.0,2429.37,payer
+2022-08,98.36,1.64,Axis Bank Ltd,0.0,1046.3,payer
+2022-08,98.35,1.64,ICICI Bank,0.0,968.56,payer
+2022-08,98.12,1.87,Paytm Payments Bank,0.01,893.12,payer
+2022-08,98.38,1.61,State Bank Of India,0.0,662.88,payer
+2022-08,98.77,1.23,HDFC Bank Ltd,0.0,616.31,payer
+2022-08,93.45,6.53,National Payments Corporation of India (BHIM),0.02,26.74,payer
+2022-08,94.53,5.45,IDFC FIRST Bank,0.02,10.95,payer
+2022-08,96.86,3.14,Kotak Mahindra Bank,0.0,9.58,payer
+2022-08,96.15,3.76,Airtel Payments Bank,0.09,8.28,payer
+2022-08,97.36,2.63,India Post Payment Bank,0.01,4.42,payer
+2022-08,96.79,3.19,Federal Bank,0.01,3.99,payer
+2022-08,99.95,0.05,Deutsche Bank,0.0,1.98,payer
+2022-08,95.2,4.51,Jio Payments Bank,0.29,1.94,payer
+2022-08,95.07,4.93,IndusInd Bank,0.01,1.09,payer
+2022-09,98.13,1.87,Yes Bank Ltd,0.0,2487.88,payer
+2022-09,98.29,1.7,Axis Bank Ltd,0.01,1089.86,payer
+2022-09,98.34,1.65,ICICI Bank,0.0,1000.85,payer
+2022-09,98.28,1.71,Paytm Payments Bank,0.01,944.3,payer
+2022-09,98.31,1.68,State Bank Of India,0.01,659.01,payer
+2022-09,98.82,1.18,HDFC Bank Ltd,0.0,638.28,payer
+2022-09,93.2,6.78,National Payments Corporation of India (BHIM),0.02,27.0,payer
+2022-09,96.03,3.95,IDFC FIRST Bank,0.02,12.11,payer
+2022-09,97.12,2.88,Kotak Mahindra Bank,0.0,10.84,payer
+2022-09,96.0,3.95,Airtel Payments Bank,0.06,9.53,payer
+2022-09,97.54,2.43,India Post Payment Bank,0.02,5.35,payer
+2022-09,96.88,3.11,Federal Bank,0.0,4.01,payer
+2022-09,99.93,0.07,Deutsche Bank,0.0,1.59,payer
+2022-09,94.39,5.35,Jio Payments Bank,0.26,1.49,payer
+2022-09,98.28,1.72,RBL Bank,0.01,1.25,payer
+2022-10,98.2,1.8,Yes Bank Ltd,0.0,2655.79,payer
+2022-10,98.23,1.77,Axis Bank Ltd,0.0,1195.53,payer
+2022-10,98.33,1.66,ICICI Bank,0.0,1075.2,payer
+2022-10,98.17,1.83,Paytm Payments Bank,0.01,1019.37,payer
+2022-10,98.14,1.86,State Bank Of India,0.0,735.35,payer
+2022-10,98.82,1.18,HDFC Bank Ltd,0.0,669.66,payer
+2022-10,93.36,6.62,National Payments Corporation of India (BHIM),0.02,27.3,payer
+2022-10,96.53,3.44,IDFC FIRST Bank,0.03,14.61,payer
+2022-10,97.12,2.88,Kotak Mahindra Bank,0.0,11.8,payer
+2022-10,95.53,4.43,Airtel Payments Bank,0.04,9.88,payer
+2022-10,97.37,2.61,India Post Payment Bank,0.02,4.83,payer
+2022-10,97.14,2.85,Federal Bank,0.01,4.34,payer
+2022-10,94.35,5.45,Jio Payments Bank,0.2,1.47,payer
+2022-10,97.93,2.07,RBL Bank,0.0,1.42,payer
+2022-10,92.14,7.85,Bank of Baroda,0.01,1.34,payer
+2022-11,98.34,1.66,Yes Bank Ltd,0.0,2575.97,payer
+2022-11,98.36,1.64,Axis Bank Ltd,0.0,1289.43,payer
+2022-11,98.46,1.53,ICICI Bank,0.0,1102.3,payer
+2022-11,98.31,1.69,Paytm Payments Bank,0.01,995.21,payer
+2022-11,98.88,1.11,HDFC Bank Ltd,0.01,690.6,payer
+2022-11,98.38,1.62,State Bank Of India,0.01,690.36,payer
+2022-11,97.48,2.5,IDFC FIRST Bank,0.02,15.81,payer
+2022-11,97.34,2.65,Kotak Mahindra Bank,0.01,11.23,payer
+2022-11,95.92,4.04,Airtel Payments Bank,0.05,9.1,payer
+2022-11,97.62,2.37,India Post Payment Bank,0.01,4.77,payer
+2022-11,97.23,2.74,Federal Bank,0.03,4.26,payer
+2022-11,98.47,1.53,RBL Bank,0.0,1.64,payer
+2022-11,94.63,5.17,Jio Payments Bank,0.2,1.39,payer
+2022-11,92.72,7.27,Bank of Baroda,0.01,1.35,payer
+2022-11,99.93,0.07,Deutsche Bank,0.0,1.3,payer
+2022-12,98.38,1.61,Yes Bank Ltd,0.01,2760.7,payer
+2022-12,98.42,1.57,Axis Bank Ltd,0.01,1466.35,payer
+2022-12,98.51,1.48,ICICI Bank,0.01,1252.92,payer
+2022-12,98.31,1.68,Paytm Payments Bank,0.01,1078.75,payer
+2022-12,98.69,1.3,HDFC Bank Ltd,0.01,693.09,payer
+2022-12,98.22,1.76,State Bank Of India,0.01,613.07,payer
+2022-12,97.57,2.42,IDFC FIRST Bank,0.01,20.0,payer
+2022-12,97.45,2.55,Kotak Mahindra Bank,0.01,11.83,payer
+2022-12,95.82,4.12,Airtel Payments Bank,0.06,9.07,payer
+2022-12,97.99,1.99,India Post Payment Bank,0.02,5.67,payer
+2022-12,97.7,2.29,Federal Bank,0.01,4.73,payer
+2022-12,98.09,1.9,RBL Bank,0.01,1.7,payer
+2022-12,94.97,4.74,Jio Payments Bank,0.29,1.56,payer
+2022-12,97.25,1.44,IndusInd Bank,1.3,1.3,payer
+2022-12,99.92,0.08,Deutsche Bank,0.0,1.29,payer
+2023-01,98.58,1.41,Yes Bank Ltd,0.02,2824.37,payer
+2023-01,98.59,1.4,Axis Bank Ltd,0.01,1479.23,payer
+2023-01,98.66,1.3,ICICI Bank,0.03,1252.34,payer
+2023-01,98.56,1.43,Paytm Payments Bank,0.02,1100.84,payer
+2023-01,98.41,1.57,State Bank Of India,0.01,710.82,payer
+2023-01,98.93,1.06,HDFC Bank Ltd,0.01,686.19,payer
+2023-01,98.21,1.78,IDFC FIRST Bank,0.01,24.84,payer
+2023-01,97.8,2.19,Kotak Mahindra Bank,0.01,12.41,payer
+2023-01,96.48,3.48,Airtel Payments Bank,0.05,10.12,payer
+2023-01,98.15,1.84,India Post Payment Bank,0.01,5.53,payer
+2023-01,97.6,2.35,Federal Bank,0.05,4.88,payer
+2023-01,98.56,1.44,RBL Bank,0.01,1.85,payer
+2023-01,95.2,4.47,Jio Payments Bank,0.33,1.67,payer
+2023-01,99.94,0.06,Deutsche Bank,0.0,1.32,payer
+2023-01,90.02,9.97,Bank of Baroda,0.01,1.22,payer
+2023-02,98.19,1.56,Yes Bank Ltd,0.26,2647.71,payer
+2023-02,98.26,1.53,Axis Bank Ltd,0.21,1406.78,payer
+2023-02,98.31,1.46,ICICI Bank,0.23,1195.11,payer
+2023-02,98.17,1.59,Paytm Payments Bank,0.24,1058.33,payer
+2023-02,98.17,1.59,State Bank Of India,0.24,672.74,payer
+2023-02,98.47,1.33,HDFC Bank Ltd,0.2,596.39,payer
+2023-02,97.51,2.47,IDFC FIRST Bank,0.02,23.0,payer
+2023-02,97.76,2.24,Kotak Mahindra Bank,0.0,12.37,payer
+2023-02,95.63,4.26,Airtel Payments Bank,0.11,9.11,payer
+2023-02,97.44,2.4,Federal Bank,0.16,4.92,payer
+2023-02,97.76,2.22,India Post Payment Bank,0.01,4.14,payer
+2023-02,98.88,1.07,RBL Bank,0.05,2.29,payer
+2023-02,94.85,4.5,Jio Payments Bank,0.64,1.58,payer
+2023-02,99.94,0.06,Deutsche Bank,0.0,1.32,payer
+2023-02,89.14,10.52,Bank of Baroda,0.34,1.28,payer
+2023-03,98.69,1.3,Yes Bank Ltd,0.0,3027.01,payer
+2023-03,98.72,1.28,Axis Bank Ltd,0.0,1563.99,payer
+2023-03,98.77,1.23,ICICI Bank,0.0,1331.47,payer
+2023-03,98.64,1.35,Paytm Payments Bank,0.01,1199.41,payer
+2023-03,98.76,1.24,State Bank Of India,0.0,941.76,payer
+2023-03,98.8,1.2,HDFC Bank Ltd,0.0,635.41,payer
+2023-03,98.21,1.78,IDFC FIRST Bank,0.01,14.4,payer
+2023-03,98.09,1.9,Kotak Mahindra Bank,0.02,14.04,payer
+2023-03,96.25,3.7,Airtel Payments Bank,0.05,11.07,payer
+2023-03,98.09,1.89,Federal Bank,0.01,5.4,payer
+2023-03,98.28,1.72,India Post Payment Bank,0.0,4.52,payer
+2023-03,98.81,1.19,RBL Bank,0.0,2.53,payer
+2023-03,95.74,3.71,Jio Payments Bank,0.56,1.76,payer
+2023-03,99.94,0.06,Deutsche Bank,0.0,1.73,payer
+2023-03,95.54,4.45,Canara Bank,0.01,1.45,payer
+2023-04,98.73,1.27,Yes Bank Ltd,0.0,3144.79,payer
+2023-04,98.8,1.2,ICICI Bank,0.0,1460.93,payer
+2023-04,98.63,1.37,Axis Bank Ltd,0.0,1443.01,payer
+2023-04,98.58,1.4,Paytm Payments Bank,0.01,1210.88,payer
+2023-04,98.8,1.19,State Bank Of India,0.01,939.75,payer
+2023-04,98.84,1.16,HDFC Bank Ltd,0.0,715.3,payer
+2023-04,98.15,1.85,Kotak Mahindra Bank,0.0,14.24,payer
+2023-04,99.06,0.94,IDFC FIRST Bank,0.0,12.84,payer
+2023-04,98.21,1.79,FamPay PPI,0.0,11.99,payer
+2023-04,96.07,3.89,Airtel Payments Bank,0.04,9.41,payer
+2023-04,98.47,1.53,India Post Payment Bank,0.0,5.32,payer
+2023-04,98.08,1.92,Federal Bank,0.0,5.3,payer
+2023-04,98.79,1.21,RBL Bank,0.0,2.42,payer
+2023-04,99.95,0.05,Deutsche Bank,0.0,1.65,payer
+2023-04,95.1,4.22,Jio Payments Bank,0.68,1.56,payer
+2023-05,98.77,1.22,Yes Bank Ltd,0.0,3322.19,payer
+2023-05,98.78,1.21,ICICI Bank,0.0,1732.56,payer
+2023-05,98.51,1.48,Axis Bank Ltd,0.0,1340.63,payer
+2023-05,98.16,1.83,Paytm Payments Bank,0.01,1257.01,payer
+2023-05,98.72,1.27,State Bank Of India,0.0,1019.3,payer
+2023-05,98.74,1.26,HDFC Bank Ltd,0.0,773.58,payer
+2023-05,98.15,1.85,Kotak Mahindra Bank,0.0,16.61,payer
+2023-05,98.55,1.45,Fampay (PPI),0.0,13.98,payer
+2023-05,97.47,2.51,Airtel Payments Bank,0.02,9.4,payer
+2023-05,98.76,1.24,IDFC FIRST Bank,0.0,8.71,payer
+2023-05,95.86,2.03,Federal Bank,2.11,5.35,payer
+2023-05,98.48,1.51,India Post Payment Bank,0.01,5.11,payer
+2023-05,98.56,1.44,RBL Bank,0.0,2.12,payer
+2023-05,99.94,0.06,Deutsche Bank,0.0,1.89,payer
+2023-05,95.92,3.7,Jio Payments Bank,0.38,1.63,payer
+2023-06,98.64,0.04,Yes Bank Ltd,1.32,3318.7,payer
+2023-06,98.48,0.01,Axis Bank Ltd,1.51,1657.48,payer
+2023-06,98.58,0.01,ICICI Bank,1.42,1416.23,payer
+2023-06,98.34,0.0,Paytm Payments Bank,1.66,1219.59,payer
+2023-06,98.56,0.0,State Bank Of India,1.44,1013.07,payer
+2023-06,98.03,0.02,HDFC Bank Ltd,1.95,747.72,payer
+2023-06,97.88,0.0,Kotak Mahindra Bank,2.12,17.76,payer
+2023-06,98.4,0.0,Fampay (PPI),1.6,15.23,payer
+2023-06,97.36,0.04,Airtel Payments Bank,2.6,9.08,payer
+2023-06,98.37,0.01,IDFC FIRST Bank,1.62,6.53,payer
+2023-06,97.55,0.08,Federal Bank,2.37,4.98,payer
+2023-06,98.15,0.01,India Post Payment Bank,1.84,4.92,payer
+2023-06,98.35,0.01,RBL Bank,1.65,2.17,payer
+2023-06,99.93,0.0,Deutsche Bank,0.07,1.81,payer
+2023-06,94.75,0.01,Canara Bank,5.24,1.66,payer
+2023-07,98.47,1.53,Yes Bank Ltd,0.0,3475.05,payer
+2023-07,98.32,1.67,Axis Bank Ltd,0.0,1814.41,payer
+2023-07,98.43,1.57,ICICI Bank,0.0,1642.83,payer
+2023-07,98.38,1.62,Paytm Payments Bank,0.0,1302.04,payer
+2023-07,98.13,1.87,State Bank Of India,0.0,967.58,payer
+2023-07,98.49,1.5,HDFC Bank Ltd,0.01,815.96,payer
+2023-07,94.78,5.2,National Payments Corporation of India (BHIM),0.02,26.31,payer
+2023-07,97.58,2.4,Kotak Mahindra Bank,0.01,19.02,payer
+2023-07,98.34,1.66,Fampay (PPI),0.0,17.07,payer
+2023-07,97.2,2.74,Airtel Payments Bank,0.06,9.93,payer
+2023-07,98.21,1.79,India Post Payment Bank,0.0,5.53,payer
+2023-07,97.55,2.44,Federal Bank,0.01,5.32,payer
+2023-07,97.19,2.77,IDFC FIRST Bank,0.04,4.49,payer
+2023-07,99.79,0.21,Standard Chartered,0.0,4.15,payer
+2023-07,97.99,2.0,RBL Bank,0.0,2.4,payer
+2023-08,98.62,1.38,Yes Bank Ltd,0.0,3548.89,payer
+2023-08,98.49,1.51,Axis Bank Ltd,0.0,1984.84,payer
+2023-08,98.57,1.43,ICICI Bank,0.0,1834.95,payer
+2023-08,98.5,1.49,Paytm Payments Bank,0.0,1386.27,payer
+2023-08,98.4,1.6,State Bank Of India,0.0,985.73,payer
+2023-08,98.59,1.41,HDFC Bank Ltd,0.0,885.37,payer
+2023-08,93.82,6.16,National Payments Corporation of India (BHIM),0.01,26.23,payer
+2023-08,98.18,1.82,Kotak Mahindra Bank,0.0,21.56,payer
+2023-08,98.54,1.45,Fampay (PPI),0.01,20.57,payer
+2023-08,97.53,2.42,Airtel Payments Bank,0.05,10.46,payer
+2023-08,98.06,1.93,Federal Bank,0.01,5.82,payer
+2023-08,98.45,1.55,India Post Payment Bank,0.0,5.64,payer
+2023-08,97.92,2.07,IDFC FIRST Bank,0.01,4.66,payer
+2023-08,99.78,0.22,Standard Chartered,0.0,3.6,payer
+2023-08,98.32,1.67,RBL Bank,0.01,2.45,payer
+2023-09,98.37,1.61,Yes Bank Ltd,0.02,3454.56,payer
+2023-09,98.49,1.49,Axis Bank Ltd,0.02,2052.67,payer
+2023-09,98.3,1.68,ICICI Bank,0.02,1889.52,payer
+2023-09,98.49,1.49,Paytm Payments Bank,0.02,1353.31,payer
+2023-09,98.4,1.57,HDFC Bank Ltd,0.03,901.08,payer
+2023-09,98.86,1.12,State Bank Of India,0.02,889.49,payer
+2023-09,91.38,8.58,National Payments Corporation of India (BHIM),0.04,25.28,payer
+2023-09,96.59,3.41,Fampay (PPI),0.0,23.2,payer
+2023-09,95.48,4.35,Kotak Mahindra Bank,0.17,21.92,payer
+2023-09,94.93,5.06,Airtel Payments Bank,0.01,10.66,payer
+2023-09,97.16,2.82,Federal Bank,0.02,5.63,payer
+2023-09,93.65,6.31,India Post Payment Bank,0.04,5.35,payer
+2023-09,95.37,4.03,IDFC FIRST Bank,0.6,4.67,payer
+2023-09,99.95,0.05,RBL Bank,0.0,2.71,payer
+2023-09,98.55,1.43,Standard Chartered,0.02,2.04,payer
+2023-10,98.95,1.04,Yes Bank Ltd,0.0,3691.75,payer
+2023-10,98.96,1.03,Axis Bank Ltd,0.0,2269.64,payer
+2023-10,99.02,0.98,ICICI Bank,0.0,2151.88,payer
+2023-10,98.79,1.21,Paytm Payments Bank,0.0,1439.34,payer
+2023-10,99.05,0.95,HDFC Bank Ltd,0.0,1029.19,payer
+2023-10,98.45,1.55,State Bank Of India,0.0,815.9,payer
+2023-10,98.46,1.54,Fampay (PPI),0.0,27.98,payer
+2023-10,95.32,4.67,National Payments Corporation of India (BHIM),0.01,27.0,payer
+2023-10,98.52,1.47,Kotak Mahindra Bank,0.0,24.19,payer
+2023-10,98.13,1.81,Airtel Payments Bank,0.05,11.53,payer
+2023-10,99.87,0.13,Standard Chartered,0.0,7.03,payer
+2023-10,98.13,1.87,Federal Bank,0.0,6.0,payer
+2023-10,98.67,1.31,India Post Payment Bank,0.02,5.62,payer
+2023-10,98.14,1.86,IDFC FIRST Bank,0.01,5.55,payer
+2023-10,98.53,1.46,RBL Bank,0.01,3.7,payer
+2023-11,94.97,4.95,YES BANK LTD,0.08,3511.25,payer
+2023-11,95.16,4.75,AXIS BANK LTD.,0.09,2610.39,payer
+2023-11,95.12,4.79,ICICI BANK,0.09,2077.75,payer
+2023-11,94.11,5.8,PAYTM PAYMENTS BANK,0.09,1451.32,payer
+2023-11,96.04,3.89,HDFC BANK LTD,0.07,1044.71,payer
+2023-11,95.7,4.26,STATE BANK OF INDIA,0.04,983.74,payer
+2023-11,100.0,0.0,TRI O TECH SOLUTIONS PRIVATE LIMITED,0.0,28.43,payer
+2023-11,100.0,0.0,KOTAK MAHINDRA BANK,0.0,23.97,payer
+2023-11,94.88,5.02,National Payments Corporation of India (BHIM),0.1,24.75,payer
+2023-11,92.59,7.35,AIRTEL PAYMENTS BANK,0.06,11.95,payer
+2023-11,98.19,1.79,FEDERAL BANK,0.02,5.61,payer
+2023-11,99.98,0.02,INDIA POST PAYMENT BANK,0.0,5.27,payer
+2023-11,98.99,1.0,IDFC FIRST Bank,0.01,5.21,payer
+2023-11,100.0,0.0,STANDARD CHARTERED,0.0,4.39,payer
+2023-11,95.85,4.09,RBL Bank Ltd,0.06,4.07,payer
+2023-12,94.66,5.22,YES BANK LTD,0.12,3445.89,payer
+2023-12,94.93,4.95,AXIS BANK LTD.,0.12,3095.94,payer
+2023-12,94.83,5.04,ICICI BANK,0.13,2325.23,payer
+2023-12,93.87,6.0,PAYTM PAYMENTS BANK,0.13,1542.33,payer
+2023-12,95.79,4.12,HDFC BANK LTD,0.09,1124.24,payer
+2023-12,95.58,4.36,STATE BANK OF INDIA,0.06,990.39,payer
+2023-12,100.0,0.0,TRI O TECH SOLUTIONS PRIVATE LIMITED,0.0,34.24,payer
+2023-12,100.0,0.0,KOTAK MAHINDRA BANK,0.0,26.48,payer
+2023-12,94.4,5.47,National Payments Corporation of India (BHIM),0.13,25.74,payer
+2023-12,92.57,7.35,AIRTEL PAYMENTS BANK,0.09,13.24,payer
+2023-12,98.09,1.86,FEDERAL BANK,0.04,6.07,payer
+2023-12,99.21,0.78,IDFC First Bank,0.01,5.61,payer
+2023-12,99.96,0.04,INDIA POST PAYMENT BANK,0.0,4.88,payer
+2023-12,95.38,4.5,RBL Bank,0.12,4.52,payer
+2023-12,100.0,0.0,DEUTSCHE BANK CORP,0.0,3.68,payer
+2024-01,94.65,5.21,YES BANK LTD,0.15,3419.78,payer
+2024-01,94.91,4.93,AXIS BANK LTD.,0.16,3183.17,payer
+2024-01,94.82,4.99,ICICI BANK,0.19,2320.91,payer
+2024-01,93.73,6.12,PAYTM PAYMENTS BANK,0.16,1543.98,payer
+2024-01,95.81,4.07,HDFC BANK LTD,0.12,1146.07,payer
+2024-01,95.73,4.18,STATE BANK OF INDIA,0.09,1088.91,payer
+2024-01,100.0,0.0,TRI O TECH SOLUTIONS PRIVATE LIMITED,0.0,36.62,payer
+2024-01,94.2,5.67,National Payments Corporation of India (BHIM),0.14,31.82,payer
+2024-01,100.0,0.0,KOTAK MAHINDRA BANK,0.0,28.42,payer
+2024-01,93.67,6.22,AIRTEL PAYMENTS BANK,0.11,14.13,payer
+2024-01,96.06,3.81,RBL Bank,0.13,6.46,payer
+2024-01,99.21,0.78,IDFC First Bank,0.01,5.77,payer
+2024-01,98.44,1.55,FEDERAL BANK,0.01,5.42,payer
+2024-01,99.98,0.02,INDIA POST PAYMENT BANK,0.0,4.69,payer
+2024-01,100.0,0.0,DEUTSCHE BANK CORP,0.0,3.87,payer
+2024-02,94.46,5.35,YES BANK LTD,0.19,3451.77,payer
+2024-02,94.73,5.08,AXIS BANK LTD.,0.19,3208.19,payer
+2024-02,94.67,5.11,ICICI BANK,0.21,2400.25,payer
+2024-02,93.2,6.64,PAYTM PAYMENTS BANK,0.17,1346.19,payer
+2024-02,95.62,4.24,HDFC BANK LTD,0.15,1097.67,payer
+2024-02,95.73,4.17,STATE BANK OF INDIA,0.1,1082.21,payer
+2024-02,93.11,6.69,National Payments Corporation of India (BHIM),0.21,60.32,payer
+2024-02,100.0,0.0,TRI O TECH SOLUTIONS PRIVATE LIMITED,0.0,37.89,payer
+2024-02,100.0,0.0,KOTAK MAHINDRA BANK,0.0,31.7,payer
+2024-02,94.71,5.18,AIRTEL PAYMENTS BANK,0.11,14.84,payer
+2024-02,95.82,4.04,RBL Bank,0.15,6.26,payer
+2024-02,99.12,0.87,IDFC First Bank,0.01,6.02,payer
+2024-02,99.97,0.03,INDIA POST PAYMENT BANK,0.0,5.38,payer
+2024-02,100.0,0.0,STANDARD CHARTERED,0.0,4.02,payer
+2024-02,98.8,1.19,FEDERAL BANK,0.01,3.62,payer
+2024-03,93.7,6.18,YES BANK LTD,0.13,3895.71,payer
+2024-03,94.37,5.48,AXIS BANK LTD.,0.15,3723.05,payer
+2024-03,94.21,5.65,ICICI BANK,0.14,2690.47,payer
+2024-03,91.61,8.26,PAYTM PAYMENTS BANK,0.13,1321.44,payer
+2024-03,95.77,4.15,STATE BANK OF INDIA,0.08,1255.46,payer
+2024-03,95.43,4.45,HDFC BANK LTD,0.12,1196.05,payer
+2024-03,100.0,0.0,TRI O TECH SOLUTIONS PRIVATE LIMITED,0.0,43.69,payer
+2024-03,100.0,0.0,KOTAK MAHINDRA BANK,0.0,39.38,payer
+2024-03,93.66,6.17,National Payments Corporation of India (BHIM),0.17,32.08,payer
+2024-03,95.22,4.72,AIRTEL PAYMENTS BANK,0.06,16.43,payer
+2024-03,99.97,0.03,INDIA POST PAYMENT BANK,0.0,6.82,payer
+2024-03,99.19,0.81,IDFC First Bank,0.01,6.8,payer
+2024-03,95.02,4.84,RBL Bank,0.14,5.7,payer
+2024-03,95.23,4.45,CANARA BANK,0.33,3.43,payer
+2024-03,100.0,0.0,DEUTSCHE BANK CORP,0.0,3.28,payer
+2024-04,92.73,7.1,YES BANK LTD,0.17,5118.5,payer
+2024-04,94.05,5.75,AXIS BANK LTD.,0.19,3794.19,payer
+2024-04,93.8,6.01,ICICI BANK,0.19,2627.42,payer
+2024-04,95.71,4.18,STATE BANK OF INDIA,0.11,1231.71,payer
+2024-04,95.24,4.63,HDFC BANK LTD,0.12,1215.36,payer
+2024-04,100.0,0.0,TRI O TECH SOLUTIONS PRIVATE LIMITED,0.0,46.64,payer
+2024-04,100.0,0.0,KOTAK MAHINDRA BANK,0.0,41.81,payer
+2024-04,92.9,6.85,National Payments Corporation of India (BHIM),0.26,27.42,payer
+2024-04,95.7,4.22,AIRTEL PAYMENTS BANK,0.07,16.92,payer
+2024-04,99.12,0.87,IDBI BANK LIMITED,0.01,6.85,payer
+2024-04,97.9,2.08,FEDERAL BANK,0.03,6.28,payer
+2024-04,95.22,4.61,RBL Bank,0.17,6.28,payer
+2024-04,99.98,0.02,INDIA POST PAYMENT BANK,0.0,5.09,payer
+2024-04,100.0,0.0,GARAGEPRENEURS INTERNET PRIVATE LIMITED,0.0,3.88,payer
+2024-04,95.42,4.23,CANARA BANK,0.35,3.36,payer
+2024-05,92.93,6.98,YES BANK LTD,0.09,5297.04,payer
+2024-05,94.3,5.6,AXIS BANK LTD,0.1,4029.9,payer
+2024-05,93.97,5.93,ICICI BANK,0.1,2756.94,payer
+2024-05,95.85,4.09,STATE BANK OF INDIA,0.06,1360.48,payer
+2024-05,95.39,4.53,HDFC BANK LTD,0.08,1280.26,payer
+2024-05,100.0,0.0,TRI O TECH SOLUTIONS PRIVATE LIMITED,0.0,50.1,payer
+2024-05,100.0,0.0,KOTAK MAHINDRA BANK,0.0,43.65,payer
+2024-05,93.44,6.42,National Payments Corporation of India (BHIM),0.14,27.76,payer
+2024-05,96.34,3.62,AIRTEL PAYMENTS BANK,0.04,17.95,payer
+2024-05,95.79,4.13,RBL BANK,0.08,7.99,payer
+2024-05,99.21,0.78,IDBI BANK LTD,0.01,7.49,payer
+2024-05,97.89,2.09,FEDERAL BANK,0.02,6.09,payer
+2024-05,99.97,0.03,INDIA POST PAYMENT BANK,0.0,5.68,payer
+2024-05,100.0,0.0,GARAGEPRENEURS INTERNET PRIVATE LIMITED,0.0,4.86,payer
+2024-05,95.5,4.13,CANARA BANK,0.37,3.49,payer
+2024-06,92.73,7.12,Yes bank Ltd.,0.15,5109.48,payer
+2024-06,94.17,5.67,AXIS Bank Ltd.,0.16,4019.53,payer
+2024-06,93.75,6.09,ICICI Bank Ltd.,0.16,2681.98,payer
+2024-06,95.76,4.09,State Bank of India,0.16,1473.39,payer
+2024-06,95.19,4.69,HDFC Bank Ltd.,0.12,1303.26,payer
+2024-06,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,50.77,payer
+2024-06,100.0,0.0,Kotak Mahindra Bank Ltd,0.0,42.91,payer
+2024-06,93.42,6.37,National Payments Corporation of India (BHIM),0.21,27.47,payer
+2024-06,96.18,3.74,Airtel Payments Bank Ltd,0.08,16.38,payer
+2024-06,95.44,4.4,RBL Bank Ltd.,0.16,8.11,payer
+2024-06,99.41,0.59,IDFC First Bank,0.01,7.78,payer
+2024-06,99.98,0.02,India Post Payments Bank Ltd,0.0,6.01,payer
+2024-06,97.94,2.04,Federal Bank Ltd.,0.02,5.8,payer
+2024-06,100.0,0.0,One Mobikwik Systems Pvt - Ltd,0.0,3.62,payer
+2024-06,100.0,0.0,Garagepreneurs Internet Private Limited,0.0,3.64,payer
+2024-07,92.02,7.86,Yes bank Ltd.,0.12,5164.19,payer
+2024-07,93.86,6.01,AXIS Bank Ltd.,0.13,4393.74,payer
+2024-07,93.29,6.58,ICICI Bank Ltd.,0.13,2762.62,payer
+2024-07,95.47,4.4,State Bank of India,0.13,1521.58,payer
+2024-07,94.81,5.08,HDFC Bank Ltd.,0.11,1394.09,payer
+2024-07,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,52.0,payer
+2024-07,100.0,0.0,Kotak Mahindra Bank Ltd,0.0,45.05,payer
+2024-07,93.13,6.72,National Payments Corporation of India (BHIM),0.16,29.02,payer
+2024-07,95.73,4.2,Airtel Payments Bank Ltd,0.07,17.37,payer
+2024-07,94.86,5.0,RBL Bank Ltd.,0.14,8.95,payer
+2024-07,99.41,0.59,IDFC First Bank,0.0,8.16,payer
+2024-07,99.98,0.02,India Post Payments Bank Ltd,0.0,6.43,payer
+2024-07,98.0,1.98,Federal Bank Ltd.,0.02,6.1,payer
+2024-07,100.0,0.0,One Mobikwik Systems Pvt - Ltd,0.0,4.4,payer
+2024-07,100.0,0.0,Garagepreneurs Internet Private Limited,0.0,4.37,payer
+2024-08,91.88,8.03,Yes bank Ltd.,0.09,4993.3,payer
+2024-08,94.27,5.64,AXIS Bank Ltd.,0.09,4967.63,payer
+2024-08,93.59,6.32,ICICI Bank Ltd.,0.09,2879.5,payer
+2024-08,95.1,4.83,HDFC Bank Ltd.,0.07,1538.03,payer
+2024-08,95.65,4.25,State Bank of India,0.11,1371.7,payer
+2024-08,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,57.12,payer
+2024-08,100.0,0.0,Kotak Mahindra Bank Ltd,0.0,47.21,payer
+2024-08,93.34,6.54,National Payments Corporation of India (BHIM),0.12,30.42,payer
+2024-08,95.59,4.36,Airtel Payments Bank Ltd,0.05,18.37,payer
+2024-08,95.19,4.72,RBL Bank Ltd.,0.09,9.51,payer
+2024-08,99.41,0.58,IDFC First Bank,0.0,8.62,payer
+2024-08,99.96,0.04,India Post Payments Bank Ltd,0.0,7.05,payer
+2024-08,98.1,1.89,Federal Bank Ltd.,0.01,6.39,payer
+2024-08,100.0,0.0,One Mobikwik Systems Pvt - Ltd,0.0,5.32,payer
+2024-08,100.0,0.0,Garagepreneurs Internet Private Limited,0.0,4.73,payer
+2024-09,94.09,5.75,AXIS Bank Ltd.,0.16,4933.71,payer
+2024-09,91.71,8.15,Yes bank Ltd.,0.14,4885.12,payer
+2024-09,93.52,6.35,ICICI Bank Ltd.,0.13,2819.1,payer
+2024-09,95.72,4.11,State Bank of India,0.16,1634.7,payer
+2024-09,95.01,4.88,HDFC Bank Ltd.,0.11,1568.06,payer
+2024-09,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,61.01,payer
+2024-09,100.0,0.0,Kotak Mahindra Bank Ltd,0.0,47.42,payer
+2024-09,93.32,6.46,National Payments Corporation of India (BHIM),0.22,31.28,payer
+2024-09,95.91,4.01,Airtel Payments Bank Ltd,0.08,18.16,payer
+2024-09,95.71,4.16,RBL Bank Ltd.,0.14,9.13,payer
+2024-09,99.42,0.57,IDFC First Bank,0.01,8.95,payer
+2024-09,99.99,0.01,India Post Payments Bank Ltd,0.0,6.96,payer
+2024-09,98.24,1.73,Federal Bank Ltd.,0.03,6.48,payer
+2024-09,100.0,0.0,One Mobikwik Systems Pvt - Ltd,0.0,6.18,payer
+2024-09,100.0,0.0,Garagepreneurs Internet Private Limited,0.0,4.83,payer
+2024-10,93.4,6.11,Axis Bank Ltd.,0.49,5662.22,payer
+2024-10,90.02,9.61,Yes Bank Ltd.,0.37,5326.82,payer
+2024-10,92.73,6.96,ICICI Bank Ltd.,0.31,3063.68,payer
+2024-10,95.11,4.37,State Bank of India,0.52,1831.81,payer
+2024-10,94.68,5.16,HDFC Bank Ltd.,0.16,1746.61,payer
+2024-10,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,69.79,payer
+2024-10,100.0,0.0,Kotak Mahindra Bank,0.0,52.23,payer
+2024-10,92.86,6.49,NPCI BHIM Services Ltd (NBSL),0.64,35.84,payer
+2024-10,95.87,3.91,Airtel Payments Bank Limited,0.22,20.89,payer
+2024-10,96.09,3.6,RBL Bank Ltd.,0.31,11.15,payer
+2024-10,100.0,0.0,INDIA POST PAYMENTS BANK LIMITED,0.0,10.11,payer
+2024-10,99.54,0.44,IDFC Bank Ltd.,0.01,9.99,payer
+2024-10,100.0,0.0,ONE MOBIKWIK SYSTEMS LIMITED,0.0,7.19,payer
+2024-10,98.23,1.66,Federal Bank Ltd.,0.11,6.6,payer
+2024-10,100.0,0.0,Garagepreneurs Internet Private Limited,0.0,5.44,payer
+2024-11,93.5,6.33,Axis Bank Ltd.,0.17,5366.04,payer
+2024-11,89.34,10.51,Yes Bank Ltd.,0.15,4838.62,payer
+2024-11,92.32,7.54,ICICI Bank Ltd.,0.14,2839.45,payer
+2024-11,95.72,4.12,State Bank of India,0.16,1738.04,payer
+2024-11,94.5,5.4,HDFC Bank Ltd.,0.1,1699.6,payer
+2024-11,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,67.21,payer
+2024-11,100.0,0.0,Kotak Mahindra Bank,0.0,47.66,payer
+2024-11,93.36,6.4,NPCI BHIM Services Ltd (NBSL),0.23,32.01,payer
+2024-11,96.2,3.7,Airtel Payments Bank Limited,0.1,19.34,payer
+2024-11,97.09,2.81,RBL Bank Ltd.,0.1,11.84,payer
+2024-11,99.6,0.39,IDFC Bank Ltd.,0.0,9.25,payer
+2024-11,100.0,0.0,India Post Payments Bank Limited,0.0,8.91,payer
+2024-11,100.0,0.0,One Mobikwik Systems Limited,0.0,7.23,payer
+2024-11,98.46,1.5,Federal Bank Ltd.,0.04,6.64,payer
+2024-11,100.0,0.0,Citibank Corporate,0.0,6.19,payer
+2024-12,93.2,6.64,Axis Bank Ltd.,0.16,6025.68,payer
+2024-12,88.57,11.3,Yes Bank Ltd.,0.12,4945.56,payer
+2024-12,91.84,8.01,ICICI Bank Ltd.,0.15,3082.57,payer
+2024-12,95.46,4.38,State Bank of India,0.16,1939.67,payer
+2024-12,94.19,5.7,HDFC Bank Ltd.,0.11,1876.39,payer
+2024-12,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,75.47,payer
+2024-12,100.0,0.0,Kotak Mahindra Bank,0.0,52.43,payer
+2024-12,93.34,6.42,NPCI BHIM Services Ltd (NBSL),0.24,36.21,payer
+2024-12,96.14,3.77,Airtel Payments Bank Limited,0.09,21.12,payer
+2024-12,97.5,2.41,RBL Bank Ltd.,0.09,16.71,payer
+2024-12,100.0,0.0,India Post Payments Bank Limited,0.0,10.76,payer
+2024-12,99.61,0.38,IDFC Bank Ltd.,0.0,10.09,payer
+2024-12,100.0,0.0,One Mobikwik Systems Limited,0.0,8.59,payer
+2024-12,98.69,1.28,Federal Bank Ltd.,0.03,7.49,payer
+2024-12,100.0,0.0,Amazon,0.0,5.76,payer
+2025-01,92.28,7.41,Axis Bank Ltd.,0.31,5954.775546,payer
+2025-01,88.09,11.69,Yes Bank Ltd.,0.23,5406.587875,payer
+2025-01,91.07,8.7,ICICI Bank Ltd.,0.23,3268.266068,payer
+2025-01,93.82,6.06,HDFC Bank Ltd.,0.12,1880.417636,payer
+2025-01,94.63,5.08,State Bank of India,0.29,1787.716846,payer
+2025-01,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,78.70692,payer
+2025-01,100.0,0.0,Kotak Mahindra Bank,0.0,54.081182,payer
+2025-01,93.25,6.45,National Payments Corporation of India,0.31,41.959103,payer
+2025-01,95.81,4.06,Airtel Payments Bank Limited,0.13,21.889661,payer
+2025-01,97.38,2.48,RBL Bank Ltd.,0.14,17.466171,payer
+2025-01,99.7,0.3,IDFC Bank Ltd.,0.0,12.607118,payer
+2025-01,100.0,0.0,India Post Payments Bank Limited,0.0,12.569724,payer
+2025-01,100.0,0.0,One Mobikwik Systems Limited,0.0,9.800559,payer
+2025-01,98.68,1.27,Federal Bank Ltd.,0.06,7.791717,payer
+2025-01,96.03,3.83,Slice Small Finance Bank Limited,0.14,6.956108,payer
+2025-02,92.24,7.57,Axis Bank Ltd.,0.19,5700.87,payer
+2025-02,88.46,11.38,Yes Bank Ltd.,0.15,5129.26,payer
+2025-02,90.89,8.94,ICICI Bank Ltd.,0.16,3081.73,payer
+2025-02,93.45,6.4,HDFC Bank Ltd.,0.15,1810.37,payer
+2025-02,94.58,5.22,State Bank of India,0.2,1599.37,payer
+2025-02,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,76.79,payer
+2025-02,100.0,0.0,Kotak Mahindra Bank,0.0,50.89,payer
+2025-02,93.38,6.39,National Payments Corporation of India,0.23,45.5,payer
+2025-02,95.73,4.16,Airtel Payments Bank Limited,0.1,19.85,payer
+2025-02,97.5,2.39,RBL Bank Ltd.,0.11,16.96,payer
+2025-02,99.74,0.26,IDFC Bank Ltd.,0.0,12.83,payer
+2025-02,100.0,0.0,India Post Payments Bank Limited,0.0,12.27,payer
+2025-02,96.1,3.76,Slice Small Finance Bank Limited,0.14,10.97,payer
+2025-02,100.0,0.0,One Mobikwik Systems Limited,0.0,9.98,payer
+2025-02,98.68,1.27,Federal Bank Ltd.,0.05,7.32,payer
+2025-03,92.4,7.45,Axis Bank Ltd.,0.16,6604.23,payer
+2025-03,89.01,10.86,Yes Bank Ltd.,0.13,5941.99,payer
+2025-03,90.81,9.06,ICICI Bank Ltd.,0.12,3439.32,payer
+2025-03,93.55,6.37,HDFC Bank Ltd.,0.08,2057.59,payer
+2025-03,94.74,5.1,State Bank of India,0.17,1584.82,payer
+2025-03,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,89.61,payer
+2025-03,100.0,0.0,Kotak Mahindra Bank,0.0,57.42,payer
+2025-03,94.09,5.71,National Payments Corporation of India,0.2,55.53,payer
+2025-03,96.32,3.58,Airtel Payments Bank Limited,0.1,22.47,payer
+2025-03,97.94,1.99,RBL Bank Ltd.,0.07,22.14,payer
+2025-03,97.39,2.52,Slice Small Finance Bank,0.09,16.79,payer
+2025-03,100.0,0.0,India Post Payments Bank Limited,0.0,16.58,payer
+2025-03,99.76,0.24,IDFC Bank Ltd.,0.0,15.55,payer
+2025-03,100.0,0.0,One Mobikwik Systems Limited,0.0,11.9,payer
+2025-03,98.74,1.24,Federal Bank Ltd.,0.02,8.28,payer
+2025-04,91.79,7.91,Axis Bank Ltd.,0.31,6387.98,payer
+2025-04,89.6,10.23,Yes Bank Ltd.,0.16,5989.77,payer
+2025-04,90.4,9.35,ICICI Bank Ltd.,0.26,3331.43,payer
+2025-04,93.35,6.52,HDFC Bank Ltd.,0.13,1914.7,payer
+2025-04,94.5,5.21,State Bank of India,0.29,1570.86,payer
+2025-04,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,99.59,payer
+2025-04,94.12,5.46,NPCI BHIM Services Ltd (NBSL),0.42,63.18,payer
+2025-04,100.0,0.0,Kotak Mahindra Bank,0.0,58.08,payer
+2025-04,97.91,1.97,RBL Bank Ltd.,0.12,22.69,payer
+2025-04,96.47,3.4,Airtel Payments Bank Limited,0.13,21.16,payer
+2025-04,97.11,2.79,Slice Small Finance Bank,0.11,17.86,payer
+2025-04,99.8,0.2,IDFC Bank Ltd.,0.01,17.05,payer
+2025-04,100.0,0.0,India Post Payments Bank Limited,0.0,14.76,payer
+2025-04,100.0,0.0,One Mobikwik Systems Limited,0.0,12.7,payer
+2025-04,98.76,1.17,Federal Bank Ltd.,0.08,8.17,payer
+2025-05,91.91,8.02,Yes Bank Ltd.,0.07,6249.31,payer
+2025-05,93.26,6.66,Axis Bank Ltd.,0.08,6243.68,payer
+2025-05,92.48,7.44,ICICI Bank Ltd.,0.08,3429.87,payer
+2025-05,94.32,5.63,HDFC Bank Ltd.,0.05,1903.95,payer
+2025-05,95.37,4.54,State Bank of India,0.09,1814.3,payer
+2025-05,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,110.06,payer
+2025-05,95.27,4.61,BHIM,0.12,74.53,payer
+2025-05,100.0,0.0,Kotak Mahindra Bank,0.0,60.08,payer
+2025-05,98.1,1.86,RBL Bank Ltd.,0.04,21.94,payer
+2025-05,96.64,3.29,Airtel Payments Bank Limited,0.06,20.85,payer
+2025-05,97.42,2.54,Slice Small Finance Bank,0.04,20.22,payer
+2025-05,99.81,0.19,IDFC Bank Ltd.,0.0,17.11,payer
+2025-05,100.0,0.0,India Post Payments Bank Limited,0.0,16.51,payer
+2025-05,100.0,0.0,One Mobikwik Systems Limited,0.0,13.66,payer
+2025-05,98.83,1.14,Federal Bank Ltd.,0.03,8.3,payer
+2025-06,93.29,6.53,Axis Bank Ltd.,0.19,6282.26,payer
+2025-06,91.82,8.06,Yes Bank Ltd.,0.12,6062.04,payer
+2025-06,92.46,7.4,ICICI Bank Ltd.,0.15,3348.12,payer
+2025-06,94.36,5.57,HDFC Bank Ltd.,0.07,1857.5,payer
+2025-06,95.31,4.48,State Bank of India,0.21,1786.32,payer
+2025-06,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,112.44,payer
+2025-06,95.3,4.48,NPCI BHIM Services Ltd (NBSL),0.23,83.63,payer
+2025-06,100.0,0.0,Kotak Mahindra Bank,0.0,60.77,payer
+2025-06,96.42,3.48,Airtel Payments Bank Limited,0.1,20.48,payer
+2025-06,98.08,1.84,RBL Bank Ltd.,0.07,18.81,payer
+2025-06,99.8,0.2,IDFC Bank Ltd.,0.0,18.49,payer
+2025-06,97.05,2.87,Slice Small Finance Bank,0.08,18.35,payer
+2025-06,100.0,0.0,India Post Payments Bank Limited,0.0,16.65,payer
+2025-06,100.0,0.0,One Mobikwik Systems Limited,0.0,13.74,payer
+2025-06,98.9,1.08,Federal Bank Ltd.,0.02,8.19,payer
+2025-07,93.26,6.61,Axis Bank Ltd.,0.13,7234.98,payer
+2025-07,90.91,8.98,Yes Bank Ltd.,0.11,5894.24,payer
+2025-07,92.29,7.59,ICICI Bank Ltd.,0.12,3697.64,payer
+2025-07,94.18,5.76,HDFC Bank Ltd.,0.07,2038.72,payer
+2025-07,94.75,5.05,State Bank of India,0.2,1652.32,payer
+2025-07,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,124.54,payer
+2025-07,95.1,4.64,NPCI BHIM Services Ltd (NBSL),0.26,99.55,payer
+2025-07,100.0,0.0,Kotak Mahindra Bank,0.0,67.13,payer
+2025-07,96.29,3.63,Airtel Payments Bank Limited,0.08,22.17,payer
+2025-07,97.06,2.86,Slice Small Finance Bank,0.08,20.49,payer
+2025-07,99.79,0.21,IDFC Bank Ltd.,0.0,19.28,payer
+2025-07,100.0,0.0,India Post Payments Bank Limited,0.0,18.16,payer
+2025-07,97.83,2.09,RBL Bank Ltd.,0.08,17.25,payer
+2025-07,100.0,0.0,One Mobikwik Systems Limited,0.0,16.68,payer
+2025-07,98.87,1.1,Federal Bank Ltd.,0.03,8.94,payer
+2025-08,93.6,6.27,Axis Bank Ltd.,0.13,7903.1,payer
+2025-08,90.97,8.94,Yes Bank Ltd.,0.1,5841.35,payer
+2025-08,92.61,7.27,ICICI Bank Ltd.,0.12,3880.13,payer
+2025-08,94.28,5.64,HDFC Bank Ltd.,0.08,1957.3,payer
+2025-08,94.47,5.36,State Bank of India,0.16,1433.43,payer
+2025-08,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,134.92,payer
+2025-08,95.28,4.54,NPCI BHIM Services Ltd (NBSL),0.18,113.93,payer
+2025-08,100.0,0.0,Kotak Mahindra Bank,0.0,72.36,payer
+2025-08,96.3,3.62,Airtel Payments Bank Limited,0.07,22.27,payer
+2025-08,96.8,3.14,Slice Small Finance Bank,0.06,21.53,payer
+2025-08,100.0,0.0,India Post Payments Bank Limited,0.0,19.58,payer
+2025-08,100.0,0.0,One Mobikwik Systems Limited,0.0,18.65,payer
+2025-08,99.81,0.19,IDFC Bank Ltd.,0.0,18.71,payer
+2025-08,98.02,1.91,RBL Bank Ltd.,0.07,17.71,payer
+2025-08,99.02,0.96,Federal Bank Ltd.,0.02,9.54,payer
+2025-09,93.46,6.43,Axis Bank Ltd.,0.1,8358.06,payer
+2025-09,90.44,9.47,Yes Bank Ltd.,0.1,5823.4,payer
+2025-09,91.43,8.46,ICICI Bank Ltd.,0.11,3047.76,payer
+2025-09,93.97,5.97,HDFC Bank Ltd.,0.07,1803.82,payer
+2025-09,94.44,5.36,State Bank of India,0.2,1641.55,payer
+2025-09,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,139.13,payer
+2025-09,95.22,4.59,NPCI BHIM Services Ltd (NBSL),0.19,125.93,payer
+2025-09,100.0,0.0,Kotak Mahindra Bank,0.0,75.98,payer
+2025-09,96.86,3.1,Slice Small Finance Bank,0.04,23.55,payer
+2025-09,100.0,0.0,One Mobikwik Systems Limited,0.0,18.84,payer
+2025-09,96.15,3.76,Airtel Payments Bank Limited,0.09,18.06,payer
+2025-09,98.13,1.85,Unity Small Finance Bank Limited,0.02,16.68,payer
+2025-09,100.0,0.0,India Post Payments Bank Limited,0.0,16.81,payer
+2025-09,97.86,2.08,RBL Bank Ltd.,0.06,15.39,payer
+2025-09,99.76,0.24,IDFC Bank Ltd.,0.0,14.36,payer
+2025-10,93.59,6.34,Axis Bank Ltd.,0.08,9384.28,payer
+2025-10,90.09,9.83,Yes Bank Ltd.,0.08,6323.07,payer
+2025-10,90.8,9.13,ICICI Bank Ltd.,0.07,3017.17,payer
+2025-10,93.86,6.1,HDFC Bank Ltd.,0.04,1926.84,payer
+2025-10,93.35,6.52,State Bank of India,0.13,1184.1,payer
+2025-10,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,145.04,payer
+2025-10,95.2,4.7,NPCI BHIM Services Ltd (NBSL),0.11,142.85,payer
+2025-10,100.0,0.0,Kotak Mahindra Bank,0.0,85.71,payer
+2025-10,96.87,3.1,Slice Small Finance Bank,0.03,26.63,payer
+2025-10,100.0,0.0,One Mobikwik Systems Limited,0.0,20.35,payer
+2025-10,96.43,3.55,Unity Small Finance Bank Limited,0.02,18.97,payer
+2025-10,96.13,3.82,Airtel Payments Bank Limited,0.05,18.17,payer
+2025-10,100.0,0.0,India Post Payments Bank Limited,0.0,17.97,payer
+2025-10,99.77,0.23,IDFC Bank Ltd.,0.0,15.05,payer
+2025-10,97.69,2.27,RBL Bank Ltd.,0.05,14.02,payer
+2025-11,93.2,6.7,Axis Bank Ltd.,0.09,8258.1,payer
+2025-11,89.94,9.96,Yes Bank Ltd.,0.1,6921.22,payer
+2025-11,90.77,9.15,ICICI Bank Ltd.,0.08,3160.58,payer
+2025-11,93.63,6.32,HDFC Bank Ltd.,0.06,1936.0,payer
+2025-11,93.01,6.84,State Bank of India,0.15,1372.17,payer
+2025-11,95.15,4.71,NPCI BHIM Services Ltd (NBSL),0.13,154.7,payer
+2025-11,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,148.71,payer
+2025-11,100.0,0.0,Kotak Mahindra Bank,0.0,86.97,payer
+2025-11,97.09,2.88,Slice Small Finance Bank,0.04,31.34,payer
+2025-11,100.0,0.0,One Mobikwik Systems Limited,0.0,21.13,payer
+2025-11,100.0,0.0,India Post Payments Bank Limited,0.0,19.17,payer
+2025-11,96.22,3.75,Unity Small Finance Bank Limited,0.03,17.31,payer
+2025-11,99.81,0.19,IDFC Bank Ltd.,0.0,16.73,payer
+2025-11,96.58,3.36,Airtel Payments Bank Limited,0.06,16.32,payer
+2025-11,97.73,2.22,RBL Bank Ltd.,0.05,13.61,payer
+2025-12,92.92,6.92,Axis Bank Ltd.,0.16,9124.05,payer
+2025-12,88.56,11.28,Yes Bank Ltd.,0.15,7012.06,payer
+2025-12,89.83,10.02,ICICI Bank Ltd.,0.15,3276.12,payer
+2025-12,93.09,6.82,HDFC Bank Ltd.,0.09,2020.77,payer
+2025-12,92.66,7.12,State Bank of India,0.22,1592.54,payer
+2025-12,94.93,4.89,NPCI BHIM Services Ltd (NBSL),0.18,174.06,payer
+2025-12,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,157.89,payer
+2025-12,100.0,0.0,Kotak Mahindra Bank,0.0,95.23,payer
+2025-12,97.2,2.75,Slice Small Finance Bank,0.05,37.08,payer
+2025-12,100.0,0.0,One Mobikwik Systems Limited,0.0,23.72,payer
+2025-12,96.53,3.44,Unity Small Finance Bank Limited,0.03,21.91,payer
+2025-12,100.0,0.0,India Post Payments Bank Limited,0.0,17.91,payer
+2025-12,96.52,3.41,Airtel Payments Bank Limited,0.07,16.66,payer
+2025-12,98.04,1.88,RBL Bank Ltd.,0.08,16.14,payer
+2025-12,99.87,0.13,IDFC Bank Ltd.,0.0,15.95,payer
+2026-01,92.61,7.33,Axis Bank Ltd.,0.07,8767.71,payer
+2026-01,88.04,11.89,Yes Bank Ltd.,0.08,7294.86,payer
+2026-01,89.39,10.55,ICICI Bank Ltd.,0.06,3333.69,payer
+2026-01,92.69,7.27,HDFC Bank Ltd.,0.04,1917.41,payer
+2026-01,93.19,6.7,State Bank of India,0.11,1840.13,payer
+2026-01,94.76,5.15,NPCI BHIM Services Ltd (NBSL),0.09,193.21,payer
+2026-01,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,159.92,payer
+2026-01,100.0,0.0,Kotak Mahindra Bank,0.0,102.05,payer
+2026-01,97.56,2.42,Slice Small Finance Bank Limited,0.02,42.58,payer
+2026-01,100.0,0.0,ONE MOBIKWIK SYSTEMS LIMITED,0.0,24.64,payer
+2026-01,95.89,4.09,Unity Small Finance Bank Limited,0.02,24.18,payer
+2026-01,99.88,0.12,IDFC Bank Ltd.,0.0,19.23,payer
+2026-01,100.0,0.0,INDIA POST PAYMENTS BANK LIMITED,0.0,18.75,payer
+2026-01,96.21,3.74,Airtel Payments Bank Limited,0.05,17.86,payer
+2026-01,91.76,8.06,NSDL Payments Bank Limited,0.19,16.36,payer
+2026-02,88.7,11.22,Yes Bank Ltd.,0.08,7891.27,payer
+2026-02,92.37,7.56,Axis Bank Ltd.,0.07,7369.63,payer
+2026-02,89.11,10.84,ICICI Bank Ltd.,0.06,3092.71,payer
+2026-02,92.91,6.98,State Bank of India,0.11,1696.25,payer
+2026-02,92.46,7.5,HDFC Bank Ltd.,0.04,1679.62,payer
+2026-02,95.09,4.84,NPCI BHIM Services Ltd (NBSL),0.07,197.17,payer
+2026-02,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,147.62,payer
+2026-02,100.0,0.0,Kotak Mahindra Bank,0.0,102.73,payer
+2026-02,97.79,2.2,Slice Small Finance Bank Limited,0.02,45.96,payer
+2026-02,99.95,0.05,IDFC Bank Ltd.,0.0,38.89,payer
+2026-02,91.39,8.51,NSDL Payments Bank Limited,0.1,23.09,payer
+2026-02,100.0,0.0,ONE MOBIKWIK SYSTEMS LIMITED,0.0,24.75,payer
+2026-02,95.57,4.41,Unity Small Finance Bank Limited,0.02,22.76,payer
+2026-02,95.95,4.01,Airtel Payments Bank Limited,0.04,17.06,payer
+2026-02,98.32,1.66,RBL Bank Ltd.,0.03,16.79,payer
+2026-03,92.46,7.47,Axis Bank Ltd.,0.07,9090.56,payer
+2026-03,86.87,13.04,Yes Bank Ltd.,0.09,7697.81,payer
+2026-03,88.52,11.42,ICICI Bank Ltd.,0.07,3412.04,payer
+2026-03,92.43,7.53,HDFC Bank Ltd.,0.04,2029.63,payer
+2026-03,92.69,7.17,State Bank of India,0.14,2002.94,payer
+2026-03,94.92,4.99,NPCI BHIM Services Ltd (NBSL),0.09,218.99,payer
+2026-03,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,166.67,payer
+2026-03,100.0,0.0,Kotak Mahindra Bank,0.0,114.93,payer
+2026-03,97.95,2.03,Slice Small Finance Bank Ltd,0.02,51.35,payer
+2026-03,99.96,0.04,IDFC Bank Ltd.,0.0,46.21,payer
+2026-03,91.1,8.79,NSDL Payments Bank Limited,0.11,33.03,payer
+2026-03,100.0,0.0,One Mobikwik Systems Limited,0.0,28.9,payer
+2026-03,94.87,5.1,Unity Small Finance Bank Limited,0.02,25.32,payer
+2026-03,95.36,4.59,Airtel Payments Bank Limited,0.05,19.71,payer
+2026-03,100.0,0.0,India Post Payments Bank Limited,0.0,19.51,payer
+2026-04,92.25,7.65,Axis Bank Ltd.,0.1,8862.396631,payer
+2026-04,86.29,13.6,Yes Bank Ltd.,0.11,7631.110245,payer
+2026-04,88.15,11.76,ICICI Bank Ltd.,0.09,3336.707734,payer
+2026-04,92.85,7.0,State Bank of India,0.15,2203.829224,payer
+2026-04,92.23,7.71,HDFC Bank Ltd.,0.06,1949.187581,payer
+2026-04,95.04,4.84,National Payments Corporation of India,0.11,227.066458,payer
+2026-04,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,180.328793,payer
+2026-04,100.0,0.0,Kotak Mahindra Bank,0.0,116.463089,payer
+2026-04,98.09,1.89,Slice Small Finance Bank Ltd,0.02,56.849401,payer
+2026-04,91.5,8.37,NSDL Payments Bank Limited,0.13,36.658893,payer
+2026-04,100.0,0.0,One Mobikwik Systems Limited,0.0,29.23373,payer
+2026-04,99.93,0.07,IDFC Bank Ltd.,0.0,27.306334,payer
+2026-04,91.98,7.99,Unity Small Finance Bank Limited,0.03,24.317049,payer
+2026-04,95.31,4.64,Airtel Payments Bank Limited,0.05,20.677254,payer
+2026-04,100.0,0.0,India Post Payments Bank Limited,0.0,17.189817,payer
+2026-05,92.21,7.73,Axis Bank Ltd.,0.06,9415.48,payer
+2026-05,86.22,13.7,Yes Bank Ltd.,0.07,8288.59,payer
+2026-05,86.43,13.5,ICICI Bank Ltd.,0.07,3008.37,payer
+2026-05,92.43,7.49,State Bank of India,0.08,2245.08,payer
+2026-05,91.84,8.12,HDFC Bank Ltd.,0.05,1994.92,payer
+2026-05,95.0,4.93,National Payments Corporation of India,0.07,246.08,payer
+2026-05,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,194.3,payer
+2026-05,100.0,0.0,Kotak Mahindra Bank,0.0,122.07,payer
+2026-05,98.21,1.78,Slice Small Finance Bank Ltd,0.01,62.57,payer
+2026-05,89.38,10.52,NSDL Payments Bank Limited,0.1,40.66,payer
+2026-05,99.96,0.04,IDFC Bank Ltd.,0.0,46.43,payer
+2026-05,100.0,0.0,One Mobikwik Systems Limited,0.0,29.58,payer
+2026-05,88.29,11.68,Unity Small Finance Bank Limited,0.03,25.61,payer
+2026-05,96.27,3.69,Airtel Payments Bank Limited,0.04,19.21,payer
+2026-05,100.0,0.0,India Post Payments Bank Limited,0.0,17.77,payer
+2026-06,91.99,7.89,Axis Bank Ltd.,0.11,10092.059853,payer
+2026-06,85.4,14.46,Yes Bank Ltd.,0.13,8567.478121,payer
+2026-06,85.59,14.3,ICICI Bank Ltd.,0.11,3047.235061,payer
+2026-06,91.26,8.66,HDFC Bank Ltd.,0.08,1996.160412,payer
+2026-06,90.72,9.01,State Bank of India,0.26,1891.433175,payer
+2026-06,94.92,4.91,NPCI BHIM Services Ltd (NBSL),0.17,264.047655,payer
+2026-06,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,202.881109,payer
+2026-06,100.0,0.0,Kotak Mahindra Bank,0.0,129.261224,payer
+2026-06,98.24,1.74,Slice Small Finance Bank Ltd,0.02,71.833672,payer
+2026-06,99.97,0.03,IDFC Bank Ltd.,0.0,55.432678,payer
+2026-06,85.02,14.8,NSDL Payments Bank Limited,0.18,34.2202,payer
+2026-06,100.0,0.0,One Mobikwik Systems Limited,0.0,28.816042,payer
+2026-06,87.3,12.64,Unity Small Finance Bank Limited,0.06,27.253703,payer
+2026-06,100.0,0.0,PhonePe Pvt. Ltd,0.0,20.730944,payer
+2026-06,100.0,0.0,India Post Payments Bank Limited,0.0,18.938329,payer
+2026-07,91.99,7.89,Axis Bank Ltd.,0.11,10092.06,payer
+2026-07,85.4,14.46,Yes Bank Ltd.,0.13,8567.48,payer
+2026-07,85.59,14.3,ICICI Bank Ltd.,0.11,3047.24,payer
+2026-07,91.26,8.66,HDFC Bank Ltd.,0.08,1996.16,payer
+2026-07,90.72,9.01,State Bank of India,0.26,1891.43,payer
+2026-07,94.92,4.91,NPCI BHIM Services Ltd (NBSL),0.17,264.05,payer
+2026-07,100.0,0.0,Tri O Tech Solutions Private Limited,0.0,202.88,payer
+2026-07,100.0,0.0,Kotak Mahindra Bank,0.0,129.26,payer
+2026-07,98.24,1.74,Slice Small Finance Bank Ltd,0.02,71.83,payer
+2026-07,99.97,0.03,IDFC Bank Ltd.,0.0,55.43,payer
+2026-07,85.02,14.8,NSDL Payments Bank Limited,0.18,34.22,payer
+2026-07,100.0,0.0,One Mobikwik Systems Limited,0.0,28.82,payer
+2026-07,87.3,12.64,Unity Small Finance Bank Limited,0.06,27.25,payer
+2026-07,100.0,0.0,PhonePe Pvt. Ltd,0.0,20.73,payer
+2026-07,100.0,0.0,India Post Payments Bank Limited,0.0,18.94,payer

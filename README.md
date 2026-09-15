@@ -89,6 +89,29 @@ gh secret set GSHEET_SA_JSON < secrets\service_account.json
 
 Because the workflow commits data back to the repo, run `git pull` before running `update.py` locally.
 
+## UPI data from NPCI
+
+`scripts/npci_upi.py` collects NPCI's *UPI Ecosystem Statistics*
+(https://www.npci.org.in/product/ecosystem-statistics/upi) through the same JSON API the page itself uses,
+one call per table and month, and keeps every month's raw response under `data/npci/raw/<table>/YYYY-MM.json`.
+NPCI's edge blocks Python's HTTP stack (TLS fingerprint) but accepts curl with Chrome headers, so the
+collector shells out to curl, which is present on Windows 10+ and on GitHub's runners.
+
+| CSV in `data/processed/` | NPCI table | From |
+|---|---|---|
+| `upi_apps.csv` | UPI Applications (per-app customer-initiated, B2C, B2B, total volume/value) | Jun 2020 |
+| `upi_p2p_p2m.csv` | P2P and P2M totals per month | Apr 2020 |
+| `upi_remitter_banks.csv`, `upi_beneficiary_banks.csv` | Top 50 member banks, approval and decline rates | Jan 2020 |
+| `upi_payer_psp.csv`, `upi_payee_psp.csv` | Top 15 PSPs | 2021 |
+| `upi_mcc.csv` | Merchant category classification | 2016 |
+| `upi_member_vol_val.csv` | Top 50 banks by volume and value | 2016 |
+| `upi_statewise.csv` | State and district statistics | recent months |
+| `upi_chargeback.csv` | Chargebacks by beneficiary bank | 2021 |
+
+Volumes are in millions of transactions and values in ₹ crore, as NPCI publishes them. The collector re-reads
+the latest three months on every run because NPCI revises them; `update.py` runs it before rebuilding the
+dashboard data, and a failure on NPCI's side never blocks the RBI refresh.
+
 ## How RBI's format changed and how it is reconciled
 
 | Period | Layout | Value unit as published | Notes |

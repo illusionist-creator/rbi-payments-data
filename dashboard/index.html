@@ -315,6 +315,37 @@
     </div>
   </section>
 
+  <section id="upi" hidden>
+    <div class="sec-head"><div><p class="eyebrow">UPI · NPCI ecosystem statistics</p><h2>UPI: apps, banks and the shift to merchants</h2></div><p id="upi-sub"></p></div>
+    <div class="grid g-kpi" style="margin-bottom:16px">
+      <div class="card tile hero"><div class="lbl" id="u0-l"></div><div class="val" id="u0-v"></div><div class="deltas" id="u0-d"></div><svg class="spark" id="u0-s"></svg></div>
+      <div class="card tile"><div class="lbl" id="u1-l"></div><div class="val" id="u1-v"></div><div class="deltas" id="u1-d"></div><svg class="spark" id="u1-s"></svg></div>
+      <div class="card tile"><div class="lbl" id="u2-l"></div><div class="val" id="u2-v"></div><div class="deltas" id="u2-d"></div><svg class="spark" id="u2-s"></svg></div>
+      <div class="card tile"><div class="lbl" id="u3-l"></div><div class="val" id="u3-v"></div><div class="deltas" id="u3-d"></div><svg class="spark" id="u3-s"></svg></div>
+      <div class="card tile"><div class="lbl" id="u4-l"></div><div class="val" id="u4-v"></div><div class="deltas" id="u4-d"></div><svg class="spark" id="u4-s"></svg></div>
+    </div>
+    <div class="grid g-share" style="margin-bottom:16px">
+      <div class="card">
+        <div class="card-head"><div><h3>App market share</h3><p class="hint" id="ua-hint"></p></div></div>
+        <div class="chart" id="ua-chart"></div><ul class="legend" id="ua-legend"></ul>
+        <details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="ua-table"></div></details>
+      </div>
+      <div class="card"><div class="card-head"><div><h3 id="ur-h3"></h3><p class="hint">Customer-initiated transactions, share of all apps, change over 12 months</p></div></div><div class="rank" id="ua-rank"></div></div>
+    </div>
+    <div class="grid g-2" style="margin-bottom:16px">
+      <div class="card"><div class="card-head"><div><h3>Person-to-person versus merchant payments, volume</h3><p class="hint">Monthly UPI transactions, millions</p></div></div><div class="chart" id="up-vol"></div><ul class="legend" id="up-vol-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="up-vol-t"></div></details></div>
+      <div class="card"><div class="card-head"><div><h3>Person-to-person versus merchant payments, value</h3><p class="hint">Monthly UPI value, ₹ crore</p></div></div><div class="chart" id="up-val"></div><ul class="legend" id="up-val-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="up-val-t"></div></details></div>
+    </div>
+    <div class="grid g-share">
+      <div class="card">
+        <div class="card-head"><div><h3>Remitter bank share of UPI volume</h3><p class="hint" id="ub-hint"></p></div></div>
+        <div class="chart" id="ub-chart"></div><ul class="legend" id="ub-legend"></ul>
+        <details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="ub-table"></div></details>
+      </div>
+      <div class="card"><div class="card-head"><div><h3 id="um-h3"></h3><p class="hint">Top merchant categories by transaction count, with value</p></div></div><div class="rank" id="um-rank"></div></div>
+    </div>
+  </section>
+
   <section id="about">
     <div class="sec-head"><div><p class="eyebrow">Reading the numbers</p><h2>Definitions and caveats</h2></div></div>
     <dl class="notes">
@@ -325,6 +356,7 @@
       <dt>Market share</dt><dd>Always a share of all banks in RBI's release for that month, even when a bank-type filter narrows which banks are listed. Colours stay attached to a bank while you change the window, month or Top N.</dd>
       <dt>Bank names</dt><dd>RBI has spelt the same bank many different ways since 2011. Names are standardised to RBI's latest spelling, so mergers show as the surviving bank from the merger month and the absorbed banks simply end. Bank type follows RBI's own group headings, with IDBI Bank classed as private from its 2019 reclassification onward.</dd>
       <dt>Revisions</dt><dd>RBI re-issues some months as "Revised", sometimes a year later. The data file is rebuilt from the latest release of every month whenever the updater runs.</dd>
+      <dt>UPI</dt><dd>The UPI section comes from NPCI's <em>UPI Ecosystem Statistics</em> tables, not from RBI. App shares use customer-initiated transactions as NPCI reports them per app; app names are standardised across NPCI's spelling changes. Remitter-bank shares come from NPCI's top-50 member table, so "Others" there is everything outside the top 50. NPCI revises the latest months, and the collector re-reads the last three months on every run.</dd>
     </dl>
   </section>
   <footer id="foot"></footer>
@@ -377,7 +409,8 @@
   }
   function fmtRs(v) { return v == null || isNaN(v) ? '–' : '₹' + nfIN.format(Math.round(v)); }
   function fmtPct(f, d = 1) { return f == null || isNaN(f) ? '–' : (f * 100).toFixed(d) + '%'; }
-  function mLabel(i, long) { const [y, m] = D.months[i].split('-'); return MON[+m - 1] + ' ' + (long ? y : '’' + y.slice(2)); }
+  function calLabel(cal, i, long) { const [y, m] = cal[i].split('-'); return MON[+m - 1] + ' ' + (long ? y : '’' + y.slice(2)); }
+  function mLabel(i, long) { return calLabel(D.months, i, long); }
   function readCss() {
     const cs = getComputedStyle(document.documentElement);
     const g = (n) => cs.getPropertyValue(n).trim();
@@ -480,17 +513,18 @@
       .attr('role', 'img').attr('aria-label', opts.aria || '');
     return { svg, width, height, M, iw: width - M.l - M.r, ih: height - M.t - M.b };
   }
-  function xAxisMonths(g, x, m0, m1, iw, ih) {
+  function xAxisMonths(g, x, m0, m1, iw, ih, cal) {
+    cal = cal || D.months;
     const span = m1 - m0 + 1, every = span <= 14 ? 1 : span <= 40 ? 3 : span <= 80 ? 12 : span <= 130 ? 12 : 24;
     const ticks = [];
     for (let m = m0; m <= m1; m++) {
-      const mm = +D.months[m].slice(5);
-      if (every === 1 || (every === 3 && (mm - 1) % 3 === 0) || (every >= 12 && mm === 1 && (every === 12 || (+D.months[m].slice(0, 4)) % 2 === 0))) ticks.push(m);
+      const mm = +cal[m].slice(5);
+      if (every === 1 || (every === 3 && (mm - 1) % 3 === 0) || (every >= 12 && mm === 1 && (every === 12 || (+cal[m].slice(0, 4)) % 2 === 0))) ticks.push(m);
     }
     const ax = g.append('g').attr('class', 'axis');
     ax.append('line').attr('x1', 0).attr('x2', iw).attr('y1', ih).attr('y2', ih);
     ax.selectAll('text').data(ticks).join('text').attr('x', d => x(d)).attr('y', ih + 16).attr('text-anchor', 'middle')
-      .text(d => every >= 12 ? D.months[d].slice(0, 4) : mLabel(d));
+      .text(d => every >= 12 ? cal[d].slice(0, 4) : calLabel(cal, d));
   }
   function yGrid(g, y, iw, fmt, n = 4) {
     const gg = g.append('g').attr('class', 'grid');
@@ -514,11 +548,12 @@
   // ---------- chart: multi-line ----------
   function lineChart(el, legendEl, series, m0, m1, fmt, opts = {}) {
     const F = frame(el, { left: opts.left || 56, right: opts.right || 16, height: opts.height, aria: opts.aria });
+    const cal = opts.cal || D.months;
     const g = F.svg.append('g').attr('transform', `translate(${F.M.l},${F.M.t})`);
     const x = d3.scaleLinear().domain([m0, m1]).range([0, F.iw]);
     let vmax = 0; series.forEach(s => { for (let m = m0; m <= m1; m++) { const v = s.v[m]; if (!isNaN(v) && v > vmax) vmax = v; } });
     const y = d3.scaleLinear().domain([0, niceMax(vmax)]).range([F.ih, 0]);
-    yGrid(g, y, F.iw, opts.axisFmt || fmt); xAxisMonths(g, x, m0, m1, F.iw, F.ih);
+    yGrid(g, y, F.iw, opts.axisFmt || fmt); xAxisMonths(g, x, m0, m1, F.iw, F.ih, cal);
     const ln = d3.line().defined(m => !isNaN(series.cur.v[m])).x(m => x(m)).y(m => y(series.cur.v[m]));
     const ar = d3.area().defined(m => !isNaN(series.cur.v[m])).x(m => x(m)).y0(F.ih).y1(m => y(series.cur.v[m]));
     const months = d3.range(m0, m1 + 1);
@@ -537,7 +572,7 @@
     }
     attachCrosshair(el, g, x, m0, m1, F.ih, (m, ev) => {
       const rows = series.map(s => ({ name: s.name, color: s.color, value: fmt(s.v[m]), n: s.v[m] })).filter(r => !isNaN(r.n)).sort((a, b) => b.n - a.n);
-      showTip(ev.clientX, ev.clientY, mLabel(m, true), rows);
+      showTip(ev.clientX, ev.clientY, calLabel(cal, m, true), rows);
     });
     if (legendEl) legend(legendEl, series.length > 1 ? series.map(s => ({ name: s.name, color: s.color, line: true })) : []);
     return { months };
@@ -550,10 +585,11 @@
   // ---------- chart: stacked 100% area ----------
   function stackedShare(el, legendEl, series, m0, m1, opts = {}) {
     const F = frame(el, { left: 44, right: opts.right || 16, height: opts.height, aria: opts.aria });
+    const cal = opts.cal || D.months;
     const g = F.svg.append('g').attr('transform', `translate(${F.M.l},${F.M.t})`);
     const x = d3.scaleLinear().domain([m0, m1]).range([0, F.iw]);
     const y = d3.scaleLinear().domain([0, 1]).range([F.ih, 0]);
-    yGrid(g, y, F.iw, d => Math.round(d * 100) + '%', 4); xAxisMonths(g, x, m0, m1, F.iw, F.ih);
+    yGrid(g, y, F.iw, d => Math.round(d * 100) + '%', 4); xAxisMonths(g, x, m0, m1, F.iw, F.ih, cal);
     const months = d3.range(m0, m1 + 1);
     // bands stack from the top down in series order: rank 1 at the top, 'Others' (last) on the baseline
     const edge = months.map(() => 1);
@@ -567,7 +603,7 @@
     series.forEach(s => { const i = months.length - 1, th = y(s._lo[i]) - y(s._hi[i]); if (th >= 14 && s.name !== 'Others') g.append('text').attr('class', 'lbl-end').attr('x', x(m1) + 6).attr('y', (y(s._lo[i]) + y(s._hi[i])) / 2 + 4).text(s.short || s.name); });
     attachCrosshair(el, g, x, m0, m1, F.ih, (m, ev) => {
       const rows = series.map(s => ({ name: s.name, color: s.color, sq: true, value: fmtPct(s.f[m]) }));
-      showTip(ev.clientX, ev.clientY, mLabel(m, true), rows);
+      showTip(ev.clientX, ev.clientY, calLabel(cal, m, true), rows);
     });
     legend(legendEl, series.map(s => ({ name: s.name, color: s.color })));
   }
@@ -734,6 +770,101 @@
     });
   }
 
+  // ---------- render: UPI (NPCI) ----------
+  function rankList(el, head, items) {
+    el.replaceChildren();
+    head.forEach(h => { const d = document.createElement('div'); d.className = 'h'; d.textContent = h; el.appendChild(d); });
+    const max = Math.max(...items.map(i => i.share || 0), 1e-9);
+    items.forEach(it => {
+      const nm = document.createElement('div'); nm.className = 'nm'; const sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = it.color; nm.append(sw, it.name); nm.title = it.name;
+      const bw = document.createElement('div'); bw.className = 'barw'; const bf = document.createElement('div'); bf.className = 'barf'; bf.style.width = (it.share / max * 100).toFixed(1) + '%'; bf.style.background = it.color; bw.appendChild(bf);
+      const n1 = document.createElement('div'); n1.className = 'num'; n1.textContent = fmtPct(it.share);
+      const n2 = document.createElement('div'); n2.className = 'num'; n2.textContent = it.value;
+      const n3 = document.createElement('div'); n3.className = 'num';
+      if (it.delta !== undefined) { const dd = document.createElement('span'); dd.className = 'sub'; dd.textContent = it.pp == null ? '' : ' ' + (it.pp >= 0 ? '+' : '') + (it.pp * 100).toFixed(1) + ' pp'; n3.replaceChildren(deltaSpan(it.cur, it.prev, ''), dd); }
+      else n3.textContent = it.extra || '';
+      el.append(nm, bw, n1, n2, n3);
+    });
+  }
+  function renderUpi() {
+    const U = D.upi, sec = $('upi');
+    if (!U || !U.months || !U.months.length) { sec.hidden = true; return; }
+    sec.hidden = false;
+    const UM = U.months, n = UM.length;
+    // as-of month for UPI = the selected RBI month if NPCI has it, else the latest NPCI month at or before it
+    const want = D.months[S.asOf]; let m = UM.findIndex(x => x === want);
+    if (m < 0) { m = UM.filter(x => x <= want).length - 1; if (m < 0) m = n - 1; }
+    const len = S.range || n, m0 = Math.max(0, m - len + 1), m1 = m;
+    const uLabel = (i, long) => { const [y, mo] = UM[i].split('-'); return MON[+mo - 1] + ' ' + (long ? y : '’' + y.slice(2)); };
+    const T = U.totals, at = (arr, i) => (i < 0 || i >= n || arr[i] == null) ? NaN : arr[i];
+    $('upi-sub').textContent = `NPCI's monthly UPI statistics, ${uLabel(0, true)} to ${uLabel(n - 1, true)}. Volumes are transaction counts; values are ₹ crore.`;
+    const fmtMn = v => isNaN(v) ? '–' : fmtCount(v * 1e6), fmtCr = v => isNaN(v) ? '–' : fmtInr(v * 10);
+    const ticket = i => at(T.val, i) * 1e7 / (at(T.vol, i) * 1e6);
+    const p2mShare = i => at(T.p2m_vol, i) / at(T.vol, i);
+    const apps = U.apps || [], appTot = i => apps.reduce((s, a) => s + (a.vol[i] || 0), 0) + ((U.apps_others && U.apps_others.vol[i]) || 0);
+    const topShare = i => apps.length ? Math.max(...apps.map(a => a.vol[i] || 0)) / appTot(i) : NaN;
+    const spark = (fn) => d3.range(Math.max(0, m - 11), m + 1).map(fn);
+    const tiles = [
+      { l: 'UPI transactions in ' + uLabel(m, true), v: fmtMn(at(T.vol, m)), cur: at(T.vol, m), pm: at(T.vol, m - 1), py: at(T.vol, m - 12), sp: spark(i => at(T.vol, i)) },
+      { l: 'UPI value', v: fmtCr(at(T.val, m)), cur: at(T.val, m), pm: at(T.val, m - 1), py: at(T.val, m - 12), sp: spark(i => at(T.val, i)) },
+      { l: 'Merchant payments, share of volume', v: fmtPct(p2mShare(m)), cur: p2mShare(m), pm: p2mShare(m - 1), py: p2mShare(m - 12), sp: spark(p2mShare) },
+      { l: 'Average transaction', v: fmtRs(ticket(m)), cur: ticket(m), pm: ticket(m - 1), py: ticket(m - 12), sp: spark(ticket) },
+      { l: 'Largest app, share of customer-initiated volume', v: fmtPct(topShare(m)), cur: topShare(m), pm: topShare(m - 1), py: topShare(m - 12), sp: spark(topShare) },
+    ];
+    tiles.forEach((t, i) => {
+      $(`u${i}-l`).textContent = t.l; $(`u${i}-v`).textContent = t.v;
+      $(`u${i}-d`).replaceChildren(deltaSpan(t.cur, t.pm, 'vs ' + (m > 0 ? uLabel(m - 1) : 'prev')), deltaSpan(t.cur, t.py, 'vs ' + (m >= 12 ? uLabel(m - 12) : 'year ago')));
+      sparkline($(`u${i}-s`), t.sp, i === 0 ? css.accent : css.series[0]);
+    });
+    {
+      if (apps.length) {
+        const top = apps.slice().sort((a, b) => (b.vol[m] || 0) - (a.vol[m] || 0)).filter(a => (a.vol[m] || 0) > 0).slice(0, S.topN);
+        if (!X.upiMap) { X.upiMap = new Map(); apps.slice().sort((a, b) => (b.vol[n - 1] || 0) - (a.vol[n - 1] || 0)).slice(0, 8).forEach((a, i) => X.upiMap.set(a.n, i)); }
+        const colour = a => { if (!X.upiMap.has(a.n) && X.upiMap.size < 8) X.upiMap.set(a.n, X.upiMap.size); return X.upiMap.has(a.n) ? css.series[X.upiMap.get(a.n)] : css.others; };
+        const tot = d3.range(0, n).map(appTot);
+        const series = top.map(a => ({ name: a.n, short: a.n, color: colour(a), f: d3.range(0, n).map(i => tot[i] ? (a.vol[i] || 0) / tot[i] : NaN) }));
+        series.push({ name: 'Others', color: css.others, f: d3.range(0, n).map(i => { let s = 0; series.forEach(sr => { s += sr.f[i] || 0; }); return tot[i] ? Math.max(0, 1 - s) : NaN; }) });
+        $('ua-hint').textContent = `Share of customer-initiated UPI transactions, top ${S.topN} apps, ${uLabel(m0, true)} to ${uLabel(m1, true)}`;
+        stackedShare($('ua-chart'), $('ua-legend'), series, m0, m1, { right: 92, cal: UM, aria: 'UPI app market share over time' });
+        lazyTable($('ua-table').closest('details'), wrap => table(wrap, ['Month', ...series.map(s => s.name)], d3.range(m0, m1 + 1).reverse().map(i => [uLabel(i, true), ...series.map(s => fmtPct(s.f[i]))])));
+        $('ur-h3').textContent = `Ranking, ${uLabel(m, true)}`;
+        rankList($('ua-rank'), ['App', '', 'Share', 'Transactions', '12-m change'], top.map(a => {
+          const v = a.vol[m] || 0, vy = m >= 12 ? a.vol[m - 12] : null, sh = v / tot[m], shY = vy != null && tot[m - 12] ? vy / tot[m - 12] : null;
+          return { name: a.n, color: colour(a), share: sh, value: fmtMn(v), cur: v, prev: vy == null ? NaN : vy, delta: true, pp: shY == null ? null : sh - shY };
+        }));
+      }
+      const two = (el, leg, tb, a, b, fmt, axis) => {
+        const s = [{ name: 'Merchant (P2M)', color: css.series[0], v: a }, { name: 'Person-to-person (P2P)', color: css.series[1], v: b }];
+        lineChart($(el), $(leg), s, m0, m1, fmt, { height: 240, left: 62, right: 118, axisFmt: axis, endLabelValue: false, cal: UM, aria: 'P2P versus P2M' });
+        lazyTable($(tb).closest('details'), wrap => table(wrap, ['Month', 'P2M', 'P2P'], d3.range(m0, m1 + 1).reverse().map(i => [uLabel(i, true), fmt(a[i]), fmt(b[i])])));
+      };
+      const nn = arr => (arr || []).map(v => v == null ? NaN : v);
+      two('up-vol', 'up-vol-l', 'up-vol-t', nn(T.p2m_vol), nn(T.p2p_vol), fmtMn, v => fmtCount(v * 1e6));
+      two('up-val', 'up-val-l', 'up-val-t', nn(T.p2m_val), nn(T.p2p_val), fmtCr, v => fmtInr(v * 10).replace('₹', ''));
+      // banks (own, longer calendar since 2016)
+      if (U.banks && U.banks.length) {
+        const bn = U.bank_months.length;
+        const bwant = U.bank_months.filter(x => x <= want).length - 1, bm = bwant < 0 ? bn - 1 : bwant, b0 = Math.max(0, bm - len + 1);
+        const btot = d3.range(0, bn).map(i => U.banks.reduce((s, b) => s + (b.vol[i] || 0), 0) + ((U.banks_others.vol[i]) || 0));
+        const topB = U.banks.slice().sort((a, b) => (b.vol[bm] || 0) - (a.vol[bm] || 0)).filter(b => (b.vol[bm] || 0) > 0).slice(0, S.topN);
+        if (!X.upiBankMap) { X.upiBankMap = new Map(); U.banks.slice().sort((a, b) => (b.vol[bn - 1] || 0) - (a.vol[bn - 1] || 0)).slice(0, 8).forEach((b, i) => X.upiBankMap.set(b.n, i)); }
+        const bcol = b => { if (!X.upiBankMap.has(b.n) && X.upiBankMap.size < 8) X.upiBankMap.set(b.n, X.upiBankMap.size); return X.upiBankMap.has(b.n) ? css.series[X.upiBankMap.get(b.n)] : css.others; };
+        const bs = topB.map(b => ({ name: b.n, short: b.n.replace(/ Bank.*$/i, '').slice(0, 18), color: bcol(b), f: d3.range(0, bn).map(i => btot[i] ? (b.vol[i] || 0) / btot[i] : NaN) }));
+        bs.push({ name: 'Others', color: css.others, f: d3.range(0, bn).map(i => { let s = 0; bs.forEach(sr => { s += sr.f[i] || 0; }); return btot[i] ? Math.max(0, 1 - s) : NaN; }) });
+        const bl = (i, long) => { const [y, mo] = U.bank_months[i].split('-'); return MON[+mo - 1] + ' ' + (long ? y : '’' + y.slice(2)); };
+        $('ub-hint').textContent = `Share of UPI transactions by the customer's (remitter) bank, top ${S.topN}, ${bl(b0, true)} to ${bl(bm, true)}`;
+        stackedShare($('ub-chart'), $('ub-legend'), bs, b0, bm, { right: 92, cal: U.bank_months, aria: 'Remitter bank share of UPI volume' });
+        lazyTable($('ub-table').closest('details'), wrap => table(wrap, ['Month', ...bs.map(s => s.name)], d3.range(b0, bm + 1).reverse().map(i => [bl(i, true), ...bs.map(s => fmtPct(s.f[i]))])));
+      }
+    }
+    if (U.mcc && U.mcc.length) {
+      const [y, mo] = U.mcc_month.split('-');
+      $('um-h3').textContent = `Merchant categories, ${MON[+mo - 1]} ${y}`;
+      const tot = U.mcc.reduce((s, c) => s + (c.vol || 0), 0);
+      rankList($('um-rank'), ['Category', '', 'Share', 'Transactions', 'Value'], U.mcc.slice(0, 12).map(c => ({ name: c.n, color: css.series[0], share: (c.vol || 0) / tot, value: fmtMn(c.vol), extra: fmtCr(c.val) })));
+    }
+  }
+
   // ---------- controls ----------
   function fillControls() {
     const sel = $('asof'); sel.replaceChildren();
@@ -757,7 +888,7 @@
   }
   function renderAll() {
     readCss();
-    renderKpis(); renderShare(); renderTicket(); renderBank(); renderCountry();
+    renderKpis(); renderShare(); renderTicket(); renderBank(); renderCountry(); renderUpi();
     const last = mLabel(X.nM - 1, true);
     $('stamp').replaceChildren(); const s1 = document.createElement('div'); s1.append('Latest month '); const b1 = document.createElement('b'); b1.textContent = last; s1.appendChild(b1);
     const s2 = document.createElement('div'); s2.append('Data built '); const b2 = document.createElement('b'); b2.textContent = D.generated; s2.appendChild(b2);
