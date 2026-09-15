@@ -119,6 +119,23 @@ def build_upi():
         upi["mcc_month"] = mcc.period.max()
         upi["mcc"] = [{"n": re.sub(r"\s+", " ", str(r.description)).strip(), "code": str(r.mcc), "vol": num(r.volume_in_mn, 2), "val": num(r.value_in_cr, 2)}
                       for r in last.sort_values("volume_in_mn", ascending=False).head(15).itertuples()]
+    sw = pd.read_csv(P / "upi_statewise.csv") if (P / "upi_statewise.csv").exists() else None
+    if sw is not None and "state_union_territory" in sw:
+        st = sw[sw["district"].isna()] if "district" in sw else sw
+        st = st.copy()
+        st["_n"] = (st.state_union_territory.astype(str).str.replace(r"\s*Total\s*$", "", regex=True).str.replace("#", "")
+                    .str.replace("&", " AND ").str.replace(r"\s+", " ", regex=True).str.strip().str.upper()
+                    .replace({"ANDAMAN AND NICOBAR": "ANDAMAN AND NICOBAR ISLANDS", "NCT OF DELHI": "DELHI", "ORISSA": "ODISHA",
+                              "PONDICHERRY": "PUDUCHERRY", "UTTARANCHAL": "UTTARAKHAND"}))
+        st["volume_in_mn"] = pd.to_numeric(st.volume_in_mn, errors="coerce")
+        st["value_in_cr"] = pd.to_numeric(st.value_in_cr, errors="coerce")
+        smonths = sorted(st.period.unique())
+        names = sorted(st._n.unique())
+        piv_v = st.pivot_table(index="_n", columns="period", values="volume_in_mn", aggfunc="sum").reindex(index=names, columns=smonths)
+        piv_c = st.pivot_table(index="_n", columns="period", values="value_in_cr", aggfunc="sum").reindex(index=names, columns=smonths)
+        upi["states"] = {"months": smonths, "names": names,
+                         "vol": [[num(v, 2) for v in row] for row in piv_v.values.tolist()],
+                         "val": [[num(v, 2) for v in row] for row in piv_c.values.tolist()]}
     return upi
 
 
