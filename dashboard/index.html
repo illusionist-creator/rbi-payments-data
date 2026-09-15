@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>India Card Monitor</title>
+<meta name="description" content="Bank-wise credit and debit card market share, ticket sizes and cash-versus-payments trends from RBI's monthly statistics, April 2011 to date.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #eef0f3;
+    --surface: #ffffff;
+    --surface-2: #f6f7f9;
+    --ink: #12161c;
+    --ink-2: #4a5260;
+    --muted: #7c8595;
+    --hair: #e2e5ea;
+    --axis: #c5cbd4;
+    --accent: #8a1c3b;
+    --accent-ink: #ffffff;
+    --accent-soft: rgba(138, 28, 59, 0.08);
+    --up: #006300;
+    --down: #b3261e;
+    --others: #b9bfc9;
+    --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100;
+    --s5: #e87ba4; --s6: #008300; --s7: #4a3aa7; --s8: #e34948;
+    --shadow: 0 1px 2px rgba(18, 22, 28, 0.06), 0 8px 24px -12px rgba(18, 22, 28, 0.18);
+    --font: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0f1216; --surface: #171b22; --surface-2: #1d222a;
+      --ink: #f2f4f7; --ink-2: #b6bdc8; --muted: #7f8797;
+      --hair: #262b33; --axis: #3a404a;
+      --accent: #e0587e; --accent-ink: #12161c; --accent-soft: rgba(224, 88, 126, 0.14);
+      --up: #3fbf5a; --down: #ef7b74; --others: #4b525d;
+      --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500;
+      --s5: #d55181; --s6: #008300; --s7: #9085e9; --s8: #e66767;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px -12px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0f1216; --surface: #171b22; --surface-2: #1d222a;
+    --ink: #f2f4f7; --ink-2: #b6bdc8; --muted: #7f8797;
+    --hair: #262b33; --axis: #3a404a;
+    --accent: #e0587e; --accent-ink: #12161c; --accent-soft: rgba(224, 88, 126, 0.14);
+    --up: #3fbf5a; --down: #ef7b74; --others: #4b525d;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500;
+    --s5: #d55181; --s6: #008300; --s7: #9085e9; --s8: #e66767;
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px -12px rgba(0,0,0,0.6);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--font); font-size: 14px; line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1920px; margin: 0 auto; padding-inline: clamp(16px, 1.6vw, 32px); }
+
+  /* masthead */
+  .mast { padding-block: 22px 14px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 32px; }
+  .mast h1 { margin: 0; font-size: 30px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; text-wrap: balance; }
+  .mast .sub { margin: 6px 0 0; color: var(--ink-2); max-width: 62ch; }
+  .stamp { font-family: var(--mono); font-size: 12px; color: var(--muted); text-align: right; line-height: 1.6; }
+  .stamp b { color: var(--ink-2); font-weight: 500; }
+
+  /* filter bar */
+  .bar {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+    background: var(--surface);
+    background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(8px);
+    border-block: 1px solid var(--hair);
+  }
+  .bar .row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; padding-block: 10px; }
+  .ctl { display: flex; align-items: center; gap: 8px; }
+  .ctl > span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); white-space: nowrap; }
+  .seg { display: inline-flex; border: 1px solid var(--hair); border-radius: 8px; background: var(--surface-2); padding: 2px; }
+  .seg label { position: relative; }
+  .seg input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+  .seg span { display: block; padding: 4px 10px; border-radius: 6px; font-size: 13px; color: var(--ink-2); white-space: nowrap; cursor: pointer; }
+  .seg input:checked + span { background: var(--surface); color: var(--ink); font-weight: 500; box-shadow: 0 1px 2px rgba(0,0,0,0.12); }
+  .seg input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 1px; }
+  select {
+    font: inherit; font-size: 13px; color: var(--ink); background: var(--surface-2);
+    border: 1px solid var(--hair); border-radius: 8px; padding: 5px 28px 5px 10px; min-width: 120px;
+    appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+    background-position: calc(100% - 15px) 55%, calc(100% - 10px) 55%; background-size: 5px 5px; background-repeat: no-repeat;
+  }
+  select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  /* sections */
+  section { padding-block: 22px 6px; }
+  .sec-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; margin-bottom: 14px; }
+  .eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 600; margin: 0 0 4px; }
+  h2 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+  .sec-head p { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+  .card { background: var(--surface); border: 1px solid var(--hair); border-radius: 12px; padding: 16px 18px 12px; box-shadow: var(--shadow); min-width: 0; }
+  .card h3 { margin: 0; font-size: 14px; font-weight: 600; }
+  .card .hint { margin: 2px 0 10px; font-size: 12px; color: var(--muted); }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .grid { display: grid; gap: 16px; }
+  .g-kpi { grid-template-columns: 1.7fr repeat(4, minmax(0, 1fr)); }
+  .g-share { grid-template-columns: minmax(0, 1.55fr) minmax(300px, 1fr); }
+  .g-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .g-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .g-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  @media (max-width: 1100px) { .g-kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); } .g-kpi .hero { grid-column: 1 / -1; } .g-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 860px) { .g-share, .g-2, .g-3 { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) { .g-kpi, .g-4 { grid-template-columns: 1fr 1fr; } .g-kpi .hero { grid-column: 1 / -1; } }
+  @media (max-width: 420px) { .g-kpi, .g-4 { grid-template-columns: 1fr; } }
+
+  /* KPI tiles */
+  .tile { display: flex; flex-direction: column; gap: 6px; }
+  .tile .lbl { font-size: 12px; color: var(--ink-2); }
+  .tile .val { font-size: 26px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
+  .hero .val { font-size: 48px; }
+  .tile .deltas { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--muted); }
+  .delta { font-family: var(--mono); font-weight: 500; }
+  .delta.up { color: var(--up); } .delta.down { color: var(--down); }
+  .spark { margin-top: auto; height: 34px; width: 100%; }
+  .hero .spark { height: 56px; }
+
+  /* charts */
+  .chart { position: relative; width: 100%; }
+  .chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .chart text { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
+  .chart .lbl-end { font-family: var(--font); font-size: 11.5px; fill: var(--ink-2); font-weight: 500; }
+  .chart .grid line { stroke: var(--hair); stroke-width: 1; shape-rendering: crispEdges; }
+  .chart .axis line { stroke: var(--axis); stroke-width: 1; shape-rendering: crispEdges; }
+  .chart .xhair { stroke: var(--ink-2); stroke-width: 1; opacity: 0; pointer-events: none; }
+  .chart:hover .xhair, .chart.focus .xhair { opacity: 0.7; }
+  .chart .hit { fill: transparent; cursor: crosshair; }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 8px 0 0; padding: 0; list-style: none; font-size: 12px; color: var(--ink-2); }
+  .legend li { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .legend .lk { width: 16px; height: 2px; display: inline-block; border-radius: 1px; }
+
+  /* ranked list */
+  .rank { display: grid; grid-template-columns: minmax(110px, 1.3fr) minmax(50px, 1fr) auto auto auto; gap: 6px 10px; align-items: center; font-size: 13px; }
+  .rank .h { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); padding-bottom: 4px; border-bottom: 1px solid var(--hair); }
+  .rank .nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 8px; max-width: 220px; }
+  .rank .sw { width: 10px; height: 10px; border-radius: 2px; flex: none; }
+  .rank .barw { height: 14px; background: var(--surface-2); border-radius: 0 4px 4px 0; position: relative; }
+  .rank .barf { height: 100%; border-radius: 0 4px 4px 0; }
+  .rank .num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  .rank .sub { color: var(--muted); font-size: 11px; }
+
+  /* tables */
+  details.tbl { margin-top: 10px; border-top: 1px solid var(--hair); padding-top: 6px; }
+  details.tbl summary { cursor: pointer; font-size: 12px; color: var(--muted); user-select: none; list-style: none; display: inline-flex; gap: 6px; align-items: center; }
+  details.tbl summary::before { content: "▸"; font-size: 10px; }
+  details[open].tbl summary::before { content: "▾"; }
+  .tbl-wrap { overflow: auto; max-height: 320px; margin-top: 8px; border: 1px solid var(--hair); border-radius: 8px; }
+  table { border-collapse: collapse; font-size: 12px; font-family: var(--mono); font-variant-numeric: tabular-nums; min-width: 100%; }
+  th, td { padding: 4px 10px; text-align: right; border-bottom: 1px solid var(--hair); white-space: nowrap; }
+  th { position: sticky; top: 0; background: var(--surface-2); color: var(--ink-2); font-weight: 500; }
+  th:first-child, td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface); }
+  th:first-child { background: var(--surface-2); z-index: 1; }
+
+  /* tooltip */
+  #tip {
+    position: fixed; z-index: 50; pointer-events: none; opacity: 0; transition: opacity 80ms;
+    background: var(--surface); color: var(--ink); border: 1px solid var(--hair); border-radius: 8px;
+    box-shadow: var(--shadow); padding: 8px 10px; font-size: 12px; min-width: 150px; max-width: 320px;
+  }
+  #tip .t { font-family: var(--mono); color: var(--muted); margin-bottom: 4px; }
+  #tip .r { display: grid; grid-template-columns: 14px minmax(0, 1fr) auto; gap: 6px; align-items: center; line-height: 1.5; }
+  #tip .r .k { height: 2px; border-radius: 1px; }
+  #tip .r .k.sq { height: 10px; width: 10px; border-radius: 2px; }
+  #tip .r .n { color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #tip .r .v { font-family: var(--mono); font-weight: 500; text-align: right; }
+  #tip.on { opacity: 1; }
+
+  /* notes */
+  .notes { color: var(--ink-2); font-size: 13px; max-width: 78ch; }
+  .notes dt { font-weight: 600; color: var(--ink); margin-top: 10px; }
+  .notes dd { margin: 2px 0 0; }
+  footer { padding-block: 24px 40px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--hair); margin-top: 28px; }
+  #status { padding: 40px 0; color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<header class="wrap mast">
+  <div>
+    <p class="eyebrow">Reserve Bank of India · bank-wise card statistics</p>
+    <h1>India Card Monitor</h1>
+    <p class="sub">Who issues the cards, where the money moves and what a swipe is worth, bank by bank, every month since April 2011.</p>
+  </div>
+  <div class="stamp" id="stamp"></div>
+</header>
+
+<div class="bar">
+  <div class="wrap row" id="filters">
+    <div class="ctl"><span>Card</span>
+      <div class="seg" role="radiogroup" aria-label="Card type">
+        <label><input type="radio" name="ct" id="ct-cc" value="cc" checked><span>Credit</span></label>
+        <label><input type="radio" name="ct" id="ct-dc" value="dc"><span>Debit</span></label>
+      </div>
+    </div>
+    <div class="ctl"><span>As of</span><select id="asof" aria-label="Month"></select></div>
+    <div class="ctl"><span>Window</span>
+      <div class="seg" role="radiogroup" aria-label="Time window">
+        <label><input type="radio" name="range" id="rg-12m" value="12"><span>12 m</span></label>
+        <label><input type="radio" name="range" id="rg-3y" value="36"><span>3 y</span></label>
+        <label><input type="radio" name="range" id="rg-5y" value="60" checked><span>5 y</span></label>
+        <label><input type="radio" name="range" id="rg-all" value="0"><span>All</span></label>
+      </div>
+    </div>
+    <div class="ctl"><span>Share by</span><select id="basis" aria-label="Share basis">
+      <option value="cards">Cards outstanding</option>
+      <option value="payN">Payment transactions</option>
+      <option value="payV">Payment value</option>
+      <option value="atmV">ATM cash withdrawn</option>
+    </select></div>
+    <div class="ctl"><span>Top</span>
+      <div class="seg" role="radiogroup" aria-label="Top N banks">
+        <label><input type="radio" name="topn" id="tn-5" value="5"><span>5</span></label>
+        <label><input type="radio" name="topn" id="tn-8" value="8" checked><span>8</span></label>
+      </div>
+    </div>
+    <div class="ctl"><span>Bank type</span><select id="btype" aria-label="Bank type">
+      <option value="all">All banks</option>
+      <option value="0">Public sector</option>
+      <option value="1">Private sector</option>
+      <option value="2">Foreign</option>
+      <option value="3">Small finance</option>
+      <option value="4">Payment banks</option>
+    </select></div>
+  </div>
+</div>
+
+<main class="wrap" id="main" hidden>
+  <section id="kpis" aria-label="Headline figures">
+    <div class="grid g-kpi">
+      <div class="card tile hero"><div class="lbl" id="k0-l"></div><div class="val" id="k0-v"></div><div class="deltas" id="k0-d"></div><svg class="spark" id="k0-s"></svg></div>
+      <div class="card tile"><div class="lbl" id="k1-l"></div><div class="val" id="k1-v"></div><div class="deltas" id="k1-d"></div><svg class="spark" id="k1-s"></svg></div>
+      <div class="card tile"><div class="lbl" id="k2-l"></div><div class="val" id="k2-v"></div><div class="deltas" id="k2-d"></div><svg class="spark" id="k2-s"></svg></div>
+      <div class="card tile"><div class="lbl" id="k3-l"></div><div class="val" id="k3-v"></div><div class="deltas" id="k3-d"></div><svg class="spark" id="k3-s"></svg></div>
+      <div class="card tile"><div class="lbl" id="k4-l"></div><div class="val" id="k4-v"></div><div class="deltas" id="k4-d"></div><svg class="spark" id="k4-s"></svg></div>
+    </div>
+  </section>
+
+  <section id="share">
+    <div class="sec-head"><div><p class="eyebrow">Market share</p><h2 id="share-h2"></h2></div><p id="share-sub"></p></div>
+    <div class="grid g-share">
+      <div class="card">
+        <div class="card-head"><div><h3>Share over time</h3><p class="hint" id="share-hint"></p></div></div>
+        <div class="chart" id="share-chart"></div>
+        <ul class="legend" id="share-legend"></ul>
+        <details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="share-table"></div></details>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h3 id="rank-h3"></h3><p class="hint" id="rank-hint"></p></div></div>
+        <div class="rank" id="rank"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ticket">
+    <div class="sec-head"><div><p class="eyebrow">Ticket size</p><h2 id="ticket-h2"></h2></div>
+      <div class="ctl"><span>Measure</span><select id="tmetric" aria-label="Ticket measure">
+        <option value="spend">Monthly spend per card</option>
+        <option value="pay">Average payment</option>
+        <option value="atm">Average ATM withdrawal</option>
+      </select></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><h3 id="ticket-h3"></h3><p class="hint" id="ticket-hint"></p></div></div>
+      <div class="chart" id="ticket-chart"></div>
+      <ul class="legend" id="ticket-legend"></ul>
+      <details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="ticket-table"></div></details>
+    </div>
+  </section>
+
+  <section id="bank">
+    <div class="sec-head"><div><p class="eyebrow">Bank explorer</p><h2>One issuer, four views</h2></div>
+      <div class="ctl"><span>Bank</span><select id="bank-sel" aria-label="Bank"></select></div>
+    </div>
+    <div class="grid g-4" id="bank-grid">
+      <div class="card"><h3>Cards outstanding</h3><p class="hint" id="b0-h"></p><div class="chart" id="b0"></div><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="b0-t"></div></details></div>
+      <div class="card"><h3>Monthly card payments</h3><p class="hint" id="b1-h"></p><div class="chart" id="b1"></div><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="b1-t"></div></details></div>
+      <div class="card"><h3>Share of cards outstanding</h3><p class="hint" id="b2-h"></p><div class="chart" id="b2"></div><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="b2-t"></div></details></div>
+      <div class="card"><h3>Monthly spend per card</h3><p class="hint" id="b3-h"></p><div class="chart" id="b3"></div><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="b3-t"></div></details></div>
+    </div>
+  </section>
+
+  <section id="country">
+    <div class="sec-head"><div><p class="eyebrow">The whole market</p><h2>Cards, cash and acceptance across India</h2></div><p>National totals as published by RBI. These panels ignore the bank-type filter but follow the time window.</p></div>
+    <div class="grid g-2" style="margin-bottom:16px">
+      <div class="card"><div class="card-head"><div><h3>Card payments versus ATM cash withdrawals</h3><p class="hint">Monthly value across credit and debit cards, ₹ crore</p></div></div><div class="chart" id="c0"></div><ul class="legend" id="c0-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="c0-t"></div></details></div>
+      <div class="card"><div class="card-head"><div><h3 id="c1-h3">Cards outstanding by bank type</h3><p class="hint" id="c1-h"></p></div></div><div class="chart" id="c1"></div><ul class="legend" id="c1-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="c1-t"></div></details></div>
+    </div>
+    <div class="grid g-3" style="margin-bottom:16px">
+      <div class="card"><h3>Credit cards outstanding</h3><p class="hint" id="c2-h"></p><div class="chart" id="c2"></div><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="c2-t"></div></details></div>
+      <div class="card"><h3>Debit cards outstanding</h3><p class="hint" id="c3-h"></p><div class="chart" id="c3"></div><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="c3-t"></div></details></div>
+      <div class="card"><h3>Share of card spend on credit cards</h3><p class="hint" id="c4-h"></p><div class="chart" id="c4"></div><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="c4-t"></div></details></div>
+    </div>
+    <div class="grid g-4">
+      <div class="card"><h3>ATMs</h3><p class="hint" id="c5-h"></p><div class="chart" id="c5"></div><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="c5-t"></div></details></div>
+      <div class="card"><h3>PoS terminals</h3><p class="hint" id="c6-h"></p><div class="chart" id="c6"></div><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="c6-t"></div></details></div>
+      <div class="card"><h3>UPI QR codes</h3><p class="hint" id="c7-h"></p><div class="chart" id="c7"></div><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="c7-t"></div></details></div>
+      <div class="card"><h3>Bharat QR codes</h3><p class="hint" id="c8-h"></p><div class="chart" id="c8"></div><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="c8-t"></div></details></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sec-head"><div><p class="eyebrow">Reading the numbers</p><h2>Definitions and caveats</h2></div></div>
+    <dl class="notes">
+      <dt>Source</dt><dd>Reserve Bank of India, <em>Bank-wise ATM/POS/Card Statistics</em>, one Excel release per month. Every figure here is a bank's own monthly return to RBI, re-shaped but not adjusted.</dd>
+      <dt>Payments and cash</dt><dd>"Card payments" are transactions at PoS terminals plus online/e-commerce and other card-not-present transactions. "ATM cash" is cash withdrawn at ATMs with the card. Before March 2022 RBI reported only an "at PoS" and an "at ATM" split; from March 2022 the payments side is the sum of three published columns. Debit-card cash withdrawn at PoS (tiny) is excluded from both.</dd>
+      <dt>Units</dt><dd>Counts are in Indian notation: K = thousand, L = lakh (100,000), Cr = crore (10 million). Money is in ₹ crore; ₹1 L Cr = ₹1 lakh crore = ₹1 trillion. RBI's own unit changed from ₹ million to ₹ lakh (July 2019) to ₹ thousand (March 2022); all values are converted before display.</dd>
+      <dt>Ticket sizes</dt><dd>Monthly spend per card = card payments value ÷ cards outstanding. Average payment = payments value ÷ payment count. Average ATM withdrawal = ATM cash value ÷ ATM withdrawal count. All in rupees per transaction or per card per month.</dd>
+      <dt>Market share</dt><dd>Always a share of all banks in RBI's release for that month, even when a bank-type filter narrows which banks are listed. Colours stay attached to a bank while you change the window, month or Top N.</dd>
+      <dt>Bank names</dt><dd>RBI has spelt the same bank many different ways since 2011. Names are standardised to RBI's latest spelling, so mergers show as the surviving bank from the merger month and the absorbed banks simply end. Bank type follows RBI's own group headings, with IDBI Bank classed as private from its 2019 reclassification onward.</dd>
+      <dt>Revisions</dt><dd>RBI re-issues some months as "Revised", sometimes a year later. The data file is rebuilt from the latest release of every month whenever the updater runs.</dd>
+    </dl>
+  </section>
+  <footer id="foot"></footer>
+</main>
+<div id="status" class="wrap">Loading RBI data…</div>
+<div id="tip" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+(function () {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const CT = {
+    cc: { name: 'Credit', cards: 'cc_cards', payN: 'cc_payments_vol', payV: 'cc_payments_val_mn', atmN: 'cc_atm_vol', atmV: 'cc_atm_val_mn' },
+    dc: { name: 'Debit',  cards: 'dc_cards', payN: 'dc_payments_vol', payV: 'dc_payments_val_mn', atmN: 'dc_atm_vol', atmV: 'dc_atm_val_mn' },
+  };
+  const BASIS = {
+    cards: { label: 'cards outstanding', short: 'Cards', title: c => `${c} cards outstanding`, fmt: fmtCount, col: 'cards' },
+    payN:  { label: 'payment transactions', short: 'Payments', title: c => `${c} card payment transactions`, fmt: fmtCount, col: 'payN' },
+    payV:  { label: 'payment value', short: 'Value', title: c => `${c} card payment value`, fmt: fmtInr, col: 'payV' },
+    atmV:  { label: 'ATM cash withdrawn', short: 'ATM cash', title: c => `${c} card cash withdrawn at ATMs`, fmt: fmtInr, col: 'atmV' },
+  };
+  const TICKET = {
+    spend: { label: 'Monthly spend per card', hint: 'Card payments value ÷ cards outstanding, ₹ per card per month', num: 'payV', den: 'cards' },
+    pay:   { label: 'Average payment', hint: 'Card payments value ÷ number of payments, ₹ per transaction', num: 'payV', den: 'payN' },
+    atm:   { label: 'Average ATM withdrawal', hint: 'ATM cash value ÷ number of withdrawals, ₹ per transaction', num: 'atmV', den: 'atmN' },
+  };
+  const TYPE_NAMES = ['Public sector', 'Private sector', 'Foreign', 'Small finance', 'Payment banks', 'Other'];
+  const S = { ct: 'cc', asOf: 0, range: 60, basis: 'cards', topN: 8, type: 'all', tmetric: 'spend', bank: 0 };
+  let D = null, X = null, css = {};
+
+  // ---------- formatting ----------
+  const nfIN = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+  function fmtCount(v) {
+    if (v == null || isNaN(v)) return '–';
+    const a = Math.abs(v);
+    if (a >= 1e7) return (v / 1e7).toFixed(a >= 1e8 ? 1 : 2) + ' Cr';
+    if (a >= 1e5) return (v / 1e5).toFixed(a >= 1e6 ? 1 : 2) + ' L';
+    if (a >= 1e3) return (v / 1e3).toFixed(1) + 'K';
+    return nfIN.format(v);
+  }
+  function fmtInr(mn) {        // Rs million -> crore notation
+    if (mn == null || isNaN(mn)) return '–';
+    const cr = mn / 10, a = Math.abs(cr);
+    if (a >= 1e5) return '₹' + (cr / 1e5).toFixed(2) + ' L Cr';
+    if (a >= 1e3) return '₹' + nfIN.format(Math.round(cr)) + ' Cr';
+    if (a >= 10) return '₹' + Math.round(cr) + ' Cr';
+    return '₹' + cr.toFixed(1) + ' Cr';
+  }
+  function fmtRs(v) { return v == null || isNaN(v) ? '–' : '₹' + nfIN.format(Math.round(v)); }
+  function fmtPct(f, d = 1) { return f == null || isNaN(f) ? '–' : (f * 100).toFixed(d) + '%'; }
+  function mLabel(i, long) { const [y, m] = D.months[i].split('-'); return MON[+m - 1] + ' ' + (long ? y : '’' + y.slice(2)); }
+  function readCss() {
+    const cs = getComputedStyle(document.documentElement);
+    const g = (n) => cs.getPropertyValue(n).trim();
+    css = { series: [1,2,3,4,5,6,7,8].map(i => g('--s' + i)), others: g('--others'), ink: g('--ink'), ink2: g('--ink-2'), muted: g('--muted'), surface: g('--surface'), accent: g('--accent'), up: g('--up'), down: g('--down') };
+  }
+
+  // ---------- data prep ----------
+  function prep(data) {
+    D = data;
+    const nM = D.months.length, nB = D.banks.length, cols = D.bank_cols, mat = {};
+    cols.forEach(c => { mat[c] = new Float64Array(nB * nM).fill(NaN); });
+    for (const r of D.rows) {
+      const m = r[0], b = r[1];
+      for (let k = 0; k < cols.length; k++) { const v = r[k + 2]; if (v != null) mat[cols[k]][b * nM + m] = v; }
+    }
+    X = { nM, nB, mat, cmap: new Map() };
+    S.asOf = nM - 1;
+  }
+  const get = (col, b, m) => X.mat[col][b * X.nM + m];
+  const colOf = (key) => CT[S.ct][key];
+  function banksIn() {
+    const out = [];
+    for (let b = 0; b < X.nB; b++) if (S.type === 'all' || D.banks[b].t === +S.type) out.push(b);
+    return out;
+  }
+  function sumAll(col, m, list) {           // sum over given banks (default: every bank) at month m
+    let s = 0; const L = list || null;
+    if (L) { for (const b of L) { const v = get(col, b, m); if (!isNaN(v)) s += v; } }
+    else { for (let b = 0; b < X.nB; b++) { const v = get(col, b, m); if (!isNaN(v)) s += v; } }
+    return s;
+  }
+  function window_() { const len = S.range || X.nM; return [Math.max(0, S.asOf - len + 1), S.asOf]; }
+  function topBanks(n, basisCol, m) {
+    return banksIn().map(b => [b, get(basisCol, b, m) || 0]).filter(d => d[1] > 0).sort((a, b) => b[1] - a[1]).slice(0, n).map(d => d[0]);
+  }
+  // colour follows the bank: a slot map fixed per (card type, basis, bank-type filter) from the latest month
+  function colourMap() {
+    const key = S.ct + '|' + S.basis + '|' + S.type;
+    if (!X.cmap.has(key)) {
+      const top = topBanks(8, colOf(BASIS[S.basis].col), X.nM - 1);
+      const map = new Map(); top.forEach((b, i) => map.set(b, i));
+      X.cmap.set(key, map);
+    }
+    return X.cmap.get(key);
+  }
+  const bankColour = (b, map) => {
+    if (!map.has(b) && map.size < 8) map.set(b, map.size);     // a newcomer takes the next free slot and keeps it
+    return map.has(b) ? css.series[map.get(b)] : css.others;
+  };
+  const bankName = (b) => D.banks[b].n.replace(/\bLTD\b\.?/g, '').replace(/\s+/g, ' ').trim()
+    .toLowerCase().replace(/\b[a-z]/g, c => c.toUpperCase()).replace(/\b(Hdfc|Icici|Idbi|Idfc|Rbl|Dcb|Csb|Uco|Sbm|Dbs|Hsbc|Au|Esaf|Nsdl|Sbi|Keb|Rbs)\b/g, s => s.toUpperCase())
+    .replace(/\bOf\b/g, 'of').replace(/\bAnd\b/g, 'and').replace(/\bN V\b/, 'NV').replace(/\bPlc\b/, 'PLC');
+
+  // ---------- tooltip ----------
+  const tip = $('tip');
+  function showTip(x, y, title, rows) {
+    tip.replaceChildren();
+    const t = document.createElement('div'); t.className = 't'; t.textContent = title; tip.appendChild(t);
+    for (const r of rows) {
+      const d = document.createElement('div'); d.className = 'r';
+      const k = document.createElement('span'); k.className = 'k' + (r.sq ? ' sq' : ''); k.style.background = r.color || 'transparent';
+      const n = document.createElement('span'); n.className = 'n'; n.textContent = r.name;
+      const v = document.createElement('span'); v.className = 'v'; v.textContent = r.value;
+      d.append(k, n, v); tip.appendChild(d);
+    }
+    tip.classList.add('on');
+    const W = tip.offsetWidth, H = tip.offsetHeight, vw = window.innerWidth, vh = window.innerHeight;
+    let L = x + 14, T = y + 14;
+    if (L + W > vw - 8) L = x - W - 14;
+    if (T + H > vh - 8) T = Math.max(8, y - H - 14);
+    tip.style.left = L + 'px'; tip.style.top = T + 'px';
+  }
+  function hideTip() { tip.classList.remove('on'); }
+
+  // ---------- table view ----------
+  function table(el, head, rows) {
+    el.replaceChildren();
+    const t = document.createElement('table'), th = document.createElement('thead'), tb = document.createElement('tbody');
+    const hr = document.createElement('tr');
+    head.forEach(h => { const c = document.createElement('th'); c.textContent = h; hr.appendChild(c); });
+    th.appendChild(hr);
+    rows.forEach(r => { const tr = document.createElement('tr'); r.forEach(v => { const c = document.createElement('td'); c.textContent = v; tr.appendChild(c); }); tb.appendChild(tr); });
+    t.append(th, tb); el.appendChild(t);
+  }
+  function lazyTable(detailsEl, build) {
+    const wrap = detailsEl.querySelector('.tbl-wrap');
+    wrap.replaceChildren();
+    detailsEl.onToggle = build;
+    detailsEl.ontoggle = () => { if (detailsEl.open) build(wrap); };
+    if (detailsEl.open) build(wrap);
+  }
+
+  // ---------- generic SVG chart frame ----------
+  function frame(el, opts) {
+    const width = Math.max(240, el.clientWidth || 600);
+    const height = opts.height || Math.max(180, Math.min(320, Math.round(width * 0.42)));
+    const M = Object.assign({ t: 12, r: opts.right || 16, b: 26, l: opts.left || 48 }, opts.margin || {});
+    el.replaceChildren();
+    const svg = d3.select(el).append('svg').attr('viewBox', `0 0 ${width} ${height}`).attr('width', width).attr('height', height)
+      .attr('role', 'img').attr('aria-label', opts.aria || '');
+    return { svg, width, height, M, iw: width - M.l - M.r, ih: height - M.t - M.b };
+  }
+  function xAxisMonths(g, x, m0, m1, iw, ih) {
+    const span = m1 - m0 + 1, every = span <= 14 ? 1 : span <= 40 ? 3 : span <= 80 ? 12 : span <= 130 ? 12 : 24;
+    const ticks = [];
+    for (let m = m0; m <= m1; m++) {
+      const mm = +D.months[m].slice(5);
+      if (every === 1 || (every === 3 && (mm - 1) % 3 === 0) || (every >= 12 && mm === 1 && (every === 12 || (+D.months[m].slice(0, 4)) % 2 === 0))) ticks.push(m);
+    }
+    const ax = g.append('g').attr('class', 'axis');
+    ax.append('line').attr('x1', 0).attr('x2', iw).attr('y1', ih).attr('y2', ih);
+    ax.selectAll('text').data(ticks).join('text').attr('x', d => x(d)).attr('y', ih + 16).attr('text-anchor', 'middle')
+      .text(d => every >= 12 ? D.months[d].slice(0, 4) : mLabel(d));
+  }
+  function yGrid(g, y, iw, fmt, n = 4) {
+    const gg = g.append('g').attr('class', 'grid');
+    const ticks = y.ticks(n);
+    gg.selectAll('line').data(ticks).join('line').attr('x1', 0).attr('x2', iw).attr('y1', d => y(d)).attr('y2', d => y(d));
+    gg.selectAll('text').data(ticks).join('text').attr('x', -6).attr('y', d => y(d) + 3.5).attr('text-anchor', 'end').text(d => fmt(d));
+  }
+  function niceMax(v) { return v <= 0 ? 1 : d3.nice(0, v * 1.04, 4)[1]; }
+  function attachCrosshair(el, g, x, m0, m1, ih, onMove) {
+    const line = g.append('line').attr('class', 'xhair').attr('y1', 0).attr('y2', ih);
+    const hit = g.append('rect').attr('class', 'hit').attr('width', x(m1) - x(m0) + 20).attr('x', x(m0) - 10).attr('height', ih).attr('tabindex', 0);
+    let cur = m1;
+    const update = (m, ev) => { cur = m; line.attr('x1', x(m)).attr('x2', x(m)); onMove(m, ev); };
+    hit.on('pointermove', (ev) => { const [px] = d3.pointer(ev, g.node()); const m = Math.round(x.invert(px)); update(Math.max(m0, Math.min(m1, m)), ev); })
+      .on('pointerleave', () => { hideTip(); el.classList.remove('focus'); })
+      .on('focus', () => { el.classList.add('focus'); const r = el.getBoundingClientRect(); update(cur, { clientX: r.left + x(cur) + 48, clientY: r.top + 20 }); })
+      .on('blur', () => { hideTip(); el.classList.remove('focus'); })
+      .on('keydown', (ev) => { if (ev.key === 'ArrowLeft' || ev.key === 'ArrowRight') { ev.preventDefault(); const m = Math.max(m0, Math.min(m1, cur + (ev.key === 'ArrowLeft' ? -1 : 1))); const r = el.getBoundingClientRect(); update(m, { clientX: r.left + x(m) + 48, clientY: r.top + 20 }); } });
+  }
+
+  // ---------- chart: multi-line ----------
+  function lineChart(el, legendEl, series, m0, m1, fmt, opts = {}) {
+    const F = frame(el, { left: opts.left || 56, right: opts.right || 16, height: opts.height, aria: opts.aria });
+    const g = F.svg.append('g').attr('transform', `translate(${F.M.l},${F.M.t})`);
+    const x = d3.scaleLinear().domain([m0, m1]).range([0, F.iw]);
+    let vmax = 0; series.forEach(s => { for (let m = m0; m <= m1; m++) { const v = s.v[m]; if (!isNaN(v) && v > vmax) vmax = v; } });
+    const y = d3.scaleLinear().domain([0, niceMax(vmax)]).range([F.ih, 0]);
+    yGrid(g, y, F.iw, opts.axisFmt || fmt); xAxisMonths(g, x, m0, m1, F.iw, F.ih);
+    const ln = d3.line().defined(m => !isNaN(series.cur.v[m])).x(m => x(m)).y(m => y(series.cur.v[m]));
+    const ar = d3.area().defined(m => !isNaN(series.cur.v[m])).x(m => x(m)).y0(F.ih).y1(m => y(series.cur.v[m]));
+    const months = d3.range(m0, m1 + 1);
+    series.forEach(s => {
+      series.cur = s;
+      if (opts.area && series.length === 1) g.append('path').attr('d', ar(months)).attr('fill', s.color).attr('opacity', 0.1);
+      g.append('path').attr('d', ln(months)).attr('fill', 'none').attr('stroke', s.color).attr('stroke-width', s.width || 2).attr('stroke-linejoin', 'round').attr('stroke-linecap', 'round');
+    });
+    // end markers + selective end labels (top 3 by end value, no collisions)
+    const ends = series.map(s => { let m = m1; while (m >= m0 && isNaN(s.v[m])) m--; return { s, m, v: m >= m0 ? s.v[m] : NaN }; }).filter(e => !isNaN(e.v));
+    ends.forEach(e => g.append('circle').attr('cx', x(e.m)).attr('cy', y(e.v)).attr('r', 4).attr('fill', e.s.color).attr('stroke', css.surface).attr('stroke-width', 2));
+    if (opts.endLabels !== false) {
+      const cand = ends.slice().sort((a, b) => b.v - a.v).slice(0, series.length === 1 ? 1 : 3).sort((a, b) => y(a.v) - y(b.v));
+      let lastY = -99;
+      cand.forEach(e => { const yy = y(e.v); if (yy - lastY >= 13) { g.append('text').attr('class', 'lbl-end').attr('x', x(e.m) + 8).attr('y', yy + 4).text(series.length === 1 ? fmt(e.v) : (opts.endLabelValue ? fmt(e.v) : e.s.short || e.s.name)); lastY = yy; } });
+    }
+    attachCrosshair(el, g, x, m0, m1, F.ih, (m, ev) => {
+      const rows = series.map(s => ({ name: s.name, color: s.color, value: fmt(s.v[m]), n: s.v[m] })).filter(r => !isNaN(r.n)).sort((a, b) => b.n - a.n);
+      showTip(ev.clientX, ev.clientY, mLabel(m, true), rows);
+    });
+    if (legendEl) legend(legendEl, series.length > 1 ? series.map(s => ({ name: s.name, color: s.color, line: true })) : []);
+    return { months };
+  }
+  function legend(el, items) {
+    el.replaceChildren();
+    items.forEach(it => { const li = document.createElement('li'); const sw = document.createElement('span'); sw.className = it.line ? 'lk' : 'sw'; sw.style.background = it.color; const t = document.createElement('span'); t.textContent = it.name; li.append(sw, t); el.appendChild(li); });
+  }
+
+  // ---------- chart: stacked 100% area ----------
+  function stackedShare(el, legendEl, series, m0, m1, opts = {}) {
+    const F = frame(el, { left: 44, right: opts.right || 16, height: opts.height, aria: opts.aria });
+    const g = F.svg.append('g').attr('transform', `translate(${F.M.l},${F.M.t})`);
+    const x = d3.scaleLinear().domain([m0, m1]).range([0, F.iw]);
+    const y = d3.scaleLinear().domain([0, 1]).range([F.ih, 0]);
+    yGrid(g, y, F.iw, d => Math.round(d * 100) + '%', 4); xAxisMonths(g, x, m0, m1, F.iw, F.ih);
+    const months = d3.range(m0, m1 + 1);
+    // bands stack from the top down in series order: rank 1 at the top, 'Others' (last) on the baseline
+    const edge = months.map(() => 1);
+    series.forEach(s => {
+      const hi = edge.slice(), lo = months.map((m, i) => Math.max(0, edge[i] - (s.f[m] || 0)));
+      const area = d3.area().x((m, i) => x(m)).y0((m, i) => y(lo[i])).y1((m, i) => y(hi[i]));
+      g.append('path').attr('d', area(months)).attr('fill', s.color).attr('stroke', css.surface).attr('stroke-width', 1.5).attr('stroke-linejoin', 'round');
+      s._lo = lo; s._hi = hi; lo.forEach((v, i) => { edge[i] = v; });
+    });
+    // in-band end labels where the band is thick enough
+    series.forEach(s => { const i = months.length - 1, th = y(s._lo[i]) - y(s._hi[i]); if (th >= 14 && s.name !== 'Others') g.append('text').attr('class', 'lbl-end').attr('x', x(m1) + 6).attr('y', (y(s._lo[i]) + y(s._hi[i])) / 2 + 4).text(s.short || s.name); });
+    attachCrosshair(el, g, x, m0, m1, F.ih, (m, ev) => {
+      const rows = series.map(s => ({ name: s.name, color: s.color, sq: true, value: fmtPct(s.f[m]) }));
+      showTip(ev.clientX, ev.clientY, mLabel(m, true), rows);
+    });
+    legend(legendEl, series.map(s => ({ name: s.name, color: s.color })));
+  }
+
+  // ---------- sparkline ----------
+  function sparkline(svgEl, values, color) {
+    const W = svgEl.clientWidth || 200, H = svgEl.clientHeight || 34;
+    const svg = d3.select(svgEl).attr('viewBox', `0 0 ${W} ${H}`).attr('preserveAspectRatio', 'none');
+    svg.selectAll('*').remove();
+    const vals = values.filter(v => !isNaN(v)); if (vals.length < 2) return;
+    const x = d3.scaleLinear().domain([0, values.length - 1]).range([2, W - 6]);
+    const y = d3.scaleLinear().domain([Math.min(...vals) * 0.98, Math.max(...vals) * 1.02]).range([H - 4, 4]);
+    const line = d3.line().defined(v => !isNaN(v)).x((v, i) => x(i)).y(v => y(v));
+    const area = d3.area().defined(v => !isNaN(v)).x((v, i) => x(i)).y0(H - 2).y1(v => y(v));
+    svg.append('path').attr('d', area(values)).attr('fill', color).attr('opacity', 0.1);
+    svg.append('path').attr('d', line(values)).attr('fill', 'none').attr('stroke', css.others).attr('stroke-width', 1.5);
+    const last = values.length - 1;
+    svg.append('path').attr('d', line(values.map((v, i) => i >= last - 1 ? v : NaN))).attr('fill', 'none').attr('stroke', color).attr('stroke-width', 2);
+    svg.append('circle').attr('cx', x(last)).attr('cy', y(values[last])).attr('r', 3.5).attr('fill', color).attr('stroke', css.surface).attr('stroke-width', 2);
+  }
+
+  // ---------- render: KPIs ----------
+  function deltaSpan(cur, prev, label, pct = true) {
+    const s = document.createElement('span');
+    if (prev == null || isNaN(prev) || prev === 0 || cur == null || isNaN(cur)) { s.textContent = '– ' + label; return s; }
+    const d = cur / prev - 1;
+    const b = document.createElement('span'); b.className = 'delta ' + (d > 0.0005 ? 'up' : d < -0.0005 ? 'down' : '');
+    b.textContent = (d > 0 ? '▲' : d < 0 ? '▼' : '') + ' ' + (Math.abs(d) * 100).toFixed(1) + '%';
+    s.append(b, ' ' + label); return s;
+  }
+  function renderKpis() {
+    const list = banksIn(), m = S.asOf, c = CT[S.ct];
+    const series = (col, fn) => d3.range(Math.max(0, m - 11), m + 1).map(mm => fn ? fn(mm) : sumAll(col, mm, list));
+    const at = (col, mm) => mm < 0 ? NaN : sumAll(col, mm, list);
+    const issuing = list.filter(b => (get(c.cards, b, m) || 0) > 0).length;
+    const tiles = [
+      { l: `${c.name} cards outstanding · ${issuing} issuing banks`, v: fmtCount(at(c.cards, m)), cur: at(c.cards, m), pm: at(c.cards, m - 1), py: at(c.cards, m - 12), sp: series(c.cards) },
+      { l: 'Card payments this month', v: fmtInr(at(c.payV, m)), cur: at(c.payV, m), pm: at(c.payV, m - 1), py: at(c.payV, m - 12), sp: series(c.payV) },
+      { l: 'Payment transactions', v: fmtCount(at(c.payN, m)), cur: at(c.payN, m), pm: at(c.payN, m - 1), py: at(c.payN, m - 12), sp: series(c.payN) },
+      { l: 'Average payment', v: fmtRs(at(c.payV, m) * 1e6 / at(c.payN, m)), cur: at(c.payV, m) / at(c.payN, m), pm: at(c.payV, m - 1) / at(c.payN, m - 1), py: at(c.payV, m - 12) / at(c.payN, m - 12), sp: series(null, mm => sumAll(c.payV, mm, list) / sumAll(c.payN, mm, list)) },
+      { l: 'Cash withdrawn at ATMs', v: fmtInr(at(c.atmV, m)), cur: at(c.atmV, m), pm: at(c.atmV, m - 1), py: at(c.atmV, m - 12), sp: series(c.atmV) },
+    ];
+    tiles.forEach((t, i) => {
+      $(`k${i}-l`).textContent = t.l; $(`k${i}-v`).textContent = t.v;
+      const d = $(`k${i}-d`); d.replaceChildren(deltaSpan(t.cur, t.pm, 'vs ' + (m > 0 ? mLabel(m - 1) : 'prev')), deltaSpan(t.cur, t.py, 'vs ' + (m >= 12 ? mLabel(m - 12) : 'year ago')));
+      sparkline($(`k${i}-s`), t.sp, i === 0 ? css.accent : css.series[0]);
+    });
+  }
+
+  // ---------- render: market share ----------
+  function renderShare() {
+    const c = CT[S.ct], B = BASIS[S.basis], col = c[B.col], [m0, m1] = window_(), m = S.asOf;
+    const map = colourMap(), top = topBanks(S.topN, col, m);
+    $('share-h2').textContent = `${B.title(c.name)}: share by bank`;
+    $('share-sub').textContent = `Top ${S.topN} banks by ${B.label} in ${mLabel(m, true)}${S.type === 'all' ? '' : ' among ' + TYPE_NAMES[+S.type].toLowerCase() + ' banks'}; every share is of all banks in that month.`;
+    $('share-hint').textContent = `Share of ${B.label}, ${mLabel(m0, true)} to ${mLabel(m1, true)}`;
+    const totals = d3.range(0, X.nM).map(mm => sumAll(col, mm));
+    const series = top.map(b => ({ name: bankName(b), short: shortName(b), color: bankColour(b, map), f: d3.range(0, X.nM).map(mm => totals[mm] ? (get(col, b, mm) || 0) / totals[mm] : NaN) }));
+    series.push({ name: 'Others', color: css.others, f: d3.range(0, X.nM).map(mm => { let s = 0; series.forEach(sr => { s += sr.f[mm] || 0; }); return totals[mm] ? Math.max(0, 1 - s) : NaN; }) });
+    stackedShare($('share-chart'), $('share-legend'), series, m0, m1, { right: 92, aria: `Stacked area of ${c.name.toLowerCase()} card ${B.label} share by bank` });
+    lazyTable($('share-table').closest('details'), wrap => table(wrap, ['Month', ...series.map(s => s.name)], d3.range(m0, m1 + 1).reverse().map(mm => [mLabel(mm, true), ...series.map(s => fmtPct(s.f[mm]))])));
+    // ranked list
+    $('rank-h3').textContent = `Ranking, ${mLabel(m, true)}`;
+    $('rank-hint').textContent = `${B.label[0].toUpperCase() + B.label.slice(1)} with share of all banks and change over 12 months`;
+    const el = $('rank'); el.replaceChildren();
+    ['Bank', '', 'Share', B.short, '12-m change'].forEach(h => { const d = document.createElement('div'); d.className = 'h'; d.textContent = h; el.appendChild(d); });
+    const tot = totals[m], totY = m >= 12 ? totals[m - 12] : NaN;
+    const maxShare = top.length ? (get(col, top[0], m) || 0) / tot : 1;
+    top.forEach(b => {
+      const v = get(col, b, m) || 0, sh = v / tot, vy = m >= 12 ? get(col, b, m - 12) : NaN, shY = isNaN(vy) || !totY ? NaN : vy / totY;
+      const nm = document.createElement('div'); nm.className = 'nm'; const sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = bankColour(b, map); nm.append(sw, bankName(b)); nm.title = D.banks[b].n;
+      const bw = document.createElement('div'); bw.className = 'barw'; const bf = document.createElement('div'); bf.className = 'barf'; bf.style.width = (sh / maxShare * 100).toFixed(1) + '%'; bf.style.background = bankColour(b, map); bw.appendChild(bf);
+      const n1 = document.createElement('div'); n1.className = 'num'; n1.textContent = fmtPct(sh);
+      const n2 = document.createElement('div'); n2.className = 'num'; n2.textContent = B.fmt(v);
+      const dd = document.createElement('span'); dd.className = 'sub'; dd.textContent = isNaN(shY) ? '' : ' ' + (sh - shY >= 0 ? '+' : '') + ((sh - shY) * 100).toFixed(1) + ' pp';
+      const n3 = document.createElement('div'); n3.className = 'num'; n3.replaceChildren(deltaSpan(v, vy, ''), dd);
+      el.append(nm, bw, n1, n2, n3);
+    });
+  }
+  const SHORT = { 'STATE BANK OF INDIA': 'SBI', 'PUNJAB NATIONAL BANK': 'PNB', 'BANK OF BARODA': 'BoB', 'BANK OF INDIA': 'BoI', 'UNION BANK OF INDIA': 'Union Bank',
+    'CENTRAL BANK OF INDIA': 'Central Bank', 'INDIAN OVERSEAS BANK': 'IOB', 'PUNJAB AND SIND BANK': 'P&S Bank', 'KOTAK MAHINDRA BANK LTD': 'Kotak', 'INDUSIND BANK LTD': 'IndusInd',
+    'STANDARD CHARTERED BANK LTD': 'StanChart', 'AMERICAN EXPRESS BANKING CORPORATION': 'Amex', 'IDFC FIRST BANK LTD': 'IDFC First', 'PAYTM PAYMENTS BANK': 'Paytm PB',
+    'AIRTEL PAYMENTS BANK': 'Airtel PB', 'INDIA POST PAYMENTS BANK': 'IPPB', 'FINO PAYMENTS BANK': 'Fino PB', 'JIO PAYMENTS BANK': 'Jio PB', 'NSDL PAYMENTS BANK': 'NSDL PB',
+    'STATE BANK OF BIKANER AND JAIPUR': 'SBBJ', 'STATE BANK OF HYDERABAD': 'SBH', 'STATE BANK OF MYSORE': 'SBM', 'STATE BANK OF PATIALA': 'SBP', 'STATE BANK OF TRAVANCORE': 'SBT',
+    'ORIENTAL BANK OF COMMERCE': 'OBC', 'JAMMU AND KASHMIR BANK LTD': 'J&K Bank', 'TAMILNAD MERCANTILE BANK LTD': 'TMB', 'KARUR VYSYA BANK LTD': 'KVB', 'CITY UNION BANK LTD': 'CUB',
+    'SOUTH INDIAN BANK': 'South Indian', 'BANK OF MAHARASHTRA': 'Maharashtra', 'ROYAL BANK OF SCOTLAND N V': 'RBS', 'DBS INDIA BANK LTD': 'DBS', 'DEUTSCHE BANK LTD': 'Deutsche', 'BARCLAYS BANK PLC': 'Barclays' };
+  function shortName(b) {
+    const raw = D.banks[b].n; if (SHORT[raw]) return SHORT[raw];
+    const n = bankName(b);
+    if (n.length <= 14) return n;
+    return n.replace(/ Small Finance Bank$/, ' SFB').replace(/ Payments Bank$/, ' PB').replace(/^(\S+) Bank$/, '$1').replace(/ Bank$/, '');
+  }
+
+  // ---------- render: ticket size ----------
+  function renderTicket() {
+    const c = CT[S.ct], T = TICKET[S.tmetric], [m0, m1] = window_(), m = S.asOf, col = c[BASIS[S.basis].col];
+    const map = colourMap(), top = topBanks(S.topN, col, m);
+    $('ticket-h2').textContent = `${T.label.toLowerCase()[0].toUpperCase() + T.label.slice(1)} on ${c.name.toLowerCase()} cards`;
+    $('ticket-h3').textContent = `${T.label} for the top ${S.topN} banks`;
+    $('ticket-hint').textContent = T.hint + '. "All banks" is the market-wide figure.';
+    const list = banksIn();
+    const ratio = (b, mm) => { const n = get(c[T.num], b, mm), d = get(c[T.den], b, mm); return d > 0 && !isNaN(n) ? n * 1e6 / d : NaN; };
+    const series = top.map(b => ({ name: bankName(b), short: shortName(b), color: bankColour(b, map), v: d3.range(0, X.nM).map(mm => ratio(b, mm)) }));
+    series.push({ name: 'All banks', color: css.ink2, width: 2.5, v: d3.range(0, X.nM).map(mm => { const n = sumAll(c[T.num], mm), d = sumAll(c[T.den], mm); return d > 0 ? n * 1e6 / d : NaN; }) });
+    lineChart($('ticket-chart'), $('ticket-legend'), series, m0, m1, fmtRs, { right: 96, height: 340, aria: `${T.label} by bank over time`, axisFmt: v => '₹' + fmtCount(v) });
+    lazyTable($('ticket-table').closest('details'), wrap => table(wrap, ['Month', ...series.map(s => s.name)], d3.range(m0, m1 + 1).reverse().map(mm => [mLabel(mm, true), ...series.map(s => fmtRs(s.v[mm]))])));
+  }
+
+  // ---------- render: bank explorer ----------
+  function renderBank() {
+    const c = CT[S.ct], b = S.bank, [m0, m1] = window_();
+    const colour = css.series[0];
+    const totals = d3.range(0, X.nM).map(mm => sumAll(c.cards, mm));
+    const panels = [
+      { el: 'b0', hint: `${c.name} cards outstanding, month end`, fmt: fmtCount, v: mm => get(c.cards, b, mm) },
+      { el: 'b1', hint: `${c.name} card payments value, ₹ crore per month`, fmt: fmtInr, v: mm => get(c.payV, b, mm), axis: v => fmtInr(v).replace('₹', ''), left: 66 },
+      { el: 'b2', hint: `Share of all ${c.name.toLowerCase()} cards outstanding`, fmt: v => fmtPct(v), v: mm => totals[mm] ? (get(c.cards, b, mm) || NaN) / totals[mm] : NaN, axis: v => Math.round(v * 1000) / 10 + '%' },
+      { el: 'b3', hint: `Payments value ÷ cards outstanding, ₹ per card per month`, fmt: fmtRs, v: mm => { const n = get(c.payV, b, mm), d = get(c.cards, b, mm); return d > 0 ? n * 1e6 / d : NaN; }, axis: v => '₹' + fmtCount(v) },
+    ];
+    panels.forEach(p => {
+      $(p.el + '-h').textContent = p.hint;
+      const s = { name: bankName(b), color: colour, v: d3.range(0, X.nM).map(p.v) };
+      lineChart($(p.el), null, [s], m0, m1, p.fmt, { area: true, height: 190, left: p.left || 52, right: 70, axisFmt: p.axis || p.fmt, aria: p.hint });
+      lazyTable($(p.el + '-t').closest('details'), wrap => table(wrap, ['Month', bankName(b)], d3.range(m0, m1 + 1).reverse().map(mm => [mLabel(mm, true), p.fmt(s.v[mm])])));
+    });
+  }
+
+  // ---------- render: country ----------
+  function renderCountry() {
+    const [m0, m1] = window_(), N = D.national, c = CT[S.ct];
+    const arr = (k) => (N[k] || []).map(v => v == null ? NaN : v);
+    const add = (a, b) => a.map((v, i) => (isNaN(v) ? 0 : v) + (isNaN(b[i]) ? 0 : b[i]));
+    const pay = add(arr('cc_payments_val_mn'), arr('dc_payments_val_mn')), cash = add(arr('cc_atm_val_mn'), arr('dc_atm_val_mn'));
+    lineChart($('c0'), $('c0-l'), [
+      { name: 'Card payments', color: css.series[0], v: pay },
+      { name: 'ATM cash withdrawals', color: css.series[1], v: cash },
+    ], m0, m1, fmtInr, { height: 260, left: 68, right: 110, axisFmt: v => fmtInr(v).replace('₹', ''), aria: 'Card payments versus ATM cash withdrawals', endLabelValue: false });
+    lazyTable($('c0-t').closest('details'), wrap => table(wrap, ['Month', 'Card payments', 'ATM cash'], d3.range(m0, m1 + 1).reverse().map(mm => [mLabel(mm, true), fmtInr(pay[mm]), fmtInr(cash[mm])])));
+    // by bank type (stacked share of selected card type)
+    $('c1-h3').textContent = `${c.name} cards outstanding by bank type`;
+    $('c1-h').textContent = 'Share of all cards, by RBI bank group';
+    const tot = d3.range(0, X.nM).map(mm => sumAll(c.cards, mm));
+    const byType = [0, 1, 2, 3, 4].map(t => { const list = []; for (let b = 0; b < X.nB; b++) if (D.banks[b].t === t) list.push(b); return { name: TYPE_NAMES[t], color: css.series[t], f: d3.range(0, X.nM).map(mm => tot[mm] ? sumAll(c.cards, mm, list) / tot[mm] : NaN) }; });
+    stackedShare($('c1'), $('c1-l'), byType, m0, m1, { height: 260, right: 90, aria: 'Cards outstanding by bank type' });
+    lazyTable($('c1-t').closest('details'), wrap => table(wrap, ['Month', ...byType.map(s => s.name)], d3.range(m0, m1 + 1).reverse().map(mm => [mLabel(mm, true), ...byType.map(s => fmtPct(s.f[mm]))])));
+    // small multiples
+    const ccCards = arr('cc_cards'), dcCards = arr('dc_cards');
+    const ccShare = arr('cc_payments_val_mn').map((v, i) => pay[i] ? v / pay[i] : NaN);
+    const atms = add(arr('atm_onsite'), arr('atm_offsite'));
+    const sm = [
+      { el: 'c2', hint: 'All banks, month end', v: ccCards, fmt: fmtCount },
+      { el: 'c3', hint: 'All banks, month end', v: dcCards, fmt: fmtCount },
+      { el: 'c4', hint: 'Credit card payments as a share of all card payments value', v: ccShare, fmt: v => fmtPct(v), axis: v => Math.round(v * 100) + '%' },
+      { el: 'c5', hint: 'On-site and off-site ATMs and cash recyclers', v: atms, fmt: fmtCount },
+      { el: 'c6', hint: 'Point-of-sale terminals deployed', v: arr('pos_terminals'), fmt: fmtCount },
+      { el: 'c7', hint: 'Bank-issued UPI QR codes, reported since March 2022', v: arr('upi_qr'), fmt: fmtCount },
+      { el: 'c8', hint: 'Bharat QR codes, reported since May 2020', v: arr('bharat_qr'), fmt: fmtCount },
+    ];
+    sm.forEach(p => {
+      $(p.el + '-h').textContent = p.hint;
+      const s = { name: 'All banks', color: css.series[0], v: p.v };
+      lineChart($(p.el), null, [s], m0, m1, p.fmt, { area: true, height: 170, left: 50, right: 64, axisFmt: p.axis || p.fmt, aria: p.hint });
+      lazyTable($(p.el + '-t').closest('details'), wrap => table(wrap, ['Month', 'Value'], d3.range(m0, m1 + 1).reverse().map(mm => [mLabel(mm, true), p.fmt(p.v[mm])])));
+    });
+  }
+
+  // ---------- controls ----------
+  function fillControls() {
+    const sel = $('asof'); sel.replaceChildren();
+    for (let m = X.nM - 1; m >= 0; m--) { const o = document.createElement('option'); o.value = m; o.textContent = mLabel(m, true); sel.appendChild(o); }
+    sel.value = S.asOf;
+    const bs = $('bank-sel'); bs.replaceChildren();
+    D.banks.map((b, i) => [bankName(i), i]).sort((a, b) => a[0].localeCompare(b[0])).forEach(([n, i]) => { const o = document.createElement('option'); o.value = i; o.textContent = n + (D.banks[i].to === D.months[X.nM - 1] ? '' : ` (to ${D.banks[i].to})`); bs.appendChild(o); });
+    S.bank = topBanks(1, colOf('cards'), X.nM - 1)[0] || 0; bs.value = S.bank;
+    $('filters').addEventListener('change', (e) => {
+      const t = e.target; if (!t.name && !t.id) return;
+      if (t.name === 'ct') S.ct = t.value;
+      else if (t.name === 'range') S.range = +t.value;
+      else if (t.name === 'topn') S.topN = +t.value;
+      else if (t.id === 'asof') S.asOf = +t.value;
+      else if (t.id === 'basis') S.basis = t.value;
+      else if (t.id === 'btype') S.type = t.value;
+      renderAll();
+    });
+    $('tmetric').addEventListener('change', (e) => { S.tmetric = e.target.value; renderTicket(); });
+    bs.addEventListener('change', (e) => { S.bank = +e.target.value; renderBank(); });
+  }
+  function renderAll() {
+    readCss();
+    renderKpis(); renderShare(); renderTicket(); renderBank(); renderCountry();
+    const last = mLabel(X.nM - 1, true);
+    $('stamp').replaceChildren(); const s1 = document.createElement('div'); s1.append('Latest month '); const b1 = document.createElement('b'); b1.textContent = last; s1.appendChild(b1);
+    const s2 = document.createElement('div'); s2.append('Data built '); const b2 = document.createElement('b'); b2.textContent = D.generated; s2.appendChild(b2);
+    const s3 = document.createElement('div'); s3.textContent = `${X.nM} months · ${X.nB} banks`;
+    $('stamp').append(s1, s2, s3);
+    $('foot').textContent = `Source: ${D.source}. Values converted to a common unit; bank names standardised. Rebuilt ${D.generated}.`;
+  }
+
+  // ---------- boot ----------
+  async function boot() {
+    let data = window.__DATA__;
+    if (!data) {
+      try { const r = await fetch('data.json', { cache: 'no-cache' }); if (!r.ok) throw new Error('HTTP ' + r.status); data = await r.json(); }
+      catch (e) { $('status').textContent = 'Could not load data.json (' + e.message + '). Run scripts/update.py to rebuild it, and serve this folder over HTTP.'; return; }
+    }
+    prep(data); fillControls();
+    $('status').hidden = true; $('main').hidden = false;
+    renderAll();
+    let raf = 0, lastW = $('main').clientWidth;
+    const ro = new ResizeObserver(() => { const w = $('main').clientWidth; if (w === lastW) return; lastW = w; cancelAnimationFrame(raf); raf = requestAnimationFrame(renderAll); });
+    ro.observe($('main'));
+    matchMedia('(prefers-color-scheme: dark)').addEventListener('change', renderAll);
+    new MutationObserver(renderAll).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  }
+  boot();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "credentials": "secrets/service_account.json",
+  "spreadsheet_id": "",
+  "spreadsheet_title": "RBI ATM_POS_CARDS_ALL",
+  "share_with": [],
+  "tabs": {
+    "RBI_ATM_POS_CARDS_ALL": "data/processed/RBI_ATM_POS_CARDS_ALL.csv",
+    "national_totals": "data/processed/national_totals.csv"
+  }
+}

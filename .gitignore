@@ -1,0 +1,5 @@
+secrets/*
+!secrets/.gitignore
+__pycache__/
+*.pyc
+data/update_console.log
