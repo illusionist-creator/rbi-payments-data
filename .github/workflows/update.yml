@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "30 3 * * 1,4"      # 09:00 IST every Monday and Thursday
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Rebuild outputs and push the Sheet even if RBI has nothing new"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths: ["dashboard/page.html", "scripts/**", ".github/workflows/update.yml"]
@@ -33,7 +38,7 @@ jobs:
         run: |
           if [ -n "$GSHEET_SA_JSON" ]; then mkdir -p secrets && printf '%s' "$GSHEET_SA_JSON" > secrets/service_account.json; fi
       - name: Pull new months from RBI and rebuild
-        run: python scripts/update.py ${{ github.event_name == 'push' && '--force' || '' }}
+        run: python scripts/update.py ${{ (github.event_name == 'push' || inputs.force) && '--force' || '' }}
       - name: Commit refreshed data
         run: |
           rm -f secrets/service_account.json
