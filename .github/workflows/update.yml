@@ -1,0 +1,57 @@
+name: Update RBI card data and deploy dashboard
+
+on:
+  schedule:
+    - cron: "30 3 * * 1,4"      # 09:00 IST every Monday and Thursday
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["dashboard/page.html", "scripts/**", ".github/workflows/update.yml"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: rbi-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Restore Google Sheets key (optional)
+        env:
+          GSHEET_SA_JSON: ${{ secrets.GSHEET_SA_JSON }}
+        run: |
+          if [ -n "$GSHEET_SA_JSON" ]; then mkdir -p secrets && printf '%s' "$GSHEET_SA_JSON" > secrets/service_account.json; fi
+      - name: Pull new months from RBI and rebuild
+        run: python scripts/update.py ${{ github.event_name == 'push' && '--force' || '' }}
+      - name: Commit refreshed data
+        run: |
+          rm -f secrets/service_account.json
+          git config user.name "rbi-update-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data dashboard
+          git commit -m "Data refresh $(date -u +%Y-%m-%d)" || echo "nothing new"
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
