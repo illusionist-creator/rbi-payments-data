@@ -68,10 +68,26 @@ The sheet holds ~10.7k rows × 18 columns, far below Google's 10-million-cell li
 | `dashboard/data.json` | Compact dataset the page loads, written by `scripts/build_dashboard.py` (every `update.py` run) |
 | `dashboard/index.html` | `page.html` wrapped as a complete document, generated alongside `data.json` |
 
-Published copy: https://claude.ai/artifact/C3jGdhAEUCkfuy6KrxrPoU (republish from this project to refresh its data).
+**Live, self-updating copy:** https://illusionist-creator.github.io/rbi-payments-data/ (GitHub Pages, deployed by the
+workflow below; repo https://github.com/illusionist-creator/rbi-payments-data). A snapshot is also published as a Claude artifact at https://claude.ai/artifact/C3jGdhAEUCkfuy6KrxrPoU.
 To view locally, serve the folder over HTTP (`python -m http.server 8765 --directory dashboard`) and open
-`http://127.0.0.1:8765/index.html`; opening the file directly blocks the `data.json` fetch. To host it anywhere
-else (GitHub Pages, S3, Netlify), copy `index.html` and `data.json` together; the page fetches `data.json` next to itself.
+`http://127.0.0.1:8765/index.html`; opening the file directly blocks the `data.json` fetch.
+
+## Hands-off refresh (GitHub Actions)
+
+`.github/workflows/update.yml` runs on GitHub's servers every Monday and Thursday at 09:00 IST (and on demand
+from the Actions tab). Each run: checks RBI for new or revised months, downloads them, re-parses everything,
+rebuilds `data/processed/*` and `dashboard/data.json`, commits the result to `main`, and deploys `dashboard/`
+to GitHub Pages. RBI publishes a month roughly 6–8 weeks after month-end, so most runs find nothing and exit quietly.
+
+The Google Sheet push runs in the workflow only if the service-account key is stored as a repository secret named
+`GSHEET_SA_JSON`. Add it once from this folder with:
+
+```
+gh secret set GSHEET_SA_JSON < secrets\service_account.json
+```
+
+Because the workflow commits data back to the repo, run `git pull` before running `update.py` locally.
 
 ## How RBI's format changed and how it is reconciled
 
