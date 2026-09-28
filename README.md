@@ -61,12 +61,15 @@ The sheet holds ~10.7k rows × 18 columns, far below Google's 10-million-cell li
 ## The HTML dashboard
 
 `dashboard/` holds *India Card Monitor*, a single-page replacement for the Tableau dashboard (D3, no build step):
+The Product switch in the filter bar offers Credit card, Debit card, UPI and **Insights**; the Insights view puts all three rails on one
+calendar (from April 2020, when NPCI's monthly tables begin) and recomputes its tiles, charts and plain-language findings for the month picked.
 
 | File | What |
 |---|---|
 | `dashboard/page.html` | The page itself (body fragment). Edit this one. |
 | `dashboard/data.json` | Compact dataset the page loads, written by `scripts/build_dashboard.py` (every `update.py` run) |
 | `dashboard/index.html` | `page.html` wrapped as a complete document, generated alongside `data.json` |
+| `dashboard/favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `icon-*.png`, `manifest.webmanifest` | Site icons and web-app manifest, linked from the `<head>` that `build_dashboard.py` writes |
 
 **Live, self-updating copy:** https://illusionist-creator.github.io/rbi-payments-data/ (GitHub Pages, deployed by the
 workflow below; repo https://github.com/illusionist-creator/rbi-payments-data). A snapshot is also published as a Claude artifact at https://claude.ai/artifact/C3jGdhAEUCkfuy6KrxrPoU.

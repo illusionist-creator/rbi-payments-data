@@ -232,11 +232,19 @@ def main():
     # as a complete document for any ordinary web host or a local folder served over HTTP
     page = OUT.parent / "page.html"
     if page.exists():
+        # the page fragment carries a data-URI icon for the artifact viewer; the full document links the real
+        # icon files in <head> instead (favicon.svg / .ico / apple-touch-icon.png / manifest live in dashboard/)
+        body = re.sub(r'<link rel="icon" href="data:[^"]*">\n?', '', page.read_text(encoding="utf-8"))
         html = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
                 '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
+                '<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">\n'
+                '<link rel="icon" href="favicon.svg" type="image/svg+xml">\n'
+                '<link rel="apple-touch-icon" href="apple-touch-icon.png">\n'
+                '<link rel="manifest" href="manifest.webmanifest">\n'
+                '<meta name="theme-color" content="#8a1c3b">\n'
                 '<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}'
                 'img{max-width:100%}[hidden]{display:none!important}</style>\n</head>\n<body>\n'
-                + page.read_text(encoding="utf-8") + '\n</body>\n</html>\n')
+                + body + '\n</body>\n</html>\n')
         (OUT.parent / "index.html").write_text(html, encoding="utf-8")
         print("wrote", OUT.parent / "index.html")
     return 0

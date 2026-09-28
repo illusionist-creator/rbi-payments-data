@@ -3,11 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#8a1c3b">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
 <title>India Card Monitor</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238a1c3b'/%3E%3Crect x='10' y='19' width='44' height='28' rx='5' fill='%23ffffff'/%3E%3Crect x='10' y='25' width='44' height='6' fill='%238a1c3b'/%3E%3Crect x='16' y='37' width='14' height='4' rx='2' fill='%238a1c3b'/%3E%3C/svg%3E">
 <meta name="description" content="Bank-wise credit and debit card market share, ticket sizes and cash-versus-payments trends from RBI's monthly statistics, April 2011 to date.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -188,6 +192,14 @@
   #tip .r .v { font-family: var(--mono); font-weight: 500; text-align: right; }
   #tip.on { opacity: 1; }
 
+  /* insights */
+  .ins { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .ins li { padding-left: 14px; border-left: 3px solid var(--accent); color: var(--ink-2); font-size: 13.5px; line-height: 1.5; }
+  .ins li b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .ins li .hd { display: block; color: var(--ink); font-weight: 600; margin-bottom: 1px; }
+  .ins li .delta { font-size: 12px; }
+  .ins-empty { color: var(--muted); font-size: 13px; }
+
   /* notes */
   .notes { color: var(--ink-2); font-size: 13px; max-width: 78ch; }
   .notes dt { font-weight: 600; color: var(--ink); margin-top: 10px; }
@@ -213,6 +225,7 @@
         <label><input type="radio" name="ct" id="ct-cc" value="cc" checked><span>Credit card</span></label>
         <label><input type="radio" name="ct" id="ct-dc" value="dc"><span>Debit card</span></label>
         <label><input type="radio" name="ct" id="ct-upi" value="upi"><span>UPI</span></label>
+        <label><input type="radio" name="ct" id="ct-ins" value="ins"><span>Insights</span></label>
       </div>
     </div>
     <div class="ctl"><span>As of</span><select id="asof" aria-label="Month"></select></div>
@@ -230,7 +243,7 @@
       <option value="payV">Payment value</option>
       <option value="atmV">ATM cash withdrawn</option>
     </select></div>
-    <div class="ctl"><span>Top</span>
+    <div class="ctl no-ins"><span>Top</span>
       <div class="seg" role="radiogroup" aria-label="Top N banks">
         <label><input type="radio" name="topn" id="tn-5" value="5"><span>5</span></label>
         <label><input type="radio" name="topn" id="tn-8" value="8" checked><span>8</span></label>
@@ -363,6 +376,36 @@
     </div>
   </section>
 
+  <section id="ins" hidden>
+    <div class="grid g-kpi" style="margin-bottom:16px;margin-top:8px">
+      <div class="card tile hero"><div class="lbl" id="n0-l"></div><div class="val" id="n0-v"></div><div class="deltas" id="n0-d"></div><svg class="spark" id="n0-s"></svg></div>
+      <div class="card tile"><div class="lbl" id="n1-l"></div><div class="val" id="n1-v"></div><div class="deltas" id="n1-d"></div><svg class="spark" id="n1-s"></svg></div>
+      <div class="card tile"><div class="lbl" id="n2-l"></div><div class="val" id="n2-v"></div><div class="deltas" id="n2-d"></div><svg class="spark" id="n2-s"></svg></div>
+      <div class="card tile"><div class="lbl" id="n3-l"></div><div class="val" id="n3-v"></div><div class="deltas" id="n3-d"></div><svg class="spark" id="n3-s"></svg></div>
+      <div class="card tile"><div class="lbl" id="n4-l"></div><div class="val" id="n4-v"></div><div class="deltas" id="n4-d"></div><svg class="spark" id="n4-s"></svg></div>
+    </div>
+    <div class="grid g-share" style="margin-bottom:16px">
+      <div class="card"><div class="card-head"><div><h3 id="in-h3">What the data says</h3><p class="hint" id="in-hint"></p></div></div><ul class="ins" id="in-list"></ul></div>
+      <div class="card"><div class="card-head"><div><h3 id="ic-h3"></h3><p class="hint">Share held by each rail's largest players: card issuers by cards outstanding, UPI apps and remitter banks by transactions</p></div></div><div class="rank" id="ic-rank"></div><p class="hint" id="ic-note" style="margin-top:10px"></p></div>
+    </div>
+    <div class="grid g-2" style="margin-bottom:16px">
+      <div class="card"><div class="card-head"><div><h3>Share of transactions by rail</h3><p class="hint" id="i0-h"></p></div></div><div class="chart" id="i0"></div><ul class="legend" id="i0-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="i0-t"></div></details></div>
+      <div class="card"><div class="card-head"><div><h3>Share of value by rail</h3><p class="hint" id="i1-h"></p></div></div><div class="chart" id="i1"></div><ul class="legend" id="i1-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="i1-t"></div></details></div>
+    </div>
+    <div class="grid g-2" style="margin-bottom:16px">
+      <div class="card"><div class="card-head"><div><h3>Monthly value by rail</h3><p class="hint">₹ crore per month. UPI is shown in full and as merchant payments only, the like-for-like comparison with cards</p></div></div><div class="chart" id="i2"></div><ul class="legend" id="i2-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="i2-t"></div></details></div>
+      <div class="card"><div class="card-head"><div><h3>Average transaction by rail</h3><p class="hint">Value ÷ number of transactions, ₹ per transaction</p></div></div><div class="chart" id="i3"></div><ul class="legend" id="i3-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="i3-t"></div></details></div>
+    </div>
+    <div class="grid g-2" style="margin-bottom:16px">
+      <div class="card"><div class="card-head"><div><h3>Growth over the window</h3><p class="hint" id="i4-h"></p></div></div><div class="chart" id="i4"></div><ul class="legend" id="i4-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="i4-t"></div></details></div>
+      <div class="card"><div class="card-head"><div><h3>What a debit card is used for</h3><p class="hint">₹ crore per month: cash withdrawn at ATMs with debit cards, debit card payments, and UPI merchant payments</p></div></div><div class="chart" id="i5"></div><ul class="legend" id="i5-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="i5-t"></div></details></div>
+    </div>
+    <div class="grid g-2">
+      <div class="card"><div class="card-head"><div><h3>Online versus in-store card transactions</h3><p class="hint">Monthly transactions. RBI has split e-commerce from PoS only since March 2022</p></div></div><div class="chart" id="i6"></div><ul class="legend" id="i6-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="i6-t"></div></details></div>
+      <div class="card"><div class="card-head"><div><h3>UPI QR codes per PoS terminal</h3><p class="hint">Bank-issued UPI QR codes ÷ PoS terminals deployed, reported since March 2022</p></div></div><div class="chart" id="i7"></div><ul class="legend" id="i7-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="i7-t"></div></details></div>
+    </div>
+  </section>
+
   <section id="about">
     <div class="sec-head"><div><p class="eyebrow">Reading the numbers</p><h2>Definitions and caveats</h2></div></div>
     <dl class="notes">
@@ -374,6 +417,7 @@
       <dt>Bank names</dt><dd>RBI has spelt the same bank many different ways since 2011. Names are standardised to RBI's latest spelling, so mergers show as the surviving bank from the merger month and the absorbed banks simply end. Bank type follows RBI's own group headings, with IDBI Bank classed as private from its 2019 reclassification onward.</dd>
       <dt>Revisions</dt><dd>RBI re-issues some months as "Revised", sometimes a year later. The data file is rebuilt from the latest release of every month whenever the updater runs.</dd>
       <dt>UPI</dt><dd>The UPI section comes from NPCI's <em>UPI Ecosystem Statistics</em> tables, not from RBI. App shares use customer-initiated transactions as NPCI reports them per app; app names are standardised across NPCI's spelling changes. Remitter-bank shares come from NPCI's top-50 member table, so "Others" there is everything outside the top 50. NPCI revises the latest months, and the collector re-reads the last three months on every run. The state map uses NPCI's state-wise table (from April 2023); a large share of transactions carries no location and is left off the map, so state shares are of located transactions only. Boundaries: udit-001/india-maps-data, simplified.</dd>
+      <dt>Insights</dt><dd>The Insights view puts RBI's card figures and NPCI's UPI figures on one calendar, so it starts in April 2020 when NPCI's monthly tables begin. "Transactions across the three rails" adds credit card payments, debit card payments and all UPI transactions (person-to-person included); UPI merchant (P2M) payments are the like-for-like comparison with cards. Cash withdrawn at PoS with debit cards is excluded throughout. Every sentence and tile is recomputed for the month picked in the bar, so the wording changes as the data does.</dd>
     </dl>
   </section>
   <footer id="foot"></footer>
@@ -406,7 +450,7 @@
   const S = { ct: 'cc', asOf: 0, asOfU: 0, range: 60, basis: 'cards', topN: 8, type: 'all', tmetric: 'spend', bank: 0, usMetric: 'vol', usState: null };
   let INDIA = null;   // GeoJSON feature collection of states, loaded next to data.json
   let DIST = null;    // district boundaries, loaded on the first drill-down
-  const isUpi = () => S.ct === 'upi';
+  const isUpi = () => S.ct === 'upi', isIns = () => S.ct === 'ins';
   let D = null, X = null, css = {};
 
   // ---------- formatting ----------
@@ -885,6 +929,161 @@
     }
   }
 
+  // ---------- render: insights (credit, debit and UPI side by side) ----------
+  function insFirst() {                        // first RBI month that also has NPCI data
+    if (!D.upi || !D.upi.months) return 0;
+    if (!X.ui) X.ui = D.months.map(x => D.upi.months.indexOf(x));
+    const f = X.ui.findIndex(i => i >= 0); return f < 0 ? 0 : f;
+  }
+  function renderIns() {
+    const U = D.upi, N = D.national, sec = $('ins');
+    if (!U || !U.months || !U.months.length) { sec.hidden = true; return; }
+    const nM = X.nM, m = S.asOf, first = insFirst(), UI = X.ui;
+    const nat = k => (N[k] || []).map(v => v == null ? NaN : v);
+    const up = k => d3.range(0, nM).map(mm => { const i = UI[mm]; const v = i >= 0 && U.totals[k] ? U.totals[k][i] : null; return v == null ? NaN : v; });
+    // everything on the RBI calendar: counts as plain numbers, money in Rs million
+    const ccN = nat('cc_payments_vol'), dcN = nat('dc_payments_vol'), ccV = nat('cc_payments_val_mn'), dcV = nat('dc_payments_val_mn');
+    const upN = up('vol').map(v => v * 1e6), upV = up('val').map(v => v * 10), pmN = up('p2m_vol').map(v => v * 1e6), pmV = up('p2m_val').map(v => v * 10);
+    const ccAtm = nat('cc_atm_val_mn'), dcAtm = nat('dc_atm_val_mn'), cash = ccAtm.map((v, i) => (isNaN(v) ? 0 : v) + (isNaN(dcAtm[i]) ? 0 : dcAtm[i]));
+    const ccC = nat('cc_cards'), dcC = nat('dc_cards'), pos = nat('pos_terminals'), qr = nat('upi_qr');
+    const ccE = nat('cc_ecom_vol'), ccP = nat('cc_pos_vol'), dcE = nat('dc_ecom_vol'), dcP = nat('dc_pos_vol');
+    const [w0, w1] = window_(), m0 = Math.max(w0, first), m1 = Math.max(m0, w1);
+    const at = (a, mm) => mm < 0 || mm >= nM ? NaN : a[mm];
+    const tot3N = mm => at(ccN, mm) + at(dcN, mm) + at(upN, mm), tot3V = mm => at(ccV, mm) + at(dcV, mm) + at(upV, mm);
+    const upShareN = mm => at(upN, mm) / tot3N(mm), ccShareV = mm => at(ccV, mm) / tot3V(mm);
+    const cashShare = mm => at(cash, mm) / (at(cash, mm) + tot3V(mm)), qrPerPos = mm => at(qr, mm) / at(pos, mm);
+    const fmtX = v => isNaN(v) ? '–' : nfIN.format(Math.round(v)), fmtMul = v => isNaN(v) ? '–' : v.toFixed(1) + '×';
+    const spark = fn => d3.range(Math.max(0, m - 11), m + 1).map(fn);
+    const col = i => css.series[i];
+    // rails keep their colour on every panel: credit blue, debit orange, UPI green, UPI merchant amber, ATM cash purple
+    const RC = { cc: col(0), dc: col(1), upi: col(2), p2m: col(3), cash: col(6) };
+    const tiles = [
+      { l: `Transactions across the three rails, ${mLabel(m, true)}`, v: fmtCount(tot3N(m)), cur: tot3N(m), pm: tot3N(m - 1), py: tot3N(m - 12), sp: spark(tot3N) },
+      { l: 'UPI share of transactions', v: fmtPct(upShareN(m)), cur: upShareN(m), pm: upShareN(m - 1), py: upShareN(m - 12), sp: spark(upShareN) },
+      { l: 'Credit cards’ share of value', v: fmtPct(ccShareV(m)), cur: ccShareV(m), pm: ccShareV(m - 1), py: ccShareV(m - 12), sp: spark(ccShareV) },
+      { l: 'ATM cash, share of cash plus digital value', v: fmtPct(cashShare(m)), cur: cashShare(m), pm: cashShare(m - 1), py: cashShare(m - 12), sp: spark(cashShare) },
+      { l: 'UPI QR codes per PoS terminal', v: fmtX(qrPerPos(m)), cur: qrPerPos(m), pm: qrPerPos(m - 1), py: qrPerPos(m - 12), sp: spark(qrPerPos) },
+    ];
+    tiles.forEach((t, i) => {
+      $(`n${i}-l`).textContent = t.l; $(`n${i}-v`).textContent = t.v;
+      $(`n${i}-d`).replaceChildren(deltaSpan(t.cur, t.pm, 'vs ' + (m > 0 ? mLabel(m - 1) : 'prev')), deltaSpan(t.cur, t.py, 'vs ' + (m >= 12 ? mLabel(m - 12) : 'year ago')));
+      sparkline($(`n${i}-s`), t.sp, i === 0 ? css.accent : css.series[0]);
+    });
+    // charts
+    const months = d3.range(m0, m1 + 1).reverse();
+    const lines = (id, series, fmt, opts) => {
+      lineChart($(id), $(id + '-l'), series, m0, m1, fmt, Object.assign({ height: 250, left: 62, right: 118, endLabelValue: false }, opts || {}));
+      lazyTable($(id + '-t').closest('details'), wrap => table(wrap, ['Month', ...series.map(s => s.name)], months.map(mm => [mLabel(mm, true), ...series.map(s => fmt(s.v[mm]))])));
+    };
+    const shares = (id, series, hint, aria) => {
+      $(id + '-h').textContent = hint;
+      stackedShare($(id), $(id + '-l'), series, m0, m1, { height: 250, right: 92, aria });
+      lazyTable($(id + '-t').closest('details'), wrap => table(wrap, ['Month', ...series.map(s => s.name)], months.map(mm => [mLabel(mm, true), ...series.map(s => fmtPct(s.f[mm]))])));
+    };
+    const shareOf = (a, tot) => d3.range(0, nM).map(mm => { const t = tot(mm); return t > 0 ? at(a, mm) / t : NaN; });
+    const span = `${mLabel(m0, true)} to ${mLabel(m1, true)}`;
+    shares('i0', [
+      { name: 'Credit card', short: 'Credit', color: RC.cc, f: shareOf(ccN, tot3N) },
+      { name: 'Debit card', short: 'Debit', color: RC.dc, f: shareOf(dcN, tot3N) },
+      { name: 'UPI', short: 'UPI', color: RC.upi, f: shareOf(upN, tot3N) },
+    ], `Card payment transactions and all UPI transactions, ${span}`, 'Share of transactions by rail');
+    shares('i1', [
+      { name: 'Credit card', short: 'Credit', color: RC.cc, f: shareOf(ccV, tot3V) },
+      { name: 'Debit card', short: 'Debit', color: RC.dc, f: shareOf(dcV, tot3V) },
+      { name: 'UPI', short: 'UPI', color: RC.upi, f: shareOf(upV, tot3V) },
+    ], `Card payment value and all UPI value, ${span}`, 'Share of value by rail');
+    lines('i2', [
+      { name: 'Credit card payments', short: 'Credit', color: RC.cc, v: ccV },
+      { name: 'Debit card payments', short: 'Debit', color: RC.dc, v: dcV },
+      { name: 'UPI, all', short: 'UPI all', color: RC.upi, v: upV },
+      { name: 'UPI merchant (P2M)', short: 'UPI P2M', color: RC.p2m, v: pmV },
+    ], fmtInr, { left: 70, axisFmt: v => fmtInr(v).replace('₹', ''), aria: 'Monthly value by rail' });
+    const ratio = (a, b) => d3.range(0, nM).map(mm => at(b, mm) > 0 ? at(a, mm) * 1e6 / at(b, mm) : NaN);
+    lines('i3', [
+      { name: 'Credit card payment', short: 'Credit', color: RC.cc, v: ratio(ccV, ccN) },
+      { name: 'Debit card payment', short: 'Debit', color: RC.dc, v: ratio(dcV, dcN) },
+      { name: 'UPI, all', short: 'UPI all', color: RC.upi, v: ratio(upV, upN) },
+      { name: 'UPI merchant (P2M)', short: 'UPI P2M', color: RC.p2m, v: ratio(pmV, pmN) },
+    ], fmtRs, { axisFmt: v => '₹' + fmtCount(v), aria: 'Average transaction by rail' });
+    const indexed = a => { const b = at(a, m0); return d3.range(0, nM).map(mm => b > 0 ? at(a, mm) / b * 100 : NaN); };
+    $('i4-h').textContent = `Monthly value indexed to 100 in ${mLabel(m0, true)}`;
+    lines('i4', [
+      { name: 'Credit card payments', short: 'Credit', color: RC.cc, v: indexed(ccV) },
+      { name: 'Debit card payments', short: 'Debit', color: RC.dc, v: indexed(dcV) },
+      { name: 'UPI value', short: 'UPI', color: RC.upi, v: indexed(upV) },
+      { name: 'ATM cash withdrawn', short: 'ATM cash', color: RC.cash, v: indexed(cash) },
+    ], fmtX, { left: 52, aria: 'Growth indexed to the start of the window' });
+    lines('i5', [
+      { name: 'Debit card cash at ATMs', short: 'Debit ATM', color: RC.cash, v: dcAtm },
+      { name: 'Debit card payments', short: 'Debit pay', color: RC.dc, v: dcV },
+      { name: 'UPI merchant (P2M)', short: 'UPI P2M', color: RC.p2m, v: pmV },
+    ], fmtInr, { left: 70, axisFmt: v => fmtInr(v).replace('₹', ''), aria: 'Debit card cash versus payments versus UPI merchant payments' });
+    lines('i6', [
+      { name: 'Credit card, online', short: 'Credit online', color: RC.cc, v: ccE },
+      { name: 'Credit card, in-store', short: 'Credit PoS', color: col(6), v: ccP },
+      { name: 'Debit card, online', short: 'Debit online', color: RC.dc, v: dcE },
+      { name: 'Debit card, in-store', short: 'Debit PoS', color: col(3), v: dcP },
+    ], fmtCount, { aria: 'Online versus in-store card transactions' });
+    lines('i7', [{ name: 'UPI QR codes per PoS terminal', color: RC.upi, v: d3.range(0, nM).map(qrPerPos) }], fmtX, { area: true, left: 52, right: 70, endLabelValue: true, aria: 'UPI QR codes per PoS terminal' });
+    // concentration: how much of each rail its biggest players hold
+    const conc = (col_, mm) => {
+      const tot = sumAll(col_, mm), v = [];
+      for (let b = 0; b < X.nB; b++) { const x = get(col_, b, mm); if (!isNaN(x) && x > 0) v.push([x, b]); }
+      v.sort((a, b) => b[0] - a[0]);
+      return { top: k => tot ? v.slice(0, k).reduce((s, d) => s + d[0], 0) / tot : NaN, leader: v.length ? shortName(v[0][1]) : '–' };
+    };
+    const concList = (items, other) => {                    // items: [[value, name]]
+      const v = items.filter(d => d[0] > 0).sort((a, b) => b[0] - a[0]), tot = v.reduce((s, d) => s + d[0], 0) + (other || 0);
+      return { top: k => tot ? v.slice(0, k).reduce((s, d) => s + d[0], 0) / tot : NaN, leader: v.length ? v[0][1] : '–' };
+    };
+    let ui = UI[m]; const apps = U.apps || [];
+    while (ui > 0 && !apps.some(a => a.vol[ui] != null)) ui--;    // the app table lags the totals by a month
+    const cCC = conc('cc_cards', m), cDC = conc('dc_cards', m);
+    const cApp = ui >= 0 && apps.length ? concList(apps.map(a => [a.vol[ui] || 0, a.n]), (U.apps_others && U.apps_others.vol[ui]) || 0) : null;
+    let bm = U.bank_months ? U.bank_months.filter(x => x <= D.months[m]).length - 1 : -1;
+    const npciShort = n => SHORT[n.toUpperCase().replace(/[^A-Z ]/g, '').replace(/\s+/g, ' ').trim()] || n.replace(/\s+Bank(\s+Ltd\.?)?$/i, '');
+    const cBank = bm >= 0 && U.banks && U.banks.length ? concList(U.banks.map(b => [b.vol[bm] || 0, npciShort(b.n)]), (U.banks_others && U.banks_others.vol[bm]) || 0) : null;
+    $('ic-h3').textContent = `Who holds each rail, ${mLabel(m, true)}`;
+    const rows = [
+      { name: 'Credit card issuers', color: RC.cc, c: cCC }, { name: 'Debit card issuers', color: RC.dc, c: cDC },
+      cApp && { name: 'UPI apps', color: RC.upi, c: cApp }, cBank && { name: 'UPI remitter banks', color: RC.p2m, c: cBank },
+    ].filter(Boolean);
+    rankList($('ic-rank'), ['Rail', '', 'Top 3', 'Leader', 'Top 5'], rows.map(r => ({ name: r.name, color: r.color, share: r.c.top(3), value: `${r.c.leader} ${fmtPct(r.c.top(1))}`, extra: fmtPct(r.c.top(5)) })));
+    $('ic-note').textContent = (cApp && UI[m] !== ui ? `UPI app shares are for ${calLabel(U.months, ui, true)}, the latest month NPCI has published per app. ` : '') + 'Remitter-bank shares are of NPCI\'s top-50 table.';
+    // the sentences: each one is recomputed for the month picked above
+    const list = $('in-list'); list.replaceChildren();
+    $('in-hint').textContent = `Computed from RBI and NPCI figures for ${mLabel(m, true)}; every sentence follows the month picked above.`;
+    const M = mLabel(m, true), yr = m >= 12, mul = (a, b) => fmtMul(a / b);
+    const chg = (cur, prev) => { const d = document.createElement('span'); if (!(prev > 0) || isNaN(cur)) { d.textContent = '–'; return d; } const r = cur / prev - 1; d.className = 'delta ' + (r > 0.0005 ? 'up' : r < -0.0005 ? 'down' : ''); d.textContent = (r > 0 ? '▲' : r < 0 ? '▼' : '') + ' ' + (Math.abs(r) * 100).toFixed(1) + '%'; return d; };
+    const add = (hd, parts) => {
+      if (parts.some(p => p && p.b !== undefined && /NaN|undefined|–/.test(String(p.b)))) return;   // a sentence with a hole is left out
+      const li = document.createElement('li'); const h = document.createElement('span'); h.className = 'hd'; h.textContent = hd; li.appendChild(h);
+      parts.forEach(p => { if (p instanceof Node) li.appendChild(p); else if (p && p.b !== undefined) { const b = document.createElement('b'); b.textContent = p.b; li.appendChild(b); } else li.append(String(p)); });
+      list.appendChild(li);
+    };
+    const B = v => ({ b: v });
+    if (!isNaN(tot3N(m))) {
+      add('UPI carries the count, cards carry the ticket', ['In ', M, ' UPI made up ', B(fmtPct(upShareN(m))), ' of the ', B(fmtCount(tot3N(m))), ' transactions across the three rails but ', B(fmtPct(at(upV, m) / tot3V(m))), ' of the ', B(fmtInr(tot3V(m))), ' moved. Credit cards were ', B(fmtPct(at(ccN, m) / tot3N(m))), ' of transactions and ', B(fmtPct(ccShareV(m))), ' of value; debit cards ', B(fmtPct(at(dcN, m) / tot3N(m))), ' and ', B(fmtPct(at(dcV, m) / tot3V(m))), '.']);
+      const tk = a => ratio(a[0], a[1])[m];
+      add('Ticket sizes', ['The average credit card payment was ', B(fmtRs(tk([ccV, ccN]))), ', a debit card payment ', B(fmtRs(tk([dcV, dcN]))), ', a UPI transaction ', B(fmtRs(tk([upV, upN]))), ' and a UPI merchant payment ', B(fmtRs(tk([pmV, pmN]))), '. A card payment is worth ', B(mul((tk([ccV, ccN]) * at(ccN, m) + tk([dcV, dcN]) * at(dcN, m)) / (at(ccN, m) + at(dcN, m)), tk([pmV, pmN]))), ' a UPI merchant payment.']);
+      if (yr) {
+        const g = [['UPI value', at(upV, m), at(upV, m - 12), RC.upi], ['credit card payments', at(ccV, m), at(ccV, m - 12)], ['debit card payments', at(dcV, m), at(dcV, m - 12)]].map(d => ({ n: d[0], r: d[1] / d[2] - 1, cur: d[1], prev: d[2] })).sort((a, b) => b.r - a.r);
+        add(`Growing fastest: ${g[0].n}`, ['Over the 12 months to ', M, ', ', g[0].n, ' ', chg(g[0].cur, g[0].prev), ', ', g[1].n, ' ', chg(g[1].cur, g[1].prev), ' and ', g[2].n, ' ', chg(g[2].cur, g[2].prev), '. Cash withdrawn at ATMs ', chg(at(cash, m), at(cash, m - 12)), ' over the same period.']);
+      }
+      add('Debit cards are still cash cards', ['Debit-card holders withdrew ', B(fmtInr(at(dcAtm, m))), ' at ATMs in ', M, ' against ', B(fmtInr(at(dcV, m))), ' paid with debit cards at shops and online, ', B(mul(at(dcAtm, m), at(dcV, m))), ' as much cash as payments. ATM cash was ', B(fmtPct(cashShare(m))), ' of cash plus digital value, against ', B(fmtPct(cashShare(first))), ' in ', mLabel(first, true), '.']);
+      const e0 = ccE.findIndex(v => !isNaN(v));
+      if (e0 >= 0 && m > e0) {
+        const dcOn = at(dcE, m) / (at(dcE, m) + at(dcP, m)), ccOn = at(ccE, m) / (at(ccE, m) + at(ccP, m));
+        add(at(dcE, m) < at(dcE, e0) ? 'Online debit is fading, online credit is growing' : 'Online card payments', ['Since ', mLabel(e0, true), ' debit card e-commerce transactions ', chg(at(dcE, m), at(dcE, e0)), ' to ', B(fmtCount(at(dcE, m))), ' a month while credit card e-commerce transactions ', chg(at(ccE, m), at(ccE, e0)), ' to ', B(fmtCount(at(ccE, m))), '. ', B(fmtPct(ccOn)), ' of credit card transactions now happen online, against ', B(fmtPct(dcOn)), ' of debit card transactions.']);
+      }
+      add('A credit card is worked harder', ['Monthly spend per credit card was ', B(fmtRs(at(ccV, m) * 1e6 / at(ccC, m))), ' against ', B(fmtRs(at(dcV, m) * 1e6 / at(dcC, m))), ' per debit card, ', B(mul(at(ccV, m) / at(ccC, m), at(dcV, m) / at(dcC, m))), '. There were ', B(fmtCount(at(ccC, m))), ' credit cards ', ...(yr ? [chg(at(ccC, m), at(ccC, m - 12)), ' over 12 months'] : []), ' and ', B(fmtCount(at(dcC, m))), ' debit cards', ...(yr ? [' ', chg(at(dcC, m), at(dcC, m - 12))] : []), '.']);
+      const q0 = qr.findIndex(v => !isNaN(v));
+      if (q0 >= 0 && !isNaN(at(qr, m))) add('Acceptance runs on QR codes', ['Banks reported ', B(fmtCount(at(qr, m))), ' UPI QR codes against ', B(fmtCount(at(pos, m))), ' PoS terminals in ', M, ', ', B(fmtX(qrPerPos(m))), ' QR codes per terminal, up from ', B(fmtX(qrPerPos(q0))), ' in ', mLabel(q0, true), '. PoS terminals ', chg(at(pos, m), at(pos, q0)), ' over the same period.']);
+      if (cApp) add('UPI is the most concentrated rail', ['The two largest UPI apps carried ', B(fmtPct(cApp.top(2))), ' of customer-initiated UPI transactions', cBank ? ` and the two largest remitter banks ${fmtPct(cBank.top(2))} of UPI volume` : '', '. The two largest credit card issuers hold ', B(fmtPct(cCC.top(2))), ' of credit cards and the two largest debit card issuers ', B(fmtPct(cDC.top(2))), ' of debit cards.']);
+    }
+    if (!list.children.length) { const p = document.createElement('li'); p.className = 'ins-empty'; p.textContent = 'No overlapping RBI and NPCI data for this month.'; list.appendChild(p); }
+  }
+
   // ---------- render: UPI state map ----------
   const RAMP = { light: ['#cde2fb', '#9ec5f4', '#6da7ec', '#3987e5', '#256abf', '#184f95', '#0d366b'],
                  dark: ['#184f95', '#1c5cab', '#256abf', '#3987e5', '#5598e7', '#86b6ef', '#b7d3f6'] };
@@ -1018,15 +1217,18 @@
   // ---------- controls ----------
   function fillAsOf() {
     const sel = $('asof'); sel.replaceChildren();
-    const cal = isUpi() ? D.upi.months : D.months;
-    for (let m = cal.length - 1; m >= 0; m--) { const o = document.createElement('option'); o.value = m; o.textContent = calLabel(cal, m, true); sel.appendChild(o); }
+    const cal = isUpi() ? D.upi.months : D.months, lo = isIns() ? insFirst() : 0;   // insights need both RBI and NPCI data
+    for (let m = cal.length - 1; m >= lo; m--) { const o = document.createElement('option'); o.value = m; o.textContent = calLabel(cal, m, true); sel.appendChild(o); }
     sel.value = isUpi() ? S.asOfU : S.asOf;
   }
   function setMode() {
-    const upi = isUpi();
-    ['kpis', 'share', 'ticket', 'bank', 'country'].forEach(id => { $(id).hidden = upi; });
-    $('upi').hidden = !upi || !(D.upi && D.upi.months && D.upi.months.length);
-    document.querySelectorAll('.card-only').forEach(el => { el.hidden = upi; });
+    const upi = isUpi(), ins = isIns(), hasUpi = !!(D.upi && D.upi.months && D.upi.months.length);
+    ['kpis', 'share', 'ticket', 'bank', 'country'].forEach(id => { $(id).hidden = upi || ins; });
+    $('upi').hidden = !upi || !hasUpi;
+    $('ins').hidden = !ins || !hasUpi;
+    document.querySelectorAll('.card-only').forEach(el => { el.hidden = upi || ins; });
+    document.querySelectorAll('.no-ins').forEach(el => { el.hidden = ins; });
+    if (ins && S.asOf < insFirst()) S.asOf = X.nM - 1;
     fillAsOf();
   }
   function fillControls() {
@@ -1035,7 +1237,7 @@
       const U = D.upi, n = U.months.length, hasApps = i => (U.apps || []).some(a => a.vol[i] != null);
       let i = n - 1; while (i > 0 && !(hasApps(i) && U.totals.vol[i] != null)) i--;
       S.asOfU = i;
-    } else $('ct-upi').closest('label').hidden = true;
+    } else { $('ct-upi').closest('label').hidden = true; $('ct-ins').closest('label').hidden = true; }
     fillAsOf();
     const bs = $('bank-sel'); bs.replaceChildren();
     D.banks.map((b, i) => [bankName(i), i]).sort((a, b) => a[0].localeCompare(b[0])).forEach(([n, i]) => { const o = document.createElement('option'); o.value = i; o.textContent = n + (D.banks[i].to === D.months[X.nM - 1] ? '' : ` (to ${D.banks[i].to})`); bs.appendChild(o); });
@@ -1059,6 +1261,7 @@
   function renderAll() {
     readCss();
     if (isUpi()) renderUpi();
+    else if (isIns()) renderIns();
     else { renderKpis(); renderShare(); renderTicket(); renderBank(); renderCountry(); }
     const last = mLabel(X.nM - 1, true);
     $('stamp').replaceChildren(); const s1 = document.createElement('div'); s1.append('Latest month '); const b1 = document.createElement('b'); b1.textContent = last; s1.appendChild(b1);
