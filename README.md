@@ -62,7 +62,10 @@ The sheet holds ~10.7k rows × 18 columns, far below Google's 10-million-cell li
 
 `dashboard/` holds *India Card Monitor*, a single-page replacement for the Tableau dashboard (D3, no build step):
 The Product switch in the filter bar offers Credit card, Debit card, UPI and **Insights**; the Insights view puts all three rails on one
-calendar (from April 2020, when NPCI's monthly tables begin) and recomputes its tiles, charts and plain-language findings for the month picked.
+calendar (from April 2020, when NPCI's monthly tables begin) and recomputes its tiles, charts and findings for the month picked. Findings are
+rules over the data (issuance versus usage of new credit cards, UPI decline and chargeback rates, cash versus its peak, app and bank
+concentration, per-person UPI use by state, seasonality) and land in a "working" or "warning signs" column according to the numbers.
+`config/state_population.json` holds the approximate 2026 state populations used for per-person figures.
 
 | File | What |
 |---|---|
