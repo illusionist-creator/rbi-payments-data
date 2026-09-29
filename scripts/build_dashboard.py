@@ -94,7 +94,7 @@ def series_block(df, name_col, months, cols, top=12, min_months=1):
     return out, others
 
 
-def build_upi(types_by_key=None):
+def build_upi(types_by_key=None, idx_by_key=None):
     P = ROOT / "data" / "processed"
     if not (P / "upi_p2p_p2m.csv").exists():
         return None
@@ -153,16 +153,22 @@ def build_upi(types_by_key=None):
             quality = {"months": qm, "vol": [num(g.get_group(p).total_volume_in_mn.sum(), 2) for p in qm],
                        "bd": [wavg(g.get_group(p), "bd_percent") for p in qm], "td": [wavg(g.get_group(p), "td_percent") for p in qm],
                        "note": "volume-weighted across the top remitter banks NPCI lists each month"}
-            last12 = r[r.period.isin(qm[-12:])].copy()
-            last12["_k"] = last12.upi_remitter_banks.map(bank_key)
-            spelling = last12.sort_values("period").groupby("_k").upi_remitter_banks.last().map(clean_name)
+            r["_k"] = r.upi_remitter_banks.map(bank_key)
+            last12 = r[r.period.isin(qm[-12:])]
+            spelling = r.sort_values("period").groupby("_k").upi_remitter_banks.last().map(clean_name)
+            qidx = {p: i for i, p in enumerate(qm)}
             banks = []
             for k, x in last12.groupby("_k"):
                 xs = x.sort_values("period")
-                banks.append({"n": spelling[k], "vol": num(xs.total_volume_in_mn.mean(), 2), "bd": wavg(xs, "bd_percent"), "td": wavg(xs, "td_percent"),
-                              "bd_last": num(xs.bd_percent.iloc[-1], 2), "months": int(len(xs))})
+                full = r[r._k == k].sort_values("period").drop_duplicates("period", keep="last")
+                bd_s, td_s = [None] * len(qm), [None] * len(qm)
+                for row in full.itertuples():
+                    bd_s[qidx[row.period]] = num(row.bd_percent, 2); td_s[qidx[row.period]] = num(row.td_percent, 2)
+                banks.append({"n": spelling[k], "rbi": idx_by_key.get(k) if idx_by_key else None,
+                              "vol": num(xs.total_volume_in_mn.mean(), 2), "bd": wavg(xs, "bd_percent"), "td": wavg(xs, "td_percent"),
+                              "bd_last": num(xs.bd_percent.iloc[-1], 2), "months": int(len(xs)), "bd_s": bd_s, "td_s": td_s})
             banks.sort(key=lambda d: -(d["vol"] or 0))
-            quality["banks"] = banks[:15]
+            quality["banks"] = banks[:20]
             upi["quality"] = quality
     # disputes: NPCI's chargeback table per beneficiary bank, summed to a system-wide rate
     cq = P / "upi_chargeback.csv"
@@ -176,6 +182,25 @@ def build_upi(types_by_key=None):
             g = g[g.tx > 0]
             upi["chargebacks"] = {"months": g.index.tolist(), "per10k": [num(v, 3) for v in (g.rec / g.tx * 1e4)],
                                   "received": [num(v, 0) for v in g.rec], "accepted_pct": [num(v, 1) for v in (g.acc / g.rec.replace(0, np.nan) * 100).fillna(0)]}
+            # per beneficiary bank, for the banks that match an RBI issuer (NPCI also lists PSP sponsor entries and non-banks)
+            if idx_by_key and "beneficiary_bank" in c:
+                cm = g.index.tolist(); cidx = {p: i for i, p in enumerate(cm)}
+                c["_k"] = c.beneficiary_bank.map(bank_key)
+                c = c[c._k.isin(idx_by_key)]
+                gb = c.groupby(["_k", "period"]).agg(rec=(cols[0], "sum"), tx=(cols[2], "sum")).reset_index()
+                recent = gb[gb.period.isin(cm[-12:])].groupby("_k").tx.sum().sort_values(ascending=False).head(25)
+                spelling = c.sort_values("period").groupby("_k").beneficiary_bank.last()
+                cbanks = []
+                for k in recent.index:
+                    x = gb[gb._k == k]
+                    s = [None] * len(cm)
+                    for row in x.itertuples():
+                        if row.tx > 0:
+                            s[cidx[row.period]] = num(row.rec / row.tx * 1e4, 3)
+                    x12 = x[x.period.isin(cm[-12:])]
+                    cbanks.append({"n": clean_name(spelling[k]).title(), "rbi": idx_by_key[k], "tx": num(x12.tx.mean(), 0),
+                                   "per10k": num(x12.rec.sum() / x12.tx.sum() * 1e4, 3) if x12.tx.sum() else None, "s": s})
+                upi["chargebacks"]["banks"] = cbanks
     mcc = pd.read_csv(P / "upi_mcc.csv") if (P / "upi_mcc.csv").exists() else None
     if mcc is not None and "description" in mcc and "volume_in_mn" in mcc:
         last = mcc[mcc.period == mcc.period.max()].copy()
@@ -281,6 +306,7 @@ def main():
     for r in b.itertuples(index=False):
         rows.append([midx[r.period], bidx[r.bank_name_std]] + [num(getattr(r, c)) for c in BANK_COLS])
     types_by_key = {bank_key(name): (TYPE_ORDER.index(t) if t in TYPE_ORDER else 5) for name, t in types.items()}
+    idx_by_key = {bank_key(name): i for name, i in bidx.items()}
     nat = n.sort_values("period")
     national = {c: [num(v) for v in nat[c].tolist()] for c in NAT_COLS if c in nat}
     layout = nat.layout.tolist()
@@ -295,7 +321,7 @@ def main():
         "national": national,
         "layout": layout,
         "value_unit": "Rs million",
-        "upi": build_upi(types_by_key),
+        "upi": build_upi(types_by_key, idx_by_key),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(data, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")

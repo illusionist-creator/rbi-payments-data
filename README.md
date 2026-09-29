@@ -61,7 +61,9 @@ The sheet holds ~10.7k rows × 18 columns, far below Google's 10-million-cell li
 ## The HTML dashboard
 
 `dashboard/` holds *India Card Monitor*, a single-page replacement for the Tableau dashboard (D3, no build step):
-The Product switch in the filter bar offers Credit card, Debit card, UPI and **Insights**; the Insights view puts all three rails on one
+The Product switch in the filter bar offers Credit card, Debit card, UPI, **Insights** and **Issuer risk** (a flag-based risk matrix of every
+issuer with a lakh or more credit cards, plus a per-issuer drill-down with peer ranks and bank-versus-market charts, using RBI card data and
+NPCI's per-bank decline and chargeback tables); the Insights view puts all three rails on one
 calendar (from April 2020, when NPCI's monthly tables begin) and recomputes its tiles, charts and findings for the month picked. Findings are
 rules over the data (issuance versus usage of new credit cards, UPI decline and chargeback rates, cash versus its peak, app and bank
 concentration, per-person UPI use by state, seasonality) and land in a "working" or "warning signs" column according to the numbers.
