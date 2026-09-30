@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: int_bank_names
+    description: Every published bank spelling mapped to one standard name.
+    columns:
+      - name: bank_name_published
+        data_tests: [unique, not_null]
+      - name: bank_name_std
+        data_tests: [not_null]
+  - name: int_bank_types
+    description: One bank type per standard bank.
+    columns:
+      - name: bank_name_std
+        data_tests: [unique, not_null]

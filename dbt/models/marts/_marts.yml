@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: fct_bank_month
+    description: >
+      Every metric RBI has published, one row per bank per month (Apr 2011 onwards). Values are in
+      the published unit and, as *_mn columns, in Rs million. atm_total, pos_terminals and the
+      *_payments_* columns stay comparable across RBI's layout changes in Jul 2019, May 2020 and Mar 2022.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: [period, bank_name_published]
+    columns:
+      - name: bank_name_std
+        description: Standard bank name (RBI's latest spelling). See dim_bank.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_bank')
+                field: bank_name_std
+      - name: bank_type
+        description: Public / Private / Foreign / Payment / Small Finance.
+        data_tests:
+          - not_null:
+              config:
+                severity: warn
+          - accepted_values:
+              arguments:
+                values: [Public Sector Banks, Private Sector Banks, Foreign Banks, Payment Banks, Small Finance Banks]
+      - name: cc_payments_val_mn
+        description: Credit card payments in Rs million. From Mar 2022, PoS + online + other; before, PoS only.
+      - name: dc_payments_val_mn
+        description: Debit card payments in Rs million, same definition as cc_payments_val_mn.
+
+  - name: fct_national_month
+    description: RBI's printed national Total for each month, with the same continuity series.
+    columns:
+      - name: period
+        data_tests: [unique, not_null]
+
+  - name: dim_bank
+    description: One row per standard bank, with its type and how many spellings RBI has used for it.
+    columns:
+      - name: bank_name_std
+        data_tests: [unique, not_null]
+      - name: bank_type_source
+        description: rbi_heading when taken from RBI's group headings, manual_seed for banks that closed before mid-2020.
+
+  - name: rpt_tableau_cards
+    description: >
+      The Tableau workbook's 16-column schema. Column names are a contract with the workbook's
+      calculated fields; tests/assert_tableau_output_matches_pandas.sql pins the output to the
+      pandas pipeline row for row.
+    columns:
+      - name: start_date
+        data_tests: [not_null]
+      - name: bank_names
+        data_tests: [not_null]

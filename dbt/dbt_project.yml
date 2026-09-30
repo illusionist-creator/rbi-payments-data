@@ -1,0 +1,37 @@
+name: rbi_payments
+version: "1.0.0"
+config-version: 2
+profile: rbi_payments
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+vars:
+  # the pandas pipeline's outputs, used only by the parity tests
+  processed_dir: "../data/processed"
+  # counts and transaction volumes: no unit, carried through as published
+  count_cols: [atm_onsite, atm_offsite, atm_online, atm_offline, micro_atm, pos_online, pos_offline, pos,
+               bharat_qr, upi_qr, cc_cards, cc_atm_vol, cc_pos_vol, cc_ecom_vol, cc_other_vol,
+               dc_cards, dc_atm_vol, dc_pos_vol, dc_ecom_vol, dc_other_vol, dc_cashpos_vol]
+  # transaction values: published in million, lakh or thousand rupees depending on the month
+  value_cols: [cc_atm_val, cc_pos_val, cc_ecom_val, cc_other_val,
+               dc_atm_val, dc_pos_val, dc_ecom_val, dc_other_val, dc_cashpos_val]
+
+models:
+  rbi_payments:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+
+seeds:
+  rbi_payments:
+    value_units:
+      +column_types:
+        to_million: double

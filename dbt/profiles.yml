@@ -1,0 +1,7 @@
+rbi_payments:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: target/rbi.duckdb
+      threads: 4

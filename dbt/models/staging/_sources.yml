@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+  - name: rbi
+    description: >
+      RBI's bank-wise ATM / POS / card statistics as parsed from the monthly Excel releases by
+      scripts/parse_raw.py: one row per bank per month, values in the unit RBI published that month.
+    meta:
+      external_location: "read_csv('../data/processed/{name}.csv', header = true, sample_size = -1)"
+    tables:
+      - name: bank_month_all_metrics_raw
+        description: One row per bank per monthly release. The Total row is split out into national_totals_raw.
+        columns:
+          - name: period
+            description: Release month as YYYY-MM.
+            data_tests: [not_null]
+          - name: layout
+            description: Column layout detected by the parser (A14, A16x, B16, C26).
+            data_tests:
+              - accepted_values:
+                  arguments:
+                    values: [A14, A16x, B16, C26]
+          - name: value_unit_published
+            data_tests:
+              - not_null
+              - relationships:
+                  arguments:
+                    to: ref('value_units')
+                    field: value_unit_published
+          - name: bank_name_published
+            data_tests: [not_null]
+      - name: national_totals_raw
+        description: RBI's own printed Total row for each release.
+        columns:
+          - name: period
+            data_tests: [not_null, unique]
