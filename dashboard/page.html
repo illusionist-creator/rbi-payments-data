@@ -129,6 +129,7 @@
   .spark { margin-top: auto; height: 34px; width: 100%; cursor: crosshair; touch-action: pan-y; }
   .spark:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
   .hero .spark { height: 56px; }
+  .tile .tnote { font-size: 11.5px; line-height: 1.4; color: var(--muted); }
 
   /* charts */
   .chart { position: relative; width: 100%; }
@@ -435,7 +436,7 @@
       <div class="card"><div class="card-head"><div><h3>Cash and the ATM network</h3><p class="hint" id="i2-h"></p></div></div><div class="chart" id="i2"></div><ul class="legend" id="i2-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="i2-t"></div></details></div>
     </div>
     <div class="grid g-2" style="margin-bottom:16px">
-      <div class="card"><div class="card-head"><div><h3>UPI attempts that fail</h3><p class="hint">Share of attempts at the top remitter banks declined by the bank itself (balance, PIN, limits) or by its systems (technical), weighted by volume</p></div></div><div class="chart" id="i3"></div><ul class="legend" id="i3-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="i3-t"></div></details></div>
+      <div class="card"><div class="card-head"><div><h3>UPI attempts that fail</h3><p class="hint">Share of attempts at the top remitter banks declined on the customer’s side (balance, PIN, limits) or by the bank’s systems (technical), weighted by volume</p></div></div><div class="chart" id="i3"></div><ul class="legend" id="i3-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="i3-t"></div></details></div>
       <div class="card"><div class="card-head"><div><h3>UPI disputes</h3><p class="hint">Chargebacks raised per 10,000 transactions, all beneficiary banks</p></div></div><div class="chart" id="i4"></div><ul class="legend" id="i4-l"></ul><details class="tbl"><summary>Table</summary><div class="tbl-wrap" id="i4-t"></div></details></div>
     </div>
     <div class="grid g-2" style="margin-bottom:16px">
@@ -493,13 +494,14 @@
     <dl class="notes">
       <dt>Source</dt><dd>Reserve Bank of India, <em>Bank-wise ATM/POS/Card Statistics</em>, one Excel release per month. Every figure here is a bank's own monthly return to RBI, re-shaped but not adjusted.</dd>
       <dt>Payments and cash</dt><dd>"Card payments" are transactions at PoS terminals plus online/e-commerce and other card-not-present transactions. "ATM cash" is cash withdrawn at ATMs with the card. Before March 2022 RBI reported only an "at PoS" and an "at ATM" split; from March 2022 the payments side is the sum of three published columns. Debit-card cash withdrawn at PoS (tiny) is excluded from both.</dd>
+      <dt>Headline tiles</dt><dd>Changes are green when they are good news for the market, red when they are bad news (cash advances on credit cards, UPI declines, app concentration) and uncoloured when they are neither (average ticket, cash withdrawn on debit cards). Month-on-month changes on monthly totals and per-card monthly rates compare per-day averages, so a 28-day February is not read as a fall. The line under each tile covers the time window up to the latest month, with the month picked marked; hover or use the arrow keys to read any month. Cards outstanding count every card in issue, used or not; RBI's 2022 card directions make issuers close credit cards unused for a year, and RBI publishes no count of new cards, so spend per card added is net of closures. The concentration tiles mark NPCI's cap: no UPI app above 30% of volume on a rolling three months after 31 December 2026. UPI months marked provisional are the latest three, which NPCI revises.</dd>
       <dt>Units</dt><dd>Counts are in Indian notation: K = thousand, L = lakh (100,000), Cr = crore (10 million). Money is in ₹ crore; ₹1 L Cr = ₹1 lakh crore = ₹1 trillion. RBI's own unit changed from ₹ million to ₹ lakh (July 2019) to ₹ thousand (March 2022); all values are converted before display.</dd>
       <dt>Ticket sizes</dt><dd>Monthly spend per card = card payments value ÷ cards outstanding. Average payment = payments value ÷ payment count. Average ATM withdrawal = ATM cash value ÷ ATM withdrawal count. All in rupees per transaction or per card per month.</dd>
       <dt>Market share</dt><dd>Always a share of all banks in RBI's release for that month, even when a bank-type filter narrows which banks are listed. Colours stay attached to a bank while you change the window, month or Top N.</dd>
       <dt>Bank names</dt><dd>RBI has spelt the same bank many different ways since 2011. Names are standardised to RBI's latest spelling, so mergers show as the surviving bank from the merger month and the absorbed banks simply end. Bank type follows RBI's own group headings, with IDBI Bank classed as private from its 2019 reclassification onward.</dd>
       <dt>Revisions</dt><dd>RBI re-issues some months as "Revised", sometimes a year later. The data file is rebuilt from the latest release of every month whenever the updater runs.</dd>
       <dt>UPI</dt><dd>The UPI section comes from NPCI's <em>UPI Ecosystem Statistics</em> tables, not from RBI. App shares use customer-initiated transactions as NPCI reports them per app; app names are standardised across NPCI's spelling changes. Remitter-bank shares come from NPCI's top-50 member table, so "Others" there is everything outside the top 50. NPCI revises the latest months, and the collector re-reads the last three months on every run. The state map uses NPCI's state-wise table (from April 2023); a large share of transactions carries no location and is left off the map, so state shares are of located transactions only. Boundaries: udit-001/india-maps-data, simplified.</dd>
-      <dt>Insights</dt><dd>The Insights view reads RBI's card figures and NPCI's UPI tables together, so its month picker starts in April 2020 when NPCI's monthly data begins; panels that use RBI data alone follow the full time window. Every finding is a rule applied to the numbers for the month picked (for example, a finding about new cards appears only when spend per added card is below 80% of the average), so findings appear, disappear and change column as the data changes. "Spend per card added" is the 12-month change in card spend divided by the 12-month change in cards outstanding. UPI decline rates come from NPCI's remitter-bank table (top banks by volume, weighted by volume): "business" declines are refusals by the customer's own bank such as insufficient balance, wrong PIN or exceeded limits; "technical" declines are system failures. Chargebacks are NPCI's beneficiary-bank chargeback table summed across banks. Per-person figures use approximate 2026 population projections from the National Commission on Population and count only transactions NPCI could place in a state. Seasonality is the average deviation of a month from a centred 13-month trend over the five years ending six months before the month picked.</dd>
+      <dt>Insights</dt><dd>The Insights view reads RBI's card figures and NPCI's UPI tables together, so its month picker starts in April 2020 when NPCI's monthly data begins; panels that use RBI data alone follow the full time window. Every finding is a rule applied to the numbers for the month picked (for example, a finding about new cards appears only when spend per added card is below 80% of the average), so findings appear, disappear and change column as the data changes. "Spend per card added" is the 12-month change in card spend divided by the 12-month change in cards outstanding. UPI decline rates come from NPCI's remitter-bank table (top banks by volume, weighted by volume): "customer-side" declines (NPCI calls them business declines) are refusals for insufficient balance, wrong PIN or exceeded limits, and say more about a bank's customer base than about how well it runs; "technical" declines are system failures. Chargebacks are NPCI's beneficiary-bank chargeback table summed across banks. Per-person figures use approximate 2026 population projections from the National Commission on Population and count only transactions NPCI could place in a state. Seasonality is the average deviation of a month from a centred 13-month trend over the five years ending six months before the month picked.</dd>
       <dt>Risk monitor</dt><dd>The Risk monitor rates card issuers against their peers, separately for credit and debit cards. Peers are issuers with at least a lakh credit cards, or at least 10 lakh debit cards, in the month picked (largest 25, within the bank-type filter). Cells are shaded by quartile among those peers on indicators where a direction is worse. Growth rates are withheld for issuers whose card base a year earlier was under a fifth of today's. Flags common to both: <em>New cards under-used</em> (cards grew over 5%, and spend or payments per added card is under 60% of the issuer's average and no better than the market's ratio; the ratio is computed only when the card base grew at least 2%); <em>Spend / Payments lagging issuance</em> (value growth trails card growth by 5 points more than it does for the market as a whole); <em>Low card activity</em> (worst quartile of transactions per card); <em>Losing spend / payments share</em> (down more than 0.5 points in a year); <em>Portfolio purge</em> (cards outstanding fell over 5% in a single month within the last 12); <em>High UPI decline rate</em> and <em>High chargebacks</em> (worst quartile among peers with NPCI data); <em>UPI technical declines</em> (over 0.5% of attempts); <em>Systemic weight</em> (over 20% of all cards of that type). Credit only: <em>High cash-advance use</em> (worst quartile of ATM withdrawals per 1,000 cards) and <em>Cash advances rising</em> (over 20% in a year). Debit only: <em>Cash-dependent base</em> (worst quartile of ATM cash withdrawn per card) and <em>ATM network shrinking</em> (the bank's own ATMs down over 5% in a year, counted only for banks with at least 50 ATMs). UPI indicators describe the bank as a UPI remitter or beneficiary, not its card book, and exist only for the banks NPCI lists. Views can be linked directly: add #risk-credit, #risk-debit or #insights to the address.</dd>
     </dl>
   </section>
@@ -541,6 +543,7 @@
   function fmtCount(v) {
     if (v == null || isNaN(v)) return '–';
     const a = Math.abs(v);
+    if (a >= 1e10) return nfIN.format(Math.round(v / 1e7)) + ' Cr';
     if (a >= 1e7) return (v / 1e7).toFixed(a >= 1e8 ? 1 : 2) + ' Cr';
     if (a >= 1e5) return (v / 1e5).toFixed(a >= 1e6 ? 1 : 2) + ' L';
     if (a >= 1e3) return (v / 1e3).toFixed(1) + 'K';
@@ -554,7 +557,7 @@
     if (a >= 10) return '₹' + Math.round(cr) + ' Cr';
     return '₹' + cr.toFixed(1) + ' Cr';
   }
-  function fmtRs(v) { return v == null || isNaN(v) ? '–' : '₹' + nfIN.format(Math.round(v)); }
+  function fmtRs(v) { return v == null || isNaN(v) ? '–' : (v < -0.5 ? '−₹' : '₹') + nfIN.format(Math.abs(Math.round(v))); }
   function fmtPct(f, d = 1) { return f == null || isNaN(f) ? '–' : (f * 100).toFixed(d) + '%'; }
   function calLabel(cal, i, long) { const [y, m] = cal[i].split('-'); return MON[+m - 1] + ' ' + (long ? y : '’' + y.slice(2)); }
   function mLabel(i, long) { return calLabel(D.months, i, long); }
@@ -760,7 +763,7 @@
   // the line covers the time window up to the latest month (stretched back to the month picked if that is older),
   // so it stays put while the month picker moves the marker along it
   function sparkWin(sel, last, first = 0) { const len = S.range || last + 1; return [Math.max(first, Math.min(sel, last - len + 1)), last]; }
-  // o: { m0, m1, sel, lab: month index -> label, fmt, name }; fn: month index -> value
+  // o: { m0, m1, sel, lab: month index -> label, fmt, name, ref: { v, name }, prov: month index -> provisional? }; fn: month index -> value
   function sparkline(svgEl, fn, color, o) {
     const W = svgEl.clientWidth || 200, H = svgEl.clientHeight || 34;
     const svg = d3.select(svgEl).attr('viewBox', `0 0 ${W} ${H}`).attr('preserveAspectRatio', 'none');
@@ -769,11 +772,16 @@
     const vals = values.filter(v => !isNaN(v)); if (vals.length < 2) return;
     const vAt = mm => mm < o.m0 || mm > o.m1 ? NaN : values[mm - o.m0];
     const x = d3.scaleLinear().domain([o.m0, o.m1]).range([4, W - 6]);
-    const lo = Math.min(...vals), hi = Math.max(...vals), pad = (hi - lo) * 0.08 || Math.abs(hi) * 0.02 || 1;
+    const ext = o.ref ? vals.concat(o.ref.v) : vals;
+    const lo = Math.min(...ext), hi = Math.max(...ext), pad = (hi - lo) * 0.08 || Math.abs(hi) * 0.02 || 1;
     const y = d3.scaleLinear().domain([lo - pad, hi + pad]).range([H - 4, 4]);
     const line = d3.line().defined(v => !isNaN(v)).x((v, i) => x(months[i])).y(v => y(v));
-    const area = d3.area().defined(v => !isNaN(v)).x((v, i) => x(months[i])).y0(H - 2).y1(v => y(v));
-    svg.append('path').attr('d', area(values)).attr('fill', color).attr('opacity', 0.1);
+    // no area fill: the axis does not start at zero, and a fill would suggest that it does
+    if (o.ref) {
+      const ry = y(o.ref.v);
+      svg.append('line').attr('x1', 0).attr('x2', W).attr('y1', ry).attr('y2', ry).attr('stroke', css.down).attr('stroke-width', 1).attr('stroke-dasharray', '4 3').attr('opacity', 0.7);
+      svg.append('text').attr('x', 4).attr('y', ry > 12 ? ry - 3 : ry + 10).attr('font-size', 9).attr('font-family', 'var(--mono)').attr('fill', css.down).text(o.ref.name + ' ' + o.fmt(o.ref.v));
+    }
     svg.append('path').attr('d', line(values)).attr('fill', 'none').attr('stroke', css.others).attr('stroke-width', 1.5);
     // the month picked: a guide, the step into it in colour, and the dot
     const sv = vAt(o.sel);
@@ -793,7 +801,8 @@
       hd.attr('cx', x(mm)).attr('cy', y(v)).style('display', null);
       const rows = [{ name: o.name, color, value: o.fmt(v) }];
       if (mm !== o.sel && !isNaN(sv)) rows.push({ name: `${o.lab(o.sel)} (picked)`, color: 'transparent', value: o.fmt(sv) });
-      showTip(cx, cy, o.lab(mm), rows);
+      if (o.ref) rows.push({ name: o.ref.name, color: css.down, value: o.fmt(o.ref.v) });
+      showTip(cx, cy, o.lab(mm) + (o.prov && o.prov(mm) ? ' · provisional' : ''), rows);
     };
     const hide = () => { hl.style('display', 'none'); hd.style('display', 'none'); hideTip(); };
     const near = r => [r.left + x(cur) * r.width / W, r.top + r.height / 2];
@@ -809,31 +818,52 @@
   }
 
   // ---------- render: KPIs ----------
-  function deltaSpan(cur, prev, label, pct = true) {
+  // pol: +1 when a rise is good news (green), -1 when a rise is bad news (red), 0 when it is neither (no colour)
+  function deltaSpan(cur, prev, label, pol = 1) {
     const s = document.createElement('span');
     if (prev == null || isNaN(prev) || prev === 0 || cur == null || isNaN(cur)) { s.textContent = '– ' + label; return s; }
-    const d = cur / prev - 1;
-    const b = document.createElement('span'); b.className = 'delta ' + (d > 0.0005 ? 'up' : d < -0.0005 ? 'down' : '');
+    const d = cur / prev - 1, g = d * pol;
+    const b = document.createElement('span'); b.className = 'delta ' + (g > 0.0005 ? 'up' : g < -0.0005 ? 'down' : '');
     b.textContent = (d > 0 ? '▲' : d < 0 ? '▼' : '') + ' ' + (Math.abs(d) * 100).toFixed(1) + '%';
     s.append(b, ' ' + label); return s;
+  }
+  const daysIn = (cal, i) => { const [y, mo] = cal[i].split('-'); return new Date(+y, +mo, 0).getDate(); };
+  // one row of five KPI tiles. Tile fields: l label, v value text, cur / pm / py (this month, last month, a year ago),
+  // pol (see deltaSpan), fl (a monthly total or rate: compared per day, so a 28-day February is not read as a fall),
+  // note (a line under the deltas), and for the sparkline sp (month -> value), f (format), n (short name), ref, prov
+  function fillTiles(p, tiles, m, cal, sw) {
+    const lab = (i, long) => calLabel(cal, i, long), dn = i => i >= 0 && i < cal.length ? daysIn(cal, i) : NaN;
+    tiles.forEach((t, i) => {
+      $(`${p}${i}-l`).textContent = t.l; $(`${p}${i}-v`).textContent = t.v;
+      const pm = t.fl ? t.pm * dn(m) / dn(m - 1) : t.pm, py = t.fl ? t.py * dn(m) / dn(m - 12) : t.py;
+      const de = $(`${p}${i}-d`);
+      de.replaceChildren(deltaSpan(t.cur, pm, 'vs ' + (m > 0 ? lab(m - 1) : 'prev') + (t.fl ? ', per day' : ''), t.pol), deltaSpan(t.cur, py, 'vs ' + (m >= 12 ? lab(m - 12) : 'year ago'), t.pol));
+      let ne = de.nextElementSibling;
+      if (!ne || !ne.classList.contains('tnote')) { ne = document.createElement('div'); ne.className = 'tnote'; de.after(ne); }
+      ne.textContent = t.note || ''; ne.style.display = t.note ? '' : 'none';
+      sparkline($(`${p}${i}-s`), t.sp, i === 0 ? css.accent : css.series[0], { m0: sw[0], m1: sw[1], sel: m, lab: mm => lab(mm, true), fmt: t.f, name: t.n, ref: t.ref, prov: t.prov });
+    });
   }
   function renderKpis() {
     const list = banksIn(), m = S.asOf, c = CT[S.ct];
     const at = (col, mm) => mm < 0 ? NaN : sumAll(col, mm, list);
-    const issuing = list.filter(b => (get(c.cards, b, m) || 0) > 0).length;
+    const issuing = list.filter(b => (get(c.cards, b, m) || 0) > 0).length, credit = S.ct === 'cc';
+    const fmtDec = (v, d = 1) => isNaN(v) ? '–' : v.toFixed(d), sg = v => (v >= 0 ? '+' : '−') + Math.abs(v * 100).toFixed(0) + '%';
+    const ticket = mm => at(c.payV, mm) * 1e6 / at(c.payN, mm), adv = mm => at(c.atmN, mm) * 1000 / at(c.cards, mm);
+    // the average ticket moves with the payment mix, so say which way the mix moved
+    const yN = at(c.payN, m) / at(c.payN, m - 12) - 1, yV = at(c.payV, m) / at(c.payV, m - 12) - 1, yT = ticket(m) / ticket(m - 12) - 1;
+    const tNote = !(Math.abs(yT) > 0.05) ? ''
+      : yT < 0 ? `Over the year: ${sg(yN)} in number, ${sg(yV)} in value. ${yV >= 0 ? 'More small payments, not less spending.' : 'Smaller payments and less spending.'}`
+      : `Over the year: ${sg(yV)} in value, ${sg(yN)} in number. ${yN >= 0 ? 'Payments got larger.' : 'Fewer, larger payments.'}`;
     const tiles = [
-      { l: `${c.name} cards outstanding · ${issuing} issuing banks`, v: fmtCount(at(c.cards, m)), cur: at(c.cards, m), pm: at(c.cards, m - 1), py: at(c.cards, m - 12), n: `${c.name} cards outstanding`, f: fmtCount, sp: mm => at(c.cards, mm) },
-      { l: 'Card payments this month', v: fmtInr(at(c.payV, m)), cur: at(c.payV, m), pm: at(c.payV, m - 1), py: at(c.payV, m - 12), n: 'Card payments', f: fmtInr, sp: mm => at(c.payV, mm) },
-      { l: 'Payment transactions', v: fmtCount(at(c.payN, m)), cur: at(c.payN, m), pm: at(c.payN, m - 1), py: at(c.payN, m - 12), n: 'Payment transactions', f: fmtCount, sp: mm => at(c.payN, mm) },
-      { l: 'Average payment', v: fmtRs(at(c.payV, m) * 1e6 / at(c.payN, m)), cur: at(c.payV, m) / at(c.payN, m), pm: at(c.payV, m - 1) / at(c.payN, m - 1), py: at(c.payV, m - 12) / at(c.payN, m - 12), n: 'Average payment', f: fmtRs, sp: mm => at(c.payV, mm) * 1e6 / at(c.payN, mm) },
-      { l: 'Cash withdrawn at ATMs', v: fmtInr(at(c.atmV, m)), cur: at(c.atmV, m), pm: at(c.atmV, m - 1), py: at(c.atmV, m - 12), n: 'Cash withdrawn at ATMs', f: fmtInr, sp: mm => at(c.atmV, mm) },
+      { l: `${c.name} cards outstanding · ${issuing} issuing banks`, v: fmtCount(at(c.cards, m)), cur: at(c.cards, m), pm: at(c.cards, m - 1), py: at(c.cards, m - 12), pol: 1, n: `${c.name} cards outstanding`, f: fmtCount, sp: mm => at(c.cards, mm) },
+      { l: 'Card payments this month', v: fmtInr(at(c.payV, m)), cur: at(c.payV, m), pm: at(c.payV, m - 1), py: at(c.payV, m - 12), pol: 1, fl: true, n: 'Card payments', f: fmtInr, sp: mm => at(c.payV, mm) },
+      { l: 'Payment transactions', v: fmtCount(at(c.payN, m)), cur: at(c.payN, m), pm: at(c.payN, m - 1), py: at(c.payN, m - 12), pol: 1, fl: true, n: 'Payment transactions', f: fmtCount, sp: mm => at(c.payN, mm) },
+      { l: 'Average payment', v: fmtRs(ticket(m)), cur: ticket(m), pm: ticket(m - 1), py: ticket(m - 12), pol: 0, note: tNote, n: 'Average payment', f: fmtRs, sp: ticket },
+      credit ? { l: `Cash advances per 1,000 cards · ${fmtInr(at(c.atmV, m))} drawn at ATMs`, v: fmtDec(adv(m)), cur: adv(m), pm: adv(m - 1), py: adv(m - 12), pol: -1, fl: true, n: 'Cash advances per 1,000 cards', f: v => fmtDec(v), sp: adv }
+             : { l: 'Cash withdrawn at ATMs', v: fmtInr(at(c.atmV, m)), cur: at(c.atmV, m), pm: at(c.atmV, m - 1), py: at(c.atmV, m - 12), pol: 0, fl: true, n: 'Cash withdrawn at ATMs', f: fmtInr, sp: mm => at(c.atmV, mm) },
     ];
-    const [sw0, sw1] = sparkWin(m, X.nM - 1);
-    tiles.forEach((t, i) => {
-      $(`k${i}-l`).textContent = t.l; $(`k${i}-v`).textContent = t.v;
-      const d = $(`k${i}-d`); d.replaceChildren(deltaSpan(t.cur, t.pm, 'vs ' + (m > 0 ? mLabel(m - 1) : 'prev')), deltaSpan(t.cur, t.py, 'vs ' + (m >= 12 ? mLabel(m - 12) : 'year ago')));
-      sparkline($(`k${i}-s`), t.sp, i === 0 ? css.accent : css.series[0], { m0: sw0, m1: sw1, sel: m, lab: mm => mLabel(mm, true), fmt: t.f, name: t.n });
-    });
+    fillTiles('k', tiles, m, D.months, sparkWin(m, X.nM - 1));
   }
 
   // ---------- render: market share ----------
@@ -985,19 +1015,16 @@
     const p2mShare = i => at(T.p2m_vol, i) / at(T.vol, i);
     const apps = U.apps || [], appTot = i => apps.reduce((s, a) => s + (a.vol[i] || 0), 0) + ((U.apps_others && U.apps_others.vol[i]) || 0);
     const topShare = i => apps.length ? Math.max(...apps.map(a => a.vol[i] || 0)) / appTot(i) : NaN;
+    const prov = i => i >= n - 3;      // NPCI revises the latest three months
     const tiles = [
-      { l: 'UPI transactions in ' + uLabel(m, true), v: fmtMn(at(T.vol, m)), cur: at(T.vol, m), pm: at(T.vol, m - 1), py: at(T.vol, m - 12), n: 'UPI transactions', f: fmtMn, sp: i => at(T.vol, i) },
-      { l: 'UPI value', v: fmtCr(at(T.val, m)), cur: at(T.val, m), pm: at(T.val, m - 1), py: at(T.val, m - 12), n: 'UPI value', f: fmtCr, sp: i => at(T.val, i) },
-      { l: 'Merchant payments, share of volume', v: fmtPct(p2mShare(m)), cur: p2mShare(m), pm: p2mShare(m - 1), py: p2mShare(m - 12), n: 'Merchant share of volume', f: fmtPct, sp: p2mShare },
-      { l: 'Average transaction', v: fmtRs(ticket(m)), cur: ticket(m), pm: ticket(m - 1), py: ticket(m - 12), n: 'Average transaction', f: fmtRs, sp: ticket },
-      { l: 'Largest app, share of customer-initiated volume', v: fmtPct(topShare(m)), cur: topShare(m), pm: topShare(m - 1), py: topShare(m - 12), n: 'Largest app’s share', f: fmtPct, sp: topShare },
+      { l: 'UPI transactions in ' + uLabel(m, true), v: fmtMn(at(T.vol, m)), cur: at(T.vol, m), pm: at(T.vol, m - 1), py: at(T.vol, m - 12), pol: 1, fl: true, n: 'UPI transactions', f: fmtMn, sp: i => at(T.vol, i), prov, note: prov(m) ? 'Provisional: NPCI revises the latest three months.' : '' },
+      { l: 'UPI value', v: fmtCr(at(T.val, m)), cur: at(T.val, m), pm: at(T.val, m - 1), py: at(T.val, m - 12), pol: 1, fl: true, n: 'UPI value', f: fmtCr, sp: i => at(T.val, i), prov },
+      { l: 'Merchant payments, share of volume', v: fmtPct(p2mShare(m)), cur: p2mShare(m), pm: p2mShare(m - 1), py: p2mShare(m - 12), pol: 1, n: 'Merchant share of volume', f: fmtPct, sp: p2mShare, prov },
+      { l: 'Average transaction', v: fmtRs(ticket(m)), cur: ticket(m), pm: ticket(m - 1), py: ticket(m - 12), pol: 0, n: 'Average transaction', f: fmtRs, sp: ticket, prov },
+      { l: 'Largest app, share of customer-initiated volume', v: fmtPct(topShare(m)), cur: topShare(m), pm: topShare(m - 1), py: topShare(m - 12), pol: -1, n: 'Largest app’s share', f: fmtPct, sp: topShare, prov,
+        ref: { v: 0.3, name: 'NPCI cap' }, note: 'NPCI’s cap: no app above 30% of UPI volume, on a rolling three months, after 31 Dec 2026.' },
     ];
-    const [sw0, sw1] = sparkWin(m, n - 1);
-    tiles.forEach((t, i) => {
-      $(`u${i}-l`).textContent = t.l; $(`u${i}-v`).textContent = t.v;
-      $(`u${i}-d`).replaceChildren(deltaSpan(t.cur, t.pm, 'vs ' + (m > 0 ? uLabel(m - 1) : 'prev')), deltaSpan(t.cur, t.py, 'vs ' + (m >= 12 ? uLabel(m - 12) : 'year ago')));
-      sparkline($(`u${i}-s`), t.sp, i === 0 ? css.accent : css.series[0], { m0: sw0, m1: sw1, sel: m, lab: i => uLabel(i, true), fmt: t.f, name: t.n });
-    });
+    fillTiles('u', tiles, m, UM, sparkWin(m, n - 1));
     {
       if (apps.length) {
         const top = apps.slice().sort((a, b) => (b.vol[m] || 0) - (a.vol[m] || 0)).filter(a => (a.vol[m] || 0) > 0).slice(0, S.topN);
@@ -1125,19 +1152,17 @@
     const M = mLabel(m, true), yr = m >= 12;
     // ---- tiles
     const peakC = peakUpTo(cash, m);
+    const prov = mm => UI[mm] >= 0 && UI[mm] >= U.months.length - 3;
+    const shrank = d3.range(m - 11, m + 1).filter(mm => at(ccC, mm) < at(ccC, mm - 1)).length;
     const tiles = [
-      { l: `Monthly spend on each credit card added in the 12 months to ${M} · the average card spends ${fmtRs(at(avgSpend, m))}`, v: fmtRs(at(marg, m)), cur: at(marg, m), pm: at(marg, m - 1), py: at(marg, m - 12), n: 'Spend per card added', f: fmtRs, sp: mm => at(marg, mm) },
-      { l: 'Purchases per debit card per month', v: fmtDec(at(dcPerCard, m)), cur: at(dcPerCard, m), pm: at(dcPerCard, m - 1), py: at(dcPerCard, m - 12), n: 'Purchases per debit card', f: fmtDec, sp: mm => at(dcPerCard, mm) },
-      { l: 'UPI debits declined by the customer’s own bank', v: fmtP(at(bd, m)), cur: at(bd, m), pm: at(bd, m - 1), py: at(bd, m - 12), n: 'Declined by own bank', f: fmtP, sp: mm => at(bd, mm) },
-      { l: `ATM cash withdrawn, against the ${peakC >= 0 ? mLabel(peakC, true) : ''} peak`, v: fmtPct(at(cash, m) / at(cash, peakC)), cur: at(cash, m), pm: at(cash, m - 1), py: at(cash, m - 12), n: 'ATM cash withdrawn', f: fmtInr, sp: mm => at(cash, mm) },
-      { l: 'Two largest UPI apps, share of transactions', v: fmtPct(at(top2, m)), cur: at(top2, m), pm: at(top2, m - 1), py: at(top2, m - 12), n: 'Top two apps’ share', f: fmtPct, sp: mm => at(top2, mm) },
+      { l: `Monthly spend on each credit card added in the 12 months to ${M} · the average card spends ${fmtRs(at(avgSpend, m))}`, v: fmtRs(at(marg, m)), cur: at(marg, m), pm: at(marg, m - 1), py: at(marg, m - 12), pol: 1, fl: true, n: 'Spend per card added', f: fmtRs, sp: mm => at(marg, mm),
+        note: shrank ? `Credit cards in issue fell in ${shrank} of the last 12 months, most likely issuers closing unused cards: that moves this figure with no change in new cards.` : 'Counts net additions: issuers must close credit cards unused for a year, and RBI publishes no count of new cards.' },
+      { l: 'Purchases per debit card per month', v: fmtDec(at(dcPerCard, m)), cur: at(dcPerCard, m), pm: at(dcPerCard, m - 1), py: at(dcPerCard, m - 12), pol: 1, fl: true, n: 'Purchases per debit card', f: fmtDec, sp: mm => at(dcPerCard, mm) },
+      { l: 'UPI customer-side declines: debits refused for low balance, wrong PIN or limits', v: fmtP(at(bd, m)), cur: at(bd, m), pm: at(bd, m - 1), py: at(bd, m - 12), pol: -1, n: 'Customer-side declines', f: fmtP, sp: mm => at(bd, mm), prov },
+      { l: `ATM cash withdrawn, against the ${peakC >= 0 ? mLabel(peakC, true) : ''} peak`, v: fmtPct(at(cash, m) / at(cash, peakC)), cur: at(cash, m), pm: at(cash, m - 1), py: at(cash, m - 12), pol: 0, fl: true, n: 'ATM cash withdrawn', f: fmtInr, sp: mm => at(cash, mm) },
+      { l: 'Two largest UPI apps, share of transactions', v: fmtPct(at(top2, m)), cur: at(top2, m), pm: at(top2, m - 1), py: at(top2, m - 12), pol: -1, n: 'Top two apps’ share', f: fmtPct, sp: mm => at(top2, mm), prov, ref: { v: 0.6, name: 'Two apps at the 30% cap' } },
     ];
-    const [sw0, sw1] = sparkWin(m, nM - 1, first);
-    tiles.forEach((t, i) => {
-      $(`n${i}-l`).textContent = t.l; $(`n${i}-v`).textContent = t.v;
-      $(`n${i}-d`).replaceChildren(deltaSpan(t.cur, t.pm, 'vs ' + (m > 0 ? mLabel(m - 1) : 'prev')), deltaSpan(t.cur, t.py, 'vs ' + (m >= 12 ? mLabel(m - 12) : 'year ago')));
-      sparkline($(`n${i}-s`), t.sp, i === 0 ? css.accent : css.series[0], { m0: sw0, m1: sw1, sel: m, lab: mm => mLabel(mm, true), fmt: t.f, name: t.n });
-    });
+    fillTiles('n', tiles, m, D.months, sparkWin(m, nM - 1, first));
     // ---- findings: each one is computed for the month picked and lands in whichever column the numbers put it
     $('in-h2').textContent = `What the three datasets say together, ${M}`;
     $('in-hint').textContent = 'Every sentence, tile and chart is recomputed for the month picked in the bar; findings move between the columns as the data changes.';
@@ -1194,13 +1219,13 @@
       if (gap < 0.8) add(warn, 'New credit cards are being used far less than existing ones', ['Cards outstanding grew ', chg(at(ccC, m), at(ccC, m - 12)), ' in the 12 months to ', M, ' while card spend grew ', chg(at(ccV, m), at(ccV, m - 12)), '. The ', B(fmtCount(added)), ' cards added spend ', B(fmtRs(at(marg, m))), ' a month each, against ', B(fmtRs(at(avgSpend, m))), ' for the average card: issuers are chasing card counts, not usage, and the newest cohort carries the thinnest economics.', names ? ' Widest gaps among large issuers: ' + names + '.' : '']);
       else add(good, 'New credit cards are being used', ['The ', B(fmtCount(added)), ' credit cards added in the 12 months to ', M, ' spend ', B(fmtRs(at(marg, m))), ' a month each, ', B(fmtPct(gap)), ' of the average card’s ', B(fmtRs(at(avgSpend, m))), '.']);
     }
-    // business declines
+    // customer-side (NPCI: business) declines
     if (!isNaN(at(bd, m)) && Q && Q.banks) {
       const failed = at(bd, m) / 100 * at(qvol, m) * 1e6;
       const worst = Q.banks.slice(0, 12).filter(b => b.bd != null).sort((a, b) => b.bd - a.bd).slice(0, 3).map(b => `${npciShort(b.n)} ${fmtP(b.bd)}`).join(', ');
       const ref = !isNaN(at(bd, m - 24)) ? m - 24 : (!isNaN(at(bd, m - 12)) ? m - 12 : -1);
       const high = at(bd, m) > 5;
-      add(high ? warn : good, high ? `One in ${Math.round(100 / at(bd, m))} UPI debits is declined by the customer’s own bank` : 'Few UPI debits are declined by the customer’s bank', [B(fmtP(at(bd, m))), ' of attempts at the top remitter banks were declined for business reasons in ', M, ' (insufficient balance, wrong PIN, exceeded limits), roughly ', B(fmtCount(failed)), ' attempts', ref >= 0 ? [', against ', B(fmtP(at(bd, ref))), ' in ', mLabel(ref, true)] : '', '. Technical declines were ', B(fmtP(at(td, m))), ', so failures now sit with the customer’s balance and the bank’s rules rather than the network: a rising business-decline rate is a household-liquidity signal as much as an operations one.', worst ? [' Highest over the last 12 months among large banks: ', worst, '.'] : '']);
+      add(high ? warn : good, high ? `One in ${Math.round(100 / at(bd, m))} UPI debits fails on the customer’s side` : 'Few UPI debits fail on the customer’s side', [B(fmtP(at(bd, m))), ' of attempts at the top remitter banks were declined on the customer’s side in ', M, ' (insufficient balance, wrong PIN, exceeded limits), roughly ', B(fmtCount(failed)), ' attempts', ref >= 0 ? [', against ', B(fmtP(at(bd, ref))), ' in ', mLabel(ref, true)] : '', '. Technical declines were ', B(fmtP(at(td, m))), ', so failures now sit with the customer’s balance and the bank’s rules rather than the network: a rising customer-side decline rate is a household-liquidity signal as much as an operations one.', worst ? [' Highest over the last 12 months among large banks: ', worst, '.'] : '']);
     }
     // growth engine
     { const g = yoyS(upN), gp = yoyS(pmN), gpp = yoyS(ppN);
@@ -1281,7 +1306,7 @@
     const idx = a => { const b = at(a, w0); return ser(mm => b > 0 ? at(a, mm) / b * 100 : NaN); };
     $('i2-h').textContent = `Indexed to 100 in ${mLabel(w0, true)}. Follows the time window`;
     lines('i2', [{ name: 'ATM cash withdrawn', short: 'Cash', color: RC.cash, v: idx(cash) }, { name: 'ATMs', short: 'ATMs', color: col(4), v: idx(atms) }, { name: 'Off-site ATMs', short: 'Off-site', color: col(7), v: idx(offsite) }, { name: 'Cash per ATM', short: 'Per ATM', color: col(5), v: idx(cashPerAtm) }], fmtX, { left: 52, aria: 'Cash withdrawn, ATMs and cash per ATM, indexed' }, w0, w1);
-    lines('i3', [{ name: 'Business declines', short: 'Business', color: RC.dc, v: bd }, { name: 'Technical declines', short: 'Technical', color: RC.cc, v: td }], fmtP, { axisFmt: v => v + '%', aria: 'UPI decline rates' });
+    lines('i3', [{ name: 'Customer-side declines', short: 'Customer-side', color: RC.dc, v: bd }, { name: 'Technical declines', short: 'Technical', color: RC.cc, v: td }], fmtP, { axisFmt: v => v + '%', aria: 'UPI decline rates' });
     lines('i4', [{ name: 'Chargebacks per 10,000 UPI transactions', color: RC.upi, v: cb10k }], v => fmtDec(v, 2), { area: true, endLabelValue: true, left: 52, right: 70, axisFmt: v => v.toFixed(2), aria: 'UPI chargebacks per 10,000 transactions' });
     lines('i5', [{ name: 'UPI merchant payments (P2M)', short: 'P2M', color: RC.p2m, v: yoyS(pmN).map(v => v * 100) }, { name: 'UPI person-to-person (P2P)', short: 'P2P', color: RC.p2p, v: yoyS(ppN).map(v => v * 100) }, { name: 'Credit card payments', short: 'Credit', color: RC.cc, v: yoyS(ccN).map(v => v * 100) }], v => isNaN(v) ? '–' : v.toFixed(0) + '%', { axisFmt: v => v + '%', aria: 'Year-on-year growth in transactions' });
     lines('i6', [{ name: 'Two largest apps', short: 'Top 2', color: RC.upi, v: top2.map(v => v * 100) }, { name: 'Third-largest app', short: 'Third', color: col(4), v: third.map(v => v * 100) }], fmtP, { axisFmt: v => v + '%', aria: 'UPI app concentration' });
@@ -1446,7 +1471,7 @@
     });
     tb.append(thead, tbody); mx.appendChild(tb);
     $('rk-note').textContent = credit
-      ? 'Cards 12 m and Spend 12 m are growth over 12 months. New-card spend ÷ avg is the monthly spend attributable to each card added over 12 months, as a multiple of the issuer’s average spend per card. Cash advances are ATM withdrawals per 1,000 credit cards. UPI declines are the share of the bank’s own UPI debits it refused for business reasons, 12-month average (NPCI remitter table, top banks only). Chargebacks are per 10,000 UPI transactions the bank received, 12-month average. Flag rules are listed under Definitions.'
+      ? 'Cards 12 m and Spend 12 m are growth over 12 months. New-card spend ÷ avg is the monthly spend attributable to each card added over 12 months, as a multiple of the issuer’s average spend per card. Cash advances are ATM withdrawals per 1,000 credit cards. UPI declines are the share of the bank’s own customers’ UPI debits refused on the customer’s side (low balance, wrong PIN, limits), 12-month average; they reflect the customer base as much as the bank (NPCI remitter table, top banks only). Chargebacks are per 10,000 UPI transactions the bank received, 12-month average. Flag rules are listed under Definitions.'
       : 'Cards 12 m and Payments 12 m are growth over 12 months in debit cards outstanding and debit card payment value. New-card payments ÷ avg is the monthly payment value attributable to each card added over 12 months, as a multiple of the issuer’s average. Purchases per card count PoS and online debit card payments. ATM cash per card is the rupee value withdrawn at ATMs per debit card per month: how cash-dependent the customer base is. ATMs 12 m is the change in the bank’s own ATM count. UPI declines and chargebacks are as in the credit view. Flag rules are listed under Definitions.';
     // ---- one issuer
     const b = S.riskBank;
@@ -1464,21 +1489,21 @@
     const bAvg = per(payVS, cardsS, 1e6), bTxn = per(payNS, cardsS), bAdv = per(atmNS, cardsS, 1000), bCash = per(atmVS, cardsS, 1e6);
     const bShare = ser(mm => T.cards[mm] > 0 && !isNaN(at(cardsS, mm)) ? at(cardsS, mm) / T.cards[mm] * 100 : NaN), bSShare = ser(mm => T.payV[mm] > 0 && !isNaN(at(payVS, mm)) ? at(payVS, mm) / T.payV[mm] * 100 : NaN);
     const qb = qBank.get(b), cb = cBank.get(b);
+    const ui = X.ui || (U.months ? D.months.map(x => U.months.indexOf(x)) : null);
+    const prov = mm => !!ui && ui[mm] >= 0 && ui[mm] >= U.months.length - 3;
+    const shrank = d3.range(m - 11, m + 1).filter(mm => at(cardsS, mm) < at(cardsS, mm - 1)).length;
+    const margNote = shrank ? `${name}’s ${P.name}s in issue fell in ${shrank} of the last 12 months, likely closures of unused cards: that moves this figure with no change in new cards.`
+      : credit ? 'Counts net additions: issuers must close credit cards unused for a year, and RBI publishes no count of new cards.' : 'Counts net additions, after closed and expired cards; RBI publishes no count of new cards.';
     const tiles = [
-      { l: `${P.Name}s in ${M} · ${fmtPct(d.share)} of all ${P.name}s`, v: fmtCount(d.cards), cur: d.cards, pm: at(cardsS, m - 1), py: at(cardsS, m - 12), n: `${P.Name}s`, f: fmtCount, sp: mm => at(cardsS, mm) },
-      { l: `Monthly ${P.word} on each card added in 12 months · this issuer's average card ${fmtRs(d.avg)}`, v: fmtRs(d.marg), cur: d.marg > 0 ? d.marg : NaN, pm: at(bMarg, m - 1) > 0 ? at(bMarg, m - 1) : NaN, py: at(bMarg, m - 12) > 0 ? at(bMarg, m - 12) : NaN, n: `Monthly ${P.word} per card added`, f: fmtRs, sp: mm => at(bMarg, mm) },
-      { l: `${credit ? 'Transactions' : 'Purchases'} per card per month · all issuers ${fmtDec(at(mkt.txn, m))}`, v: fmtDec(d.txn), cur: d.txn, pm: at(bTxn, m - 1), py: at(bTxn, m - 12), n: `${credit ? 'Transactions' : 'Purchases'} per card`, f: v => fmtDec(v), sp: mm => at(bTxn, mm) },
-      credit ? { l: `Cash advances per 1,000 cards · all issuers ${fmtDec(at(mkt.adv, m), 1)}`, v: fmtDec(d.adv, 1), cur: d.adv, pm: at(bAdv, m - 1), py: at(bAdv, m - 12), n: 'Cash advances per 1,000 cards', f: v => fmtDec(v, 1), sp: mm => at(bAdv, mm) }
-             : { l: `ATM cash withdrawn per card per month · all banks ${fmtRs(at(mkt.cash, m))}`, v: fmtRs(d.cash), cur: d.cash, pm: at(bCash, m - 1), py: at(bCash, m - 12), n: 'ATM cash per card', f: fmtRs, sp: mm => at(bCash, mm) },
-      qb ? { l: `UPI debits it declined for business reasons, 12-m average · all banks ${fmtP(mBd(m))}`, v: fmtP(d.bd), cur: d.bd, pm: avg12(k => qAt(qb.bd_s, k), m - 1), py: avg12(k => qAt(qb.bd_s, k), m - 12), n: 'UPI business declines (month)', f: fmtP, sp: mm => qAt(qb.bd_s, mm) }
-         : { l: `${O.Name} ${credit ? 'purchases' : 'transactions'} per card per month · all banks ${fmtDec(at(mkt.oTxn, m))}`, v: fmtDec(d.oTxn), cur: d.oTxn, pm: ind(b, m - 1).oTxn, py: ind(b, m - 12).oTxn, n: `${O.Name} ${credit ? 'purchases' : 'transactions'} per card`, f: v => fmtDec(v), sp: mm => ind(b, mm).oTxn },
+      { l: `${P.Name}s in ${M} · ${fmtPct(d.share)} of all ${P.name}s`, v: fmtCount(d.cards), cur: d.cards, pm: at(cardsS, m - 1), py: at(cardsS, m - 12), pol: 1, n: `${P.Name}s`, f: fmtCount, sp: mm => at(cardsS, mm) },
+      { l: `Monthly ${P.word} on each card added in 12 months · this issuer's average card ${fmtRs(d.avg)}`, v: fmtRs(d.marg), cur: d.marg > 0 ? d.marg : NaN, pm: at(bMarg, m - 1) > 0 ? at(bMarg, m - 1) : NaN, py: at(bMarg, m - 12) > 0 ? at(bMarg, m - 12) : NaN, pol: 1, fl: true, note: margNote, n: `Monthly ${P.word} per card added`, f: fmtRs, sp: mm => at(bMarg, mm) },
+      { l: `${credit ? 'Transactions' : 'Purchases'} per card per month · all issuers ${fmtDec(at(mkt.txn, m))}`, v: fmtDec(d.txn), cur: d.txn, pm: at(bTxn, m - 1), py: at(bTxn, m - 12), pol: 1, fl: true, n: `${credit ? 'Transactions' : 'Purchases'} per card`, f: v => fmtDec(v), sp: mm => at(bTxn, mm) },
+      credit ? { l: `Cash advances per 1,000 cards · all issuers ${fmtDec(at(mkt.adv, m), 1)}`, v: fmtDec(d.adv, 1), cur: d.adv, pm: at(bAdv, m - 1), py: at(bAdv, m - 12), pol: -1, fl: true, n: 'Cash advances per 1,000 cards', f: v => fmtDec(v, 1), sp: mm => at(bAdv, mm) }
+             : { l: `ATM cash withdrawn per card per month · all banks ${fmtRs(at(mkt.cash, m))}`, v: fmtRs(d.cash), cur: d.cash, pm: at(bCash, m - 1), py: at(bCash, m - 12), pol: 0, fl: true, n: 'ATM cash per card', f: fmtRs, sp: mm => at(bCash, mm) },
+      qb ? { l: `UPI customer-side declines (low balance, PIN, limits), 12-m average · all banks ${fmtP(mBd(m))}`, v: fmtP(d.bd), cur: d.bd, pm: avg12(k => qAt(qb.bd_s, k), m - 1), py: avg12(k => qAt(qb.bd_s, k), m - 12), pol: -1, n: 'Customer-side declines (month)', f: fmtP, sp: mm => qAt(qb.bd_s, mm), prov }
+         : { l: `${O.Name} ${credit ? 'purchases' : 'transactions'} per card per month · all banks ${fmtDec(at(mkt.oTxn, m))}`, v: fmtDec(d.oTxn), cur: d.oTxn, pm: ind(b, m - 1).oTxn, py: ind(b, m - 12).oTxn, pol: 1, fl: true, n: `${O.Name} ${credit ? 'purchases' : 'transactions'} per card`, f: v => fmtDec(v), sp: mm => ind(b, mm).oTxn },
     ];
-    const [sw0, sw1] = sparkWin(m, nM - 1);
-    tiles.forEach((t, i) => {
-      $(`r${i}-l`).textContent = t.l; $(`r${i}-v`).textContent = t.v;
-      $(`r${i}-d`).replaceChildren(deltaSpan(t.cur, t.pm, 'vs ' + (m > 0 ? mLabel(m - 1) : 'prev')), deltaSpan(t.cur, t.py, 'vs ' + (m >= 12 ? mLabel(m - 12) : 'year ago')));
-      sparkline($(`r${i}-s`), t.sp, i === 0 ? css.accent : css.series[0], { m0: sw0, m1: sw1, sel: m, lab: mm => mLabel(mm, true), fmt: t.f, name: t.n });
-    });
+    fillTiles('r', tiles, m, D.months, sparkWin(m, nM - 1));
     // findings
     const list = $('rk-list'); list.replaceChildren();
     $('rk-hint').textContent = `Computed for ${M}${inPeers ? ', ranked against ' + (peers.length - 1) + ' peers' : ' (below the peer threshold or outside the bank-type filter, so no peer rankings)'}.`;
@@ -1503,7 +1528,7 @@
     if (!credit && !isNaN(d.atmG)) add(d.atmG < -0.05 ? 'warn' : 'good', d.atmG < -0.05 ? 'Its ATM network is shrinking' : 'ATM network', [name, ' ran ', B(fmtCount(d.atms)), ' ATMs in ', M, ', ', chg(d.atms, d.atms0), ' over 12 months against ', chg(at(T.atms, m), at(T.atms, m - 12)), ' for all banks.', d.atmG < -0.05 && worst('cash') ? ' Closing ATMs under a cash-dependent customer base is where access risk concentrates.' : '']);
     if (d.purge < -0.03) add('warn', `Portfolio purge in ${mLabel(d.purgeM, true)}`, ['Cards outstanding fell ', B(fmtPct(-d.purge)), ' in a single month, the sharpest drop of the last 12. ', credit ? 'Issuers close inactive credit cards in bulk (RBI requires closure after a year without use), so the base before the purge overstated live customers.' : 'Bulk closures of expired or inactive debit cards usually follow a clean-up of dormant accounts; the base before it overstated live cards.']);
     if (!isNaN(d.sg) && !isNaN(at(mkt.sg, m))) add(d.sg < at(mkt.sg, m) - 0.05 ? 'warn' : 'good', d.sg < at(mkt.sg, m) - 0.05 ? `${P.Word} growing slower than the market` : `${P.Word} keeping pace with the market`, [`${P.Name} ${P.word} `, chg(at(payVS, m), at(payVS, m - 12)), ' over 12 months against ', chg(at(T.payV, m), at(T.payV, m - 12)), ' for all issuers.']);
-    if (qb && !isNaN(d.bd)) add(worst('bd') || d.td > 0.5 ? 'warn' : 'good', d.td > 0.5 ? 'UPI technical declines are elevated' : worst('bd') ? 'High UPI decline rate' : 'UPI declines in line with peers', ['As a UPI remitter, ', name, ' declined ', B(fmtP(d.bd)), ' of its customers’ UPI debits for business reasons over the last 12 months (all banks ', B(fmtP(mBd(m))), ')', rk('bd'), ' and ', B(fmtP(d.td)), ' for technical reasons. Its customers attempted about ', B(fmtCount((qb.vol || 0) * 1e6)), ' UPI debits a month.']);
+    if (qb && !isNaN(d.bd)) add(worst('bd') || d.td > 0.5 ? 'warn' : 'good', d.td > 0.5 ? 'UPI technical declines are elevated' : worst('bd') ? 'High UPI decline rate' : 'UPI declines in line with peers', ['As a UPI remitter, ', name, ' declined ', B(fmtP(d.bd)), ' of its customers’ UPI debits on the customer’s side (low balance, wrong PIN, limits) over the last 12 months (all banks ', B(fmtP(mBd(m))), ')', rk('bd'), ' and ', B(fmtP(d.td)), ' for technical reasons. Its customers attempted about ', B(fmtCount((qb.vol || 0) * 1e6)), ' UPI debits a month.']);
     if (cb && !isNaN(d.cb)) add(worst('cb') ? 'warn' : 'good', worst('cb') ? 'High chargebacks' : 'Chargebacks in line with peers', ['UPI transactions received by ', name, ' drew ', B(fmtDec(d.cb)), ' chargebacks per 10,000 over the last 12 months against ', B(fmtDec(mCb(m))), ' system-wide', rk('cb'), '.']);
     if (credit && !isNaN(d.oTxn) && !isNaN(at(mkt.oTxn, m))) add(d.oTxn < at(mkt.oTxn, m) * 0.5 ? 'warn' : 'good', d.oTxn < at(mkt.oTxn, m) * 0.5 ? 'Debit cards barely used for purchases' : 'Debit card use', ['Its debit cards made ', B(fmtDec(d.oTxn)), ' purchases per card in ', M, ' against ', B(fmtDec(at(mkt.oTxn, m))), ' across all banks.']);
     if (!credit && !isNaN(d.x100) && !isNaN(at(mkt.x100, m))) add(d.x100 < at(mkt.x100, m) * 0.25 ? 'warn' : 'good', d.x100 < at(mkt.x100, m) * 0.25 ? 'Little credit reaches its customers' : 'Credit cross-sell', [name, ' issues ', B(fmtDec(d.x100, 1)), ' credit cards per 100 debit cards against ', B(fmtDec(at(mkt.x100, m), 1)), ' across all banks.', d.x100 < at(mkt.x100, m) * 0.25 ? ' Its deposit customers who need card credit are getting it elsewhere, or not at all.' : d.x100 > at(mkt.x100, m) ? ' It turns more of its deposit customers into credit customers than the market does.' : '']);
@@ -1537,8 +1562,8 @@
     lines('rc4', [{ name: 'Share of cards', short: 'Cards', color: me, v: bShare }, { name: `Share of ${P.word}`, short: P.Word, color: alt, v: bSShare }], fmtP, { axisFmt: v => v + '%', aria: 'Share of cards versus share of ' + P.word });
     const c5 = $('rc5-card');
     if (qb) {
-      c5.hidden = false; title('rc5', 'UPI debits declined, as remitter', 'Share of the bank’s customers’ UPI attempts it declined, against the volume-weighted rate for all top remitters');
-      lines('rc5', [{ name: 'Business declines', short: 'Business', color: me, v: ser(mm => qAt(qb.bd_s, mm)) }, { name: 'Technical declines', short: 'Technical', color: alt, v: ser(mm => qAt(qb.td_s, mm)) }, { name: 'All banks, business', short: 'Market', color: all, v: ser(mm => qAt(Q.bd, mm)) }], fmtP, { axisFmt: v => v + '%', aria: 'UPI decline rates for this bank' });
+      c5.hidden = false; title('rc5', 'UPI debits declined, as remitter', 'Share of the bank’s customers’ UPI attempts that failed, customer-side or technical, against the volume-weighted rate for all top remitters');
+      lines('rc5', [{ name: 'Customer-side declines', short: 'Customer-side', color: me, v: ser(mm => qAt(qb.bd_s, mm)) }, { name: 'Technical declines', short: 'Technical', color: alt, v: ser(mm => qAt(qb.td_s, mm)) }, { name: 'All banks, business', short: 'Market', color: all, v: ser(mm => qAt(Q.bd, mm)) }], fmtP, { axisFmt: v => v + '%', aria: 'UPI decline rates for this bank' });
     } else if (cb) {
       c5.hidden = false; title('rc5', 'UPI chargebacks, as beneficiary', 'Chargebacks per 10,000 UPI transactions the bank received, against all banks');
       lines('rc5', [{ name: name, short: shortName(b), color: me, v: ser(mm => cAt(cb.s, mm)) }, { name: 'All banks', short: 'Market', color: all, v: ser(mm => cAt(CB.per10k, mm)) }], v => fmtDec(v, 2), { axisFmt: v => v.toFixed(2), aria: 'UPI chargebacks for this bank' });
