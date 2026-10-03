@@ -138,7 +138,8 @@
   .tile .deltas { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--muted); }
   .delta { font-family: var(--mono); font-weight: 500; }
   .delta.up { color: var(--up); } .delta.down { color: var(--down); }
-  .spark { margin-top: auto; height: 34px; width: 100%; }
+  .spark { margin-top: auto; height: 34px; width: 100%; cursor: crosshair; touch-action: pan-y; }
+  .spark:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
   .hero .spark { height: 56px; }
 
   /* charts */
@@ -768,20 +769,55 @@
   }
 
   // ---------- sparkline ----------
-  function sparkline(svgEl, values, color) {
+  // the line covers the time window up to the latest month (stretched back to the month picked if that is older),
+  // so it stays put while the month picker moves the marker along it
+  function sparkWin(sel, last, first = 0) { const len = S.range || last + 1; return [Math.max(first, Math.min(sel, last - len + 1)), last]; }
+  // o: { m0, m1, sel, lab: month index -> label, fmt, name }; fn: month index -> value
+  function sparkline(svgEl, fn, color, o) {
     const W = svgEl.clientWidth || 200, H = svgEl.clientHeight || 34;
     const svg = d3.select(svgEl).attr('viewBox', `0 0 ${W} ${H}`).attr('preserveAspectRatio', 'none');
-    svg.selectAll('*').remove();
+    svg.selectAll('*').remove(); svg.on('.spark', null).attr('tabindex', null).attr('aria-label', null);
+    const months = d3.range(o.m0, o.m1 + 1), values = months.map(mm => { const v = fn(mm); return Number.isFinite(v) ? v : NaN; });
     const vals = values.filter(v => !isNaN(v)); if (vals.length < 2) return;
-    const x = d3.scaleLinear().domain([0, values.length - 1]).range([2, W - 6]);
-    const y = d3.scaleLinear().domain([Math.min(...vals) * 0.98, Math.max(...vals) * 1.02]).range([H - 4, 4]);
-    const line = d3.line().defined(v => !isNaN(v)).x((v, i) => x(i)).y(v => y(v));
-    const area = d3.area().defined(v => !isNaN(v)).x((v, i) => x(i)).y0(H - 2).y1(v => y(v));
+    const vAt = mm => mm < o.m0 || mm > o.m1 ? NaN : values[mm - o.m0];
+    const x = d3.scaleLinear().domain([o.m0, o.m1]).range([4, W - 6]);
+    const lo = Math.min(...vals), hi = Math.max(...vals), pad = (hi - lo) * 0.08 || Math.abs(hi) * 0.02 || 1;
+    const y = d3.scaleLinear().domain([lo - pad, hi + pad]).range([H - 4, 4]);
+    const line = d3.line().defined(v => !isNaN(v)).x((v, i) => x(months[i])).y(v => y(v));
+    const area = d3.area().defined(v => !isNaN(v)).x((v, i) => x(months[i])).y0(H - 2).y1(v => y(v));
     svg.append('path').attr('d', area(values)).attr('fill', color).attr('opacity', 0.1);
     svg.append('path').attr('d', line(values)).attr('fill', 'none').attr('stroke', css.others).attr('stroke-width', 1.5);
-    const last = values.length - 1;
-    svg.append('path').attr('d', line(values.map((v, i) => i >= last - 1 ? v : NaN))).attr('fill', 'none').attr('stroke', color).attr('stroke-width', 2);
-    svg.append('circle').attr('cx', x(last)).attr('cy', y(values[last])).attr('r', 3.5).attr('fill', color).attr('stroke', css.surface).attr('stroke-width', 2);
+    // the month picked: a guide, the step into it in colour, and the dot
+    const sv = vAt(o.sel);
+    if (!isNaN(sv)) {
+      svg.append('line').attr('x1', x(o.sel)).attr('x2', x(o.sel)).attr('y1', 0).attr('y2', H).attr('stroke', color).attr('stroke-width', 1).attr('stroke-dasharray', '2 2').attr('opacity', 0.55);
+      svg.append('path').attr('d', line(values.map((v, i) => months[i] === o.sel || months[i] === o.sel - 1 ? v : NaN))).attr('fill', 'none').attr('stroke', color).attr('stroke-width', 2);
+      svg.append('circle').attr('cx', x(o.sel)).attr('cy', y(sv)).attr('r', 3.5).attr('fill', color).attr('stroke', css.surface).attr('stroke-width', 2);
+    }
+    // hover / arrow keys read any month off the line
+    const hl = svg.append('line').attr('y1', 0).attr('y2', H).attr('stroke', css.ink2).attr('stroke-width', 1).attr('opacity', 0.6).style('display', 'none');
+    const hd = svg.append('circle').attr('r', 3).attr('fill', css.surface).attr('stroke', css.ink).attr('stroke-width', 1.5).style('display', 'none');
+    let cur = o.sel;
+    const show = (mm, cx, cy) => {
+      const v = vAt(mm); cur = mm;
+      if (isNaN(v)) { hl.style('display', 'none'); hd.style('display', 'none'); hideTip(); return; }
+      hl.attr('x1', x(mm)).attr('x2', x(mm)).style('display', null);
+      hd.attr('cx', x(mm)).attr('cy', y(v)).style('display', null);
+      const rows = [{ name: o.name, color, value: o.fmt(v) }];
+      if (mm !== o.sel && !isNaN(sv)) rows.push({ name: `${o.lab(o.sel)} (picked)`, color: 'transparent', value: o.fmt(sv) });
+      showTip(cx, cy, o.lab(mm), rows);
+    };
+    const hide = () => { hl.style('display', 'none'); hd.style('display', 'none'); hideTip(); };
+    const near = r => [r.left + x(cur) * r.width / W, r.top + r.height / 2];
+    svg.attr('tabindex', 0).attr('aria-label', `${o.name}, ${o.lab(o.m0)} to ${o.lab(o.m1)}; arrow keys read each month`)
+      .on('pointermove.spark', ev => { const [px] = d3.pointer(ev, svgEl); show(Math.max(o.m0, Math.min(o.m1, Math.round(x.invert(px)))), ev.clientX, ev.clientY); })
+      .on('pointerleave.spark blur.spark', hide)
+      .on('focus.spark', () => { const [cx, cy] = near(svgEl.getBoundingClientRect()); show(cur, cx, cy); })
+      .on('keydown.spark', ev => {
+        if (ev.key !== 'ArrowLeft' && ev.key !== 'ArrowRight') return;
+        ev.preventDefault(); cur = Math.max(o.m0, Math.min(o.m1, cur + (ev.key === 'ArrowLeft' ? -1 : 1)));
+        const [cx, cy] = near(svgEl.getBoundingClientRect()); show(cur, cx, cy);
+      });
   }
 
   // ---------- render: KPIs ----------
@@ -795,20 +831,20 @@
   }
   function renderKpis() {
     const list = banksIn(), m = S.asOf, c = CT[S.ct];
-    const series = (col, fn) => d3.range(Math.max(0, m - 11), m + 1).map(mm => fn ? fn(mm) : sumAll(col, mm, list));
     const at = (col, mm) => mm < 0 ? NaN : sumAll(col, mm, list);
     const issuing = list.filter(b => (get(c.cards, b, m) || 0) > 0).length;
     const tiles = [
-      { l: `${c.name} cards outstanding · ${issuing} issuing banks`, v: fmtCount(at(c.cards, m)), cur: at(c.cards, m), pm: at(c.cards, m - 1), py: at(c.cards, m - 12), sp: series(c.cards) },
-      { l: 'Card payments this month', v: fmtInr(at(c.payV, m)), cur: at(c.payV, m), pm: at(c.payV, m - 1), py: at(c.payV, m - 12), sp: series(c.payV) },
-      { l: 'Payment transactions', v: fmtCount(at(c.payN, m)), cur: at(c.payN, m), pm: at(c.payN, m - 1), py: at(c.payN, m - 12), sp: series(c.payN) },
-      { l: 'Average payment', v: fmtRs(at(c.payV, m) * 1e6 / at(c.payN, m)), cur: at(c.payV, m) / at(c.payN, m), pm: at(c.payV, m - 1) / at(c.payN, m - 1), py: at(c.payV, m - 12) / at(c.payN, m - 12), sp: series(null, mm => sumAll(c.payV, mm, list) / sumAll(c.payN, mm, list)) },
-      { l: 'Cash withdrawn at ATMs', v: fmtInr(at(c.atmV, m)), cur: at(c.atmV, m), pm: at(c.atmV, m - 1), py: at(c.atmV, m - 12), sp: series(c.atmV) },
+      { l: `${c.name} cards outstanding · ${issuing} issuing banks`, v: fmtCount(at(c.cards, m)), cur: at(c.cards, m), pm: at(c.cards, m - 1), py: at(c.cards, m - 12), n: `${c.name} cards outstanding`, f: fmtCount, sp: mm => at(c.cards, mm) },
+      { l: 'Card payments this month', v: fmtInr(at(c.payV, m)), cur: at(c.payV, m), pm: at(c.payV, m - 1), py: at(c.payV, m - 12), n: 'Card payments', f: fmtInr, sp: mm => at(c.payV, mm) },
+      { l: 'Payment transactions', v: fmtCount(at(c.payN, m)), cur: at(c.payN, m), pm: at(c.payN, m - 1), py: at(c.payN, m - 12), n: 'Payment transactions', f: fmtCount, sp: mm => at(c.payN, mm) },
+      { l: 'Average payment', v: fmtRs(at(c.payV, m) * 1e6 / at(c.payN, m)), cur: at(c.payV, m) / at(c.payN, m), pm: at(c.payV, m - 1) / at(c.payN, m - 1), py: at(c.payV, m - 12) / at(c.payN, m - 12), n: 'Average payment', f: fmtRs, sp: mm => at(c.payV, mm) * 1e6 / at(c.payN, mm) },
+      { l: 'Cash withdrawn at ATMs', v: fmtInr(at(c.atmV, m)), cur: at(c.atmV, m), pm: at(c.atmV, m - 1), py: at(c.atmV, m - 12), n: 'Cash withdrawn at ATMs', f: fmtInr, sp: mm => at(c.atmV, mm) },
     ];
+    const [sw0, sw1] = sparkWin(m, X.nM - 1);
     tiles.forEach((t, i) => {
       $(`k${i}-l`).textContent = t.l; $(`k${i}-v`).textContent = t.v;
       const d = $(`k${i}-d`); d.replaceChildren(deltaSpan(t.cur, t.pm, 'vs ' + (m > 0 ? mLabel(m - 1) : 'prev')), deltaSpan(t.cur, t.py, 'vs ' + (m >= 12 ? mLabel(m - 12) : 'year ago')));
-      sparkline($(`k${i}-s`), t.sp, i === 0 ? css.accent : css.series[0]);
+      sparkline($(`k${i}-s`), t.sp, i === 0 ? css.accent : css.series[0], { m0: sw0, m1: sw1, sel: m, lab: mm => mLabel(mm, true), fmt: t.f, name: t.n });
     });
   }
 
@@ -961,18 +997,18 @@
     const p2mShare = i => at(T.p2m_vol, i) / at(T.vol, i);
     const apps = U.apps || [], appTot = i => apps.reduce((s, a) => s + (a.vol[i] || 0), 0) + ((U.apps_others && U.apps_others.vol[i]) || 0);
     const topShare = i => apps.length ? Math.max(...apps.map(a => a.vol[i] || 0)) / appTot(i) : NaN;
-    const spark = (fn) => d3.range(Math.max(0, m - 11), m + 1).map(fn);
     const tiles = [
-      { l: 'UPI transactions in ' + uLabel(m, true), v: fmtMn(at(T.vol, m)), cur: at(T.vol, m), pm: at(T.vol, m - 1), py: at(T.vol, m - 12), sp: spark(i => at(T.vol, i)) },
-      { l: 'UPI value', v: fmtCr(at(T.val, m)), cur: at(T.val, m), pm: at(T.val, m - 1), py: at(T.val, m - 12), sp: spark(i => at(T.val, i)) },
-      { l: 'Merchant payments, share of volume', v: fmtPct(p2mShare(m)), cur: p2mShare(m), pm: p2mShare(m - 1), py: p2mShare(m - 12), sp: spark(p2mShare) },
-      { l: 'Average transaction', v: fmtRs(ticket(m)), cur: ticket(m), pm: ticket(m - 1), py: ticket(m - 12), sp: spark(ticket) },
-      { l: 'Largest app, share of customer-initiated volume', v: fmtPct(topShare(m)), cur: topShare(m), pm: topShare(m - 1), py: topShare(m - 12), sp: spark(topShare) },
+      { l: 'UPI transactions in ' + uLabel(m, true), v: fmtMn(at(T.vol, m)), cur: at(T.vol, m), pm: at(T.vol, m - 1), py: at(T.vol, m - 12), n: 'UPI transactions', f: fmtMn, sp: i => at(T.vol, i) },
+      { l: 'UPI value', v: fmtCr(at(T.val, m)), cur: at(T.val, m), pm: at(T.val, m - 1), py: at(T.val, m - 12), n: 'UPI value', f: fmtCr, sp: i => at(T.val, i) },
+      { l: 'Merchant payments, share of volume', v: fmtPct(p2mShare(m)), cur: p2mShare(m), pm: p2mShare(m - 1), py: p2mShare(m - 12), n: 'Merchant share of volume', f: fmtPct, sp: p2mShare },
+      { l: 'Average transaction', v: fmtRs(ticket(m)), cur: ticket(m), pm: ticket(m - 1), py: ticket(m - 12), n: 'Average transaction', f: fmtRs, sp: ticket },
+      { l: 'Largest app, share of customer-initiated volume', v: fmtPct(topShare(m)), cur: topShare(m), pm: topShare(m - 1), py: topShare(m - 12), n: 'Largest app’s share', f: fmtPct, sp: topShare },
     ];
+    const [sw0, sw1] = sparkWin(m, n - 1);
     tiles.forEach((t, i) => {
       $(`u${i}-l`).textContent = t.l; $(`u${i}-v`).textContent = t.v;
       $(`u${i}-d`).replaceChildren(deltaSpan(t.cur, t.pm, 'vs ' + (m > 0 ? uLabel(m - 1) : 'prev')), deltaSpan(t.cur, t.py, 'vs ' + (m >= 12 ? uLabel(m - 12) : 'year ago')));
-      sparkline($(`u${i}-s`), t.sp, i === 0 ? css.accent : css.series[0]);
+      sparkline($(`u${i}-s`), t.sp, i === 0 ? css.accent : css.series[0], { m0: sw0, m1: sw1, sel: m, lab: i => uLabel(i, true), fmt: t.f, name: t.n });
     });
     {
       if (apps.length) {
@@ -1095,7 +1131,6 @@
     const fmtX = v => isNaN(v) ? '–' : nfIN.format(Math.round(v)), fmtMul = v => isNaN(v) ? '–' : v.toFixed(1) + '×', fmtDec = (v, d = 2) => isNaN(v) ? '–' : v.toFixed(d), fmtP = v => isNaN(v) ? '–' : v.toFixed(1) + '%';
     const npciShort = n => SHORT[n.toUpperCase().replace(/[^A-Z ]/g, '').replace(/\s+/g, ' ').trim()] || n.replace(/\s+Bank(\s+Ltd\.?|\s+Limited)?\.?$/i, '').replace(/\s+Ltd\.?$/i, '');
     const tc = n => String(n).replace(/\b([A-Z])([A-Z]+)/g, (s, a, b) => a + b.toLowerCase()).replace(/\bAnd\b/g, 'and').replace(/\bOf\b/g, 'of');
-    const spark = fn => d3.range(Math.max(0, m - 11), m + 1).map(fn);
     const col = i => css.series[i];
     // rails keep their colour on every panel: credit blue, debit orange, UPI green, UPI merchant amber, P2P pink, ATM cash purple
     const RC = { cc: col(0), dc: col(1), upi: col(2), p2m: col(3), p2p: col(4), cash: col(6) };
@@ -1103,16 +1138,17 @@
     // ---- tiles
     const peakC = peakUpTo(cash, m);
     const tiles = [
-      { l: `Monthly spend on each credit card added in the 12 months to ${M} · the average card spends ${fmtRs(at(avgSpend, m))}`, v: fmtRs(at(marg, m)), cur: at(marg, m), pm: at(marg, m - 1), py: at(marg, m - 12), sp: spark(mm => at(marg, mm)) },
-      { l: 'Purchases per debit card per month', v: fmtDec(at(dcPerCard, m)), cur: at(dcPerCard, m), pm: at(dcPerCard, m - 1), py: at(dcPerCard, m - 12), sp: spark(mm => at(dcPerCard, mm)) },
-      { l: 'UPI debits declined by the customer’s own bank', v: fmtP(at(bd, m)), cur: at(bd, m), pm: at(bd, m - 1), py: at(bd, m - 12), sp: spark(mm => at(bd, mm)) },
-      { l: `ATM cash withdrawn, against the ${peakC >= 0 ? mLabel(peakC, true) : ''} peak`, v: fmtPct(at(cash, m) / at(cash, peakC)), cur: at(cash, m), pm: at(cash, m - 1), py: at(cash, m - 12), sp: spark(mm => at(cash, mm)) },
-      { l: 'Two largest UPI apps, share of transactions', v: fmtPct(at(top2, m)), cur: at(top2, m), pm: at(top2, m - 1), py: at(top2, m - 12), sp: spark(mm => at(top2, mm)) },
+      { l: `Monthly spend on each credit card added in the 12 months to ${M} · the average card spends ${fmtRs(at(avgSpend, m))}`, v: fmtRs(at(marg, m)), cur: at(marg, m), pm: at(marg, m - 1), py: at(marg, m - 12), n: 'Spend per card added', f: fmtRs, sp: mm => at(marg, mm) },
+      { l: 'Purchases per debit card per month', v: fmtDec(at(dcPerCard, m)), cur: at(dcPerCard, m), pm: at(dcPerCard, m - 1), py: at(dcPerCard, m - 12), n: 'Purchases per debit card', f: fmtDec, sp: mm => at(dcPerCard, mm) },
+      { l: 'UPI debits declined by the customer’s own bank', v: fmtP(at(bd, m)), cur: at(bd, m), pm: at(bd, m - 1), py: at(bd, m - 12), n: 'Declined by own bank', f: fmtP, sp: mm => at(bd, mm) },
+      { l: `ATM cash withdrawn, against the ${peakC >= 0 ? mLabel(peakC, true) : ''} peak`, v: fmtPct(at(cash, m) / at(cash, peakC)), cur: at(cash, m), pm: at(cash, m - 1), py: at(cash, m - 12), n: 'ATM cash withdrawn', f: fmtInr, sp: mm => at(cash, mm) },
+      { l: 'Two largest UPI apps, share of transactions', v: fmtPct(at(top2, m)), cur: at(top2, m), pm: at(top2, m - 1), py: at(top2, m - 12), n: 'Top two apps’ share', f: fmtPct, sp: mm => at(top2, mm) },
     ];
+    const [sw0, sw1] = sparkWin(m, nM - 1, first);
     tiles.forEach((t, i) => {
       $(`n${i}-l`).textContent = t.l; $(`n${i}-v`).textContent = t.v;
       $(`n${i}-d`).replaceChildren(deltaSpan(t.cur, t.pm, 'vs ' + (m > 0 ? mLabel(m - 1) : 'prev')), deltaSpan(t.cur, t.py, 'vs ' + (m >= 12 ? mLabel(m - 12) : 'year ago')));
-      sparkline($(`n${i}-s`), t.sp, i === 0 ? css.accent : css.series[0]);
+      sparkline($(`n${i}-s`), t.sp, i === 0 ? css.accent : css.series[0], { m0: sw0, m1: sw1, sel: m, lab: mm => mLabel(mm, true), fmt: t.f, name: t.n });
     });
     // ---- findings: each one is computed for the month picked and lands in whichever column the numbers put it
     $('in-h2').textContent = `What the three datasets say together, ${M}`;
@@ -1440,20 +1476,20 @@
     const bAvg = per(payVS, cardsS, 1e6), bTxn = per(payNS, cardsS), bAdv = per(atmNS, cardsS, 1000), bCash = per(atmVS, cardsS, 1e6);
     const bShare = ser(mm => T.cards[mm] > 0 && !isNaN(at(cardsS, mm)) ? at(cardsS, mm) / T.cards[mm] * 100 : NaN), bSShare = ser(mm => T.payV[mm] > 0 && !isNaN(at(payVS, mm)) ? at(payVS, mm) / T.payV[mm] * 100 : NaN);
     const qb = qBank.get(b), cb = cBank.get(b);
-    const spark = fn => d3.range(Math.max(0, m - 11), m + 1).map(fn);
     const tiles = [
-      { l: `${P.Name}s in ${M} · ${fmtPct(d.share)} of all ${P.name}s`, v: fmtCount(d.cards), cur: d.cards, pm: at(cardsS, m - 1), py: at(cardsS, m - 12), sp: spark(mm => at(cardsS, mm)) },
-      { l: `Monthly ${P.word} on each card added in 12 months · this issuer's average card ${fmtRs(d.avg)}`, v: fmtRs(d.marg), cur: d.marg > 0 ? d.marg : NaN, pm: at(bMarg, m - 1) > 0 ? at(bMarg, m - 1) : NaN, py: at(bMarg, m - 12) > 0 ? at(bMarg, m - 12) : NaN, sp: spark(mm => at(bMarg, mm)) },
-      { l: `${credit ? 'Transactions' : 'Purchases'} per card per month · all issuers ${fmtDec(at(mkt.txn, m))}`, v: fmtDec(d.txn), cur: d.txn, pm: at(bTxn, m - 1), py: at(bTxn, m - 12), sp: spark(mm => at(bTxn, mm)) },
-      credit ? { l: `Cash advances per 1,000 cards · all issuers ${fmtDec(at(mkt.adv, m), 1)}`, v: fmtDec(d.adv, 1), cur: d.adv, pm: at(bAdv, m - 1), py: at(bAdv, m - 12), sp: spark(mm => at(bAdv, mm)) }
-             : { l: `ATM cash withdrawn per card per month · all banks ${fmtRs(at(mkt.cash, m))}`, v: fmtRs(d.cash), cur: d.cash, pm: at(bCash, m - 1), py: at(bCash, m - 12), sp: spark(mm => at(bCash, mm)) },
-      qb ? { l: `UPI debits it declined for business reasons, 12-m average · all banks ${fmtP(mBd(m))}`, v: fmtP(d.bd), cur: d.bd, pm: avg12(k => qAt(qb.bd_s, k), m - 1), py: avg12(k => qAt(qb.bd_s, k), m - 12), sp: spark(mm => qAt(qb.bd_s, mm)) }
-         : { l: `${O.Name} ${credit ? 'purchases' : 'transactions'} per card per month · all banks ${fmtDec(at(mkt.oTxn, m))}`, v: fmtDec(d.oTxn), cur: d.oTxn, pm: ind(b, m - 1).oTxn, py: ind(b, m - 12).oTxn, sp: spark(mm => ind(b, mm).oTxn) },
+      { l: `${P.Name}s in ${M} · ${fmtPct(d.share)} of all ${P.name}s`, v: fmtCount(d.cards), cur: d.cards, pm: at(cardsS, m - 1), py: at(cardsS, m - 12), n: `${P.Name}s`, f: fmtCount, sp: mm => at(cardsS, mm) },
+      { l: `Monthly ${P.word} on each card added in 12 months · this issuer's average card ${fmtRs(d.avg)}`, v: fmtRs(d.marg), cur: d.marg > 0 ? d.marg : NaN, pm: at(bMarg, m - 1) > 0 ? at(bMarg, m - 1) : NaN, py: at(bMarg, m - 12) > 0 ? at(bMarg, m - 12) : NaN, n: `Monthly ${P.word} per card added`, f: fmtRs, sp: mm => at(bMarg, mm) },
+      { l: `${credit ? 'Transactions' : 'Purchases'} per card per month · all issuers ${fmtDec(at(mkt.txn, m))}`, v: fmtDec(d.txn), cur: d.txn, pm: at(bTxn, m - 1), py: at(bTxn, m - 12), n: `${credit ? 'Transactions' : 'Purchases'} per card`, f: v => fmtDec(v), sp: mm => at(bTxn, mm) },
+      credit ? { l: `Cash advances per 1,000 cards · all issuers ${fmtDec(at(mkt.adv, m), 1)}`, v: fmtDec(d.adv, 1), cur: d.adv, pm: at(bAdv, m - 1), py: at(bAdv, m - 12), n: 'Cash advances per 1,000 cards', f: v => fmtDec(v, 1), sp: mm => at(bAdv, mm) }
+             : { l: `ATM cash withdrawn per card per month · all banks ${fmtRs(at(mkt.cash, m))}`, v: fmtRs(d.cash), cur: d.cash, pm: at(bCash, m - 1), py: at(bCash, m - 12), n: 'ATM cash per card', f: fmtRs, sp: mm => at(bCash, mm) },
+      qb ? { l: `UPI debits it declined for business reasons, 12-m average · all banks ${fmtP(mBd(m))}`, v: fmtP(d.bd), cur: d.bd, pm: avg12(k => qAt(qb.bd_s, k), m - 1), py: avg12(k => qAt(qb.bd_s, k), m - 12), n: 'UPI business declines (month)', f: fmtP, sp: mm => qAt(qb.bd_s, mm) }
+         : { l: `${O.Name} ${credit ? 'purchases' : 'transactions'} per card per month · all banks ${fmtDec(at(mkt.oTxn, m))}`, v: fmtDec(d.oTxn), cur: d.oTxn, pm: ind(b, m - 1).oTxn, py: ind(b, m - 12).oTxn, n: `${O.Name} ${credit ? 'purchases' : 'transactions'} per card`, f: v => fmtDec(v), sp: mm => ind(b, mm).oTxn },
     ];
+    const [sw0, sw1] = sparkWin(m, nM - 1);
     tiles.forEach((t, i) => {
       $(`r${i}-l`).textContent = t.l; $(`r${i}-v`).textContent = t.v;
       $(`r${i}-d`).replaceChildren(deltaSpan(t.cur, t.pm, 'vs ' + (m > 0 ? mLabel(m - 1) : 'prev')), deltaSpan(t.cur, t.py, 'vs ' + (m >= 12 ? mLabel(m - 12) : 'year ago')));
-      sparkline($(`r${i}-s`), t.sp, i === 0 ? css.accent : css.series[0]);
+      sparkline($(`r${i}-s`), t.sp, i === 0 ? css.accent : css.series[0], { m0: sw0, m1: sw1, sel: m, lab: mm => mLabel(mm, true), fmt: t.f, name: t.n });
     });
     // findings
     const list = $('rk-list'); list.replaceChildren();
