@@ -76,7 +76,8 @@
     border-block: 1px solid var(--hair);
   }
   .bar .row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; padding-block: 10px; }
-  .ctl { display: flex; align-items: center; gap: 8px; }
+  .ctl { display: flex; align-items: center; gap: 8px; min-width: 0; max-width: 100%; }
+  .ctl select { min-width: 0; max-width: 100%; text-overflow: ellipsis; }
   .ctl > span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); white-space: nowrap; }
   .seg { display: inline-flex; border: 1px solid var(--hair); border-radius: 8px; background: var(--surface-2); padding: 2px; }
   .seg label { position: relative; }
@@ -155,6 +156,13 @@
   .rank .barf { height: 100%; border-radius: 0 4px 4px 0; }
   .rank .num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
   .rank .sub { color: var(--muted); font-size: 11px; }
+  /* phones: the five columns must fit 390px, so the name and bar give way, and the pp change drops under the % change */
+  @media (max-width: 600px) {
+    .rank { grid-template-columns: minmax(84px, 2.4fr) minmax(0, 0.7fr) auto auto auto; gap: 6px 7px; font-size: 12px; }
+    .rank .h { font-size: 10px; letter-spacing: 0.04em; }
+    .rank .nm { max-width: none; gap: 6px; }
+    .rank .num .sub { display: block; }
+  }
 
   /* tables */
   details.tbl { margin-top: 10px; border-top: 1px solid var(--hair); padding-top: 6px; }
@@ -1633,7 +1641,7 @@
     lg.append('text').attr('x', 0).attr('y', 22).text('0%');
     cuts.forEach((v, i) => { if (i === 1 || i === 3) lg.append('text').attr('x', (i + 1) * (bw + 2) - 1).attr('y', 22).attr('text-anchor', 'middle').text(fmtPct(v, 1)); });
     lg.append('text').attr('x', ramp.length * (bw + 2)).attr('y', 22).attr('text-anchor', 'end').text(fmtPct(maxShare, 0));
-    lg.append('text').attr('x', ramp.length * (bw + 2) + 10).attr('y', 9).text('share of located ' + (metric === 'vol' ? 'transactions' : 'value') + ', quantile bands');
+    lg.append('text').attr('x', W < 520 ? 0 : ramp.length * (bw + 2) + 10).attr('y', W < 520 ? -6 : 9).text('share of located ' + (metric === 'vol' ? 'transactions' : 'value') + ', quantile bands');
     // ranking + table
     const top = located.slice().sort((a, b) => b[metric] - a[metric]);
     rankList($('us-rank'), ['State', '', 'Share', metric === 'vol' ? 'Transactions' : 'Value', metric === 'vol' ? 'Value' : 'Transactions'],
@@ -1695,7 +1703,7 @@
     ramp.forEach((c, i) => lg.append('rect').attr('x', i * (bw + 2)).attr('y', 0).attr('width', bw).attr('height', 10).attr('rx', 2).attr('fill', c));
     lg.append('text').attr('x', 0).attr('y', 22).text('0%');
     lg.append('text').attr('x', ramp.length * (bw + 2)).attr('y', 22).attr('text-anchor', 'end').text(fmtPct(maxShare, 0));
-    lg.append('text').attr('x', ramp.length * (bw + 2) + 10).attr('y', 9).text('share within state, quantile bands');
+    lg.append('text').attr('x', W < 520 ? 0 : ramp.length * (bw + 2) + 10).attr('y', W < 520 ? -6 : 9).text('share within state, quantile bands');
     const top = rows.slice().sort((a, b) => (b[metric] || 0) - (a[metric] || 0));
     rankList($('us-rank'), ['District', '', 'Share', metric === 'vol' ? 'Transactions' : 'Value', metric === 'vol' ? 'Value' : 'Transactions'],
       top.slice(0, 15).map(r => ({ name: r.name, color: css.series[0], share: r.share, value: fmtV(r[metric]), extra: metric === 'vol' ? fmtInr((r.val || 0) * 10) : fmtCount((r.vol || 0) * 1e6) })));
