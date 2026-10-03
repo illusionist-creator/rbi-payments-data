@@ -118,6 +118,8 @@ def build_upi(types_by_key=None, idx_by_key=None):
     if mem is not None and "bank_name" in mem:
         if "is_total" in mem:
             mem = mem[mem.is_total != True]
+        # NPCI does not always flag its total row (Oct-Dec 2025 came with is_total false), so drop it by name too
+        mem = mem[~mem.bank_name.astype(str).str.strip().str.lower().isin(["total", "grand total"])]
         bmonths = sorted(mem.period.unique())
         top, others = series_block(mem, "bank_name", bmonths, ["volume_mn", "value_cr"], top=12)
         upi["bank_months"] = bmonths
