@@ -6116,7 +6116,7 @@ period,bank_name,is_total,value_cr,volume_mn
 2026-08,India Post Payments Bank Limited,False,36945.91,773.71
 2026-08,Indian Bank,False,81329.11,766.36
 2026-08,Bank Of India,False,85480.11,717.63
-2026-08,Airtel Payments Bank Limited,False,30424.4,590
+2026-08,Airtel Payments Bank Limited,False,30424.4,590.0
 2026-08,Indian Overseas Bank,False,50627.94,436.84
 2026-08,Central Bank of India,False,48493.18,402.06
 2026-08,UCO Bank,False,31302.08,326.36
@@ -6142,7 +6142,7 @@ period,bank_name,is_total,value_cr,volume_mn
 2026-08,Rajasthan Marudhara Gramin Bank,False,6732.25,65.42
 2026-08,NSDL Payments Bank Limited,False,2558.58,64.53
 2026-08,Kerala Gramin Bank,False,6972.14,63.03
-2026-08,City Union Bank,False,10566.1,62
+2026-08,City Union Bank,False,10566.1,62.0
 2026-08,Ujjivan Small Finance Bank Limited,False,7042.88,60.34
 2026-08,Karnataka Gramin Bank,False,7196.08,59.19
 2026-08,Chaitanya Godavari Grameena Bank,False,6595.91,51.43
