@@ -3619,3 +3619,53 @@ period,approved_percent,bd_percent,debit_reversal_success_percent,td_percent,tot
 2026-08,90.28,9.56,6.06,0.16,0.007127,33.149834,remitter,DBS Bank India Limited,48.42,92.69
 2026-08,86.76,13.02,77.13,0.21,0.104175,31.340191,remitter,Equitas Small Finance Bank,28.51,56.53
 2026-08,100.0,0.0,0.0,0.0,,30.040117,remitter,One Mobikwik Systems Limited,0.0,0.0
+2026-09,90.34,9.28,97.86,0.38,18.256581,6734.080234,remitter,State Bank of India,97.91,86.05
+2026-09,86.22,13.74,97.94,0.04,4.84944,1791.122983,remitter,Bank of Baroda,74.82,85.82
+2026-09,93.07,6.92,98.32,0.01,3.340248,1737.562805,remitter,HDFC Bank Ltd.,97.35,96.25
+2026-09,88.34,11.34,74.89,0.32,5.270467,1563.796043,remitter,Union Bank of India,46.49,87.04
+2026-09,89.08,10.86,98.41,0.06,7.496472,1531.682043,remitter,Punjab National Bank,95.16,84.24
+2026-09,90.49,9.23,83.78,0.28,3.909467,1265.752199,remitter,Canara Bank,87.41,93.38
+2026-09,88.44,11.2,63.4,0.36,4.066139,1198.335961,remitter,Kotak Mahindra Bank,97.4,93.58
+2026-09,92.7,7.29,98.98,0.01,2.036095,1051.698361,remitter,Axis Bank Ltd.,86.68,93.92
+2026-09,80.91,18.88,94.58,0.21,6.192053,928.108832,remitter,India Post Payments Bank Limited,92.98,94.48
+2026-09,88.42,11.51,98.33,0.08,2.247146,858.459516,remitter,Indian Bank,91.95,90.94
+2026-09,94.41,4.87,73.17,0.73,2.177253,801.389214,remitter,ICICI Bank Ltd.,99.12,94.96
+2026-09,90.02,9.74,83.4,0.24,2.971681,779.967266,remitter,Bank of India,35.91,72.16
+2026-09,76.66,23.2,95.73,0.14,3.932903,759.542564,remitter,Airtel Payments Bank Limited,80.05,71.57
+2026-09,89.84,9.93,85.56,0.24,1.798787,483.165383,remitter,Indian Overseas Bank,66.36,42.37
+2026-09,86.58,13.08,75.69,0.34,2.283673,472.28146,remitter,Central Bank of India,31.25,0.0
+2026-09,87.21,12.71,95.28,0.08,1.331383,369.115856,remitter,UCO Bank,93.32,74.24
+2026-09,89.91,9.96,99.81,0.13,0.698892,309.406733,remitter,Federal Bank Ltd.,93.4,96.16
+2026-09,75.57,24.26,85.37,0.17,2.01313,291.374119,remitter,Fino Payments Bank Ltd.,86.57,0.0
+2026-09,84.59,15.09,72.79,0.32,1.31219,274.072084,remitter,Indusind Bank Ltd.,99.39,95.52
+2026-09,90.53,9.44,94.16,0.04,0.762893,271.541507,remitter,Bank of Maharashtra,99.52,65.93
+2026-09,89.86,9.45,77.38,0.69,0.699688,235.714613,remitter,IDBI Bank Ltd.,84.91,60.35
+2026-09,100.0,0.0,0.0,0.0,,224.052983,remitter,Tri O Tech Solutions Private Limited,nan,97.62
+2026-09,92.82,7.13,94.08,0.05,0.306517,183.924614,remitter,IDFC Bank Ltd.,71.0,86.41
+2026-09,92.1,7.78,92.17,0.12,0.29771,175.495446,remitter,Yes Bank Ltd.,98.2,95.35
+2026-09,89.9,10.08,82.02,0.03,0.326316,168.357327,remitter,Karnataka Bank Ltd.,88.69,0.02
+2026-09,92.36,7.5,73.43,0.14,0.422816,130.950514,remitter,The Jammu & Kashmir Bank Limited,84.2,55.68
+2026-09,94.61,5.36,94.84,0.03,0.336428,119.568746,remitter,slice small Finance Bank Limited,97.11,97.06
+2026-09,91.76,7.83,74.96,0.41,0.394524,114.587,remitter,Karur Vysya Bank,94.03,0.0
+2026-09,87.92,10.46,72.61,1.62,1.233637,110.70268,remitter,Baroda U.P. Bank,47.28,0.0
+2026-09,93.31,6.57,91.52,0.12,0.42556,108.762956,remitter,Bandhan Bank Limited,53.82,90.16
+2026-09,85.35,14.49,82.45,0.15,0.349829,102.828935,remitter,AU Small Finance Bank,39.12,58.0
+2026-09,78.62,21.19,99.19,0.2,1.093971,97.534199,remitter,Jio Payments Bank Ltd,64.48,92.17
+2026-09,92.91,7.04,91.82,0.05,0.179156,90.787833,remitter,The South Indian Bank Limited,97.52,96.15
+2026-09,77.7,21.2,88.85,1.1,0.930444,78.758256,remitter,NSDL Payments Bank Limited,28.14,0.0
+2026-09,83.28,15.88,76.98,0.85,0.5397,77.626901,remitter,Rajasthan Marudhara Gramin Bank,98.85,0.0
+2026-09,84.82,13.32,71.24,1.86,0.447826,76.787726,remitter,Punjab And Sind Bank,80.04,95.79
+2026-09,90.74,9.15,92.91,0.11,0.143874,71.872633,remitter,Tamilnad Mercantile Bank Limited,73.54,23.65
+2026-09,85.63,14.17,88.67,0.19,0.219527,69.186358,remitter,Ujjivan Small Finance Bank Limited,63.96,30.37
+2026-09,92.35,7.3,93.34,0.36,0.221688,69.062005,remitter,Kerala Gramin Bank,96.98,94.08
+2026-09,87.71,11.96,95.67,0.34,0.213857,66.496332,remitter,Karnataka Gramin Bank,49.92,94.87
+2026-09,91.18,8.69,99.15,0.13,0.127992,66.381132,remitter,City Union Bank,96.95,95.89
+2026-09,88.35,11.06,69.06,0.58,0.232676,55.806254,remitter,Chaitanya Godavari Grameena Bank,55.04,0.0
+2026-09,87.14,12.63,80.21,0.23,0.15979,54.767675,remitter,Telangana Grameena Bank,49.02,95.5
+2026-09,84.57,14.24,54.72,1.19,0.205154,45.423786,remitter,Maharashtra Gramin Bank,93.4,47.47
+2026-09,94.93,3.47,45.1,1.6,0.287643,38.777655,remitter,ESAF Small Finance Bank Ltd,99.94,94.39
+2026-09,93.0,6.64,90.92,0.36,0.085485,35.786855,remitter,Saraswat Co-Operative Bank,45.52,0.0
+2026-09,87.44,12.04,88.87,0.53,0.152892,33.045689,remitter,Sarva Haryana Gramin Bank,42.1,0.0
+2026-09,90.62,9.22,92.42,0.15,0.076047,32.05223,remitter,DBS Bank India Limited,17.69,90.18
+2026-09,100.0,0.0,0.0,0.0,,31.853513,remitter,One Mobikwik Systems Limited,nan,0.0
+2026-09,86.69,13.1,81.82,0.21,0.08926,30.403002,remitter,Equitas Small Finance Bank,15.35,54.7
