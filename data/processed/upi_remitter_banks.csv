@@ -3640,7 +3640,7 @@ period,approved_percent,bd_percent,debit_reversal_success_percent,td_percent,tot
 2026-09,84.59,15.09,72.79,0.32,1.31219,274.072084,remitter,Indusind Bank Ltd.,99.39,95.52
 2026-09,90.53,9.44,94.16,0.04,0.762893,271.541507,remitter,Bank of Maharashtra,99.52,65.93
 2026-09,89.86,9.45,77.38,0.69,0.699688,235.714613,remitter,IDBI Bank Ltd.,84.91,60.35
-2026-09,100.0,0.0,0.0,0.0,,224.052983,remitter,Tri O Tech Solutions Private Limited,nan,97.62
+2026-09,100.0,0.0,0.0,0.0,0,224.052983,remitter,Tri O Tech Solutions Private Limited,0.0,97.62
 2026-09,92.82,7.13,94.08,0.05,0.306517,183.924614,remitter,IDFC Bank Ltd.,71.0,86.41
 2026-09,92.1,7.78,92.17,0.12,0.29771,175.495446,remitter,Yes Bank Ltd.,98.2,95.35
 2026-09,89.9,10.08,82.02,0.03,0.326316,168.357327,remitter,Karnataka Bank Ltd.,88.69,0.02
@@ -3667,5 +3667,5 @@ period,approved_percent,bd_percent,debit_reversal_success_percent,td_percent,tot
 2026-09,93.0,6.64,90.92,0.36,0.085485,35.786855,remitter,Saraswat Co-Operative Bank,45.52,0.0
 2026-09,87.44,12.04,88.87,0.53,0.152892,33.045689,remitter,Sarva Haryana Gramin Bank,42.1,0.0
 2026-09,90.62,9.22,92.42,0.15,0.076047,32.05223,remitter,DBS Bank India Limited,17.69,90.18
-2026-09,100.0,0.0,0.0,0.0,,31.853513,remitter,One Mobikwik Systems Limited,nan,0.0
+2026-09,100.0,0.0,0.0,0.0,0,31.853513,remitter,One Mobikwik Systems Limited,0.0,0.0
 2026-09,86.69,13.1,81.82,0.21,0.08926,30.403002,remitter,Equitas Small Finance Bank,15.35,54.7
