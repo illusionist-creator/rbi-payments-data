@@ -156,6 +156,7 @@
   .rank .barf { height: 100%; border-radius: 0 4px 4px 0; }
   .rank .num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
   .rank .sub { color: var(--muted); font-size: 11px; }
+  .rank-empty { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 13px; }
   /* phones: the five columns must fit 390px, so the name and bar give way, and the pp change drops under the % change */
   @media (max-width: 600px) {
     .rank { grid-template-columns: minmax(84px, 2.4fr) minmax(0, 0.7fr) auto auto auto; gap: 6px 7px; font-size: 12px; }
@@ -1023,6 +1024,12 @@
     const p2mShare = i => at(T.p2m_vol, i) / at(T.vol, i);
     const apps = U.apps || [], appTot = i => apps.reduce((s, a) => s + (a.vol[i] || 0), 0) + ((U.apps_others && U.apps_others.vol[i]) || 0);
     const topShare = i => apps.length ? Math.max(...apps.map(a => a.vol[i] || 0)) / appTot(i) : NaN;
+    // NPCI's app table starts later than the totals and is published weeks after them, so the picked month may have none
+    const appHas = i => apps.some(a => a.vol[i] != null);
+    const appLatest = d3.range(0, n).filter(appHas).pop();
+    const appGap = appHas(m) || appLatest == null ? ''
+      : m > appLatest ? `NPCI hasn’t published app data for ${uLabel(m, true)} yet. The latest is ${uLabel(appLatest, true)}.`
+      : `NPCI has no app data for ${uLabel(m, true)}. Its app table starts in ${uLabel(d3.range(0, n).find(appHas), true)}.`;
     const prov = i => i >= n - 3;      // NPCI revises the latest three months
     const tiles = [
       { l: 'UPI transactions in ' + uLabel(m, true), v: fmtMn(at(T.vol, m)), cur: at(T.vol, m), pm: at(T.vol, m - 1), py: at(T.vol, m - 12), pol: 1, fl: true, n: 'UPI transactions', f: fmtMn, sp: i => at(T.vol, i), prov, note: prov(m) ? 'Provisional: NPCI revises the latest three months.' : '' },
@@ -1030,25 +1037,37 @@
       { l: 'Merchant payments, share of volume', v: fmtPct(p2mShare(m)), cur: p2mShare(m), pm: p2mShare(m - 1), py: p2mShare(m - 12), pol: 1, n: 'Merchant share of volume', f: fmtPct, sp: p2mShare, prov },
       { l: 'Average transaction', v: fmtRs(ticket(m)), cur: ticket(m), pm: ticket(m - 1), py: ticket(m - 12), pol: 0, n: 'Average transaction', f: fmtRs, sp: ticket, prov },
       { l: 'Largest app, share of customer-initiated volume', v: fmtPct(topShare(m)), cur: topShare(m), pm: topShare(m - 1), py: topShare(m - 12), pol: -1, n: 'Largest app’s share', f: fmtPct, sp: topShare, prov,
-        ref: { v: 0.3, name: 'NPCI cap' }, note: 'NPCI’s cap: no app above 30% of UPI volume, on a rolling three months, after 31 Dec 2026.' },
+        ref: { v: 0.3, name: 'NPCI cap' }, note: appGap || 'NPCI’s cap: no app above 30% of UPI volume, on a rolling three months, after 31 Dec 2026.' },
     ];
     fillTiles('u', tiles, m, UM, sparkWin(m, n - 1));
     {
       if (apps.length) {
-        const top = apps.slice().sort((a, b) => (b.vol[m] || 0) - (a.vol[m] || 0)).filter(a => (a.vol[m] || 0) > 0).slice(0, S.topN);
-        if (!X.upiMap) { X.upiMap = new Map(); apps.slice().sort((a, b) => (b.vol[n - 1] || 0) - (a.vol[n - 1] || 0)).slice(0, 8).forEach((a, i) => X.upiMap.set(a.n, i)); }
+        // with no app data for the picked month the chart runs to the last month before it that has some, and the
+        // ranking says why it is empty rather than borrowing another month's figures under this month's heading
+        const hasA = appHas(m), aEnd = hasA ? m : d3.range(0, m).filter(appHas).pop(), hasH = aEnd != null;
+        const aM0 = Math.max(0, (hasH ? aEnd : m) - len + 1), aM1 = hasH ? aEnd : m;
+        const top = !hasH ? [] : apps.slice().sort((a, b) => (b.vol[aEnd] || 0) - (a.vol[aEnd] || 0)).filter(a => (a.vol[aEnd] || 0) > 0).slice(0, S.topN);
+        if (!X.upiMap) { X.upiMap = new Map(); apps.slice().sort((a, b) => (b.vol[appLatest] || 0) - (a.vol[appLatest] || 0)).slice(0, 8).forEach((a, i) => X.upiMap.set(a.n, i)); }
         const colour = a => { if (!X.upiMap.has(a.n) && X.upiMap.size < 8) X.upiMap.set(a.n, X.upiMap.size); return X.upiMap.has(a.n) ? css.series[X.upiMap.get(a.n)] : css.others; };
         const tot = d3.range(0, n).map(appTot);
         const series = top.map(a => ({ name: a.n, short: a.n, color: colour(a), f: d3.range(0, n).map(i => tot[i] ? (a.vol[i] || 0) / tot[i] : NaN) }));
         series.push({ name: 'Others', color: css.others, f: d3.range(0, n).map(i => { let s = 0; series.forEach(sr => { s += sr.f[i] || 0; }); return tot[i] ? Math.max(0, 1 - s) : NaN; }) });
-        $('ua-hint').textContent = `Share of customer-initiated UPI transactions, top ${S.topN} apps, ${uLabel(m0, true)} to ${uLabel(m1, true)}`;
-        stackedShare($('ua-chart'), $('ua-legend'), series, m0, m1, { right: 92, cal: UM, aria: 'UPI app market share over time' });
-        lazyTable($('ua-table').closest('details'), wrap => table(wrap, ['Month', ...series.map(s => s.name)], d3.range(m0, m1 + 1).reverse().map(i => [uLabel(i, true), ...series.map(s => fmtPct(s.f[i]))])));
+        const uaDet = $('ua-table').closest('details');
+        uaDet.hidden = !hasH;
+        if (hasH) {
+          $('ua-hint').textContent = `Share of customer-initiated UPI transactions, top ${S.topN} apps, ${uLabel(aM0, true)} to ${uLabel(aM1, true)}`;
+          stackedShare($('ua-chart'), $('ua-legend'), series, aM0, aM1, { right: 92, cal: UM, aria: 'UPI app market share over time' });
+          lazyTable(uaDet, wrap => table(wrap, ['Month', ...series.map(s => s.name)], d3.range(aM0, aM1 + 1).reverse().map(i => [uLabel(i, true), ...series.map(s => fmtPct(s.f[i]))])));
+        } else {
+          $('ua-hint').textContent = appGap;
+          $('ua-chart').replaceChildren(); $('ua-legend').replaceChildren();
+        }
         $('ur-h3').textContent = `Ranking, ${uLabel(m, true)}`;
-        rankList($('ua-rank'), ['App', '', 'Share', 'Transactions', '12-m change'], top.map(a => {
+        if (hasA) rankList($('ua-rank'), ['App', '', 'Share', 'Transactions', '12-m change'], top.map(a => {
           const v = a.vol[m] || 0, vy = m >= 12 ? a.vol[m - 12] : null, sh = v / tot[m], shY = vy != null && tot[m - 12] ? vy / tot[m - 12] : null;
           return { name: a.n, color: colour(a), share: sh, value: fmtMn(v), cur: v, prev: vy == null ? NaN : vy, delta: true, pp: shY == null ? null : sh - shY };
         }));
+        else { const p = document.createElement('p'); p.className = 'rank-empty'; p.textContent = appGap; $('ua-rank').replaceChildren(p); }
       }
       const two = (el, leg, tb, a, b, fmt, axis) => {
         const s = [{ name: 'Merchant (P2M)', color: css.series[0], v: a }, { name: 'Person-to-person (P2P)', color: css.series[1], v: b }];
