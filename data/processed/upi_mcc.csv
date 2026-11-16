@@ -3813,3 +3813,34 @@ period,description,mcc,type,type_name,value_in_cr,volume_in_mn
 2026-09,Passenger railways,4112,All Other Categories,top-mccs,5296.06,73.76
 2026-09,Others,,All Other Categories,top-mccs,402044.01,2894.010000000002
 2026-09,Total,,All Other Categories,top-mccs,886987.14,15229.11
+2026-10,Groceries and supermarkets,5411,High Transacting Categories,top-mccs,90225.75,4151.69
+2026-10,Fast food restaurants,5814,High Transacting Categories,top-mccs,19417.89,1595.49
+2026-10,Eating places and restaurants,5812,High Transacting Categories,top-mccs,23119.56,1346.69
+2026-10,"Telecommunication services, including local and long distance calls, credit card calls, calls through use of magnetic stripe reading telephones and faxes",4814,High Transacting Categories,top-mccs,24156.07,845.66
+2026-10,Service stations (with or without ancillary services),5541,High Transacting Categories,top-mccs,46154.29,770.53
+2026-10,Bakeries,5462,High Transacting Categories,top-mccs,7074,521.53
+2026-10,Cigar shops and stands,5993,High Transacting Categories,top-mccs,3351.32,510.43
+2026-10,Drug stores and pharmacies,5912,High Transacting Categories,top-mccs,13702.03,338.01
+2026-10,Dairies,5451,High Transacting Categories,top-mccs,6632.48,307.77
+2026-10,Purchase of digital gold,5412,High Transacting Categories,top-mccs,2903.36,258.19
+2026-10,Debt collection agencies,7322,Medium Transacting Categories,top-mccs,88360.49,249.08
+2026-10,"Package shops beer, wine and liquor",5921,Medium Transacting Categories,top-mccs,9435.08,221.41
+2026-10,Online Marketplaces,5262,Medium Transacting Categories,top-mccs,12387.56,208.28
+2026-10,Government services not elsewhere classified,9399,Medium Transacting Categories,top-mccs,10944.34,147.96
+2026-10,"Candy, nut and confectionery shops",5441,Medium Transacting Categories,top-mccs,2969.7,143.44
+2026-10,"Utilities electric, gas, water and sanitary",4900,Medium Transacting Categories,top-mccs,23843.68,143.08
+2026-10,Freezer and locker meat provisioners,5422,Medium Transacting Categories,top-mccs,4622.64,132.2
+2026-10,Variety stores,5331,Medium Transacting Categories,top-mccs,4683.16,115.61
+2026-10,Family clothing shops,5651,Medium Transacting Categories,top-mccs,10668.33,108.86
+2026-10,Securities brokers and dealers,6211,Medium Transacting Categories,top-mccs,82775.86,96.13
+2026-10,"Digital Goods: Media, Books, Movies, Music",5815,All Other Categories,top-mccs,2158.79,95.71
+2026-10,Beauty and barber shops,7230,All Other Categories,top-mccs,2789.4,95.31
+2026-10,"Drinking places (alcoholic beverages) bars, taverns, night-clubs, cocktail lounges and discothques",5813,All Other Categories,top-mccs,3749.97,92.06
+2026-10,Electronics repair shops,7622,All Other Categories,top-mccs,2413.53,90.32
+2026-10,Courier services air and ground and freight forwarders,4215,All Other Categories,top-mccs,6738.71,89.9
+2026-10,Department stores,5311,All Other Categories,top-mccs,5367.25,88.71
+2026-10,Mens and womens clothing shops,5691,All Other Categories,top-mccs,11375.35,84.34
+2026-10,Electronics shops,5732,All Other Categories,top-mccs,11011.83,84.27
+2026-10,"Mens, womens and childrens uniforms and commercial clothing",5137,All Other Categories,top-mccs,8093.66,77.6
+2026-10,Others,,All Other Categories,top-mccs,429567.1699999999,3084.199999999999
+2026-10,Total,,All Other Categories,top-mccs,970693.25,16094.46
