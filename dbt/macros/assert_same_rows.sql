@@ -29,7 +29,7 @@ joined as (
                    or abs(d.{{ c }} - p.{{ c }}) > 1e-9 * greatest(1.0, abs(p.{{ c }})) then '{{ c }}' end
             {%- endif %}{{ "," if not loop.last }}
             {%- endfor %}
-        ], x -> x is not null) as differing_columns
+        ], lambda x: x is not null) as differing_columns
     from dbt_side as d
     full outer join pandas_side as p
         on {% for k in key %}d.{{ k }} = p.{{ k }}{{ " and " if not loop.last }}{% endfor %}

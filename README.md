@@ -14,7 +14,7 @@ Feeds the Tableau Public workbook *Indian Payments Ecosystem Dashboard*.
 | `data/processed/national_totals.csv` | RBI's published "Total" row for each month |
 | `data/processed/parse_log.csv` | Per-file layout, unit, bank count, and sum-vs-total check |
 | `scripts/update.py` | Run this to pull anything new and rebuild all outputs |
-| `dbt/` | The same transformations as a tested dbt project on DuckDB, pinned to the pandas output row for row (see `dbt/README.md`) |
+| `dbt/` | The same transformations as a tested dbt project on DuckDB, pinned to the pandas output row for row, plus the NPCI UPI tables. Its tests run before every deploy; docs and lineage at [/dbt/](https://illusionist-creator.github.io/rbi-payments-data/dbt/) (see `dbt/README.md`) |
 
 ## Keeping it updated
 

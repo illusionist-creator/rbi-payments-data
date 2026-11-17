@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+  - name: npci
+    description: >
+      NPCI's UPI ecosystem statistics as pulled by scripts/npci_upi.py from NPCI's statistics API: one CSV per
+      table, one row per entity per month. Volumes in million transactions, values in Rs crore.
+    meta:
+      external_location: "read_csv('../data/processed/{name}.csv', header = true, sample_size = -1)"
+    tables:
+      - name: upi_p2p_p2m
+        description: National UPI totals per month, split into person-to-person and person-to-merchant.
+        columns:
+          - name: period
+            data_tests: [not_null, unique]
+      - name: upi_apps
+        description: >
+          Volume and value by UPI app. NPCI changed this table's layout in Dec 2020: before it, one
+          upi_application_name / upi_volume_mn / upi_value_cr per app; from it, application_name with totals
+          split into customer-initiated, B2B, B2C and on-us transactions.
+        columns:
+          - name: period
+            data_tests: [not_null]
+      - name: upi_member_vol_val
+        description: Top 50 UPI member banks by volume and value. NPCI's Total row is in here, not always flagged.
+        columns:
+          - name: period
+            data_tests: [not_null]
+          - name: bank_name
+            data_tests:
+              # Apr 2017 has one nameless row (0.03 crore); staging drops it. Warn so a new one is seen.
+              - not_null:
+                  config:
+                    severity: warn
+      - name: upi_remitter_banks
+        description: Per remitter bank, the share of UPI transactions approved, business-declined and technically declined.
+        columns:
+          - name: period
+            data_tests: [not_null]

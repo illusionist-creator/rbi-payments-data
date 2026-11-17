@@ -1,13 +1,8 @@
 name: dbt build and tests
 
-# Runs the dbt project against the committed data: after every data refresh (the refresh commits with
-# the bot's token, which does not trigger push workflows, hence workflow_run), and on any change to dbt/.
+# Every data refresh already runs dbt build inside update.yml, before it publishes. This workflow checks
+# pull requests that touch the dbt project, and can be run by hand.
 on:
-  workflow_run:
-    workflows: ["Update RBI card data and deploy dashboard"]
-    types: [completed]
-  push:
-    paths: ["dbt/**", ".github/workflows/dbt.yml"]
   pull_request:
     paths: ["dbt/**", ".github/workflows/dbt.yml"]
   workflow_dispatch:
@@ -17,7 +12,6 @@ permissions:
 
 jobs:
   dbt:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -26,8 +20,6 @@ jobs:
       DBT_PROFILES_DIR: .
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event_name == 'workflow_run' && 'main' || '' }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

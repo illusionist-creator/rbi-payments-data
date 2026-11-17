@@ -1,2 +1,4 @@
 dbt-core>=1.9,<2
 dbt-duckdb>=1.9,<2
+# 1.3 added the `lambda x: ...` syntax the parity macro uses; 2.0 removed the old `x -> ...` form
+duckdb>=1.3

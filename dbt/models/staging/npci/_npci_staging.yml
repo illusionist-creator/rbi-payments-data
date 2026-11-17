@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: stg_npci__upi_totals
+    description: National UPI totals per month, P2P and P2M, in million transactions and Rs crore.
+    columns:
+      - name: period
+        data_tests: [not_null, unique]
+      - name: upi_volume_mn
+        data_tests: [not_null]
+
+  - name: stg_npci__upi_apps
+    description: >
+      One row per UPI app per month, with NPCI's two layouts (before and from Dec 2020) mapped onto one set of
+      columns. customer_volume_mn / customer_value_cr exist only in the current layout.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: [period, app_name]
+    columns:
+      - name: app_name
+        data_tests: [not_null]
+      - name: layout
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [pre_dec_2020, current]
+
+  - name: stg_npci__upi_member_banks
+    description: Top-50 UPI member banks per month, NPCI's Total row removed whether or not it was flagged.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: [period, bank_name]
+
+  - name: stg_npci__upi_remitter_banks
+    description: Approval, business-decline and technical-decline rates per remitter bank per month.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: [period, bank_name]
+          # NPCI has listed Slice Small Finance Bank twice in some 2026 months; flag it, don't block the build
+          config:
+            severity: warn

@@ -57,3 +57,17 @@ models:
         data_tests: [not_null]
       - name: bank_names
         data_tests: [not_null]
+
+  - name: fct_payments_month
+    description: >
+      Cards (RBI) and UPI (NPCI) on one monthly calendar, in million transactions and Rs crore, with the
+      average payment per rail and UPI's share of merchant payments. Card payments are PoS + online + other
+      from Mar 2022 (see fct_national_month); UPI merchant payments are NPCI's P2M series. NPCI's series
+      starts Apr 2020, so earlier months carry card data only.
+    columns:
+      - name: period
+        data_tests: [not_null, unique]
+      - name: upi_share_of_merchant_volume
+        description: UPI P2M transactions as a share of all merchant payments by card or UPI.
+        data_tests:
+          - share_between_0_and_1
