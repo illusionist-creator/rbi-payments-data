@@ -1,7 +1,29 @@
 # RBI Bank-wise ATM / POS / Card Statistics — historic data + auto-updater
 
-Source: https://rbi.org.in/scripts/atmview.aspx (monthly Excel per release, `ATMView.aspx?atmid=N`).
-Feeds the Tableau Public workbook *Indian Payments Ecosystem Dashboard*.
+Source: https://rbi.org.in/scripts/atmview.aspx (monthly Excel per release, `ATMView.aspx?atmid=N`), plus
+NPCI's UPI statistics. Feeds the live dashboard [India Card Monitor](https://illusionist-creator.github.io/rbi-payments-data/).
+
+```mermaid
+flowchart LR
+  subgraph Sources
+    RBI["RBI card statistics<br/>186 monthly Excel files"]
+    NPCI["NPCI UPI statistics<br/>JSON API, 10 tables"]
+    REF["Reference files<br/>populations, map outlines"]
+  end
+  GA["GitHub Actions, Mon + Thu 09:00 IST<br/>Python fetches new and revised releases,<br/>folds 4 RBI layouts and 3 units into one"]
+  subgraph Repo["The Git repo"]
+    RAW["Raw files<br/>as published"] --> CSV["Processed CSVs<br/>one row per bank per month"] --> DBT{"dbt on DuckDB<br/>13 models, 47 tests"}
+  end
+  RBI --> GA
+  NPCI --> GA
+  REF --> GA
+  GA --> RAW
+  GA -. "if the secret is set" .-> SHEET["Google Sheet"]
+  DBT -- "all pass" --> DASH["India Card Monitor<br/>GitHub Pages"]
+  DBT -- "all pass" --> DOCS["dbt docs at /dbt/"]
+  DBT -- "all pass" --> OPEN["CSV + Excel<br/>committed to the repo"]
+  DBT -. "any fails" .-> STOP["Nothing published;<br/>the last good version stays live"]
+```
 
 ## What is here
 
