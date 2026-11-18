@@ -51,7 +51,7 @@ BANK_KEY_ALIASES = {"IDFC": "IDFC FIRST"}
 
 def bank_key(s):
     """Stricter than name_key for matching NPCI bank spellings to RBI's: drops BANK/LTD/LIMITED wherever they sit."""
-    k = re.sub(r"\b(BANK|LTD|LIMITED)\b", " ", name_key(s))
+    k = re.sub(r"\b(BANK|LTD|LIMITED)\b", " ", re.sub(r"^THE\s+", "", name_key(s)))
     k = re.sub(r"\s+", " ", k).strip()
     return BANK_KEY_ALIASES.get(k, k)
 
@@ -92,6 +92,57 @@ def series_block(df, name_col, months, cols, top=12, min_months=1):
     rest = g[~g._n.isin(order[:top])].groupby("period")[cols].sum(min_count=1)
     others = {c: [num(rest[c].get(m), 2) if m in rest.index else None for m in months] for c in cols}
     return out, others
+
+
+def build_rates(path, name_col, vol_col, idx_by_key=None, top=15, tol=0.5, low=None):
+    """A per-bank NPCI table of approved / business-declined / technically-declined rates (AutoPay, NFS ATMs):
+    volume-weighted monthly rates for the banks listed, plus per-bank series for the largest banks.
+    NPCI switched AutoPay volumes from raw counts to millions in Dec 2024; a month whose total is over 100,000
+    is read as raw counts. A bank listed twice in a month is merged, and rows whose three rates don't add up
+    (to 100 within `tol`, or to at least `low` where NPCI leaves a share unclassified) are left out, and a
+    month where those rows carry over a quarter of the volume is left out whole."""
+    if not path.exists():
+        return None
+    r = pd.read_csv(path)
+    if not {name_col, vol_col, "approved_percent", "bd_percent", "td_percent"} <= set(r.columns):
+        return None
+    r = r.copy()
+    for c in [vol_col, "approved_percent", "bd_percent", "td_percent"]:
+        r[c] = pd.to_numeric(r[c], errors="coerce")
+    r = r.dropna(subset=[vol_col, "approved_percent", "bd_percent", "td_percent"])
+    tot = r.groupby("period")[vol_col].transform("sum")
+    r["vol"] = np.where(tot > 1e5, r[vol_col] / 1e6, r[vol_col])
+    s = r.approved_percent + r.bd_percent + r.td_percent
+    keep = ((s >= low) & (s <= 100 + tol)) if low else ((s - 100).abs() <= tol)
+    # a month where most of the volume fails the check (NFS, May 2025: 6-11% unclassified at every bank) is
+    # dropped whole rather than averaged over the few banks that pass
+    kept = r.vol.where(keep, 0).groupby(r.period).transform("sum") / r.groupby("period").vol.transform("sum")
+    r = r[keep & (kept >= 0.75)]
+    r["_k"] = r[name_col].map(bank_key)
+    for c in ["approved_percent", "bd_percent", "td_percent"]:
+        r[c] = r[c] * r.vol
+    r = r.groupby(["period", "_k"], as_index=False).agg(name=(name_col, "last"), vol=("vol", "sum"), ok=("approved_percent", "sum"),
+                                                        bd=("bd_percent", "sum"), td=("td_percent", "sum"))
+    months = sorted(r.period.unique())
+    g = r.groupby("period")[["vol", "ok", "bd", "td"]].sum().reindex(months)
+    out = {"months": months, "vol": [num(v, 2) for v in g.vol]}
+    for c in ["ok", "bd", "td"]:
+        out[c] = [num(v, 2) for v in g[c] / g.vol]
+        r[c] = r[c] / r.vol
+    if top:
+        midx = {p: i for i, p in enumerate(months)}
+        recent = r[r.period.isin(months[-12:])].groupby("_k").vol.sum().sort_values(ascending=False).head(top)
+        names = r.sort_values("period").groupby("_k").name.last().map(clean_name)
+        banks = []
+        for k in recent.index:
+            x = r[r._k == k]
+            ser = {c: [None] * len(months) for c in ["vol", "ok", "bd", "td"]}
+            for row in x.itertuples():
+                for c in ser:
+                    ser[c][midx[row.period]] = num(getattr(row, c), 2)
+            banks.append({"n": names[k], "rbi": idx_by_key.get(k) if idx_by_key else None, **{c + "_s": v for c, v in ser.items()}})
+        out["banks"] = banks
+    return out
 
 
 def build_upi(types_by_key=None, idx_by_key=None):
@@ -203,6 +254,16 @@ def build_upi(types_by_key=None, idx_by_key=None):
                     cbanks.append({"n": clean_name(spelling[k]).title(), "rbi": idx_by_key[k], "tx": num(x12.tx.mean(), 0),
                                    "per10k": num(x12.rec.sum() / x12.tx.sum() * 1e4, 3) if x12.tx.sum() else None, "s": s})
                 upi["chargebacks"]["banks"] = cbanks
+    ap = build_rates(P / "upi_autopay_exec.csv", "remitter_bank", "total_volume", idx_by_key, top=15, tol=1.5)
+    if ap:
+        reg = build_rates(P / "upi_autopay_reg.csv", "remitter_bank", "total_volume", idx_by_key, top=0, tol=1.5)
+        if reg:
+            ri = {p: i for i, p in enumerate(reg["months"])}
+            ap["reg_vol"] = [reg["vol"][ri[p]] if p in ri else None for p in ap["months"]]
+            ap["reg_ok"] = [reg["ok"][ri[p]] if p in ri else None for p in ap["months"]]
+        ap["note"] = ("UPI AutoPay mandates (subscriptions, EMIs, SIPs, bills): execution attempts and new registrations at the "
+                      "top 50 remitter banks; volumes in million attempts")
+        upi["autopay"] = ap
     mcc = pd.read_csv(P / "upi_mcc.csv") if (P / "upi_mcc.csv").exists() else None
     if mcc is not None and "description" in mcc and "volume_in_mn" in mcc:
         last = mcc[mcc.period == mcc.period.max()].copy()
@@ -324,6 +385,10 @@ def main():
         "layout": layout,
         "value_unit": "Rs million",
         "upi": build_upi(types_by_key, idx_by_key),
+        # NPCI's NFS table: ATM transactions switched between banks (card of one bank, ATM of another), by card issuer.
+        # NPCI leaves about 1% of each bank's transactions out of its three rates, so rows only need to reach 95%.
+        "atm": build_rates(ROOT / "data" / "processed" / "nfs_atm_declines.csv", "issuer_bank_name", "total_volume_mn",
+                           idx_by_key, top=30, tol=0.5, low=95),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(data, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")

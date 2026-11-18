@@ -18,7 +18,7 @@ API = "https://www.npci.org.in/api/ecosystem-statistics/get-statistics"
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 FIRST = (2016, 4)                      # UPI went live in April 2016
 RECHECK_LAST = 3                       # months always re-fetched (NPCI revises recent months)
-# (tab_name, type_name, short name used for files)
+# (tab_name, type_name, short name used for files); UPI unless EXTRA below says otherwise
 SERIES = [
     ("upi-apps", None, "apps"),
     ("p2p-and-p2m-transactions", None, "p2p_p2m"),
@@ -31,6 +31,15 @@ SERIES = [
     ("chargeback", None, "chargeback"),
     ("top-50-mem-vol-val", None, "member_vol_val"),
 ]
+# Tables from NPCI's other products, collected the same way: (product, tab, type, file stem, first month to try).
+# AutoPay is UPI's recurring-mandate service; NFS is the shared ATM network (card and ATM of different banks).
+EXTRA = [
+    ("AutoPay", "top50-remitter", "execution", "upi_autopay_exec", (2021, 6)),
+    ("AutoPay", "top50-remitter", "reg", "upi_autopay_reg", (2021, 6)),
+    ("NFS", "bd-and-td", None, "nfs_atm_declines", (2021, 6)),
+]
+# every table as (product, tab, type, raw folder, csv stem, first month)
+TABLES = [("UPI", t, ty, sh, "upi_" + sh, FIRST) for t, ty, sh in SERIES] + [(p, t, ty, st, st, f) for p, t, ty, st, f in EXTRA]
 META = {"id", "created_at", "updated_at", "published_at", "created_by_id", "updated_by_id", "locale",
         "localizations", "publishedAt", "createdAt", "updatedAt", "srno", "sr_no", "month_value",
         "product_name", "tab_name", "year", "month"}
@@ -63,8 +72,8 @@ def rows_of(d):
     return list(r or [])
 
 
-def fetch(tab, type_name, year, month, size=1000, tries=3):
-    q = f"product_name=UPI&tab_name={tab}" + (f"&type_name={type_name}" if type_name else "") + \
+def fetch(tab, type_name, year, month, size=1000, tries=3, product="UPI"):
+    q = f"product_name={product}&tab_name={tab}" + (f"&type_name={type_name}" if type_name else "") + \
         f"&year={year}&month={MONTHS[month-1]}&page_no=1&sort_by=asc&size={size}&locale=en"
     cmd = [CURL, "-s", "--compressed", "--max-time", "60"] + sum([["-H", h] for h in HEADERS], []) + [API + "?" + q]
     for t in range(tries):
@@ -107,16 +116,16 @@ def collect():
     recheck = {(y, m) for y, m in month_iter((today.year - 1, today.month))}
     recheck = sorted(recheck)[-RECHECK_LAST:]
     changed = []
-    for tab, typ, short in SERIES:
+    for product, tab, typ, short, _, start in TABLES:
         have = {tuple(int(x) for x in p.stem.split("-")) for p in (RAW / short).glob("*.json")}
         last_have = max(have) if have else None
-        for y, m in month_iter():
+        for y, m in month_iter(start):
             # skip months that are on disk, and gaps before the first stored month once we have data
             if (y, m) in have and (y, m) not in recheck:
                 continue
             if last_have and (y, m) < last_have and (y, m) not in have and (y, m) < recheck[0]:
                 continue                                   # a permanent gap in NPCI's archive
-            rec = fetch(tab, typ, y, m)
+            rec = fetch(tab, typ, y, m, product=product)
             if rec is None:
                 continue
             p = raw_path(short, y, m)
@@ -148,7 +157,7 @@ def to_num(v):
 def build_csvs():
     OUT.mkdir(parents=True, exist_ok=True)
     summary = {}
-    for tab, typ, short in SERIES:
+    for _, _, _, short, stem, _ in TABLES:
         files = sorted((RAW / short).glob("*.json"))
         if not files:
             continue
@@ -165,13 +174,13 @@ def build_csvs():
                     if k not in cols:
                         cols.append(k)
                 rows.append(out)
-        with (OUT / f"upi_{short}.csv").open("w", newline="", encoding="utf-8") as fh:
+        with (OUT / f"{stem}.csv").open("w", newline="", encoding="utf-8") as fh:
             w = csv.DictWriter(fh, fieldnames=["period"] + cols, extrasaction="ignore")
             w.writeheader()
             w.writerows(rows)
-        summary[short] = (len(files), files[0].stem, files[-1].stem, len(rows))
+        summary[stem] = (len(files), files[0].stem, files[-1].stem, len(rows))
     for k, (n, a, b, r) in summary.items():
-        print(f"  upi_{k}.csv: {n} months {a}..{b}, {r} rows")
+        print(f"  {k}.csv: {n} months {a}..{b}, {r} rows")
     return summary
 
 

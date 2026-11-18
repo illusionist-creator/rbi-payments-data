@@ -7,12 +7,12 @@ NPCI's UPI statistics. Feeds the live dashboard [India Card Monitor](https://ill
 flowchart LR
   subgraph Sources
     RBI["RBI card statistics<br/>186 monthly Excel files"]
-    NPCI["NPCI UPI statistics<br/>JSON API, 10 tables"]
+    NPCI["NPCI statistics<br/>JSON API, 13 tables"]
     REF["Reference files<br/>populations, map outlines"]
   end
   GA["GitHub Actions, Mon + Thu 09:00 IST<br/>Python fetches new and revised releases,<br/>folds 4 RBI layouts and 3 units into one"]
   subgraph Repo["The Git repo"]
-    RAW["Raw files<br/>as published"] --> CSV["Processed CSVs<br/>one row per bank per month"] --> DBT{"dbt on DuckDB<br/>13 models, 47 tests"}
+    RAW["Raw files<br/>as published"] --> CSV["Processed CSVs<br/>one row per bank per month"] --> DBT{"dbt on DuckDB<br/>15 models, 61 tests"}
   end
   RBI --> GA
   NPCI --> GA
@@ -123,7 +123,7 @@ Because the workflow commits data back to the repo, run `git pull` before runnin
 
 ## UPI data from NPCI
 
-`scripts/npci_upi.py` collects NPCI's *UPI Ecosystem Statistics*
+`scripts/npci_upi.py` collects NPCI's *UPI Ecosystem Statistics*, plus the AutoPay and NFS (shared ATM) tables from the same API,
 (https://www.npci.org.in/product/ecosystem-statistics/upi) through the same JSON API the page itself uses,
 one call per table and month, and keeps every month's raw response under `data/npci/raw/<table>/YYYY-MM.json`.
 NPCI's edge blocks Python's HTTP stack (TLS fingerprint) but accepts curl with Chrome headers, so the
@@ -139,6 +139,8 @@ collector shells out to curl, which is present on Windows 10+ and on GitHub's ru
 | `upi_member_vol_val.csv` | Top 50 banks by volume and value | 2016 |
 | `upi_statewise.csv` | State and district statistics | recent months |
 | `upi_chargeback.csv` | Chargebacks by beneficiary bank | 2021 |
+| `upi_autopay_exec.csv`, `upi_autopay_reg.csv` | UPI AutoPay (recurring mandates): executions and registrations at the top 50 remitter banks, with approval and decline rates. Volumes are raw counts to Nov 2024 and millions from Dec 2024 | Aug 2021 |
+| `nfs_atm_declines.csv` | NFS, NPCI's shared ATM network: transactions with one bank's card at another bank's ATM, by card issuer, with approval and decline rates (about 1% of each bank's transactions is left unclassified; May 2025 leaves 6-11%) | Aug 2021 |
 
 Volumes are in millions of transactions and values in ₹ crore, as NPCI publishes them. The collector re-reads
 the latest three months on every run because NPCI revises them; `update.py` runs it before rebuilding the

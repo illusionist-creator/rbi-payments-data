@@ -37,3 +37,29 @@ sources:
         columns:
           - name: period
             data_tests: [not_null]
+      - name: upi_autopay_exec
+        description: >
+          UPI AutoPay mandate executions (recurring debits) at the top 50 remitter banks: attempts and the share
+          approved, business-declined and technically declined. Volumes are raw counts up to Nov 2024 and millions
+          from Dec 2024.
+        columns:
+          - name: period
+            data_tests: [not_null]
+          - name: remitter_bank
+            data_tests: [not_null]
+      - name: upi_autopay_reg
+        description: UPI AutoPay mandate registrations at the top 50 remitter banks, same layout and unit change as executions.
+        columns:
+          - name: period
+            data_tests: [not_null]
+          - name: remitter_bank
+            data_tests: [not_null]
+      - name: nfs_atm_declines
+        description: >
+          NPCI's shared ATM network (NFS), by card-issuing bank: transactions in millions and the share approved,
+          business-declined and technically declined. NPCI leaves about 1% of each bank's transactions unclassified.
+        columns:
+          - name: period
+            data_tests: [not_null]
+          - name: issuer_bank_name
+            data_tests: [not_null]

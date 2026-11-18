@@ -1,0 +1,3072 @@
+period,approved_percent,bd_percent,remitter_bank,td_percent,total_volume,type_name
+2021-08,87.44,9.91,State Bank Of India,2.65,666605,reg
+2021-08,87.19,12.7,Paytm Payments Bank,0.11,204548,reg
+2021-08,79.39,20.39,Bank of Baroda,0.22,186193,reg
+2021-08,90.74,8.96,HDFC BANK LTD,0.3,184009,reg
+2021-08,82.87,9.67,Punjab National Bank,7.46,138710,reg
+2021-08,89.48,10.07,ICICI Bank,0.45,136305,reg
+2021-08,88.94,10.4,Axis Bank Ltd.,0.66,93039,reg
+2021-08,87.26,12.11,Canara Bank,0.62,49922,reg
+2021-08,89.04,10.21,Bank of India,0.75,29718,reg
+2021-08,89.26,10.66,INDUSIND BANK,0.08,16943,reg
+2021-08,99.81,0.03,Federal Bank,0.17,15457,reg
+2021-08,69.06,28.21,Yes Bank Ltd,2.73,13575,reg
+2021-08,91.39,8.15,IDBI Bank Limited,0.46,13553,reg
+2021-08,76.26,11.51,Karur Vysya Bank,12.23,8259,reg
+2021-08,83.17,10.99,Punjab and Sind Bank,5.83,6103,reg
+2021-08,88.89,7.77,IDFC FIRST Bank,3.34,5004,reg
+2021-08,80.54,19.11,RBL,0.35,3171,reg
+2021-08,94.38,4.86,HSBC,0.76,1709,reg
+2021-08,69.85,7.52,Saraswat Co-operative Bank,22.63,1582,reg
+2021-08,88.63,11.37,Kerala Gramin Bank,0.0,695,reg
+2021-08,72.13,27.12,Jio Payments Bank,0.75,531,reg
+2021-08,88.21,11.38,Pragathi Krishna Gramin Bank,0.41,492,reg
+2021-08,72.58,26.74,Thane Janta Sahakari Bank,0.67,445,reg
+2021-08,92.94,7.06,Nainital Bank,0.0,340,reg
+2021-08,73.76,26.24,Rajkot Nagrik Sahakari Bank Ltd.,0.0,141,reg
+2021-08,87.1,12.9,Utkarsh Small Finance Bank,0.0,124,reg
+2021-08,87.25,12.75,Suryoday Small Finance Bank Ltd.,0.0,102,reg
+2021-08,93.94,6.06,Capital Small Finance Bank,0.0,33,reg
+2021-08,100.0,0.0,State Bank of Mauritius,0.0,15,reg
+2021-08,100.0,0.0,GP PARSIK BANK,0.0,6,reg
+2021-09,89.98,7.78,State Bank Of India,2.24,1055548,reg
+2021-09,91.58,8.19,HDFC BANK LTD,0.23,339714,reg
+2021-09,81.83,17.72,Bank of Baroda,0.45,324807,reg
+2021-09,86.66,13.14,Paytm Payments Bank,0.2,308228,reg
+2021-09,89.85,9.72,ICICI Bank,0.42,236394,reg
+2021-09,90.36,9.07,Punjab National Bank,0.57,235596,reg
+2021-09,88.92,9.35,Axis Bank Ltd.,1.73,175401,reg
+2021-09,71.37,27.21,Kotak Mahindra Bank,1.42,160240,reg
+2021-09,88.04,11.23,Canara Bank,0.73,81325,reg
+2021-09,88.28,10.67,Bank of India,1.06,54459,reg
+2021-09,82.36,15.44,INDUSIND BANK,2.2,29615,reg
+2021-09,99.61,0.03,Federal Bank,0.37,26844,reg
+2021-09,90.7,8.66,IDBI Bank Limited,0.64,24515,reg
+2021-09,67.79,24.0,Yes Bank Ltd,8.21,24314,reg
+2021-09,42.28,57.12,Indian Overseas Bank,0.6,15928,reg
+2021-09,84.44,12.67,Punjab and Sind Bank,2.89,10155,reg
+2021-09,81.18,17.49,Karur Vysya Bank,1.33,8869,reg
+2021-09,85.07,6.66,IDFC FIRST Bank,8.28,8518,reg
+2021-09,82.63,16.95,RBL,0.42,5688,reg
+2021-09,30.87,62.27,Saraswat Bank,6.85,3605,reg
+2021-09,96.19,3.54,HSBC,0.27,2992,reg
+2021-09,79.91,20.02,Union Bank of India,0.07,2742,reg
+2021-09,64.12,9.0,AU Small Finance bank,26.88,1633,reg
+2021-09,87.71,11.75,Kerala Gramin Bank,0.53,1123,reg
+2021-09,86.01,11.29,Pragathi Krishna Gramin Bank,2.7,1001,reg
+2021-09,92.04,7.72,Nainital Bank,0.24,842,reg
+2021-09,71.09,28.67,TJSB,0.24,837,reg
+2021-09,81.89,16.75,Jio Payments Bank,1.36,806,reg
+2021-09,63.17,33.66,GP PARSIK BANK,3.17,505,reg
+2021-09,85.34,14.66,Utkarsh Small Finance Bank,0.0,266,reg
+2021-09,64.61,35.39,Rajkot Nagrik Sahakari Bank Ltd.,0.0,243,reg
+2021-09,93.78,6.22,Suryoday Small Finance Bank Ltd.,0.0,241,reg
+2021-09,94.09,1.61,Capital Small Finance Bank,4.3,186,reg
+2021-09,0.0,0.0,Shivalik Mercantile Cooperative Bank Ltd,100.0,182,reg
+2021-09,85.71,0.0,State Bank of Mauritius,14.29,35,reg
+2021-10,91.82,7.65,State Bank Of India,0.53,1380203,reg
+2021-10,92.34,7.21,HDFC BANK LTD,0.45,404639,reg
+2021-10,80.79,17.67,Bank of Baroda,1.54,356243,reg
+2021-10,86.8,12.56,Paytm Payments Bank,0.64,296229,reg
+2021-10,90.06,8.46,ICICI Bank,1.48,295453,reg
+2021-10,88.59,8.4,Punjab National Bank,3.01,265422,reg
+2021-10,89.51,8.27,Axis Bank Ltd.,2.22,208860,reg
+2021-10,91.33,8.09,Kotak Mahindra Bank,0.58,200229,reg
+2021-10,90.72,7.83,Canara Bank,1.45,181775,reg
+2021-10,82.57,16.04,Union Bank of India,1.39,143785,reg
+2021-10,87.39,11.17,Bank of India,1.44,64728,reg
+2021-10,87.24,10.67,INDUSIND BANK,2.09,40682,reg
+2021-10,39.81,58.9,Indian Overseas Bank,1.29,39489,reg
+2021-10,98.95,0.02,Federal Bank,1.03,27268,reg
+2021-10,73.45,20.51,Yes Bank Ltd,6.04,27180,reg
+2021-10,90.68,8.19,IDBI Bank Limited,1.13,26219,reg
+2021-10,87.06,7.18,IDFC FIRST Bank,5.76,16168,reg
+2021-10,73.96,15.58,Karur Vysya Bank,10.46,10455,reg
+2021-10,74.46,17.23,Punjab and Sind Bank,8.31,9726,reg
+2021-10,54.13,0.01,Central Bank Of India,45.86,7756,reg
+2021-10,82.9,16.35,RBL,0.75,6385,reg
+2021-10,0.0,98.91,Saraswat Bank,1.09,5882,reg
+2021-10,93.31,3.36,HSBC,3.33,4079,reg
+2021-10,54.9,7.75,Bank of Maharashtra,37.35,2399,reg
+2021-10,88.11,0.0,Equitas Bank,11.89,2120,reg
+2021-10,92.18,7.43,NSDL Payments Bank,0.39,1291,reg
+2021-10,84.92,10.61,Pragathi Krishna Gramin Bank,4.47,1253,reg
+2021-10,83.38,13.53,Kerala Gramin Bank,3.09,1197,reg
+2021-10,61.93,36.51,TJSB,1.56,1090,reg
+2021-10,92.53,6.84,Nainital Bank,0.63,950,reg
+2021-10,81.02,18.09,Jio Payments Bank,0.89,901,reg
+2021-10,54.26,45.2,GP PARSIK BANK,0.54,551,reg
+2021-10,88.89,8.41,Suryoday Small Finance Bank Ltd.,2.7,333,reg
+2021-10,50.88,48.07,Rajkot Nagrik Sahakari Bank Ltd.,1.05,285,reg
+2021-10,0.0,0.0,Shivalik Mercantile Cooperative Bank Ltd,100.0,223,reg
+2021-10,95.8,2.8,Capital Small Finance Bank,1.4,143,reg
+2021-10,0.0,0.0,State Bank of Mauritius,100.0,77,reg
+2021-10,55.0,38.33,A P Mahesh Bank,6.67,60,reg
+2021-11,92.19,7.63,State Bank Of India,0.18,1456221,reg
+2021-11,93.19,6.76,HDFC BANK LTD,0.05,456087,reg
+2021-11,82.16,16.33,Bank of Baroda,1.51,363574,reg
+2021-11,91.3,7.86,ICICI Bank,0.84,344554,reg
+2021-11,90.86,8.25,Punjab National Bank,0.89,286852,reg
+2021-11,91.84,8.08,Axis Bank Ltd.,0.08,240439,reg
+2021-11,90.86,8.28,Canara Bank,0.86,219853,reg
+2021-11,86.54,13.43,Paytm Payments Bank,0.03,216486,reg
+2021-11,89.74,9.51,Kotak Mahindra Bank,0.75,210328,reg
+2021-11,88.05,11.63,Union Bank of India,0.32,177004,reg
+2021-11,89.8,9.33,Bank of India,0.87,167421,reg
+2021-11,41.41,58.3,Indian Overseas Bank,0.29,58526,reg
+2021-11,99.96,0.02,Central Bank Of India,0.02,56416,reg
+2021-11,89.79,9.1,Bank of Maharashtra,1.11,46692,reg
+2021-11,92.6,7.16,IDBI Bank Limited,0.24,42649,reg
+2021-11,89.95,9.98,INDUSIND BANK,0.07,41002,reg
+2021-11,99.85,0.01,Federal Bank,0.14,33489,reg
+2021-11,78.22,20.28,Yes Bank Ltd,1.5,29901,reg
+2021-11,86.05,13.33,Karur Vysya Bank,0.62,28795,reg
+2021-11,88.68,6.15,IDFC FIRST Bank,5.17,21606,reg
+2021-11,66.32,16.0,Punjab and Sind Bank,17.68,14338,reg
+2021-11,99.52,0.0,Equitas Bank,0.48,10718,reg
+2021-11,0.0,99.72,Saraswat Bank,0.28,9840,reg
+2021-11,82.24,16.23,RBL,1.53,7591,reg
+2021-11,94.9,3.99,HSBC,1.11,4687,reg
+2021-11,58.81,41.14,TJSB,0.05,1993,reg
+2021-11,89.55,9.41,Pragathi Krishna Gramin Bank,1.04,1636,reg
+2021-11,92.83,6.94,Nainital Bank,0.23,1325,reg
+2021-11,85.51,14.02,Kerala Gramin Bank,0.47,1063,reg
+2021-11,58.99,40.91,GP PARSIK BANK,0.1,990,reg
+2021-11,89.4,10.6,NSDL Payments Bank,0.0,868,reg
+2021-11,88.87,11.13,Jio Payments Bank,0.0,575,reg
+2021-11,91.6,6.72,Suryoday Small Finance Bank Ltd.,1.68,357,reg
+2021-11,56.21,43.79,Rajkot Nagrik Sahakari Bank Ltd.,0.0,338,reg
+2021-11,0.0,0.0,Shivalik Mercantile Cooperative Bank Ltd,100.0,327,reg
+2021-11,89.76,10.24,Utkarsh Small Finance Bank,0.0,127,reg
+2021-11,98.25,1.75,Capital Small Finance Bank,0.0,114,reg
+2021-11,70.11,5.75,State Bank of Mauritius,24.14,87,reg
+2021-12,92.32,6.42,State Bank Of India,1.25,1820898,reg
+2021-12,94.37,5.48,HDFC Bank Ltd.,0.15,574841,reg
+2021-12,86.41,13.56,Bank of Baroda,0.03,435450,reg
+2021-12,93.04,6.64,ICICI Bank,0.32,421485,reg
+2021-12,90.11,7.05,Punjab National Bank,2.84,378653,reg
+2021-12,93.06,6.89,Axis Bank Ltd.,0.05,306002,reg
+2021-12,86.6,13.05,Paytm Payments Bank,0.36,302030,reg
+2021-12,90.35,9.12,Union Bank of India,0.53,293779,reg
+2021-12,91.82,7.67,Canara Bank,0.5,265658,reg
+2021-12,93.12,6.0,Kotak Mahindra Bank,0.88,264623,reg
+2021-12,90.88,7.74,Bank of India,1.39,210215,reg
+2021-12,99.89,0.01,Central Bank Of India,0.1,117353,reg
+2021-12,92.15,5.77,Indian Bank,2.08,94149,reg
+2021-12,45.26,53.82,Indian Overseas Bank,0.92,81941,reg
+2021-12,99.69,0.02,Federal Bank,0.29,73036,reg
+2021-12,90.26,8.84,Bank of Maharashtra,0.9,59345,reg
+2021-12,93.42,5.75,IDBI Bank Limited,0.83,58209,reg
+2021-12,90.91,8.67,IndusInd Bank,0.42,49787,reg
+2021-12,68.97,17.81,Yes Bank Ltd,13.22,38920,reg
+2021-12,85.9,12.35,Karur Vysya Bank,1.75,35917,reg
+2021-12,90.43,5.51,IDFC FIRST Bank,4.06,28241,reg
+2021-12,99.81,0.0,Equitas Bank,0.19,23017,reg
+2021-12,82.43,16.68,Punjab and Sind Bank,0.89,21432,reg
+2021-12,0.0,99.89,Saraswat Bank,0.11,15938,reg
+2021-12,84.15,15.35,RBL Bank,0.5,10759,reg
+2021-12,74.27,25.54,HSBC,0.19,7306,reg
+2021-12,57.84,41.01,TJSB Sahakari Bank Ltd,1.15,3055,reg
+2021-12,92.11,7.4,Kerala Gramin Bank,0.49,2434,reg
+2021-12,95.78,4.05,Nainital Bank,0.18,2273,reg
+2021-12,90.52,9.44,Pragathi Krishna Gramin Bank,0.05,2172,reg
+2021-12,57.63,42.31,GP Parsik Bank,0.06,1579,reg
+2021-12,87.56,7.61,NSDL Payments Bank,4.83,1117,reg
+2021-12,86.7,12.79,Jio Payments Bank,0.51,782,reg
+2021-12,0.0,34.27,Apna Sahakari Bank Ltd.,65.73,674,reg
+2021-12,0.0,0.0,Shivalik Mercantile Cooperative Bank Ltd,100.0,625,reg
+2021-12,92.77,7.23,Utkarsh Small Finance Bank,0.0,595,reg
+2021-12,94.55,4.44,Suryoday Small Finance Bank Ltd.,1.01,495,reg
+2021-12,58.96,41.04,Rajkot Nagrik Sahakari Bank Ltd.,0.0,441,reg
+2021-12,61.14,38.86,Janata Sahakari Bank Ltd. Pune,0.0,422,reg
+2021-12,93.65,6.02,Capital Small Finance Bank,0.33,299,reg
+2021-12,97.38,2.62,State Bank of Mauritius,0.0,229,reg
+2021-12,0.0,100.0,Dhanlaxmi Bank Ltd,0.0,26,reg
+2022-01,93.08,6.3,State Bank Of India,0.62,1636637,reg
+2022-01,94.85,4.94,HDFC Bank Ltd.,0.21,536389,reg
+2022-01,86.15,13.57,Bank of Baroda,0.28,411987,reg
+2022-01,93.73,6.11,ICICI Bank,0.16,352863,reg
+2022-01,92.87,6.84,Punjab National Bank,0.29,343636,reg
+2022-01,90.69,8.29,Union Bank of India,1.02,332344,reg
+2022-01,84.4,12.56,Paytm Payments Bank,3.04,321597,reg
+2022-01,93.78,6.2,Axis Bank Ltd.,0.02,297317,reg
+2022-01,85.17,5.45,Kotak Mahindra Bank,9.38,267570,reg
+2022-01,92.1,7.09,Canara Bank,0.81,241971,reg
+2022-01,91.02,7.38,Bank of India,1.6,193904,reg
+2022-01,93.35,5.67,Indian Bank,0.98,130411,reg
+2022-01,98.82,0.02,Central Bank Of India,1.16,108783,reg
+2022-01,48.36,51.16,Indian Overseas Bank,0.48,74464,reg
+2022-01,98.77,0.01,Federal Bank,1.22,63224,reg
+2022-01,90.27,9.05,Bank of Maharashtra,0.68,53540,reg
+2022-01,93.94,5.22,IDBI Bank Limited,0.84,50828,reg
+2022-01,91.38,8.3,IndusInd Bank,0.32,47381,reg
+2022-01,81.57,17.5,Yes Bank Ltd,0.93,34905,reg
+2022-01,87.77,10.78,Karur Vysya Bank,1.45,32468,reg
+2022-01,99.81,0.0,Equitas Small Finance Bank,0.19,32403,reg
+2022-01,90.86,4.69,IDFC First Bank,4.45,27634,reg
+2022-01,91.69,8.21,Punjab and Sind Bank,0.1,21102,reg
+2022-01,0.0,99.66,Saraswat Bank,0.34,13351,reg
+2022-01,86.86,12.91,RBL Bank,0.23,8658,reg
+2022-01,96.34,2.58,HSBC,1.08,5661,reg
+2022-01,62.32,37.41,TJSB Sahakari Bank Ltd,0.27,2622,reg
+2022-01,90.13,8.96,Pragathi Krishna Gramin Bank,0.91,1752,reg
+2022-01,74.84,25.04,Dhanlaxmi Bank Ltd,0.12,1606,reg
+2022-01,91.98,7.58,Kerala Gramin Bank,0.44,1583,reg
+2022-01,0.0,32.51,Apna Sahakari Bank Ltd.,67.49,1541,reg
+2022-01,92.13,7.87,NSDL Payments Bank,0.0,1321,reg
+2022-01,56.24,43.36,GP Parsik Bank,0.4,1259,reg
+2022-01,94.34,5.42,Nainital Bank,0.24,1255,reg
+2022-01,92.23,7.56,Jio Payments Bank,0.21,939,reg
+2022-01,63.41,36.48,Janata Sahakari Bank Ltd. Pune,0.11,891,reg
+2022-01,0.0,0.0,Shivalik Small Finance Bank,100.0,557,reg
+2022-01,91.89,8.11,Utkarsh Small Finance Bank,0.0,555,reg
+2022-01,61.71,38.29,Rajkot Nagrik Sahakari Bank Ltd.,0.0,397,reg
+2022-01,92.8,5.14,Suryoday Small Finance Bank Ltd.,2.06,389,reg
+2022-01,96.28,3.15,State Bank of Mauritius,0.57,349,reg
+2022-01,86.05,8.91,North East Small Finance Bank,5.04,337,reg
+2022-01,60.62,39.38,A P Mahesh Bank,0.0,325,reg
+2022-01,95.54,4.46,The Ahmedabad Mercantile Co-op Bank Ltd,0.0,202,reg
+2022-01,97.13,2.87,Capital Small Finance Bank,0.0,174,reg
+2022-01,100.0,0.0,The Vijay Co-operative Bank Ltd,0.0,21,reg
+2022-01,90.0,10.0,The Gujarat State Cooperative Bank,0.0,20,reg
+2022-02,93.4,6.21,State Bank Of India,0.39,1336570,reg
+2022-02,92.92,4.79,HDFC BANK LTD,2.29,417545,reg
+2022-02,85.74,13.88,Bank of Baroda,0.38,341330,reg
+2022-02,86.5,11.52,Paytm Payments Bank,1.98,282675,reg
+2022-02,91.0,6.92,Punjab National Bank,2.08,275435,reg
+2022-02,93.25,6.29,ICICI Bank,0.46,262778,reg
+2022-02,93.32,6.13,Axis Bank Ltd.,0.55,239503,reg
+2022-02,93.65,5.47,Kotak Mahindra Bank,0.88,209378,reg
+2022-02,92.0,7.15,Canara Bank,0.85,197270,reg
+2022-02,91.81,7.61,Union Bank of India,0.58,166906,reg
+2022-02,90.73,7.55,Bank of India,1.72,155998,reg
+2022-02,89.6,5.66,Indian Bank,4.74,121574,reg
+2022-02,99.68,0.01,Central Bank Of India,0.31,87181,reg
+2022-02,99.26,0.03,Federal Bank,0.71,65176,reg
+2022-02,91.23,8.21,Bank of Maharashtra,0.56,41734,reg
+2022-02,94.62,5.03,IDBI Bank Limited,0.35,39705,reg
+2022-02,50.11,48.63,Indian Overseas Bank,1.26,39621,reg
+2022-02,91.45,8.16,INDUSIND BANK,0.39,38141,reg
+2022-02,99.56,0.0,Equitas Bank,0.44,26911,reg
+2022-02,81.75,17.21,Yes Bank Ltd,1.04,26453,reg
+2022-02,86.72,11.91,Karur Vysya Bank,1.37,24493,reg
+2022-02,91.86,5.23,IDFC FIRST Bank,2.91,22576,reg
+2022-02,85.37,12.3,Punjab and Sind Bank,2.33,16574,reg
+2022-02,0.0,99.13,Saraswat Bank,0.87,9734,reg
+2022-02,87.67,11.92,RBL,0.41,6024,reg
+2022-02,92.06,7.77,Kerala Gramin Bank,0.17,4533,reg
+2022-02,97.2,2.29,HSBC,0.51,4102,reg
+2022-02,63.81,35.21,TJSB,0.98,1843,reg
+2022-02,92.08,7.66,Dhanlaxmi Bank Ltd,0.26,1553,reg
+2022-02,91.56,6.93,Pragathi Krishna Gramin Bank,1.51,1387,reg
+2022-02,0.0,27.87,Apna Sahakari Bank Ltd.,72.13,1141,reg
+2022-02,93.64,6.18,NSDL Payments Bank,0.18,1116,reg
+2022-02,59.05,40.11,GP PARSIK BANK,0.84,945,reg
+2022-02,94.25,5.53,Nainital Bank,0.22,922,reg
+2022-02,86.93,11.49,Jio Payments Bank,1.58,696,reg
+2022-02,64.2,35.33,Janata Sahakari Bank Ltd. Pune,0.47,634,reg
+2022-02,13.63,2.31,Utkarsh Small Finance Bank,84.06,477,reg
+2022-02,0.0,0.0,Shivalik Small Finance Bank,100.0,432,reg
+2022-02,59.68,39.37,Rajkot Nagrik Sahakari Bank Ltd.,0.95,315,reg
+2022-02,96.24,3.76,State Bank of Mauritius,0.0,266,reg
+2022-02,44.71,55.29,A P Mahesh Bank,0.0,255,reg
+2022-02,88.8,10.37,North East Small Finance Bank,0.83,241,reg
+2022-02,91.7,8.3,The Ahmedabad Mercantile Cooperative Bank Ltd,0.0,229,reg
+2022-02,96.49,3.51,Suryoday Small Finance Bank Ltd.,0.0,228,reg
+2022-02,98.08,1.28,Capital Small Finance Bank,0.64,156,reg
+2022-02,84.0,16.0,The Vijay Co-operative Bank Limited,0.0,50,reg
+2022-03,93.82,6.07,State Bank Of India,0.11,1533187,reg
+2022-03,91.96,4.83,HDFC Bank Ltd,3.21,439591,reg
+2022-03,86.32,13.59,Bank of Baroda,0.09,379776,reg
+2022-03,92.27,6.86,Punjab National Bank,0.87,302754,reg
+2022-03,87.01,12.76,Paytm Payments Bank,0.23,287576,reg
+2022-03,93.11,6.14,ICICI Bank,0.75,275879,reg
+2022-03,93.43,6.09,Axis Bank Ltd,0.48,254012,reg
+2022-03,86.52,8.22,Canara Bank,5.26,234103,reg
+2022-03,94.14,5.46,Kotak Mahindra Bank,0.4,219200,reg
+2022-03,92.48,7.18,Bank of India,0.34,175519,reg
+2022-03,91.82,7.18,Union Bank of India,1.0,159226,reg
+2022-03,91.26,6.68,Indian Bank,2.06,133612,reg
+2022-03,99.48,0.01,Central Bank Of India,0.51,101216,reg
+2022-03,99.68,0.02,Federal Bank,0.3,75655,reg
+2022-03,48.68,50.68,Indian Overseas Bank,0.64,59554,reg
+2022-03,90.59,8.46,Bank of Maharashtra,0.95,44390,reg
+2022-03,90.67,8.75,IndusInd Bank,0.58,41727,reg
+2022-03,93.85,4.97,IDBI Bank Limited,1.18,40957,reg
+2022-03,94.6,5.28,IDFC FIRST Bank,0.12,27997,reg
+2022-03,80.51,17.95,Yes Bank Ltd,1.54,27887,reg
+2022-03,87.17,11.04,Karur Vysya Bank,1.79,26082,reg
+2022-03,99.51,0.0,Equitas Small Finance Bank,0.49,24079,reg
+2022-03,90.85,8.92,Punjab and Sind Bank,0.23,17234,reg
+2022-03,0.0,99.85,Saraswat Bank,0.15,10225,reg
+2022-03,91.52,8.45,Kerala Gramin Bank,0.03,7039,reg
+2022-03,84.19,15.57,RBL Bank,0.24,6357,reg
+2022-03,96.55,2.29,HSBC,1.16,4150,reg
+2022-03,66.61,31.56,TJSB Bank,1.83,2291,reg
+2022-03,92.25,7.66,Dhanlaxmi Bank Ltd,0.09,2142,reg
+2022-03,90.25,8.93,Pragathi Krishna Gramin Bank,0.82,1467,reg
+2022-03,0.0,28.36,Apna Sahakari Bank Ltd.,71.64,1174,reg
+2022-03,65.9,33.8,GP Parsik Bank,0.3,994,reg
+2022-03,94.46,5.34,Nainital Bank,0.2,992,reg
+2022-03,90.95,8.6,NSDL Payments Bank,0.45,895,reg
+2022-03,90.74,8.78,Jio Payments Bank,0.48,842,reg
+2022-03,64.46,35.54,Janata Sahakari Bank Ltd. Pune,0.0,726,reg
+2022-03,0.0,0.0,Utkarsh Small Finance Bank Ltd,100.0,681,reg
+2022-03,44.67,4.06,Shivalik Small Finance Bank,51.27,394,reg
+2022-03,60.34,39.38,Rajkot Nagrik Sahakari Bank Ltd.,0.28,358,reg
+2022-03,94.81,4.82,Suryoday Small Finance Bank Ltd.,0.37,270,reg
+2022-03,0.0,0.0,North East Small Finance Bank,100.0,253,reg
+2022-03,86.61,7.11,Bharat Co-op Bank Mumbai,6.28,239,reg
+2022-03,54.67,44.89,A P Mahesh Bank,0.44,225,reg
+2022-03,90.05,2.37,DBS Bank Ltd,7.58,211,reg
+2022-03,96.08,3.92,The Ahmedabad Mercantile Co-op Bank Ltd,0.0,204,reg
+2022-03,93.97,5.02,Capital Small Finance Bank,1.01,199,reg
+2022-03,95.56,4.44,State Bank of Mauritius,0.0,180,reg
+2022-03,95.24,100.0,The Vijay Co-op Bank Ltd,0.0,42,reg
+2022-03,80.0,100.0,The Gujarat State Co-operative Bank,0.0,35,reg
+2022-04,94.71,5.05,State Bank Of India,0.24,2089663,reg
+2022-04,92.25,4.21,HDFC Bank Ltd,3.54,523513,reg
+2022-04,89.22,10.73,Bank of Baroda,0.05,485977,reg
+2022-04,93.61,5.9,Punjab National Bank,0.49,363838,reg
+2022-04,76.74,7.07,Canara Bank,16.19,356148,reg
+2022-04,87.27,12.7,Paytm Payments Bank,0.03,335321,reg
+2022-04,94.05,5.71,ICICI Bank,0.24,305889,reg
+2022-04,94.63,5.16,Axis Bank Ltd.,0.21,300163,reg
+2022-04,94.49,4.82,Kotak Mahindra Bank,0.69,277436,reg
+2022-04,93.69,6.05,Bank of India,0.26,241013,reg
+2022-04,93.14,6.44,Union Bank of India,0.42,185318,reg
+2022-04,94.53,4.86,Indian Bank,0.61,184091,reg
+2022-04,99.53,0.01,Central Bank Of India,0.46,136872,reg
+2022-04,99.16,0.02,Federal Bank,0.82,100235,reg
+2022-04,57.76,40.85,Indian Overseas Bank,1.39,95110,reg
+2022-04,89.7,8.7,Bank of Maharashtra,1.6,72920,reg
+2022-04,91.07,7.64,IndusInd Bank,1.29,52503,reg
+2022-04,91.68,4.45,IDBI Bank Limited,3.87,38083,reg
+2022-04,90.23,9.59,Karur Vysya Bank,0.18,36770,reg
+2022-04,82.14,17.15,Yes Bank Ltd,0.71,35421,reg
+2022-04,93.4,4.44,IDFC FIRST Bank,2.16,35369,reg
+2022-04,99.85,0.0,Equitas Small Finance Bank,0.15,30079,reg
+2022-04,88.71,10.94,Punjab and Sind Bank,0.35,20710,reg
+2022-04,86.48,12.4,RBL Bank,1.12,5533,reg
+2022-04,90.8,8.82,Kerala Gramin Bank,0.38,5457,reg
+2022-04,96.04,2.58,HSBC Bank,1.38,4340,reg
+2022-04,93.9,5.68,Dhanlaxmi Bank Ltd,0.42,3310,reg
+2022-04,86.53,13.47,TJSB Sahakari Bank Ltd,0.0,1633,reg
+2022-04,97.62,2.07,DBS Bank Ltd,0.31,1599,reg
+2022-04,93.13,6.27,Pragathi Krishna Gramin Bank,0.6,1340,reg
+2022-04,89.45,9.85,Jio Payments Bank,0.7,1005,reg
+2022-04,95.34,4.66,Nainital Bank,0.0,858,reg
+2022-04,90.87,9.13,NSDL Payments Bank,0.0,789,reg
+2022-04,91.02,8.98,GP Parsik Bank,0.0,679,reg
+2022-04,77.67,22.17,Janata Sahakari Bank Ltd. Pune,0.16,618,reg
+2022-04,69.67,30.33,Rajkot Nagrik Sahakari Bank Ltd.,0.0,333,reg
+2022-04,83.08,6.46,Bharat Co-op Bank Mumbai,10.46,325,reg
+2022-04,94.16,5.84,Suryoday Small Finance Bank Ltd.,0.0,291,reg
+2022-04,94.12,5.88,Capital Small Finance Bank,0.0,238,reg
+2022-04,93.81,6.19,North East Small Finance Bank,0.0,226,reg
+2022-04,95.54,4.46,The Ahmedabad Mercantile Co-op Bank Ltd,0.0,224,reg
+2022-04,94.63,5.37,Shivalik Mercantile Cooperative Bank Ltd,0.0,205,reg
+2022-04,57.23,42.77,A P Mahesh Bank,0.0,173,reg
+2022-04,95.74,4.26,State Bank of Mauritius,0.0,141,reg
+2022-04,91.11,8.89,The Gujarat State Cooperative Bank,0.0,45,reg
+2022-04,58.14,41.86,The Vijay Co-op Bank Ltd.,0.0,43,reg
+2022-05,93.54,6.18,State Bank Of India,0.27,1551804,reg
+2022-05,94.38,4.79,HDFC Bank Ltd,0.83,460171,reg
+2022-05,85.83,13.19,Bank of Baroda,0.98,380431,reg
+2022-05,92.07,7.46,Punjab National Bank,0.48,292958,reg
+2022-05,85.57,14.36,Paytm Payments Bank,0.07,283053,reg
+2022-05,93.69,6.12,ICICI Bank,0.2,264175,reg
+2022-05,87.01,9.41,Canara Bank,3.58,250329,reg
+2022-05,94.23,5.65,Axis Bank Ltd,0.13,241658,reg
+2022-05,93.96,5.63,Kotak Mahindra Bank,0.41,223559,reg
+2022-05,92.5,7.41,Bank of India,0.09,178432,reg
+2022-05,93.82,6.01,Union Bank of India,0.17,164792,reg
+2022-05,94.01,5.53,Indian Bank,0.45,145404,reg
+2022-05,99.89,0.04,Central Bank Of India,0.07,98632,reg
+2022-05,99.17,0.03,Federal Bank,0.8,86166,reg
+2022-05,54.88,45.01,Indian Overseas Bank,0.1,79176,reg
+2022-05,88.5,10.81,Bank of Maharashtra,0.69,51903,reg
+2022-05,87.06,12.08,IndusInd Bank,0.87,42728,reg
+2022-05,95.0,4.59,IDBI Bank Limited,0.41,37339,reg
+2022-05,88.4,11.16,Karur Vysya Bank,0.44,31200,reg
+2022-05,82.67,17.3,Yes Bank Ltd,0.03,29742,reg
+2022-05,94.52,5.4,IDFC FIRST Bank,0.08,28580,reg
+2022-05,99.93,0.0,Equitas Small Finance Bank,0.07,25280,reg
+2022-05,88.96,10.92,Punjab and Sind Bank,0.13,17585,reg
+2022-05,0.0,99.72,Saraswat Bank,0.28,9230,reg
+2022-05,0.0,0.0,India Post Payment Bank,100.0,7282,reg
+2022-05,93.69,5.82,DBS BANK LTD,0.49,6891,reg
+2022-05,88.71,10.68,RBL Bank,0.61,5217,reg
+2022-05,89.9,8.23,Kerala Gramin Bank,1.87,4059,reg
+2022-05,97.07,2.35,HSBC Bank,0.58,3960,reg
+2022-05,93.28,6.33,Dhanlaxmi Bank Ltd,0.39,3097,reg
+2022-05,93.86,5.24,TJSB Sahakari Bank Ltd,0.9,1547,reg
+2022-05,88.76,9.51,Pragathi Krishna Gramin Bank,1.72,1335,reg
+2022-05,84.57,6.41,Bharat Co-op Bank Mumbai,9.02,1186,reg
+2022-05,7.23,19.46,Apna Sahakari Bank Ltd.,73.31,1079,reg
+2022-05,88.79,10.87,Jio Payments Bank,0.34,892,reg
+2022-05,93.4,6.6,NSDL Payments Bank,0.0,864,reg
+2022-05,95.78,4.22,Nainital Bank,0.0,806,reg
+2022-05,0.0,99.21,Andhra Pradesh Grameena Vikas Bank,0.79,760,reg
+2022-05,63.11,36.34,Catholic Syrian Bank,0.55,721,reg
+2022-05,0.0,0.0,Utkarsh Small Finance Bank,100.0,669,reg
+2022-05,93.39,6.31,GP Parsik Bank,0.3,666,reg
+2022-05,95.23,4.39,Janata Sahakari Bank Ltd. Pune,0.38,524,reg
+2022-05,0.0,0.0,Andhra Pragathi Grameena Bank,100.0,365,reg
+2022-05,94.55,5.45,Suryoday Small Finance Bank Ltd.,0.0,312,reg
+2022-05,89.75,8.83,Rajkot Nagrik Sahakari Bank Ltd.,1.41,283,reg
+2022-05,94.68,5.32,Capital Small Finance Bank,0.0,282,reg
+2022-05,97.33,2.29,DBS Bank India Limited,0.38,262,reg
+2022-05,93.1,6.9,Shivalik Mercantile Cooperative Bank Ltd,0.0,232,reg
+2022-05,94.55,4.55,North East Small Finance Bank,0.91,220,reg
+2022-05,63.37,36.63,A P Mahesh Bank,0.0,172,reg
+2022-06,91.96,6.08,State Bank Of India,1.96,1122658,reg
+2022-06,95.42,4.45,HDFC BANK LTD,0.13,356632,reg
+2022-06,82.97,14.12,Bank of Baroda,2.92,277477,reg
+2022-06,85.76,14.13,Paytm Payments Bank,0.1,264100,reg
+2022-06,92.6,6.99,Punjab National Bank,0.42,210205,reg
+2022-06,93.51,5.38,ICICI Bank,1.12,202589,reg
+2022-06,92.6,6.83,Union Bank of India,0.57,186490,reg
+2022-06,94.35,5.17,Axis Bank Ltd.,0.47,176641,reg
+2022-06,94.44,5.37,Kotak Mahindra Bank,0.19,168868,reg
+2022-06,90.02,9.15,Canara Bank,0.83,165684,reg
+2022-06,92.46,7.26,Bank of India,0.28,126953,reg
+2022-06,94.3,5.34,Indian Bank,0.36,100082,reg
+2022-06,99.13,0.02,Central Bank Of India,0.85,71468,reg
+2022-06,98.79,0.02,Federal Bank,1.19,65459,reg
+2022-06,56.51,42.86,Indian Overseas Bank,0.64,53806,reg
+2022-06,89.73,9.09,Bank of Maharashtra,1.18,38110,reg
+2022-06,91.03,8.53,INDUSIND BANK,0.43,30511,reg
+2022-06,62.11,9.22,India Post Payment Bank,28.67,25224,reg
+2022-06,75.69,11.35,Karur Vysya Bank,12.95,23929,reg
+2022-06,95.1,4.16,IDBI Bank Limited,0.74,22749,reg
+2022-06,94.22,5.56,IDFC FIRST Bank,0.22,22679,reg
+2022-06,99.78,0.0,Equitas Bank,0.22,22106,reg
+2022-06,82.68,16.51,Yes Bank Ltd,0.8,22013,reg
+2022-06,0.0,98.58,Jammu and Kashmir Bank,1.42,15229,reg
+2022-06,89.3,9.84,Punjab and Sind Bank,0.86,12871,reg
+2022-06,94.34,5.44,DBS BANK LTD,0.22,12680,reg
+2022-06,31.71,67.66,Saraswat Bank,0.64,5343,reg
+2022-06,97.8,1.81,HSBC,0.39,3316,reg
+2022-06,55.05,42.88,Andhra Pradesh Grameena Vikas Bank,2.06,3197,reg
+2022-06,89.44,9.12,RBL,1.44,3049,reg
+2022-06,74.77,14.6,The Bharat Co-operative Bank (Mumbai) Ltd,10.63,1815,reg
+2022-06,71.72,3.64,Andhra Pragathi Grameena Bank,24.64,1595,reg
+2022-06,92.54,5.1,Kerala Gramin Bank,2.36,1528,reg
+2022-06,94.27,5.38,Dhanlaxmi Bank Ltd,0.35,1432,reg
+2022-06,90.84,9.07,Catholic Syrian Bank,0.09,1092,reg
+2022-06,94.03,3.37,TJSB,2.6,1039,reg
+2022-06,90.72,8.58,Jio Payments Bank,0.7,1002,reg
+2022-06,89.32,7.68,Pragathi Krishna Gramin Bank,2.99,1002,reg
+2022-06,95.31,4.57,NSDL Payments Bank,0.12,832,reg
+2022-06,96.39,2.75,Nainital Bank,0.86,581,reg
+2022-06,91.78,6.88,GP PARSIK BANK,1.34,523,reg
+2022-06,0.0,0.0,Utkarsh Small Finance Bank,100.0,444,reg
+2022-06,97.5,2.25,Apna Sahakari Bank Ltd.,0.25,400,reg
+2022-06,95.45,2.67,Janata Sahakari Bank Ltd. Pune,1.87,374,reg
+2022-06,97.35,1.32,Lakshmi Vilas Bank,1.32,302,reg
+2022-06,96.49,3.51,Suryoday Small Finance Bank Ltd.,0.0,285,reg
+2022-06,94.34,5.28,Capital Small Finance Bank,0.38,265,reg
+2022-06,100.0,0.0,Deutsche Bank,0.0,257,reg
+2022-06,92.14,6.99,Rajkot Nagrik Sahakari Bank Ltd.,0.87,229,reg
+2022-06,93.62,6.38,North East Small Finance Bank,0.0,188,reg
+2022-07,93.16,6.3,State Bank Of India,0.54,1264618,reg
+2022-07,95.46,4.25,HDFC BANK LTD,0.29,419251,reg
+2022-07,84.18,14.67,Bank of Baroda,1.14,323666,reg
+2022-07,85.87,13.85,Paytm Payments Bank,0.28,288602,reg
+2022-07,91.52,7.95,Union Bank of India,0.52,262421,reg
+2022-07,90.21,4.87,ICICI Bank,4.92,250973,reg
+2022-07,92.0,6.6,Punjab National Bank,1.41,237183,reg
+2022-07,93.88,5.25,Kotak Mahindra Bank,0.87,213987,reg
+2022-07,91.67,5.3,Axis Bank Ltd.,3.03,207007,reg
+2022-07,86.45,8.84,Canara Bank,4.72,197996,reg
+2022-07,91.22,7.73,Bank of India,1.05,146812,reg
+2022-07,94.07,5.34,Indian Bank,0.59,113363,reg
+2022-07,92.04,7.43,Central Bank Of India,0.53,95492,reg
+2022-07,98.42,0.01,Federal Bank,1.57,80814,reg
+2022-07,59.06,40.3,Indian Overseas Bank,0.64,59441,reg
+2022-07,89.4,8.96,Bank of Maharashtra,1.64,45326,reg
+2022-07,90.44,8.9,INDUSIND BANK,0.66,37429,reg
+2022-07,87.82,11.51,IDFC FIRST Bank,0.67,28105,reg
+2022-07,99.16,0.0,Equitas Bank,0.84,27985,reg
+2022-07,81.34,18.49,Yes Bank Ltd,0.17,26410,reg
+2022-07,83.12,10.03,Karur Vysya Bank,6.85,26323,reg
+2022-07,95.17,4.3,IDBI Bank Limited,0.52,26170,reg
+2022-07,90.04,9.1,India Post Payment Bank,0.86,24376,reg
+2022-07,93.81,5.72,DBS BANK LTD,0.47,15026,reg
+2022-07,89.62,10.12,Punjab and Sind Bank,0.27,14640,reg
+2022-07,97.76,2.04,HSBC,0.2,4011,reg
+2022-07,96.36,3.33,Saraswat Bank,0.31,3843,reg
+2022-07,83.49,3.21,City Union Bank,13.31,3712,reg
+2022-07,94.08,3.95,Andhra Pradesh Grameena Vikas Bank,1.97,3498,reg
+2022-07,88.36,11.21,RBL,0.43,2774,reg
+2022-07,93.46,5.88,Kerala Gramin Bank,0.67,1804,reg
+2022-07,96.18,3.7,Andhra Pragathi Grameena Bank,0.12,1703,reg
+2022-07,77.73,13.11,The Bharat Co-operative Bank (Mumbai) Ltd.,9.16,1693,reg
+2022-07,92.34,6.95,Jio Payments Bank,0.71,1540,reg
+2022-07,90.28,9.65,Catholic Syrian Bank,0.07,1358,reg
+2022-07,93.89,6.11,NSDL Payments Bank,0.0,1276,reg
+2022-07,93.58,3.25,Thane Janta Sahakari Bank,3.17,1261,reg
+2022-07,92.39,6.15,Pragathi Krishna Gramin Bank,1.46,1235,reg
+2022-07,89.38,9.78,Dhanlaxmi Bank Ltd,0.84,1196,reg
+2022-07,94.2,4.91,Nainital Bank,0.89,672,reg
+2022-07,92.03,6.64,GP PARSIK BANK,1.33,602,reg
+2022-07,96.93,2.87,Apna Sahakari Bank Ltd.,0.2,488,reg
+2022-07,95.33,1.97,Janata Sahakari Bank Ltd. Pune,2.7,407,reg
+2022-07,95.93,4.07,Lakshmi Vilas Bank,0.0,393,reg
+2022-07,92.5,7.22,Suryoday Small Finance Bank Ltd.,0.28,360,reg
+2022-07,100.0,0.0,Deutsche Bank,0.0,347,reg
+2022-07,96.15,3.55,Capital Small Finance Bank,0.3,338,reg
+2022-07,79.34,4.92,Rajkot Nagrik Sahakari Bank Ltd.,15.74,305,reg
+2022-07,95.31,4.69,State Bank of Mauritius,0.0,256,reg
+2022-07,95.76,2.12,Maharashtra Gramin Bank,2.12,236,reg
+2022-08,93.33,6.02,State Bank Of India,0.65,1604488,reg
+2022-08,95.46,4.15,HDFC BANK LTD,0.39,522046,reg
+2022-08,86.14,13.63,Bank of Baroda,0.23,443674,reg
+2022-08,86.23,13.5,Paytm Payments Bank,0.27,351696,reg
+2022-08,91.78,7.5,Union Bank of India,0.72,344211,reg
+2022-08,91.53,5.96,Punjab National Bank,2.51,315019,reg
+2022-08,94.84,4.9,ICICI Bank,0.27,314984,reg
+2022-08,94.57,5.1,Kotak Mahindra Bank,0.33,272070,reg
+2022-08,91.87,5.01,Axis Bank Ltd.,3.12,257814,reg
+2022-08,89.88,8.64,Canara Bank,1.49,255644,reg
+2022-08,92.78,6.9,Bank of India,0.31,197792,reg
+2022-08,96.14,1.4,Federal Bank,2.46,143424,reg
+2022-08,93.17,4.96,Indian Bank,1.87,138971,reg
+2022-08,91.27,8.13,Central Bank Of India,0.59,119695,reg
+2022-08,62.58,37.04,Indian Overseas Bank,0.38,69818,reg
+2022-08,83.93,13.66,Bank of Maharashtra,2.4,65861,reg
+2022-08,91.01,8.62,INDUSIND BANK,0.37,49342,reg
+2022-08,96.46,3.05,UCO Bank,0.49,42452,reg
+2022-08,89.38,10.28,IDFC FIRST Bank,0.34,38365,reg
+2022-08,82.14,17.74,Yes Bank Ltd,0.11,34481,reg
+2022-08,98.91,0.0,Equitas Bank,1.09,33682,reg
+2022-08,90.85,8.57,India Post Payment Bank,0.58,30419,reg
+2022-08,95.36,3.78,IDBI Bank Limited,0.86,29335,reg
+2022-08,88.22,10.42,Karur Vysya Bank,1.36,27133,reg
+2022-08,89.76,9.45,Punjab and Sind Bank,0.79,18532,reg
+2022-08,95.11,4.56,DBS BANK LTD,0.34,18155,reg
+2022-08,97.5,1.59,HSBC,0.91,6470,reg
+2022-08,93.27,5.12,City Union Bank,1.62,5004,reg
+2022-08,96.64,3.16,Saraswat Bank,0.2,4530,reg
+2022-08,88.56,11.04,RBL,0.4,4231,reg
+2022-08,92.48,5.22,Rajasthan Marudhara Gramin Bank,2.3,3086,reg
+2022-08,95.31,3.0,Andhra Pradesh Grameena Vikas Bank,1.69,2600,reg
+2022-08,81.76,10.57,The Bharat Co-operative Bank (Mumbai) Ltd.,7.67,1996,reg
+2022-08,93.66,5.39,Kerala Gramin Bank,0.96,1986,reg
+2022-08,92.61,6.1,Jio Payments Bank,1.29,1786,reg
+2022-08,90.59,8.81,Catholic Syrian Bank,0.6,1509,reg
+2022-08,92.65,6.35,Pragathi Krishna Gramin Bank,1.0,1497,reg
+2022-08,97.53,2.12,TJSB,0.35,1417,reg
+2022-08,91.89,2.58,Maharashtra Gramin Bank,5.53,1319,reg
+2022-08,88.03,11.33,Dhanlaxmi Bank Ltd,0.64,1245,reg
+2022-08,94.63,5.37,NSDL Payments Bank,0.0,1192,reg
+2022-08,96.12,3.36,Andhra Pragathi Grameena Bank,0.52,1161,reg
+2022-08,95.81,4.06,Nainital Bank,0.14,739,reg
+2022-08,96.41,3.59,GP PARSIK BANK,0.0,696,reg
+2022-08,93.37,5.31,Fincare Small Finance Bank,1.33,603,reg
+2022-08,94.87,4.27,Karnataka Vikas Grameena Bank,0.85,585,reg
+2022-08,96.04,3.6,Apna Sahakari Bank Ltd.,0.36,556,reg
+2022-08,99.42,0.0,Deutsche Bank,0.58,514,reg
+2022-08,94.9,4.9,Janata Sahakari Bank Ltd. Pune,0.2,490,reg
+2022-08,94.88,4.65,Suryoday Small Finance Bank Ltd.,0.47,430,reg
+2022-09,91.53,7.49,State Bank Of India,0.98,1959999,reg
+2022-09,94.12,5.74,HDFC Bank Ltd,0.14,666957,reg
+2022-09,84.46,15.03,Bank of Baroda,0.51,512650,reg
+2022-09,79.42,20.41,Paytm Payments Bank,0.17,461276,reg
+2022-09,90.11,8.65,Union Bank of India,1.24,419157,reg
+2022-09,92.96,6.76,ICICI Bank,0.28,390765,reg
+2022-09,88.91,8.3,Punjab National Bank,2.79,386375,reg
+2022-09,92.61,7.06,Kotak Mahindra Bank,0.32,325048,reg
+2022-09,93.36,6.27,Axis Bank Ltd,0.37,308082,reg
+2022-09,87.74,9.69,Canara Bank,2.58,298116,reg
+2022-09,91.28,8.3,Bank of India,0.42,233808,reg
+2022-09,90.16,6.85,Indian Bank,2.99,167106,reg
+2022-09,91.49,3.48,Federal Bank,5.03,162628,reg
+2022-09,86.69,9.02,Central Bank Of India,4.29,143429,reg
+2022-09,78.96,11.38,India Post Payment Bank,9.66,139645,reg
+2022-09,87.49,6.21,UCO Bank,6.3,104832,reg
+2022-09,63.92,35.64,Indian Overseas Bank,0.44,79778,reg
+2022-09,85.97,9.7,Bank of Maharashtra,4.32,78674,reg
+2022-09,89.96,9.53,IndusInd Bank,0.51,60742,reg
+2022-09,92.1,7.05,IDFC FIRST Bank,0.86,45714,reg
+2022-09,81.77,16.37,Yes Bank Ltd,1.86,42627,reg
+2022-09,91.18,8.19,IDBI Bank Limited,0.63,35512,reg
+2022-09,96.8,1.75,Equitas Small Finance Bank,1.45,35485,reg
+2022-09,87.01,11.98,Karur Vysya Bank,1.0,33101,reg
+2022-09,87.43,11.42,Punjab and Sind Bank,1.15,23599,reg
+2022-09,92.98,6.47,DBS Bank Ltd,0.55,20201,reg
+2022-09,90.01,3.96,Maharashtra Gramin Bank,6.03,14817,reg
+2022-09,86.99,5.46,Rajasthan Marudhara Gramin Bank,7.55,13652,reg
+2022-09,88.89,9.3,City Union Bank,1.81,12049,reg
+2022-09,90.78,5.15,Andhra Pradesh Grameena Vikas Bank,4.07,12011,reg
+2022-09,95.46,4.18,HSBC Bank,0.36,6725,reg
+2022-09,91.08,4.9,Andhra Pragathi Grameena Bank,4.01,6404,reg
+2022-09,91.51,8.34,Saraswat Bank,0.15,5419,reg
+2022-09,88.07,9.02,Fincare Small Finance Bank,2.91,5399,reg
+2022-09,85.45,13.22,RBL Bank,1.33,5105,reg
+2022-09,87.83,5.37,Karnataka Vikas Grameena Bank,6.8,3781,reg
+2022-09,79.95,18.58,Bharat Co-op Bank Mumbai,1.47,3127,reg
+2022-09,87.48,11.61,Kerala Gramin Bank,0.91,3067,reg
+2022-09,91.35,8.09,Catholic Syrian Bank,0.56,2854,reg
+2022-09,90.8,8.99,Dhanlaxmi Bank Ltd,0.21,2359,reg
+2022-09,88.43,11.04,Jio Payments Bank,0.54,2238,reg
+2022-09,24.46,4.63,Pragathi Krishna Gramin Bank,70.92,2204,reg
+2022-09,92.89,6.68,TJSB Sahakari Bank Ltd,0.42,1900,reg
+2022-09,90.31,9.45,NSDL Payments Bank,0.24,1683,reg
+2022-09,90.76,8.49,Janata Sahakari Bank Ltd. Pune,0.75,1331,reg
+2022-09,89.74,8.46,Apna Sahakari Bank Ltd.,1.79,1170,reg
+2022-09,88.71,10.97,Nainital Bank,0.32,930,reg
+2022-09,91.11,7.87,GP Parsik Bank,1.03,877,reg
+2022-09,50.19,9.07,Utkarsh Small Finance Bank,40.74,783,reg
+2022-09,92.91,6.5,State Bank of Mauritius,0.59,677,reg
+2022-10,91.81,7.62,State Bank Of India,0.57,2354191,reg
+2022-10,94.61,5.21,HDFC Bank Ltd,0.18,726243,reg
+2022-10,86.96,12.52,Bank of Baroda,0.52,580225,reg
+2022-10,79.73,20.13,Paytm Payments Bank,0.14,510564,reg
+2022-10,91.06,7.83,Union Bank of India,1.11,495214,reg
+2022-10,90.42,7.7,Punjab National Bank,1.88,435998,reg
+2022-10,93.65,6.09,ICICI Bank,0.26,435404,reg
+2022-10,93.49,6.23,Kotak Mahindra Bank,0.28,358697,reg
+2022-10,91.24,8.32,Canara Bank,0.44,348288,reg
+2022-10,94.22,5.55,Axis Bank Ltd,0.23,348214,reg
+2022-10,92.53,7.17,Bank of India,0.3,287205,reg
+2022-10,87.25,11.39,India Post Payment Bank,1.36,211576,reg
+2022-10,92.44,6.35,Indian Bank,1.21,201499,reg
+2022-10,89.45,7.88,Central Bank Of India,2.67,169395,reg
+2022-10,89.99,4.0,Federal Bank,6.01,120406,reg
+2022-10,90.49,6.46,UCO Bank,3.05,116131,reg
+2022-10,68.65,30.93,Indian Overseas Bank,0.42,99481,reg
+2022-10,89.42,9.65,Bank of Maharashtra,0.94,98501,reg
+2022-10,91.4,8.33,IndusInd Bank,0.26,68763,reg
+2022-10,93.28,6.19,IDFC FIRST Bank,0.53,54394,reg
+2022-10,90.81,5.39,Maharashtra Gramin Bank,3.8,54211,reg
+2022-10,84.2,15.56,Yes Bank Ltd,0.24,45351,reg
+2022-10,92.11,7.23,IDBI Bank Limited,0.66,39386,reg
+2022-10,87.82,11.6,Karur Vysya Bank,0.58,39149,reg
+2022-10,96.73,1.87,Equitas Small Finance Bank,1.4,34209,reg
+2022-10,80.41,17.98,Punjab and Sind Bank,1.61,27694,reg
+2022-10,93.21,6.6,DBS Bank Ltd,0.19,21918,reg
+2022-10,89.35,8.02,City Union Bank,2.63,20765,reg
+2022-10,93.16,4.9,Andhra Pradesh Grameena Vikas Bank,1.94,18208,reg
+2022-10,88.52,4.8,Rajasthan Marudhara Gramin Bank,6.69,17511,reg
+2022-10,87.16,4.3,Andhra Pragathi Grameena Bank,8.54,14457,reg
+2022-10,88.22,8.86,Fincare Small Finance Bank,2.92,9751,reg
+2022-10,93.96,4.7,Karnataka Vikas Grameena Bank,1.34,9269,reg
+2022-10,93.92,5.71,Saraswat Bank,0.37,6495,reg
+2022-10,95.97,3.81,HSBC Bank,0.22,6321,reg
+2022-10,87.74,11.91,RBL Bank,0.35,5634,reg
+2022-10,84.43,13.86,Bharat Co-op Bank Mumbai,1.72,5478,reg
+2022-10,92.4,6.94,Catholic Syrian Bank,0.67,4210,reg
+2022-10,93.05,5.46,Dhanlaxmi Bank Ltd,1.49,3279,reg
+2022-10,91.43,8.33,Kerala Gramin Bank,0.24,2918,reg
+2022-10,95.55,4.22,Janata Sahakari Bank Ltd. Pune,0.23,2583,reg
+2022-10,88.64,11.24,Jio Payments Bank,0.12,2464,reg
+2022-10,93.2,5.17,TJSB Sahakari Bank Ltd,1.63,2207,reg
+2022-10,92.01,7.89,Apna Sahakari Bank Ltd.,0.1,2015,reg
+2022-10,88.42,11.33,NSDL Payments Bank,0.26,1554,reg
+2022-10,92.12,7.72,State Bank of Mauritius,0.16,1218,reg
+2022-10,92.92,6.47,GP Parsik Bank,0.62,974,reg
+2022-10,92.85,6.93,Nainital Bank,0.22,895,reg
+2022-10,94.7,1.42,Deutsche Bank,3.88,773,reg
+2022-10,88.27,10.41,The Gujarat State Cooperative Bank,1.32,759,reg
+2022-11,91.83,7.54,State Bank Of India,0.62,1922963,reg
+2022-11,94.74,5.04,HDFC Bank Ltd,0.22,685414,reg
+2022-11,86.52,12.64,Bank of Baroda,0.84,504016,reg
+2022-11,79.95,19.91,Paytm Payments Bank,0.14,442262,reg
+2022-11,91.22,8.06,Union Bank of India,0.72,406462,reg
+2022-11,93.78,5.82,ICICI Bank,0.39,402099,reg
+2022-11,79.39,6.87,Punjab National Bank,13.74,398773,reg
+2022-11,92.98,6.34,Kotak Mahindra Bank,0.68,323214,reg
+2022-11,94.4,5.33,Axis Bank Ltd,0.27,322579,reg
+2022-11,90.78,8.17,Canara Bank,1.05,303763,reg
+2022-11,91.98,7.3,Bank of India,0.73,242318,reg
+2022-11,87.0,11.88,India Post Payment Bank,1.12,174191,reg
+2022-11,93.0,6.24,Indian Bank,0.75,174085,reg
+2022-11,91.12,8.12,Central Bank Of India,0.76,162900,reg
+2022-11,90.07,3.51,Federal Bank,6.42,141141,reg
+2022-11,88.11,6.48,UCO Bank,5.41,98246,reg
+2022-11,62.52,37.1,Indian Overseas Bank,0.38,91524,reg
+2022-11,86.48,9.78,Bank of Maharashtra,3.74,85587,reg
+2022-11,91.21,8.43,IndusInd Bank,0.36,61889,reg
+2022-11,90.57,6.12,IDFC FIRST Bank,3.31,52016,reg
+2022-11,83.94,15.8,Yes Bank Ltd,0.26,41626,reg
+2022-11,92.21,6.79,IDBI Bank Limited,1.0,39532,reg
+2022-11,87.73,11.81,Karur Vysya Bank,0.45,35396,reg
+2022-11,97.78,1.95,Equitas Small Finance Bank,0.28,28207,reg
+2022-11,83.39,3.87,Maharashtra Gramin Bank,12.73,24414,reg
+2022-11,87.1,11.9,Punjab and Sind Bank,1.0,21374,reg
+2022-11,93.95,5.95,DBS Bank Ltd,0.1,21138,reg
+2022-11,90.26,7.97,City Union Bank,1.77,18687,reg
+2022-11,91.32,7.42,Andhra Pradesh Grameena Vikas Bank,1.25,16357,reg
+2022-11,90.99,6.69,Rajasthan Marudhara Gramin Bank,2.31,15254,reg
+2022-11,93.82,6.08,South Indian Bank,0.11,12246,reg
+2022-11,87.65,4.92,Andhra Pragathi Grameena Bank,7.44,10840,reg
+2022-11,76.83,7.57,Fincare Small Finance Bank,15.6,8983,reg
+2022-11,61.5,37.94,HSBC Bank,0.56,7863,reg
+2022-11,93.6,6.25,Saraswat Bank,0.15,6516,reg
+2022-11,93.49,4.73,Karnataka Vikas Grameena Bank,1.78,6063,reg
+2022-11,88.34,11.38,RBL Bank,0.28,5658,reg
+2022-11,85.36,13.43,Bharat Co-op Bank Mumbai,1.21,4878,reg
+2022-11,92.89,6.86,Kerala Gramin Bank,0.25,4023,reg
+2022-11,92.65,6.33,Catholic Syrian Bank,1.02,3919,reg
+2022-11,94.93,4.62,Dhanlaxmi Bank Ltd,0.45,3095,reg
+2022-11,90.6,9.02,Jio Payments Bank,0.37,2671,reg
+2022-11,94.01,5.65,Janata Sahakari Bank Ltd. Pune,0.33,2405,reg
+2022-11,92.99,6.45,TJSB Sahakari Bank Ltd,0.56,2310,reg
+2022-11,88.11,6.51,Cosmos Bank,5.37,1750,reg
+2022-11,88.49,11.45,NSDL Payments Bank,0.06,1624,reg
+2022-11,93.97,5.85,Apna Sahakari Bank Ltd.,0.18,1624,reg
+2022-11,89.97,6.75,State Bank of Mauritius,3.28,1555,reg
+2022-11,91.53,8.28,GP Parsik Bank,0.19,1063,reg
+2022-11,90.12,8.36,The Gujarat State Cooperative Bank,1.52,921,reg
+2022-12,94.33,5.3,State Bank Of India,0.37,1650117,reg
+2022-12,96.1,3.57,HDFC Bank Ltd,0.33,724095,reg
+2022-12,74.82,10.51,Bank of Baroda,14.67,484757,reg
+2022-12,88.19,11.72,Paytm Payments Bank,0.08,451972,reg
+2022-12,96.16,3.29,ICICI Bank,0.55,426385,reg
+2022-12,92.17,7.02,Union Bank of India,0.8,348724,reg
+2022-12,94.59,4.66,Kotak Mahindra Bank,0.75,335259,reg
+2022-12,91.43,5.23,Punjab National Bank,3.34,333628,reg
+2022-12,93.35,3.98,Axis Bank Ltd,2.67,322033,reg
+2022-12,91.75,7.63,Canara Bank,0.62,274122,reg
+2022-12,93.54,6.23,Bank of India,0.23,197159,reg
+2022-12,81.85,10.99,India Post Payment Bank,7.17,172033,reg
+2022-12,94.72,4.22,Indian Bank,1.06,157059,reg
+2022-12,63.75,36.09,Central Bank Of India,0.16,136963,reg
+2022-12,97.01,2.21,Federal Bank,0.78,121493,reg
+2022-12,90.47,5.65,UCO Bank,3.88,88063,reg
+2022-12,65.67,33.25,Indian Overseas Bank,1.08,85071,reg
+2022-12,87.81,8.82,Bank of Maharashtra,3.37,67787,reg
+2022-12,91.9,7.48,IndusInd Bank,0.63,57602,reg
+2022-12,93.9,5.44,IDFC FIRST Bank,0.66,50793,reg
+2022-12,92.61,2.92,IDBI Bank Limited,4.47,44148,reg
+2022-12,86.12,13.79,Yes Bank Ltd,0.09,43759,reg
+2022-12,88.45,9.93,Karur Vysya Bank,1.63,33832,reg
+2022-12,99.77,0.0,Equitas Small Finance Bank,0.23,29223,reg
+2022-12,96.31,3.53,DBS Bank Ltd,0.16,22604,reg
+2022-12,91.25,8.46,Punjab and Sind Bank,0.29,20851,reg
+2022-12,91.67,6.22,City Union Bank,2.1,20416,reg
+2022-12,96.27,3.46,South Indian Bank,0.26,19912,reg
+2022-12,91.73,6.55,Andhra Pradesh Grameena Vikas Bank,1.73,13252,reg
+2022-12,91.94,6.14,Rajasthan Marudhara Gramin Bank,1.92,12047,reg
+2022-12,10.57,1.88,Pragathi Krishna Gramin Bank,87.55,10871,reg
+2022-12,93.19,5.81,Maharashtra Gramin Bank,1.0,10055,reg
+2022-12,66.66,32.93,HSBC Bank,0.41,9676,reg
+2022-12,88.43,7.51,Fincare Small Finance Bank,4.06,8119,reg
+2022-12,92.53,6.52,Andhra Pragathi Grameena Bank,0.95,7290,reg
+2022-12,96.97,2.52,Saraswat Bank,0.5,6972,reg
+2022-12,88.69,9.54,RBL Bank,1.77,6680,reg
+2022-12,70.4,28.46,AU Small Finance bank,1.14,5004,reg
+2022-12,94.26,4.97,Kerala Gramin Bank,0.78,4890,reg
+2022-12,94.15,5.44,Karnataka Vikas Grameena Bank,0.41,4120,reg
+2022-12,94.69,4.15,Catholic Syrian Bank,1.15,3994,reg
+2022-12,94.7,5.24,Jio Payments Bank,0.06,3738,reg
+2022-12,83.52,14.67,Bharat Co-op Bank Mumbai,1.81,3652,reg
+2022-12,95.62,3.81,Dhanlaxmi Bank Ltd,0.57,3309,reg
+2022-12,95.02,4.1,TJSB Sahakari Bank Ltd,0.88,3298,reg
+2022-12,94.13,3.92,Cosmos Bank,1.95,2981,reg
+2022-12,92.56,4.09,State Bank of Mauritius,3.35,2055,reg
+2022-12,94.99,4.96,NSDL Payments Bank,0.05,2037,reg
+2022-12,94.12,4.98,Janata Sahakari Bank Ltd. Pune,0.9,1768,reg
+2022-12,91.16,8.65,Utkarsh Small Finance Bank,0.2,1516,reg
+2023-01,90.02,8.71,State Bank Of India,1.27,1920339,reg
+2023-01,96.24,3.62,HDFC Bank Ltd,0.14,769645,reg
+2023-01,78.46,11.43,Bank of Baroda,10.1,530173,reg
+2023-01,87.14,12.83,Paytm Payments Bank,0.03,450765,reg
+2023-01,95.87,3.08,ICICI Bank,1.05,432574,reg
+2023-01,87.37,5.24,Punjab National Bank,7.39,404866,reg
+2023-01,93.01,6.66,Union Bank of India,0.33,393201,reg
+2023-01,95.94,3.79,Axis Bank Ltd,0.27,370079,reg
+2023-01,94.45,4.63,Kotak Mahindra Bank,0.92,355789,reg
+2023-01,91.89,7.28,Canara Bank,0.83,294478,reg
+2023-01,93.89,5.87,Bank of India,0.23,221466,reg
+2023-01,94.39,4.01,Indian Bank,1.6,174280,reg
+2023-01,69.08,30.63,Central Bank Of India,0.28,152026,reg
+2023-01,87.48,9.26,India Post Payment Bank,3.26,119907,reg
+2023-01,97.34,2.62,Federal Bank,0.04,119135,reg
+2023-01,90.57,5.0,UCO Bank,4.43,115310,reg
+2023-01,66.92,32.82,Indian Overseas Bank,0.26,87173,reg
+2023-01,89.54,9.82,Bank of Maharashtra,0.64,71989,reg
+2023-01,92.62,7.19,IndusInd Bank,0.19,66434,reg
+2023-01,94.07,5.44,IDFC FIRST Bank,0.49,56236,reg
+2023-01,87.68,11.93,Yes Bank Ltd,0.38,53809,reg
+2023-01,95.29,3.2,IDBI Bank Limited,1.51,46468,reg
+2023-01,89.16,9.81,Karur Vysya Bank,1.03,34635,reg
+2023-01,99.94,0.0,Equitas Small Finance Bank,0.06,30162,reg
+2023-01,82.45,17.5,Punjab and Sind Bank,0.05,24143,reg
+2023-01,96.23,3.68,DBS Bank Ltd,0.08,22754,reg
+2023-01,96.11,3.79,South Indian Bank,0.1,21463,reg
+2023-01,92.48,5.99,City Union Bank,1.53,20610,reg
+2023-01,86.75,3.45,Karnataka Bank,9.79,14079,reg
+2023-01,94.29,5.24,Rajasthan Marudhara Gramin Bank,0.47,14017,reg
+2023-01,94.7,5.23,Maharashtra Gramin Bank,0.06,12936,reg
+2023-01,93.73,6.05,Andhra Pradesh Grameena Vikas Bank,0.22,12769,reg
+2023-01,81.48,18.24,Pragathi Krishna Gramin Bank,0.28,10878,reg
+2023-01,87.62,7.77,Fincare Small Finance Bank,4.61,10181,reg
+2023-01,72.36,26.29,HSBC Bank,1.35,9056,reg
+2023-01,94.38,5.51,Andhra Pragathi Grameena Bank,0.11,8169,reg
+2023-01,97.03,2.54,Saraswat Bank,0.43,7234,reg
+2023-01,89.01,9.72,RBL Bank,1.27,6987,reg
+2023-01,95.22,4.24,TJSB Sahakari Bank Ltd,0.54,4787,reg
+2023-01,94.73,5.16,Kerala Gramin Bank,0.11,4554,reg
+2023-01,94.71,5.18,Karnataka Vikas Grameena Bank,0.11,4422,reg
+2023-01,92.38,6.8,Jio Payments Bank,0.83,4341,reg
+2023-01,94.96,4.44,Catholic Syrian Bank,0.6,3850,reg
+2023-01,88.51,3.24,Cosmos Bank,8.25,3708,reg
+2023-01,95.07,4.66,Dhanlaxmi Bank Ltd,0.26,3431,reg
+2023-01,90.01,9.56,Utkarsh Small Finance Bank,0.43,3254,reg
+2023-01,79.13,18.0,Bharat Co-op Bank Mumbai,2.87,3172,reg
+2023-01,94.11,5.61,Suryoday Small Finance Bank Ltd.,0.28,2497,reg
+2023-01,91.1,4.98,State Bank of Mauritius,3.93,2190,reg
+2023-01,93.83,5.8,GP Parsik Bank,0.38,2122,reg
+2023-02,93.56,4.47,State Bank Of India,1.97,1723274,reg
+2023-02,96.78,3.11,HDFC Bank Ltd,0.11,761143,reg
+2023-02,86.68,11.7,Bank of Baroda,1.62,450616,reg
+2023-02,94.31,2.65,ICICI Bank,3.03,436526,reg
+2023-02,87.63,12.32,Paytm Payments Bank,0.06,428110,reg
+2023-02,95.53,3.91,Kotak Mahindra Bank,0.55,407295,reg
+2023-02,93.22,6.03,Union Bank of India,0.74,352580,reg
+2023-02,94.06,5.8,Punjab National Bank,0.15,349515,reg
+2023-02,96.13,3.54,Axis Bank Ltd,0.33,336794,reg
+2023-02,92.48,6.73,Canara Bank,0.79,275863,reg
+2023-02,94.23,5.25,Bank of India,0.52,199678,reg
+2023-02,79.11,10.02,India Post Payment Bank,10.88,176893,reg
+2023-02,92.52,3.54,Indian Bank,3.94,165222,reg
+2023-02,97.45,2.06,Federal Bank,0.49,129138,reg
+2023-02,92.51,6.19,Central Bank Of India,1.3,114805,reg
+2023-02,88.61,5.6,UCO Bank,5.79,91783,reg
+2023-02,69.64,30.04,Indian Overseas Bank,0.31,83051,reg
+2023-02,89.68,9.54,Bank of Maharashtra,0.78,65498,reg
+2023-02,93.52,6.28,IndusInd Bank,0.19,62483,reg
+2023-02,93.26,5.17,IDFC FIRST Bank,1.58,53151,reg
+2023-02,89.05,10.44,Yes Bank Ltd,0.51,50708,reg
+2023-02,96.22,2.77,IDBI Bank Limited,1.01,45827,reg
+2023-02,89.62,9.05,Karur Vysya Bank,1.32,33663,reg
+2023-02,97.24,0.0,Equitas Small Finance Bank,2.76,29057,reg
+2023-02,96.75,3.03,DBS Bank Ltd,0.21,22803,reg
+2023-02,96.08,3.37,South Indian Bank,0.56,22639,reg
+2023-02,89.09,10.77,Punjab and Sind Bank,0.14,20900,reg
+2023-02,92.37,5.59,City Union Bank,2.04,20781,reg
+2023-02,86.26,2.65,Karnataka Bank,11.09,17010,reg
+2023-02,94.44,4.96,Rajasthan Marudhara Gramin Bank,0.59,11610,reg
+2023-02,92.95,6.26,Andhra Pradesh Grameena Vikas Bank,0.8,10645,reg
+2023-02,95.09,4.65,Maharashtra Gramin Bank,0.25,9825,reg
+2023-02,88.93,6.64,Fincare Small Finance Bank,4.43,9082,reg
+2023-02,83.85,15.49,Pragathi Krishna Gramin Bank,0.66,8329,reg
+2023-02,97.3,1.45,HSBC Bank,1.25,7788,reg
+2023-02,97.39,2.42,Saraswat Bank,0.19,7424,reg
+2023-02,91.86,8.05,RBL Bank,0.09,6772,reg
+2023-02,93.69,5.58,Andhra Pragathi Grameena Bank,0.74,6652,reg
+2023-02,93.89,5.15,Jio Payments Bank,0.96,4894,reg
+2023-02,95.79,4.13,Kerala Gramin Bank,0.09,4627,reg
+2023-02,95.13,4.02,TJSB Sahakari Bank Ltd,0.86,4433,reg
+2023-02,95.02,4.67,Karnataka Vikas Grameena Bank,0.31,3915,reg
+2023-02,95.3,4.21,Catholic Syrian Bank,0.49,3892,reg
+2023-02,76.77,2.16,Cosmos Bank,21.06,3888,reg
+2023-02,94.42,4.88,Dhanlaxmi Bank Ltd,0.7,3425,reg
+2023-02,80.41,17.46,Bharat Co-op Bank Mumbai,2.13,3242,reg
+2023-02,89.31,10.07,Utkarsh Small Finance Bank,0.62,2722,reg
+2023-02,88.84,3.91,NSDL Payments Bank,7.25,2302,reg
+2023-02,89.43,4.94,State Bank of Mauritius,5.63,2166,reg
+2023-02,92.75,5.93,Suryoday Small Finance Bank Ltd.,1.31,2056,reg
+2023-03,95.19,3.79,State Bank Of India,1.02,2097950,reg
+2023-03,97.01,2.8,HDFC Bank Ltd,0.2,893456,reg
+2023-03,87.59,11.27,Bank of Baroda,1.13,522657,reg
+2023-03,93.36,2.36,ICICI Bank,4.28,514870,reg
+2023-03,87.91,11.95,Paytm Payments Bank,0.14,488926,reg
+2023-03,94.12,5.53,Union Bank of India,0.35,412098,reg
+2023-03,95.49,4.32,Punjab National Bank,0.18,411150,reg
+2023-03,95.01,3.98,Kotak Mahindra Bank,1.01,407341,reg
+2023-03,96.47,3.36,Axis Bank Ltd,0.17,391781,reg
+2023-03,92.71,6.38,Canara Bank,0.91,324166,reg
+2023-03,95.07,4.67,Bank of India,0.26,230656,reg
+2023-03,93.9,3.2,Indian Bank,2.9,192638,reg
+2023-03,85.42,9.49,India Post Payment Bank,5.09,170612,reg
+2023-03,97.84,1.85,Federal Bank,0.31,142943,reg
+2023-03,94.21,5.55,Central Bank Of India,0.23,132261,reg
+2023-03,93.23,5.0,UCO Bank,1.77,118103,reg
+2023-03,71.22,28.52,Indian Overseas Bank,0.26,98432,reg
+2023-03,94.81,3.38,IDBI Bank Limited,1.81,89286,reg
+2023-03,87.73,9.93,Bank of Maharashtra,2.34,75394,reg
+2023-03,92.66,5.85,IndusInd Bank,1.49,75070,reg
+2023-03,93.8,5.34,IDFC FIRST Bank,0.86,59935,reg
+2023-03,89.6,9.83,Yes Bank Ltd,0.56,57214,reg
+2023-03,91.15,8.21,Karur Vysya Bank,0.64,39998,reg
+2023-03,89.31,3.58,Karnataka Bank,7.11,39988,reg
+2023-03,96.0,3.87,South Indian Bank,0.12,33126,reg
+2023-03,96.88,0.0,Equitas Small Finance Bank,3.12,30976,reg
+2023-03,96.89,2.9,DBS Bank Ltd,0.21,25889,reg
+2023-03,90.09,8.14,City Union Bank,1.76,24670,reg
+2023-03,91.33,8.56,Punjab and Sind Bank,0.11,23800,reg
+2023-03,44.36,2.66,Tamilnad Mercantile Bank,52.98,21614,reg
+2023-03,95.22,4.14,Rajasthan Marudhara Gramin Bank,0.63,14867,reg
+2023-03,97.04,2.9,Saraswat Bank,0.06,12155,reg
+2023-03,94.37,4.99,Andhra Pradesh Grameena Vikas Bank,0.64,12031,reg
+2023-03,87.7,11.91,RBL Bank,0.4,11381,reg
+2023-03,66.37,9.89,Pragathi Krishna Gramin Bank,23.74,11037,reg
+2023-03,88.78,6.8,Fincare Small Finance Bank,4.43,10709,reg
+2023-03,95.4,4.31,Maharashtra Gramin Bank,0.29,10581,reg
+2023-03,98.01,1.51,HSBC Bank,0.48,9200,reg
+2023-03,94.39,5.24,Kerala Gramin Bank,0.37,8354,reg
+2023-03,95.15,4.7,Andhra Pragathi Grameena Bank,0.14,8312,reg
+2023-03,86.98,3.54,Cosmos Bank,9.48,8041,reg
+2023-03,93.51,6.19,Jio Payments Bank,0.3,5689,reg
+2023-03,96.42,3.44,TJSB Sahakari Bank Ltd,0.14,4995,reg
+2023-03,94.47,4.73,Catholic Syrian Bank,0.8,4992,reg
+2023-03,90.91,5.63,NSDL Payments Bank,3.47,4675,reg
+2023-03,95.75,3.85,Karnataka Vikas Grameena Bank,0.39,4334,reg
+2023-03,94.42,4.01,Dhanlaxmi Bank Ltd,1.57,3888,reg
+2023-03,81.2,17.52,Bharat Co-op Bank Mumbai,1.28,3671,reg
+2023-03,89.06,9.34,Utkarsh Small Finance Bank,1.6,2997,reg
+2023-03,95.41,3.83,State Bank of Mauritius,0.77,2481,reg
+2023-04,95.45,3.9,State Bank Of India,0.64,1920478,reg
+2023-04,96.75,2.77,HDFC Bank Ltd,0.47,852960,reg
+2023-04,93.78,2.28,ICICI Bank,3.94,500040,reg
+2023-04,87.9,11.75,Bank of Baroda,0.35,464914,reg
+2023-04,87.81,12.15,Paytm Payments Bank,0.05,441428,reg
+2023-04,95.14,4.11,Kotak Mahindra Bank,0.75,378692,reg
+2023-04,92.77,4.57,Punjab National Bank,2.67,376932,reg
+2023-04,93.98,5.35,Union Bank of India,0.66,369277,reg
+2023-04,96.56,3.4,Axis Bank Ltd,0.04,365041,reg
+2023-04,93.07,6.68,Canara Bank,0.25,296519,reg
+2023-04,94.8,4.93,Bank of India,0.28,202792,reg
+2023-04,95.78,3.44,Indian Bank,0.78,168962,reg
+2023-04,79.92,9.61,India Post Payment Bank,10.47,159739,reg
+2023-04,98.17,1.73,Federal Bank,0.1,142872,reg
+2023-04,92.61,5.96,Central Bank Of India,1.43,120225,reg
+2023-04,87.54,5.87,UCO Bank,6.59,113054,reg
+2023-04,93.75,4.43,IDBI Bank Limited,1.83,92683,reg
+2023-04,69.85,29.55,Indian Overseas Bank,0.61,90590,reg
+2023-04,92.83,5.73,IndusInd Bank,1.45,70595,reg
+2023-04,87.12,11.52,Bank of Maharashtra,1.36,68204,reg
+2023-04,94.87,4.65,IDFC FIRST Bank,0.48,55577,reg
+2023-04,86.42,13.06,Yes Bank Ltd,0.52,49387,reg
+2023-04,86.77,4.24,Karnataka Bank,8.99,46995,reg
+2023-04,91.65,7.79,Karur Vysya Bank,0.56,35989,reg
+2023-04,95.69,4.16,South Indian Bank,0.15,32778,reg
+2023-04,97.27,,Equitas Small Finance Bank,2.73,26963,reg
+2023-04,88.78,7.62,Punjab and Sind Bank,3.61,25310,reg
+2023-04,97.06,2.84,DBS Bank Ltd,0.1,24406,reg
+2023-04,91.25,7.23,City Union Bank,1.52,22772,reg
+2023-04,99.62,,Standard Chartered,0.38,22107,reg
+2023-04,96.18,3.76,Tamilnad Mercantile Bank,0.06,16576,reg
+2023-04,96.28,3.16,Saraswat Bank,0.56,13691,reg
+2023-04,94.7,4.3,Rajasthan Marudhara Gramin Bank,1.0,12742,reg
+2023-04,88.41,11.44,RBL Bank,0.15,10780,reg
+2023-04,93.85,6.05,Kerala Gramin Bank,0.1,10380,reg
+2023-04,93.84,5.49,Andhra Pradesh Grameena Vikas Bank,0.66,10233,reg
+2023-04,88.31,6.43,Fincare Small Finance Bank,5.26,9871,reg
+2023-04,98.18,1.52,HSBC Bank,0.3,9546,reg
+2023-04,58.35,40.57,Andhra Pragathi Grameena Bank,1.08,8962,reg
+2023-04,94.13,5.47,Maharashtra Gramin Bank,0.4,8557,reg
+2023-04,82.69,12.98,Pragathi Krishna Gramin Bank,4.34,7884,reg
+2023-04,89.4,3.28,Cosmos Bank,7.33,6743,reg
+2023-04,86.42,11.14,Jio Payments Bank,2.44,6150,reg
+2023-04,91.02,6.28,NSDL Payments Bank,2.7,6038,reg
+2023-04,95.3,3.72,Catholic Syrian Bank,0.99,4761,reg
+2023-04,96.41,3.23,TJSB Sahakari Bank Ltd,0.37,4620,reg
+2023-04,95.66,3.6,Dhanlaxmi Bank Ltd,0.74,4078,reg
+2023-04,80.12,18.03,Bharat Co-op Bank Mumbai,1.85,3788,reg
+2023-04,93.56,5.31,Karnataka Vikas Grameena Bank,1.14,3430,reg
+2023-04,90.17,9.09,Utkarsh Small Finance Bank,0.73,2595,reg
+2023-05,96.12,3.76,State Bank Of India,0.13,2074529,reg
+2023-05,97.09,2.73,HDFC Bank Ltd,0.19,930913,reg
+2023-05,94.6,2.31,ICICI Bank,3.09,545175,reg
+2023-05,87.6,11.88,Bank of Baroda,0.52,514587,reg
+2023-05,69.46,3.13,Punjab National Bank,27.41,488827,reg
+2023-05,88.01,11.94,Paytm Payments Bank,0.04,484431,reg
+2023-05,94.87,4.17,Kotak Mahindra Bank,0.96,429856,reg
+2023-05,94.16,4.95,Union Bank of India,0.88,405116,reg
+2023-05,96.66,3.26,Axis Bank Ltd,0.07,394840,reg
+2023-05,92.83,6.02,Canara Bank,1.15,325476,reg
+2023-05,94.18,5.2,Bank of India,0.62,223889,reg
+2023-05,95.35,3.4,Indian Bank,1.25,184198,reg
+2023-05,88.56,9.57,India Post Payment Bank,1.87,160869,reg
+2023-05,98.26,1.65,Federal Bank,0.09,153125,reg
+2023-05,84.96,5.71,UCO Bank,9.33,130991,reg
+2023-05,93.62,5.67,Central Bank Of India,0.71,129424,reg
+2023-05,73.39,25.84,Indian Overseas Bank,0.77,98148,reg
+2023-05,94.92,4.09,IDBI Bank Limited,0.99,98010,reg
+2023-05,92.03,5.89,Bank of Maharashtra,2.08,78886,reg
+2023-05,93.79,5.72,IndusInd Bank,0.49,77697,reg
+2023-05,94.74,4.53,IDFC FIRST Bank,0.73,59637,reg
+2023-05,90.64,9.3,Yes Bank Ltd,0.05,51690,reg
+2023-05,86.2,4.21,Karnataka Bank,9.59,48738,reg
+2023-05,90.14,9.39,Karur Vysya Bank,0.47,38329,reg
+2023-05,95.28,4.66,South Indian Bank,0.05,34778,reg
+2023-05,99.08,0.56,Standard Chartered,0.36,29737,reg
+2023-05,97.49,0.0,Equitas Small Finance Bank,2.51,29417,reg
+2023-05,96.94,2.81,DBS Bank Ltd,0.25,25690,reg
+2023-05,92.37,6.93,Punjab and Sind Bank,0.7,24632,reg
+2023-05,91.19,6.63,City Union Bank,2.19,24357,reg
+2023-05,94.88,4.07,Tamilnad Mercantile Bank,1.05,17967,reg
+2023-05,96.12,2.88,Saraswat Bank,1.0,15042,reg
+2023-05,94.24,5.06,Rajasthan Marudhara Gramin Bank,0.7,12353,reg
+2023-05,89.09,10.59,RBL Bank,0.33,11627,reg
+2023-05,94.75,5.14,Kerala Gramin Bank,0.11,11061,reg
+2023-05,89.85,6.3,Fincare Small Finance Bank,3.85,10956,reg
+2023-05,93.38,5.8,Andhra Pradesh Grameena Vikas Bank,0.83,10163,reg
+2023-05,98.23,1.37,HSBC Bank,0.39,10127,reg
+2023-05,93.55,5.35,Maharashtra Gramin Bank,1.1,9429,reg
+2023-05,88.8,4.17,Cosmos Bank,7.03,7841,reg
+2023-05,69.09,29.65,Andhra Pragathi Grameena Bank,1.26,7770,reg
+2023-05,85.69,12.57,Pragathi Krishna Gramin Bank,1.74,7357,reg
+2023-05,93.9,6.0,Jio Payments Bank,0.1,6918,reg
+2023-05,90.73,5.69,NSDL Payments Bank,3.58,6344,reg
+2023-05,96.12,3.38,TJSB Sahakari Bank Ltd,0.49,5260,reg
+2023-05,95.24,3.67,Catholic Syrian Bank,1.1,5016,reg
+2023-05,94.2,4.66,Dhanlaxmi Bank Ltd,1.14,4310,reg
+2023-05,80.34,18.38,Bharat Co-op Bank Mumbai,1.28,4299,reg
+2023-05,93.69,5.18,Karnataka Vikas Grameena Bank,1.13,3709,reg
+2023-05,91.24,7.66,Utkarsh Small Finance Bank,1.1,2807,reg
+2023-06,96.58,3.36,State Bank Of India,0.05,2287579,reg
+2023-06,97.35,2.56,HDFC Bank Ltd,0.09,1021160,reg
+2023-06,95.2,2.26,ICICI Bank,2.54,596849,reg
+2023-06,88.37,11.13,Bank of Baroda,0.5,554381,reg
+2023-06,88.35,11.62,Paytm Payments Bank,0.03,497253,reg
+2023-06,95.21,4.12,Kotak Mahindra Bank,0.67,455261,reg
+2023-06,95.38,4.32,Punjab National Bank,0.3,448160,reg
+2023-06,95.2,4.5,Union Bank of India,0.3,439101,reg
+2023-06,96.75,3.1,Axis Bank Ltd,0.15,432484,reg
+2023-06,92.09,5.47,Canara Bank,2.44,358129,reg
+2023-06,95.51,4.34,Bank of India,0.15,247312,reg
+2023-06,95.58,3.13,Indian Bank,1.29,203427,reg
+2023-06,97.45,1.44,Federal Bank,1.12,162713,reg
+2023-06,86.2,9.09,India Post Payment Bank,4.72,148339,reg
+2023-06,86.33,5.74,UCO Bank,7.93,143737,reg
+2023-06,92.96,5.17,Central Bank Of India,1.87,141786,reg
+2023-06,95.98,3.58,IDBI Bank Limited,0.44,108023,reg
+2023-06,85.71,14.03,Indian Overseas Bank,0.26,106563,reg
+2023-06,93.8,5.31,Bank of Maharashtra,0.89,86714,reg
+2023-06,94.42,4.97,IndusInd Bank,0.61,86198,reg
+2023-06,95.41,4.45,IDFC FIRST Bank,0.14,63483,reg
+2023-06,91.01,8.72,Yes Bank Ltd,0.27,56733,reg
+2023-06,86.12,4.77,Karnataka Bank,9.11,55548,reg
+2023-06,91.09,8.71,Karur Vysya Bank,0.2,42384,reg
+2023-06,96.43,3.53,South Indian Bank,0.04,38345,reg
+2023-06,98.25,1.46,Standard Chartered,0.29,30417,reg
+2023-06,96.31,0.0,Equitas Small Finance Bank,3.69,29557,reg
+2023-06,97.34,2.59,DBS Bank Ltd,0.07,27035,reg
+2023-06,92.16,7.18,Punjab and Sind Bank,0.66,26493,reg
+2023-06,92.68,5.58,City Union Bank,1.74,26335,reg
+2023-06,95.75,3.93,Tamilnad Mercantile Bank,0.32,19734,reg
+2023-06,95.48,2.69,Saraswat Bank,1.83,16959,reg
+2023-06,93.19,4.6,Rajasthan Marudhara Gramin Bank,2.21,13686,reg
+2023-06,90.14,9.66,RBL Bank,0.2,11972,reg
+2023-06,93.49,6.08,Kerala Gramin Bank,0.42,11557,reg
+2023-06,92.01,5.11,Andhra Pradesh Grameena Vikas Bank,2.89,11459,reg
+2023-06,93.82,4.3,Maharashtra Gramin Bank,1.87,11154,reg
+2023-06,87.26,6.27,Fincare Small Finance Bank,6.46,10583,reg
+2023-06,98.07,1.62,HSBC Bank,0.32,10450,reg
+2023-06,77.02,9.57,Pragathi Krishna Gramin Bank,13.41,9757,reg
+2023-06,84.16,15.41,Andhra Pragathi Grameena Bank,0.42,8506,reg
+2023-06,90.92,3.54,Cosmos Bank,5.53,8350,reg
+2023-06,92.21,7.7,Jio Payments Bank,0.1,7355,reg
+2023-06,89.77,5.31,NSDL Payments Bank,4.92,7117,reg
+2023-06,94.1,3.82,Catholic Syrian Bank,2.08,5581,reg
+2023-06,96.0,3.21,TJSB Sahakari Bank Ltd,0.79,5580,reg
+2023-06,83.07,15.81,Bharat Co-op Bank Mumbai,1.12,4833,reg
+2023-06,94.32,3.91,Dhanlaxmi Bank Ltd,1.77,4702,reg
+2023-06,95.85,3.46,Karnataka Vikas Grameena Bank,0.7,4573,reg
+2023-06,96.41,3.41,Suryoday Small Finance Bank Ltd.,0.18,3813,reg
+2023-07,96.04,3.38,State Bank Of India,0.58,2360254,reg
+2023-07,97.36,2.55,HDFC Bank Ltd,0.09,1068275,reg
+2023-07,94.63,2.31,ICICI Bank,3.06,618843,reg
+2023-07,87.95,11.25,Bank of Baroda,0.8,564132,reg
+2023-07,88.58,11.35,Paytm Payments Bank,0.08,557089,reg
+2023-07,95.44,4.36,Kotak Mahindra Bank,0.19,474851,reg
+2023-07,95.32,4.16,Punjab National Bank,0.52,463179,reg
+2023-07,95.08,4.63,Union Bank of India,0.29,460744,reg
+2023-07,96.77,3.14,Axis Bank Ltd,0.09,449795,reg
+2023-07,91.78,5.63,Canara Bank,2.6,368912,reg
+2023-07,95.39,4.48,Bank of India,0.14,254141,reg
+2023-07,93.9,3.06,Indian Bank,3.04,217171,reg
+2023-07,98.4,1.35,Federal Bank,0.25,168552,reg
+2023-07,88.31,8.67,India Post Payment Bank,3.02,155594,reg
+2023-07,92.64,5.42,Central Bank Of India,1.94,142161,reg
+2023-07,91.61,7.68,UCO Bank,0.71,124371,reg
+2023-07,82.17,16.8,Indian Overseas Bank,1.03,112129,reg
+2023-07,95.63,3.76,IDBI Bank Limited,0.61,107663,reg
+2023-07,94.18,5.1,IndusInd Bank,0.72,90955,reg
+2023-07,93.43,5.35,Bank of Maharashtra,1.21,85384,reg
+2023-07,95.69,4.07,IDFC FIRST Bank,0.24,68381,reg
+2023-07,90.83,8.84,Yes Bank Ltd,0.32,59090,reg
+2023-07,88.24,5.45,Karnataka Bank,6.3,54980,reg
+2023-07,91.09,8.0,Karur Vysya Bank,0.9,44217,reg
+2023-07,96.09,3.63,South Indian Bank,0.28,37155,reg
+2023-07,98.28,1.36,Standard Chartered,0.36,31811,reg
+2023-07,95.35,,Equitas Small Finance Bank,4.65,31460,reg
+2023-07,96.78,2.83,DBS Bank Ltd,0.39,28403,reg
+2023-07,92.62,5.92,City Union Bank,1.45,28392,reg
+2023-07,93.26,6.21,Punjab and Sind Bank,0.54,26664,reg
+2023-07,66.84,,AU Small Finance bank,33.16,25457,reg
+2023-07,95.71,4.03,Tamilnad Mercantile Bank,0.27,19178,reg
+2023-07,96.73,2.48,Saraswat Bank,0.79,16305,reg
+2023-07,93.59,5.76,Fincare Small Finance Bank,0.65,13120,reg
+2023-07,94.71,4.22,Rajasthan Marudhara Gramin Bank,1.07,12833,reg
+2023-07,93.13,4.9,Andhra Pradesh Grameena Vikas Bank,1.96,12826,reg
+2023-07,89.56,10.28,RBL Bank,0.16,11975,reg
+2023-07,98.02,1.6,HSBC Bank,0.38,11618,reg
+2023-07,94.93,4.88,Kerala Gramin Bank,0.19,11023,reg
+2023-07,94.48,4.67,Maharashtra Gramin Bank,0.85,10886,reg
+2023-07,93.28,3.63,NSDL Payments Bank,3.09,9677,reg
+2023-07,88.18,11.58,Jio Payments Bank,0.24,9134,reg
+2023-07,90.18,9.45,Pragathi Krishna Gramin Bank,0.37,9004,reg
+2023-07,87.31,11.79,Andhra Pragathi Grameena Bank,0.9,8992,reg
+2023-07,90.18,3.06,Cosmos Bank,6.76,8017,reg
+2023-07,96.28,2.94,TJSB Sahakari Bank Ltd,0.78,5676,reg
+2023-07,92.69,3.6,Catholic Syrian Bank,3.71,5473,reg
+2023-07,82.89,16.48,Bharat Co-op Bank Mumbai,0.63,4892,reg
+2023-07,95.58,3.78,Suryoday Small Finance Bank Ltd.,0.63,4732,reg
+2023-07,93.74,4.49,Dhanlaxmi Bank Ltd,1.77,4635,reg
+2023-08,96.36,2.88,State Bank Of India,0.76,2450276,reg
+2023-08,97.65,2.17,HDFC Bank Ltd,0.18,1096047,reg
+2023-08,94.7,1.87,ICICI Bank,3.43,618603,reg
+2023-08,88.86,10.28,Bank of Baroda,0.87,569659,reg
+2023-08,89.71,10.26,Paytm Payments Bank,0.02,559629,reg
+2023-08,91.15,8.78,Kotak Mahindra Bank,0.08,506915,reg
+2023-08,92.07,3.45,Punjab National Bank,4.48,481036,reg
+2023-08,95.03,3.94,Union Bank of India,1.03,469037,reg
+2023-08,96.93,2.75,Axis Bank Ltd,0.32,460216,reg
+2023-08,93.91,4.88,Canara Bank,1.22,370811,reg
+2023-08,95.93,3.74,Bank of India,0.33,254436,reg
+2023-08,96.63,2.9,Indian Bank,0.47,219392,reg
+2023-08,98.14,1.21,Federal Bank,0.65,177202,reg
+2023-08,90.7,8.03,India Post Payment Bank,1.27,158589,reg
+2023-08,88.9,4.5,Central Bank Of India,6.6,152798,reg
+2023-08,92.04,7.59,UCO Bank,0.37,116838,reg
+2023-08,82.65,15.55,Indian Overseas Bank,1.8,113903,reg
+2023-08,95.75,3.13,IDBI Bank Limited,1.11,108413,reg
+2023-08,91.7,4.42,IndusInd Bank,3.87,92922,reg
+2023-08,94.56,4.44,Bank of Maharashtra,1.0,88170,reg
+2023-08,95.53,3.49,IDFC FIRST Bank,0.98,65685,reg
+2023-08,91.85,7.69,Yes Bank Ltd,0.46,58710,reg
+2023-08,89.45,4.13,Karnataka Bank,6.42,54272,reg
+2023-08,92.64,6.9,Karur Vysya Bank,0.47,45571,reg
+2023-08,96.63,3.18,South Indian Bank,0.2,38937,reg
+2023-08,84.49,0.01,Equitas Small Finance Bank,15.5,34012,reg
+2023-08,98.12,1.19,Standard Chartered,0.68,32359,reg
+2023-08,93.53,4.99,City Union Bank,1.47,29756,reg
+2023-08,97.03,2.6,DBS Bank Ltd,0.36,29371,reg
+2023-08,89.48,2.67,AU Small Finance bank,7.85,28303,reg
+2023-08,92.09,5.41,Punjab and Sind Bank,2.49,27316,reg
+2023-08,96.19,3.58,Tamilnad Mercantile Bank,0.24,19486,reg
+2023-08,95.25,3.93,Fincare Small Finance Bank,0.82,19423,reg
+2023-08,97.14,2.36,Saraswat Bank,0.5,15771,reg
+2023-08,95.39,3.85,Rajasthan Marudhara Gramin Bank,0.75,13416,reg
+2023-08,96.87,3.06,Jio Payments Bank,0.07,12836,reg
+2023-08,85.56,12.74,RBL Bank,1.7,12290,reg
+2023-08,94.0,3.83,Kerala Gramin Bank,2.17,12136,reg
+2023-08,93.37,4.03,Andhra Pradesh Grameena Vikas Bank,2.6,12087,reg
+2023-08,96.93,1.45,HSBC Bank,1.62,11889,reg
+2023-08,59.73,6.35,Pragathi Krishna Gramin Bank,33.92,10924,reg
+2023-08,95.34,4.46,Maharashtra Gramin Bank,0.2,10620,reg
+2023-08,62.49,37.45,Andhra Pragathi Grameena Bank,0.06,10215,reg
+2023-08,90.59,2.91,Cosmos Bank,6.5,7088,reg
+2023-08,90.58,6.09,NSDL Payments Bank,3.33,6603,reg
+2023-08,97.41,2.35,Suryoday Small Finance Bank Ltd.,0.24,5950,reg
+2023-08,96.44,2.26,TJSB Sahakari Bank Ltd,1.3,5625,reg
+2023-08,94.35,3.64,Catholic Syrian Bank,2.02,5607,reg
+2023-08,78.87,16.55,Bharat Co-op Bank Mumbai,4.58,5069,reg
+2023-08,93.04,4.05,Dhanlaxmi Bank Ltd,2.91,4712,reg
+2023-09,99.66,0.0,State Bank Of India,0.34,2737261,reg
+2023-09,98.76,0.0,HDFC Bank Ltd,1.24,1222639,reg
+2023-09,99.17,0.0,ICICI Bank,0.83,682808,reg
+2023-09,99.73,0.0,Bank of Baroda,0.26,584490,reg
+2023-09,99.96,0.0,Kotak Mahindra Bank,0.04,559694,reg
+2023-09,99.93,0.0,Paytm Payments Bank,0.06,557716,reg
+2023-09,99.37,0.0,Union Bank of India,0.63,539224,reg
+2023-09,99.66,0.0,Punjab National Bank,0.33,528382,reg
+2023-09,99.9,0.0,Axis Bank Ltd,0.1,514185,reg
+2023-09,98.89,0.0,Canara Bank,1.11,414027,reg
+2023-09,99.81,0.0,Bank of India,0.19,285875,reg
+2023-09,97.4,0.0,Indian Bank,2.6,246546,reg
+2023-09,99.79,0.0,Federal Bank,0.21,191052,reg
+2023-09,94.97,0.0,Central Bank Of India,5.03,167994,reg
+2023-09,96.7,0.0,India Post Payment Bank,3.3,167537,reg
+2023-09,97.16,0.0,UCO Bank,2.84,129292,reg
+2023-09,99.44,0.0,IDBI Bank Limited,0.56,121734,reg
+2023-09,96.12,0.0,Indian Overseas Bank,3.88,110606,reg
+2023-09,96.7,0.0,IndusInd Bank,3.29,103441,reg
+2023-09,98.76,0.0,Bank of Maharashtra,1.24,93004,reg
+2023-09,99.43,0.0,IDFC FIRST Bank,0.57,72482,reg
+2023-09,99.18,0.0,Yes Bank Ltd,0.82,63204,reg
+2023-09,95.45,0.0,Karnataka Bank,4.55,61262,reg
+2023-09,98.89,0.0,Karur Vysya Bank,1.11,47936,reg
+2023-09,53.33,0.0,Equitas Small Finance Bank,46.67,45421,reg
+2023-09,99.54,0.0,South Indian Bank,0.46,41829,reg
+2023-09,99.34,0.0,Standard Chartered,0.66,35671,reg
+2023-09,99.53,0.0,AU Small Finance bank,0.47,32033,reg
+2023-09,99.94,0.0,DBS Bank Ltd,0.06,30996,reg
+2023-09,99.66,0.0,City Union Bank,0.34,29959,reg
+2023-09,99.79,0.0,Punjab and Sind Bank,0.21,29412,reg
+2023-09,99.65,0.0,Tamilnad Mercantile Bank,0.35,20163,reg
+2023-09,99.41,0.0,Fincare Small Finance Bank,0.59,18114,reg
+2023-09,99.78,0.01,Saraswat Bank,0.21,18006,reg
+2023-09,99.94,0.0,Jio Payments Bank,0.06,17068,reg
+2023-09,97.87,0.0,Andhra Pradesh Grameena Vikas Bank,2.13,17020,reg
+2023-09,99.48,0.0,Rajasthan Marudhara Gramin Bank,0.52,14507,reg
+2023-09,98.54,0.0,HSBC Bank,1.46,13050,reg
+2023-09,97.75,0.02,RBL Bank,2.23,12485,reg
+2023-09,99.37,0.0,Kerala Gramin Bank,0.63,12433,reg
+2023-09,99.29,0.0,Maharashtra Gramin Bank,0.71,11373,reg
+2023-09,99.94,0.0,Andhra Pragathi Grameena Bank,0.06,10728,reg
+2023-09,99.86,0.0,Pragathi Krishna Gramin Bank,0.14,9542,reg
+2023-09,92.23,0.0,Cosmos Bank,7.77,9193,reg
+2023-09,94.44,0.0,NSDL Payments Bank,5.56,7767,reg
+2023-09,99.76,0.0,TJSB Sahakari Bank Ltd,0.24,6307,reg
+2023-09,99.08,0.0,Bharat Co-op Bank Mumbai,0.92,5202,reg
+2023-09,96.75,0.0,Dhanlaxmi Bank Ltd,3.25,4897,reg
+2023-09,94.83,0.0,Catholic Syrian Bank,5.17,4773,reg
+2023-09,99.91,0.0,Suryoday Small Finance Bank Ltd.,0.09,4221,reg
+2023-10,98.02,0.0,State Bank Of India,1.98,3285972,reg
+2023-10,99.92,0.0,HDFC Bank Ltd,0.08,1441269,reg
+2023-10,99.14,0.0,ICICI Bank,0.86,843301,reg
+2023-10,99.97,0.0,Paytm Payments Bank,0.03,744305,reg
+2023-10,99.25,0.0,Bank of Baroda,0.75,695140,reg
+2023-10,99.63,0.0,Kotak Mahindra Bank,0.37,667769,reg
+2023-10,95.59,0.0,Punjab National Bank,4.41,658625,reg
+2023-10,99.15,0.0,Union Bank of India,0.85,623252,reg
+2023-10,99.98,0.0,Axis Bank Ltd,0.02,597026,reg
+2023-10,98.36,0.0,Canara Bank,1.64,482737,reg
+2023-10,99.6,0.0,Bank of India,0.4,340018,reg
+2023-10,99.14,0.0,Indian Bank,0.86,292509,reg
+2023-10,99.83,0.0,Federal Bank,0.17,216068,reg
+2023-10,57.45,0.0,Central Bank Of India,42.55,210452,reg
+2023-10,98.04,0.0,India Post Payment Bank,1.96,173182,reg
+2023-10,99.77,0.0,UCO Bank,0.23,152307,reg
+2023-10,99.27,0.0,IDBI Bank Limited,0.73,141779,reg
+2023-10,99.54,0.0,Indian Overseas Bank,0.46,131604,reg
+2023-10,96.14,0.0,IndusInd Bank,3.86,121330,reg
+2023-10,99.61,0.0,Bank of Maharashtra,0.39,105331,reg
+2023-10,99.58,0.0,IDFC FIRST Bank,0.42,86229,reg
+2023-10,99.33,0.0,Yes Bank Ltd,0.67,73335,reg
+2023-10,94.95,0.0,Karnataka Bank,5.05,67817,reg
+2023-10,99.07,0.0,Karur Vysya Bank,0.93,58756,reg
+2023-10,57.08,0.0,Equitas Small Finance Bank,42.92,51793,reg
+2023-10,99.81,0.0,South Indian Bank,0.19,46359,reg
+2023-10,99.89,0.0,Standard Chartered,0.11,41081,reg
+2023-10,99.8,0.0,AU Small Finance bank,0.2,38718,reg
+2023-10,99.92,0.0,City Union Bank,0.08,36099,reg
+2023-10,99.63,0.0,DBS Bank Ltd,0.37,35248,reg
+2023-10,97.22,0.0,Punjab and Sind Bank,2.78,33377,reg
+2023-10,98.31,0.0,Tamilnad Mercantile Bank,1.69,25364,reg
+2023-10,99.99,0.0,Jio Payments Bank,0.01,24674,reg
+2023-10,99.92,0.0,Saraswat Bank,0.08,20643,reg
+2023-10,99.77,0.0,Fincare Small Finance Bank,0.23,18878,reg
+2023-10,99.72,0.0,Rajasthan Marudhara Gramin Bank,0.28,17903,reg
+2023-10,99.28,0.0,Andhra Pradesh Grameena Vikas Bank,0.72,16714,reg
+2023-10,98.73,0.0,Kerala Gramin Bank,1.27,14221,reg
+2023-10,99.82,0.0,HSBC Bank,0.18,13910,reg
+2023-10,97.96,0.0,RBL Bank,2.04,13551,reg
+2023-10,99.98,0.0,Andhra Pragathi Grameena Bank,0.02,11224,reg
+2023-10,99.91,0.0,Maharashtra Gramin Bank,0.09,10975,reg
+2023-10,99.85,0.0,Pragathi Krishna Gramin Bank,0.15,10327,reg
+2023-10,93.38,0.0,Cosmos Bank,6.62,9880,reg
+2023-10,95.75,0.0,NSDL Payments Bank,4.25,9764,reg
+2023-10,99.71,0.0,TJSB Sahakari Bank Ltd,0.29,7281,reg
+2023-10,91.01,0.0,Catholic Syrian Bank,8.99,6753,reg
+2023-10,93.57,0.0,Dhanlaxmi Bank Ltd,6.43,5897,reg
+2023-10,98.88,0.0,Bharat Co-op Bank Mumbai,1.12,5538,reg
+2023-10,99.92,0.0,Suryoday Small Finance Bank Ltd.,0.08,4725,reg
+2023-11,99.4,0.0,State Bank Of India,0.6,3841439,reg
+2023-11,99.93,0.0,HDFC Bank Ltd,0.07,1687736,reg
+2023-11,99.72,0.0,ICICI Bank,0.28,947491,reg
+2023-11,99.89,0.0,Bank of Baroda,0.11,840335,reg
+2023-11,99.97,0.0,Paytm Payments Bank,0.03,823773,reg
+2023-11,99.91,0.0,Punjab National Bank,0.09,798663,reg
+2023-11,99.97,0.0,Kotak Mahindra Bank,0.03,787526,reg
+2023-11,99.59,0.0,Union Bank of India,0.41,774540,reg
+2023-11,99.93,0.0,Axis Bank Ltd,0.07,716616,reg
+2023-11,99.48,0.0,Canara Bank,0.52,591994,reg
+2023-11,98.14,0.0,Bank of India,1.86,413422,reg
+2023-11,99.86,0.0,Indian Bank,0.14,367043,reg
+2023-11,99.32,0.0,Federal Bank,0.68,243537,reg
+2023-11,94.31,0.0,Central Bank Of India,5.69,236188,reg
+2023-11,98.77,0.0,India Post Payment Bank,1.23,208424,reg
+2023-11,99.61,0.0,UCO Bank,0.39,171768,reg
+2023-11,98.91,0.0,IDBI Bank Limited,1.09,171314,reg
+2023-11,99.67,0.0,Indian Overseas Bank,0.33,166913,reg
+2023-11,94.45,0.0,IndusInd Bank,5.55,150900,reg
+2023-11,99.45,0.0,Karur Vysya Bank,0.55,133623,reg
+2023-11,99.55,0.0,Bank of Maharashtra,0.45,126702,reg
+2023-11,99.85,0.0,IDFC FIRST Bank,0.15,102785,reg
+2023-11,98.83,0.0,Yes Bank Ltd,1.17,88879,reg
+2023-11,95.6,0.0,Karnataka Bank,4.4,78768,reg
+2023-11,56.21,0.0,Equitas Small Finance Bank,43.79,59328,reg
+2023-11,99.79,0.0,South Indian Bank,0.21,54621,reg
+2023-11,99.97,0.0,AU Small Finance bank,0.03,46236,reg
+2023-11,99.94,0.0,City Union Bank,0.06,45444,reg
+2023-11,99.87,0.0,Standard Chartered,0.13,45443,reg
+2023-11,99.89,0.0,Punjab and Sind Bank,0.11,43289,reg
+2023-11,99.96,0.0,DBS Bank Ltd,0.04,39445,reg
+2023-11,99.62,0.0,Tamilnad Mercantile Bank,0.38,31720,reg
+2023-11,99.98,0.0,Jio Payments Bank,0.02,25052,reg
+2023-11,99.83,0.0,Saraswat Bank,0.17,24479,reg
+2023-11,99.83,0.0,Andhra Pradesh Grameena Vikas Bank,0.17,21732,reg
+2023-11,99.66,0.0,Fincare Small Finance Bank,0.34,19987,reg
+2023-11,99.9,0.0,Rajasthan Marudhara Gramin Bank,0.1,19236,reg
+2023-11,95.67,0.0,RBL Bank,4.33,16247,reg
+2023-11,99.83,0.0,Andhra Pragathi Grameena Bank,0.17,16037,reg
+2023-11,98.84,0.0,Kerala Gramin Bank,1.16,15722,reg
+2023-11,99.54,0.0,Maharashtra Gramin Bank,0.46,13832,reg
+2023-11,99.79,0.0,HSBC Bank,0.21,13161,reg
+2023-11,94.05,0.0,Pragathi Krishna Gramin Bank,5.95,12966,reg
+2023-11,94.04,0.0,Cosmos Bank,5.96,12762,reg
+2023-11,91.91,0.0,NSDL Payments Bank,8.09,9957,reg
+2023-11,99.71,0.0,TJSB Sahakari Bank Ltd,0.29,8921,reg
+2023-11,89.85,0.0,Catholic Syrian Bank,10.15,8272,reg
+2023-11,91.15,0.0,Dhanlaxmi Bank Ltd,8.85,7028,reg
+2023-11,98.8,0.0,Utkarsh Small Finance Bank,1.2,5318,reg
+2023-11,97.35,0.0,Bharat Co-op Bank Mumbai,2.65,5199,reg
+2023-12,99.59,0.41,State Bank Of India,0.0,3649053,reg
+2023-12,99.84,0.16,HDFC Bank Ltd,0.0,1588421,reg
+2023-12,99.14,0.86,ICICI Bank,0.0,874269,reg
+2023-12,99.96,0.04,Paytm Payments Bank,0.0,772399,reg
+2023-12,99.95,0.05,Punjab National Bank,0.0,762519,reg
+2023-12,96.83,3.17,Bank of Baroda,0.0,743999,reg
+2023-12,99.52,0.48,Union Bank of India,0.0,731460,reg
+2023-12,99.71,0.29,Kotak Mahindra Bank,0.0,710340,reg
+2023-12,99.75,0.25,Axis Bank Ltd,0.0,666627,reg
+2023-12,99.3,0.7,Canara Bank,0.0,566817,reg
+2023-12,99.24,0.76,Bank of India,0.0,389631,reg
+2023-12,99.66,0.34,Indian Bank,0.0,353948,reg
+2023-12,99.75,0.25,Federal Bank,0.0,247549,reg
+2023-12,97.84,2.16,India Post Payment Bank,0.0,240423,reg
+2023-12,95.42,4.58,Central Bank Of India,0.0,226174,reg
+2023-12,99.64,0.36,UCO Bank,0.0,170475,reg
+2023-12,99.09,0.91,Indian Overseas Bank,0.0,160633,reg
+2023-12,99.4,0.6,IDBI Bank Limited,0.0,159065,reg
+2023-12,91.77,8.23,IndusInd Bank,0.0,150905,reg
+2023-12,99.03,0.97,Bank of Maharashtra,0.0,124227,reg
+2023-12,99.94,0.06,IDFC FIRST Bank,0.0,99001,reg
+2023-12,86.3,13.7,Karnataka Bank,0.0,86288,reg
+2023-12,99.67,0.33,Yes Bank Ltd,0.0,85776,reg
+2023-12,99.27,0.73,Karur Vysya Bank,0.0,74235,reg
+2023-12,53.95,46.05,Equitas Small Finance Bank,0.0,57676,reg
+2023-12,99.86,0.14,South Indian Bank,0.0,55052,reg
+2023-12,99.97,0.03,AU Small Finance bank,0.0,47020,reg
+2023-12,99.82,0.18,City Union Bank,0.0,44356,reg
+2023-12,89.9,10.1,Punjab and Sind Bank,0.0,44325,reg
+2023-12,98.96,1.04,Standard Chartered,0.0,43523,reg
+2023-12,99.94,0.06,DBS Bank Ltd,0.0,37440,reg
+2023-12,99.38,0.62,Tamilnad Mercantile Bank,0.0,30971,reg
+2023-12,99.27,0.73,Saraswat Bank,0.0,23002,reg
+2023-12,99.48,0.52,Fincare Small Finance Bank,0.0,22709,reg
+2023-12,97.97,2.03,Andhra Pradesh Grameena Vikas Bank,0.0,22230,reg
+2023-12,99.58,0.42,Rajasthan Marudhara Gramin Bank,0.0,21392,reg
+2023-12,99.79,0.21,Jio Payments Bank,0.0,18647,reg
+2023-12,99.58,0.42,Andhra Pragathi Grameena Bank,0.0,15612,reg
+2023-12,99.75,0.25,HSBC Bank,0.0,15502,reg
+2023-12,99.8,0.2,Kerala Gramin Bank,0.0,15458,reg
+2023-12,96.12,3.88,RBL Bank,0.0,15337,reg
+2023-12,99.12,0.88,Maharashtra Gramin Bank,0.0,14261,reg
+2023-12,99.81,0.19,Pragathi Krishna Gramin Bank,0.0,13604,reg
+2023-12,88.28,11.72,Cosmos Bank,0.0,11649,reg
+2023-12,89.54,10.46,NSDL Payments Bank,0.0,11581,reg
+2023-12,87.87,12.13,Catholic Syrian Bank,0.0,8171,reg
+2023-12,99.09,0.91,TJSB Sahakari Bank Ltd,0.0,8027,reg
+2023-12,89.8,10.2,Dhanlaxmi Bank Ltd,0.0,7374,reg
+2023-12,99.69,0.31,Karnataka Vikas Grameena Bank,0.0,6221,reg
+2023-12,99.91,0.09,Suryoday Small Finance Bank Ltd.,0.0,5403,reg
+2024-01,99.74,0.26,State Bank Of India,0.0,3744784,reg
+2024-01,99.73,0.27,HDFC Bank Ltd,0.0,1627155,reg
+2024-01,98.57,1.43,ICICI Bank,0.0,889671,reg
+2024-01,99.91,0.09,Bank of Baroda,0.0,830414,reg
+2024-01,99.95,0.05,Kotak Mahindra Bank,0.0,796275,reg
+2024-01,99.76,0.24,Punjab National Bank,0.0,795506,reg
+2024-01,98.83,1.17,Union Bank of India,0.0,750086,reg
+2024-01,99.77,0.23,Paytm Payments Bank,0.0,713060,reg
+2024-01,99.35,0.65,Axis Bank Ltd,0.0,683773,reg
+2024-01,98.8,1.2,Canara Bank,0.0,585767,reg
+2024-01,99.7,0.3,Bank of India,0.0,400950,reg
+2024-01,99.56,0.44,Indian Bank,0.0,358147,reg
+2024-01,97.46,2.54,India Post Payment Bank,0.0,336624,reg
+2024-01,99.4,0.6,Federal Bank,0.0,247224,reg
+2024-01,90.54,9.46,Central Bank Of India,0.0,239741,reg
+2024-01,98.04,1.96,UCO Bank,0.0,179258,reg
+2024-01,98.6,1.4,IDBI Bank Limited,0.0,165910,reg
+2024-01,99.52,0.48,Indian Overseas Bank,0.0,162058,reg
+2024-01,91.1,8.9,IndusInd Bank,0.0,159405,reg
+2024-01,99.32,0.68,Bank of Maharashtra,0.0,132361,reg
+2024-01,99.88,0.12,IDFC FIRST Bank,0.0,96151,reg
+2024-01,99.55,0.45,Yes Bank Ltd,0.0,88089,reg
+2024-01,93.59,6.41,Karnataka Bank,0.0,87106,reg
+2024-01,99.4,0.6,Karur Vysya Bank,0.0,70043,reg
+2024-01,52.68,47.32,Equitas Small Finance Bank,0.0,56875,reg
+2024-01,99.83,0.17,South Indian Bank,0.0,56259,reg
+2024-01,99.93,0.07,AU Small Finance bank,0.0,48564,reg
+2024-01,99.74,0.26,Standard Chartered,0.0,42604,reg
+2024-01,99.87,0.13,Punjab and Sind Bank,0.0,42405,reg
+2024-01,99.61,0.39,City Union Bank,0.0,41987,reg
+2024-01,99.93,0.07,DBS Bank Ltd,0.0,36713,reg
+2024-01,99.45,0.55,Tamilnad Mercantile Bank,0.0,30509,reg
+2024-01,99.17,0.83,Fincare Small Finance Bank,0.0,24804,reg
+2024-01,99.76,0.24,Rajasthan Marudhara Gramin Bank,0.0,23491,reg
+2024-01,99.66,0.34,Saraswat Bank,0.0,23463,reg
+2024-01,99.25,0.75,Andhra Pradesh Grameena Vikas Bank,0.0,22340,reg
+2024-01,99.96,0.04,Jio Payments Bank,0.0,19544,reg
+2024-01,99.8,0.2,HSBC Bank,0.0,19015,reg
+2024-01,98.95,1.05,Kerala Gramin Bank,0.0,16023,reg
+2024-01,97.9,2.1,RBL Bank,0.0,15424,reg
+2024-01,99.48,0.52,Maharashtra Gramin Bank,0.0,15197,reg
+2024-01,99.72,0.28,Andhra Pragathi Grameena Bank,0.0,15003,reg
+2024-01,99.61,0.39,Pragathi Krishna Gramin Bank,0.0,13677,reg
+2024-01,87.15,12.85,Cosmos Bank,0.0,13171,reg
+2024-01,89.9,10.1,NSDL Payments Bank,0.0,12052,reg
+2024-01,99.88,0.12,TJSB Sahakari Bank Ltd,0.0,8529,reg
+2024-01,92.37,7.63,Catholic Syrian Bank,0.0,8064,reg
+2024-01,89.45,10.55,Dhanlaxmi Bank Ltd,0.0,7453,reg
+2024-01,99.59,0.41,Karnataka Vikas Grameena Bank,0.0,7283,reg
+2024-01,99.72,0.28,Utkarsh Small Finance Bank,0.0,6019,reg
+2024-02,99.41,0.59,State Bank Of India,0.0,3406918,reg
+2024-02,99.48,0.52,HDFC Bank Ltd,0.0,1491177,reg
+2024-02,92.36,7.64,ICICI Bank,0.0,813151,reg
+2024-02,94.49,5.51,Bank of Baroda,0.0,802014,reg
+2024-02,99.88,0.12,Kotak Mahindra Bank,0.0,764881,reg
+2024-02,99.93,0.07,Punjab National Bank,0.0,734510,reg
+2024-02,98.97,1.03,Union Bank of India,0.0,712448,reg
+2024-02,99.88,0.12,Axis Bank Ltd,0.0,632154,reg
+2024-02,98.82,1.18,Canara Bank,0.0,540626,reg
+2024-02,99.23,0.77,Bank of India,0.0,366837,reg
+2024-02,99.44,0.56,Indian Bank,0.0,331600,reg
+2024-02,99.95,0.05,Paytm Payments Bank,0.0,328262,reg
+2024-02,94.31,5.69,India Post Payment Bank,0.0,267162,reg
+2024-02,78.56,21.44,Central Bank Of India,0.0,242885,reg
+2024-02,99.5,0.5,Federal Bank,0.0,232337,reg
+2024-02,99.68,0.32,UCO Bank,0.0,158256,reg
+2024-02,93.95,6.05,IDBI Bank Limited,0.0,157378,reg
+2024-02,99.27,0.73,Indian Overseas Bank,0.0,150626,reg
+2024-02,99.48,0.52,IndusInd Bank,0.0,149355,reg
+2024-02,98.03,1.97,Bank of Maharashtra,0.0,116272,reg
+2024-02,99.96,0.04,IDFC FIRST Bank,0.0,92503,reg
+2024-02,99.0,1.0,Yes Bank Ltd,0.0,85291,reg
+2024-02,88.35,11.65,Karnataka Bank,0.0,83634,reg
+2024-02,98.34,1.66,Karur Vysya Bank,0.0,60978,reg
+2024-02,52.02,47.98,Equitas Small Finance Bank,0.0,54749,reg
+2024-02,99.95,0.05,South Indian Bank,0.0,50315,reg
+2024-02,99.88,0.12,AU Small Finance bank,0.0,47633,reg
+2024-02,98.39,1.61,Punjab and Sind Bank,0.0,40619,reg
+2024-02,99.06,0.94,Standard Chartered,0.0,38946,reg
+2024-02,99.88,0.12,City Union Bank,0.0,38360,reg
+2024-02,99.92,0.08,DBS Bank Ltd,0.0,33856,reg
+2024-02,98.91,1.09,Tamilnad Mercantile Bank,0.0,28017,reg
+2024-02,99.23,0.77,Fincare Small Finance Bank,0.0,24195,reg
+2024-02,99.56,0.44,Rajasthan Marudhara Gramin Bank,0.0,21754,reg
+2024-02,99.79,0.21,Saraswat Bank,0.0,21553,reg
+2024-02,99.48,0.52,Andhra Pradesh Grameena Vikas Bank,0.0,19996,reg
+2024-02,99.87,0.13,Jio Payments Bank,0.0,17889,reg
+2024-02,99.86,0.14,HSBC Bank,0.0,16628,reg
+2024-02,97.67,2.33,Kerala Gramin Bank,0.0,15034,reg
+2024-02,95.89,4.11,RBL Bank,0.0,14614,reg
+2024-02,99.67,0.33,Maharashtra Gramin Bank,0.0,13872,reg
+2024-02,99.7,0.3,Andhra Pragathi Grameena Bank,0.0,13761,reg
+2024-02,99.73,0.27,Pragathi Krishna Gramin Bank,0.0,13661,reg
+2024-02,85.0,15.0,Cosmos Bank,0.0,13035,reg
+2024-02,90.09,9.91,NSDL Payments Bank,0.0,12849,reg
+2024-02,99.61,0.39,TJSB Sahakari Bank Ltd,0.0,7745,reg
+2024-02,93.89,6.11,Catholic Syrian Bank,0.0,7279,reg
+2024-02,99.67,0.33,Karnataka Vikas Grameena Bank,0.0,6871,reg
+2024-02,96.2,3.8,Dhanlaxmi Bank Ltd,0.0,6257,reg
+2024-02,99.81,0.19,Utkarsh Small Finance Bank,0.0,5923,reg
+2024-03,99.61,0.39,State Bank Of India,0.0,3916231,reg
+2024-03,99.95,0.05,HDFC Bank Ltd,0.0,1678225,reg
+2024-03,99.27,0.73,ICICI Bank,0.0,902223,reg
+2024-03,98.81,1.19,Bank of Baroda,0.0,892157,reg
+2024-03,99.92,0.08,Punjab National Bank,0.0,865304,reg
+2024-03,99.87,0.13,Kotak Mahindra Bank,0.0,860384,reg
+2024-03,99.94,0.06,Union Bank of India,0.0,782568,reg
+2024-03,99.87,0.13,Axis Bank Ltd,0.0,722253,reg
+2024-03,98.81,1.19,Canara Bank,0.0,626275,reg
+2024-03,99.53,0.47,Bank of India,0.0,417072,reg
+2024-03,98.92,1.08,Indian Bank,0.0,382490,reg
+2024-03,94.85,5.15,India Post Payment Bank,0.0,302043,reg
+2024-03,99.44,0.56,Federal Bank,0.0,281630,reg
+2024-03,90.98,9.02,Central Bank Of India,0.0,257897,reg
+2024-03,75.79,24.21,IDBI Bank Limited,0.0,214120,reg
+2024-03,99.49,0.51,UCO Bank,0.0,190208,reg
+2024-03,99.24,0.76,Indian Overseas Bank,0.0,183330,reg
+2024-03,99.55,0.45,IndusInd Bank,0.0,171623,reg
+2024-03,97.46,2.54,Bank of Maharashtra,0.0,134891,reg
+2024-03,99.97,0.03,IDFC FIRST Bank,0.0,105517,reg
+2024-03,99.22,0.78,Yes Bank Ltd,0.0,97989,reg
+2024-03,98.71,1.29,Karnataka Bank,0.0,86492,reg
+2024-03,97.42,2.58,Karur Vysya Bank,0.0,68155,reg
+2024-03,99.95,0.05,South Indian Bank,0.0,65790,reg
+2024-03,55.88,44.12,Equitas Small Finance Bank,0.0,60845,reg
+2024-03,99.78,0.22,AU Small Finance bank,0.0,56621,reg
+2024-03,98.27,1.73,Punjab and Sind Bank,0.0,48420,reg
+2024-03,99.92,0.08,City Union Bank,0.0,46299,reg
+2024-03,99.9,0.1,Standard Chartered,0.0,44604,reg
+2024-03,99.84,0.16,Jammu and Kashmir Bank,0.0,41605,reg
+2024-03,99.84,0.16,DBS Bank Ltd,0.0,37640,reg
+2024-03,99.06,0.94,Tamilnad Mercantile Bank,0.0,31459,reg
+2024-03,99.88,0.12,Fincare Small Finance Bank,0.0,26285,reg
+2024-03,98.63,1.37,Rajasthan Marudhara Gramin Bank,0.0,25524,reg
+2024-03,99.72,0.28,Saraswat Bank,0.0,24738,reg
+2024-03,99.6,0.4,Kerala Gramin Bank,0.0,21994,reg
+2024-03,99.96,0.04,Jio Payments Bank,0.0,21825,reg
+2024-03,97.77,2.23,Andhra Pradesh Grameena Vikas Bank,0.0,20749,reg
+2024-03,98.99,1.01,HSBC Bank,0.0,18634,reg
+2024-03,94.58,5.42,RBL Bank,0.0,16648,reg
+2024-03,99.98,0.02,Maharashtra Gramin Bank,0.0,16636,reg
+2024-03,90.62,9.38,NSDL Payments Bank,0.0,16106,reg
+2024-03,93.73,6.27,Pragathi Krishna Gramin Bank,0.0,15478,reg
+2024-03,99.83,0.17,Andhra Pragathi Grameena Bank,0.0,14945,reg
+2024-03,83.99,16.01,Cosmos Bank,0.0,14257,reg
+2024-03,99.49,0.51,DCB Bank Ltd,0.0,9020,reg
+2024-03,99.73,0.27,TJSB Sahakari Bank Ltd,0.0,8945,reg
+2024-03,97.31,2.69,Catholic Syrian Bank,0.0,8925,reg
+2024-03,99.49,0.51,Dhanlaxmi Bank Ltd,0.0,7969,reg
+2024-03,99.87,0.13,Karnataka Vikas Grameena Bank,0.0,7908,reg
+2024-04,99.2,0.0,State Bank Of India,0.8,4634900,reg
+2024-04,99.96,0.0,HDFC Bank Ltd,0.04,1962731,reg
+2024-04,98.66,0.0,Bank of Baroda,1.34,1117170,reg
+2024-04,95.97,0.0,Punjab National Bank,4.03,1072080,reg
+2024-04,99.32,0.0,ICICI Bank,0.68,1052122,reg
+2024-04,99.02,0.0,Kotak Mahindra Bank,0.98,1036887,reg
+2024-04,99.76,0.0,Union Bank of India,0.24,928345,reg
+2024-04,99.83,0.0,Axis Bank Ltd,0.17,845420,reg
+2024-04,99.22,0.0,Canara Bank,0.78,751859,reg
+2024-04,99.69,0.0,Bank of India,0.31,493948,reg
+2024-04,99.66,0.0,Indian Bank,0.34,459536,reg
+2024-04,97.29,0.0,India Post Payment Bank,2.71,350960,reg
+2024-04,99.24,0.0,Federal Bank,0.76,324485,reg
+2024-04,90.34,0.0,Central Bank Of India,9.66,283884,reg
+2024-04,78.48,0.0,IDBI Bank Limited,21.52,231037,reg
+2024-04,98.94,0.0,UCO Bank,1.06,228285,reg
+2024-04,99.37,0.0,Indian Overseas Bank,0.63,221524,reg
+2024-04,93.4,0.0,IndusInd Bank,6.6,210639,reg
+2024-04,99.16,0.0,Bank of Maharashtra,0.84,154965,reg
+2024-04,99.0,0.0,Yes Bank Ltd,1.0,115976,reg
+2024-04,76.36,0.0,Airtel Payments Bank,23.64,107851,reg
+2024-04,92.7,0.0,Karnataka Bank,7.3,104646,reg
+2024-04,99.51,0.0,IDFC FIRST Bank,0.49,103182,reg
+2024-04,99.16,0.0,Karur Vysya Bank,0.84,79187,reg
+2024-04,99.87,0.0,Jammu and Kashmir Bank,0.13,77740,reg
+2024-04,99.96,0.0,South Indian Bank,0.04,76884,reg
+2024-04,49.38,0.0,Equitas Small Finance Bank,50.62,69149,reg
+2024-04,99.8,0.0,AU Small Finance bank,0.2,65859,reg
+2024-04,90.91,0.0,Punjab and Sind Bank,9.09,60105,reg
+2024-04,99.75,0.0,City Union Bank,0.25,50846,reg
+2024-04,99.85,0.0,Standard Chartered,0.15,49918,reg
+2024-04,99.82,0.0,DBS Bank Ltd,0.18,41419,reg
+2024-04,99.0,0.0,Tamilnad Mercantile Bank,1.0,36939,reg
+2024-04,99.66,0.0,Saraswat Bank,0.34,31090,reg
+2024-04,99.45,0.0,Kerala Gramin Bank,0.55,30076,reg
+2024-04,99.91,0.0,Fincare Small Finance Bank,0.09,29302,reg
+2024-04,99.91,0.0,Jio Payments Bank,0.09,28777,reg
+2024-04,99.87,0.0,Rajasthan Marudhara Gramin Bank,0.13,27900,reg
+2024-04,99.28,0.0,Andhra Pradesh Grameena Vikas Bank,0.72,23059,reg
+2024-04,91.21,0.0,NSDL Payments Bank,8.79,22665,reg
+2024-04,99.38,0.0,HSBC Bank,0.62,20825,reg
+2024-04,99.05,0.0,RBL Bank,0.95,18721,reg
+2024-04,99.77,0.0,Andhra Pragathi Grameena Bank,0.23,18610,reg
+2024-04,99.5,0.0,Maharashtra Gramin Bank,0.5,18313,reg
+2024-04,90.93,0.0,Pragathi Krishna Gramin Bank,9.07,17671,reg
+2024-04,94.85,0.0,Cosmos Bank,5.15,16009,reg
+2024-04,99.55,0.0,TJSB Sahakari Bank Ltd,0.45,11274,reg
+2024-04,99.82,0.0,DCB Bank Ltd,0.18,10810,reg
+2024-04,96.39,0.0,Catholic Syrian Bank,3.61,10799,reg
+2024-04,99.63,0.0,Karnataka Vikas Grameena Bank,0.37,10003,reg
+2024-05,99.8,0.0,State Bank Of India,0.2,6007008,reg
+2024-05,99.94,0.0,HDFC Bank Ltd,0.06,2564501,reg
+2024-05,98.31,0.0,Bank of Baroda,1.69,1471055,reg
+2024-05,99.55,0.0,ICICI Bank,0.45,1403370,reg
+2024-05,99.11,0.0,Punjab National Bank,0.89,1349000,reg
+2024-05,99.69,0.0,Kotak Mahindra Bank,0.31,1345211,reg
+2024-05,99.72,0.0,Union Bank of India,0.28,1193260,reg
+2024-05,99.95,0.0,Axis Bank Ltd,0.05,1115775,reg
+2024-05,97.98,0.0,Canara Bank,2.02,971847,reg
+2024-05,99.54,0.0,Bank of India,0.46,660714,reg
+2024-05,86.31,0.0,Indian Bank,13.69,635042,reg
+2024-05,98.93,0.0,India Post Payment Bank,1.07,447868,reg
+2024-05,99.66,0.0,Airtel Payments Bank,0.34,430747,reg
+2024-05,98.35,0.0,Federal Bank,1.65,389257,reg
+2024-05,96.16,0.0,Central Bank Of India,3.84,332351,reg
+2024-05,99.81,0.0,UCO Bank,0.19,288627,reg
+2024-05,99.75,0.0,Indian Overseas Bank,0.25,276549,reg
+2024-05,99.7,0.0,IDBI Bank Limited,0.3,260833,reg
+2024-05,96.76,0.0,IndusInd Bank,3.24,260661,reg
+2024-05,98.14,0.0,Bank of Maharashtra,1.86,210733,reg
+2024-05,99.74,0.0,Yes Bank Ltd,0.26,153566,reg
+2024-05,99.1,0.0,IDFC FIRST Bank,0.9,140143,reg
+2024-05,98.06,0.0,Karnataka Bank,1.94,131496,reg
+2024-05,99.41,0.0,Karur Vysya Bank,0.59,99204,reg
+2024-05,99.68,0.0,Jammu and Kashmir Bank,0.32,94660,reg
+2024-05,99.87,0.0,South Indian Bank,0.13,88319,reg
+2024-05,99.89,0.0,AU Small Finance bank,0.11,87171,reg
+2024-05,59.79,0.0,Equitas Small Finance Bank,40.21,80630,reg
+2024-05,99.71,0.0,Punjab and Sind Bank,0.29,72126,reg
+2024-05,99.83,0.0,Standard Chartered,0.17,66281,reg
+2024-05,99.81,0.0,City Union Bank,0.19,62472,reg
+2024-05,99.54,0.0,DBS Bank Ltd,0.46,52871,reg
+2024-05,99.5,0.0,Tamilnad Mercantile Bank,0.5,45167,reg
+2024-05,99.69,0.0,Saraswat Bank,0.31,42808,reg
+2024-05,99.73,0.0,Jio Payments Bank,0.27,41089,reg
+2024-05,99.79,0.0,Rajasthan Marudhara Gramin Bank,0.21,39003,reg
+2024-05,99.89,0.0,Fincare Small Finance Bank,0.11,32864,reg
+2024-05,99.38,0.0,Kerala Gramin Bank,0.62,31215,reg
+2024-05,99.57,0.0,Andhra Pradesh Grameena Vikas Bank,0.43,29572,reg
+2024-05,99.53,0.0,HSBC Bank,0.47,28071,reg
+2024-05,91.53,0.0,NSDL Payments Bank,8.47,27892,reg
+2024-05,82.34,0.0,Pragathi Krishna Gramin Bank,17.66,24615,reg
+2024-05,98.93,0.0,RBL Bank,1.07,23818,reg
+2024-05,99.89,0.0,Maharashtra Gramin Bank,0.11,23584,reg
+2024-05,99.99,0.0,Andhra Pragathi Grameena Bank,0.01,23491,reg
+2024-05,90.68,0.0,Cosmos Bank,9.32,22588,reg
+2024-05,99.94,0.0,TJSB Sahakari Bank Ltd,0.06,15707,reg
+2024-05,99.68,0.0,DCB Bank Ltd,0.32,14556,reg
+2024-05,99.89,0.0,Karnataka Vikas Grameena Bank,0.11,12753,reg
+2024-05,98.35,0.0,Catholic Syrian Bank,1.65,12631,reg
+2024-06,99.91,0.0,State Bank Of India,0.09,6038553,reg
+2024-06,99.89,0.0,HDFC Bank Ltd,0.11,2534633,reg
+2024-06,99.8,0.0,Bank of Baroda,0.2,1471190,reg
+2024-06,99.36,0.0,Punjab National Bank,0.64,1407877,reg
+2024-06,99.5,0.0,ICICI Bank,0.5,1353000,reg
+2024-06,99.0,0.0,Kotak Mahindra Bank,1.0,1343321,reg
+2024-06,99.9,0.0,Union Bank of India,0.1,1198313,reg
+2024-06,99.94,0.0,Axis Bank Ltd,0.06,1091843,reg
+2024-06,99.26,0.0,Canara Bank,0.74,948806,reg
+2024-06,99.23,0.0,Airtel Payments Bank,0.77,732928,reg
+2024-06,99.75,0.0,Bank of India,0.25,663653,reg
+2024-06,96.72,0.0,Indian Bank,3.28,590881,reg
+2024-06,97.72,0.0,India Post Payment Bank,2.28,491370,reg
+2024-06,98.79,0.0,Federal Bank,1.21,386163,reg
+2024-06,96.8,0.0,Central Bank Of India,3.2,306928,reg
+2024-06,99.39,0.0,UCO Bank,0.61,299106,reg
+2024-06,99.39,0.0,Indian Overseas Bank,0.61,275166,reg
+2024-06,99.67,0.0,IndusInd Bank,0.33,260791,reg
+2024-06,97.68,0.0,IDBI Bank Limited,2.32,258591,reg
+2024-06,98.98,0.0,Bank of Maharashtra,1.02,213714,reg
+2024-06,99.63,0.0,IDFC FIRST Bank,0.37,155659,reg
+2024-06,99.44,0.0,Yes Bank Ltd,0.56,154263,reg
+2024-06,94.15,0.0,Karnataka Bank,5.85,131786,reg
+2024-06,98.94,0.0,Karur Vysya Bank,1.06,101126,reg
+2024-06,99.41,0.0,Jammu and Kashmir Bank,0.59,100848,reg
+2024-06,99.99,0.0,AU Small Finance bank,0.01,87984,reg
+2024-06,99.94,0.0,South Indian Bank,0.06,85696,reg
+2024-06,63.04,0.0,Equitas Small Finance Bank,36.96,78985,reg
+2024-06,99.89,0.0,Punjab and Sind Bank,0.11,78816,reg
+2024-06,99.85,0.0,City Union Bank,0.15,63631,reg
+2024-06,99.84,0.0,Standard Chartered,0.16,63059,reg
+2024-06,99.94,0.0,Jio Payments Bank,0.06,51503,reg
+2024-06,99.95,0.0,DBS Bank Ltd,0.05,49777,reg
+2024-06,99.13,0.0,Tamilnad Mercantile Bank,0.87,47890,reg
+2024-06,99.61,0.0,Saraswat Bank,0.39,41848,reg
+2024-06,99.7,0.0,Rajasthan Marudhara Gramin Bank,0.3,41126,reg
+2024-06,92.5,0.0,NSDL Payments Bank,7.5,37549,reg
+2024-06,99.88,0.0,Fincare Small Finance Bank,0.12,33859,reg
+2024-06,99.75,0.0,Kerala Gramin Bank,0.25,29479,reg
+2024-06,98.56,0.0,Andhra Pradesh Grameena Vikas Bank,1.44,28882,reg
+2024-06,98.9,0.0,HSBC Bank,1.1,27506,reg
+2024-06,99.14,0.0,RBL Bank,0.86,23820,reg
+2024-06,99.91,0.0,Maharashtra Gramin Bank,0.09,23490,reg
+2024-06,99.72,0.0,Andhra Pragathi Grameena Bank,0.28,22897,reg
+2024-06,99.91,0.0,Pragathi Krishna Gramin Bank,0.09,21970,reg
+2024-06,58.32,0.0,Cosmos Bank,41.68,17654,reg
+2024-06,99.96,0.0,TJSB Sahakari Bank Ltd,0.04,15207,reg
+2024-06,99.78,0.0,DCB Bank Ltd,0.22,14399,reg
+2024-06,99.87,0.0,Karnataka Vikas Grameena Bank,0.13,13450,reg
+2024-06,98.44,0.0,Catholic Syrian Bank,1.56,12068,reg
+2024-07,96.48,0.0,State Bank Of India,3.52,6576590,reg
+2024-07,97.35,0.0,HDFC Bank Ltd,2.65,2592266,reg
+2024-07,95.68,0.0,Bank of Baroda,4.32,1659110,reg
+2024-07,95.74,0.0,Punjab National Bank,4.26,1587762,reg
+2024-07,96.02,0.0,Kotak Mahindra Bank,3.98,1446919,reg
+2024-07,96.91,0.0,ICICI Bank,3.09,1332143,reg
+2024-07,95.88,0.0,Union Bank of India,4.12,1329116,reg
+2024-07,97.24,0.0,Axis Bank Ltd,2.76,1170265,reg
+2024-07,92.86,0.0,Canara Bank,7.14,1069848,reg
+2024-07,99.92,0.0,Airtel Payments Bank,0.08,931935,reg
+2024-07,95.34,0.0,Bank of India,4.66,743547,reg
+2024-07,88.62,0.0,India Post Payment Bank,11.38,675711,reg
+2024-07,96.99,0.0,Indian Bank,3.01,640233,reg
+2024-07,94.28,0.0,Central Bank Of India,5.72,422311,reg
+2024-07,92.32,0.0,Federal Bank,7.68,414946,reg
+2024-07,95.93,0.0,UCO Bank,4.07,339049,reg
+2024-07,95.53,0.0,Indian Overseas Bank,4.47,307538,reg
+2024-07,95.52,0.0,IndusInd Bank,4.48,296693,reg
+2024-07,95.52,0.0,IDBI Bank Limited,4.48,281202,reg
+2024-07,93.62,0.0,Bank of Maharashtra,6.38,259638,reg
+2024-07,94.03,0.0,Yes Bank Ltd,5.97,170240,reg
+2024-07,95.88,0.0,IDFC FIRST Bank,4.12,161736,reg
+2024-07,86.12,0.0,Karnataka Bank,13.88,156139,reg
+2024-07,91.57,0.0,Karur Vysya Bank,8.43,117157,reg
+2024-07,93.89,0.0,Jammu and Kashmir Bank,6.11,98988,reg
+2024-07,97.16,0.0,AU Small Finance bank,2.84,95303,reg
+2024-07,96.78,0.0,South Indian Bank,3.22,91389,reg
+2024-07,93.85,0.0,Punjab and Sind Bank,6.15,84391,reg
+2024-07,61.94,0.0,Equitas Small Finance Bank,38.06,80709,reg
+2024-07,92.09,0.0,City Union Bank,7.91,73856,reg
+2024-07,90.59,0.0,Jio Payments Bank,9.41,59843,reg
+2024-07,98.68,0.0,Standard Chartered,1.32,59276,reg
+2024-07,95.89,0.0,Tamilnad Mercantile Bank,4.11,56420,reg
+2024-07,97.52,0.0,DBS Bank Ltd,2.48,52770,reg
+2024-07,85.76,0.0,NSDL Payments Bank,14.24,49575,reg
+2024-07,96.13,0.0,Saraswat Bank,3.87,48086,reg
+2024-07,91.89,0.0,Rajasthan Marudhara Gramin Bank,8.11,43881,reg
+2024-07,93.98,0.0,Fincare Small Finance Bank,6.02,39387,reg
+2024-07,93.92,0.0,Kerala Gramin Bank,6.08,34151,reg
+2024-07,92.31,0.0,Pragathi Krishna Gramin Bank,7.69,29736,reg
+2024-07,87.5,0.0,RBL Bank,12.5,29545,reg
+2024-07,95.17,0.0,Andhra Pradesh Grameena Vikas Bank,4.83,28377,reg
+2024-07,93.44,0.0,Maharashtra Gramin Bank,6.56,27808,reg
+2024-07,98.04,0.0,HSBC Bank,1.96,26207,reg
+2024-07,94.71,0.0,Andhra Pragathi Grameena Bank,5.29,21567,reg
+2024-07,97.16,0.0,TJSB Sahakari Bank Ltd,2.84,17935,reg
+2024-07,93.78,0.0,DCB Bank Ltd,6.22,15331,reg
+2024-07,92.29,0.0,Karnataka Vikas Grameena Bank,7.71,15134,reg
+2024-07,64.37,0.0,Cosmos Bank,35.63,14786,reg
+2024-07,69.54,0.0,Bharat Co-op Bank Mumbai,30.46,13909,reg
+2024-08,96.52,0.0,State Bank Of India,3.48,6701682,reg
+2024-08,97.23,0.0,HDFC Bank Ltd,2.77,2706508,reg
+2024-08,95.82,0.0,Bank of Baroda,4.18,1666743,reg
+2024-08,95.56,0.0,Punjab National Bank,4.44,1529960,reg
+2024-08,96.26,0.0,Kotak Mahindra Bank,3.74,1434614,reg
+2024-08,95.98,0.0,Union Bank of India,4.02,1364552,reg
+2024-08,97.11,0.0,ICICI Bank,2.89,1358462,reg
+2024-08,97.33,0.0,Axis Bank Ltd,2.67,1213568,reg
+2024-08,93.26,0.0,Canara Bank,6.74,1083371,reg
+2024-08,99.92,0.0,Airtel Payments Bank,0.08,1019075,reg
+2024-08,95.62,0.0,Bank of India,4.38,769716,reg
+2024-08,91.55,0.0,India Post Payment Bank,8.45,737396,reg
+2024-08,96.86,0.0,Indian Bank,3.14,662218,reg
+2024-08,93.68,0.0,Central Bank Of India,6.32,425748,reg
+2024-08,95.05,0.0,Federal Bank,4.95,409502,reg
+2024-08,6.57,0.0,Fino Payments Bank,93.43,353099,reg
+2024-08,96.25,0.0,UCO Bank,3.75,337116,reg
+2024-08,91.77,0.0,Indian Overseas Bank,8.23,331322,reg
+2024-08,95.42,0.0,IndusInd Bank,4.58,309128,reg
+2024-08,96.9,0.0,Bank of Maharashtra,3.1,291326,reg
+2024-08,97.11,0.0,IDBI Bank Limited,2.89,287861,reg
+2024-08,94.12,0.0,Yes Bank Ltd,5.88,173160,reg
+2024-08,86.62,0.0,Karnataka Bank,13.38,161923,reg
+2024-08,96.74,0.0,IDFC FIRST Bank,3.26,134704,reg
+2024-08,91.12,0.0,Karur Vysya Bank,8.88,121180,reg
+2024-08,94.92,0.0,Jammu and Kashmir Bank,5.08,118636,reg
+2024-08,97.29,0.0,AU Small Finance bank,2.71,95870,reg
+2024-08,96.66,0.0,South Indian Bank,3.34,91535,reg
+2024-08,93.87,0.0,Punjab and Sind Bank,6.13,81877,reg
+2024-08,59.9,0.0,Equitas Small Finance Bank,40.1,81154,reg
+2024-08,92.52,0.0,City Union Bank,7.48,74903,reg
+2024-08,88.99,0.0,Jio Payments Bank,11.01,63309,reg
+2024-08,98.66,0.0,Standard Chartered,1.34,62014,reg
+2024-08,86.64,0.0,NSDL Payments Bank,13.36,59510,reg
+2024-08,96.56,0.0,Tamilnad Mercantile Bank,3.44,57577,reg
+2024-08,97.69,0.0,DBS Bank Ltd,2.31,53282,reg
+2024-08,96.47,0.0,Saraswat Bank,3.53,51239,reg
+2024-08,95.66,0.0,Rajasthan Marudhara Gramin Bank,4.34,46831,reg
+2024-08,94.13,0.0,Fincare Small Finance Bank,5.87,41173,reg
+2024-08,96.09,0.0,Maharashtra Gramin Bank,3.91,39368,reg
+2024-08,93.54,0.0,Kerala Gramin Bank,6.46,35705,reg
+2024-08,82.57,0.0,Pragathi Krishna Gramin Bank,17.43,35344,reg
+2024-08,94.76,0.0,Andhra Pradesh Grameena Vikas Bank,5.24,32965,reg
+2024-08,87.41,0.0,RBL Bank,12.59,30577,reg
+2024-08,97.46,0.0,HSBC Bank,2.54,28378,reg
+2024-08,94.87,0.0,Andhra Pragathi Grameena Bank,5.13,25329,reg
+2024-08,96.75,0.0,TJSB Sahakari Bank Ltd,3.25,19684,reg
+2024-08,94.19,0.0,Karnataka Vikas Grameena Bank,5.81,19485,reg
+2024-08,96.5,0.0,DCB Bank Ltd,3.5,15832,reg
+2024-08,75.49,0.0,Cosmos Bank,24.51,15156,reg
+2024-09,95.47,0.0,State Bank Of India,4.53,6889931,reg
+2024-09,97.31,0.0,HDFC Bank Ltd,2.69,2756265,reg
+2024-09,96.0,0.0,Bank of Baroda,4.0,1684259,reg
+2024-09,93.68,0.0,Punjab National Bank,6.32,1586945,reg
+2024-09,96.27,0.0,Kotak Mahindra Bank,3.73,1480840,reg
+2024-09,95.78,0.0,Union Bank of India,4.22,1426417,reg
+2024-09,97.22,0.0,ICICI Bank,2.78,1374709,reg
+2024-09,97.23,0.0,Axis Bank Ltd,2.77,1245147,reg
+2024-09,93.58,0.0,Canara Bank,6.42,1144724,reg
+2024-09,99.85,0.0,Airtel Payments Bank,0.15,1098843,reg
+2024-09,91.51,0.0,India Post Payment Bank,8.49,804513,reg
+2024-09,95.61,0.0,Bank of India,4.39,766962,reg
+2024-09,97.01,0.0,Indian Bank,2.99,688455,reg
+2024-09,88.66,0.0,Central Bank Of India,11.34,438958,reg
+2024-09,96.2,0.0,Federal Bank,3.8,426174,reg
+2024-09,96.04,0.0,UCO Bank,3.96,344360,reg
+2024-09,93.82,0.0,Indian Overseas Bank,6.18,341706,reg
+2024-09,95.37,0.0,IndusInd Bank,4.63,319825,reg
+2024-09,96.57,0.0,IDBI Bank Limited,3.43,290593,reg
+2024-09,96.61,0.0,Bank of Maharashtra,3.39,280950,reg
+2024-09,7.36,0.0,Fino Payments Bank,92.64,239087,reg
+2024-09,93.62,0.0,Karnataka Bank,6.38,182671,reg
+2024-09,94.34,0.0,Yes Bank Ltd,5.66,177255,reg
+2024-09,90.69,0.0,Karur Vysya Bank,9.31,124513,reg
+2024-09,96.33,0.0,IDFC FIRST Bank,3.67,123849,reg
+2024-09,95.33,0.0,Jammu and Kashmir Bank,4.67,117522,reg
+2024-09,96.58,0.0,South Indian Bank,3.42,96423,reg
+2024-09,96.87,0.0,AU Small Finance bank,3.13,94389,reg
+2024-09,93.71,0.0,Punjab and Sind Bank,6.29,84603,reg
+2024-09,66.05,0.0,Equitas Small Finance Bank,33.95,76760,reg
+2024-09,91.83,0.0,City Union Bank,8.17,75390,reg
+2024-09,93.64,0.0,Jio Payments Bank,6.36,73673,reg
+2024-09,85.92,0.0,NSDL Payments Bank,14.08,67342,reg
+2024-09,98.57,0.0,Standard Chartered,1.43,63123,reg
+2024-09,96.32,0.0,Tamilnad Mercantile Bank,3.68,57928,reg
+2024-09,97.5,0.0,DBS Bank Ltd,2.5,56198,reg
+2024-09,96.5,0.0,Saraswat Bank,3.5,47701,reg
+2024-09,95.6,0.0,Rajasthan Marudhara Gramin Bank,4.4,43810,reg
+2024-09,94.12,0.0,Fincare Small Finance Bank,5.88,42384,reg
+2024-09,92.45,0.0,Pragathi Krishna Gramin Bank,7.55,41129,reg
+2024-09,93.52,0.0,Kerala Gramin Bank,6.48,39874,reg
+2024-09,95.65,0.0,Maharashtra Gramin Bank,4.35,37737,reg
+2024-09,95.51,0.0,Andhra Pradesh Grameena Vikas Bank,4.49,36089,reg
+2024-09,89.69,0.0,RBL Bank,10.31,31553,reg
+2024-09,98.11,0.0,HSBC Bank,1.89,29202,reg
+2024-09,95.07,0.0,Andhra Pragathi Grameena Bank,4.93,27996,reg
+2024-09,94.33,0.0,Karnataka Vikas Grameena Bank,5.67,24132,reg
+2024-09,47.06,0.0,Jana Small Finance Bank Ltd,52.94,18346,reg
+2024-09,96.68,0.0,TJSB Sahakari Bank Ltd,3.32,18189,reg
+2024-09,96.76,0.0,DCB Bank Ltd,3.24,16026,reg
+2024-10,96.32,0.0,State Bank Of India,3.68,8210285,reg
+2024-10,97.43,0.0,HDFC Bank Ltd,2.57,3154434,reg
+2024-10,95.65,0.0,Bank of Baroda,4.35,1977867,reg
+2024-10,93.69,0.0,Punjab National Bank,6.31,1869725,reg
+2024-10,96.49,0.0,Kotak Mahindra Bank,3.51,1710499,reg
+2024-10,95.79,0.0,Union Bank of India,4.21,1675584,reg
+2024-10,97.32,0.0,ICICI Bank,2.68,1569925,reg
+2024-10,97.39,0.0,Axis Bank Ltd,2.61,1433982,reg
+2024-10,93.62,0.0,Canara Bank,6.38,1394449,reg
+2024-10,99.88,0.0,Airtel Payments Bank,0.12,1092759,reg
+2024-10,85.7,0.0,India Post Payment Bank,14.3,910649,reg
+2024-10,95.77,0.0,Bank of India,4.23,883244,reg
+2024-10,96.88,0.0,Indian Bank,3.12,841820,reg
+2024-10,86.66,0.0,Central Bank Of India,13.34,515232,reg
+2024-10,95.84,0.0,Federal Bank,4.16,485113,reg
+2024-10,94.31,0.0,Indian Overseas Bank,5.69,431644,reg
+2024-10,96.34,0.0,UCO Bank,3.66,400957,reg
+2024-10,95.71,0.0,IndusInd Bank,4.29,354904,reg
+2024-10,97.2,0.0,IDBI Bank Limited,2.8,332883,reg
+2024-10,96.28,0.0,Bank of Maharashtra,3.72,308272,reg
+2024-10,10.24,0.0,Fino Payments Bank,89.76,238466,reg
+2024-10,96.5,0.0,Karnataka Bank,3.5,233467,reg
+2024-10,94.52,0.0,Yes Bank Ltd,5.48,203106,reg
+2024-10,96.86,0.0,IDFC FIRST Bank,3.14,182896,reg
+2024-10,92.65,0.0,Karur Vysya Bank,7.35,157247,reg
+2024-10,94.86,0.0,Jammu and Kashmir Bank,5.14,133263,reg
+2024-10,96.7,0.0,South Indian Bank,3.3,108179,reg
+2024-10,97.29,0.0,AU Small Finance bank,2.71,107910,reg
+2024-10,94.37,0.0,Punjab and Sind Bank,5.63,96802,reg
+2024-10,94.27,0.0,Jio Payments Bank,5.73,92405,reg
+2024-10,93.48,0.0,City Union Bank,6.52,90945,reg
+2024-10,68.49,0.0,Equitas Small Finance Bank,31.51,87377,reg
+2024-10,96.0,0.0,Tamilnad Mercantile Bank,4.0,77308,reg
+2024-10,98.42,0.0,Standard Chartered,1.58,73643,reg
+2024-10,84.9,0.0,NSDL Payments Bank,15.1,72680,reg
+2024-10,97.24,0.0,DBS Bank Ltd,2.76,66428,reg
+2024-10,92.89,0.0,Pragathi Krishna Gramin Bank,7.11,60141,reg
+2024-10,95.78,0.0,Rajasthan Marudhara Gramin Bank,4.22,51873,reg
+2024-10,96.46,0.0,Saraswat Bank,3.54,51235,reg
+2024-10,95.7,0.0,Andhra Pradesh Grameena Vikas Bank,4.3,46337,reg
+2024-10,94.31,0.0,Fincare Small Finance Bank,5.69,44573,reg
+2024-10,95.89,0.0,Maharashtra Gramin Bank,4.11,42615,reg
+2024-10,94.39,0.0,Kerala Gramin Bank,5.61,40665,reg
+2024-10,95.56,0.0,Karnataka Vikas Grameena Bank,4.44,40349,reg
+2024-10,95.45,0.0,Andhra Pragathi Grameena Bank,4.55,36067,reg
+2024-10,93.54,0.0,RBL Bank,6.46,35375,reg
+2024-10,97.73,0.0,HSBC Bank,2.27,34637,reg
+2024-10,50.29,0.0,Jana Small Finance Bank Ltd,49.71,19078,reg
+2024-10,97.03,0.0,TJSB Sahakari Bank Ltd,2.97,19037,reg
+2024-10,96.74,0.0,DCB Bank Ltd,3.26,18015,reg
+2024-11,96.09,0.0,State Bank Of India,3.91,8058214,reg
+2024-11,97.39,0.0,HDFC Bank Ltd,2.61,3059788,reg
+2024-11,95.68,0.0,Bank of Baroda,4.32,1985558,reg
+2024-11,95.67,0.0,Punjab National Bank,4.33,1820364,reg
+2024-11,96.25,0.0,Kotak Mahindra Bank,3.75,1684330,reg
+2024-11,96.06,0.0,Union Bank of India,3.94,1672806,reg
+2024-11,97.27,0.0,ICICI Bank,2.73,1498122,reg
+2024-11,97.44,0.0,Axis Bank Ltd,2.56,1391646,reg
+2024-11,94.56,0.0,Canara Bank,5.44,1355582,reg
+2024-11,99.27,0.0,Airtel Payments Bank,0.73,1145620,reg
+2024-11,91.01,0.0,India Post Payment Bank,8.99,910075,reg
+2024-11,95.24,0.0,Bank of India,4.76,896808,reg
+2024-11,97.08,0.0,Indian Bank,2.92,839334,reg
+2024-11,87.08,0.0,Central Bank Of India,12.92,520061,reg
+2024-11,88.8,0.0,Federal Bank,11.2,501741,reg
+2024-11,95.86,0.0,Indian Overseas Bank,4.14,417776,reg
+2024-11,96.39,0.0,UCO Bank,3.61,403533,reg
+2024-11,95.77,0.0,IndusInd Bank,4.23,353515,reg
+2024-11,96.87,0.0,IDBI Bank Limited,3.13,329446,reg
+2024-11,96.61,0.0,Bank of Maharashtra,3.39,300950,reg
+2024-11,9.27,0.0,Fino Payments Bank,90.73,252232,reg
+2024-11,95.46,0.0,Karnataka Bank,4.54,215835,reg
+2024-11,91.8,0.0,Yes Bank Ltd,8.2,202390,reg
+2024-11,97.04,0.0,IDFC FIRST Bank,2.96,195201,reg
+2024-11,95.95,0.0,Jammu and Kashmir Bank,4.05,154408,reg
+2024-11,92.96,0.0,Karur Vysya Bank,7.04,152503,reg
+2024-11,96.75,0.0,South Indian Bank,3.25,108397,reg
+2024-11,97.36,0.0,AU Small Finance bank,2.64,103605,reg
+2024-11,94.05,0.0,Jio Payments Bank,5.95,101917,reg
+2024-11,95.9,0.0,Punjab and Sind Bank,4.1,98160,reg
+2024-11,92.75,0.0,City Union Bank,7.25,94666,reg
+2024-11,69.37,0.0,Equitas Small Finance Bank,30.63,84444,reg
+2024-11,87.52,0.0,NSDL Payments Bank,12.48,79965,reg
+2024-11,95.92,0.0,Tamilnad Mercantile Bank,4.08,75676,reg
+2024-11,98.44,0.0,Standard Chartered,1.56,69231,reg
+2024-11,96.56,0.0,DBS Bank Ltd,3.44,62802,reg
+2024-11,96.03,0.0,Rajasthan Marudhara Gramin Bank,3.97,51651,reg
+2024-11,96.74,0.0,Saraswat Bank,3.26,51646,reg
+2024-11,92.23,0.0,Pragathi Krishna Gramin Bank,7.77,49421,reg
+2024-11,92.68,0.0,Andhra Pradesh Grameena Vikas Bank,7.32,47449,reg
+2024-11,94.25,0.0,Fincare Small Finance Bank,5.75,45067,reg
+2024-11,92.52,0.0,Kerala Gramin Bank,7.48,43625,reg
+2024-11,96.14,0.0,Maharashtra Gramin Bank,3.86,39877,reg
+2024-11,95.08,0.0,Andhra Pragathi Grameena Bank,4.92,37412,reg
+2024-11,93.09,0.0,RBL Bank,6.91,35736,reg
+2024-11,98.04,0.0,HSBC Bank,1.96,33053,reg
+2024-11,95.23,0.0,Karnataka Vikas Grameena Bank,4.77,30966,reg
+2024-11,96.69,0.0,TJSB Sahakari Bank Ltd,3.31,19973,reg
+2024-11,50.9,0.0,Jana Small Finance Bank Ltd,49.1,19877,reg
+2024-11,96.61,0.0,DCB Bank Ltd,3.39,18865,reg
+2024-12,96.44,3.25,State Bank Of India,0.32,8.8,reg
+2024-12,97.37,2.51,HDFC Bank Ltd,0.12,3.24,reg
+2024-12,96.32,3.6,Bank of Baroda,0.08,2.19,reg
+2024-12,95.27,4.01,Punjab National Bank,0.72,2.03,reg
+2024-12,88.16,11.76,Union Bank of India,0.08,1.94,reg
+2024-12,96.27,3.69,Kotak Mahindra Bank,0.04,1.82,reg
+2024-12,97.48,2.26,ICICI Bank,0.26,1.58,reg
+2024-12,94.21,5.27,Canara Bank,0.52,1.51,reg
+2024-12,97.38,2.53,Axis Bank Ltd,0.09,1.48,reg
+2024-12,99.4,0.0,Airtel Payments Bank,0.6,1.38,reg
+2024-12,89.66,7.4,India Post Payment Bank,2.94,1.11,reg
+2024-12,96.1,3.78,Bank of India,0.12,0.97,reg
+2024-12,96.74,2.85,Indian Bank,0.41,0.95,reg
+2024-12,91.38,4.65,Central Bank Of India,3.98,0.57,reg
+2024-12,93.64,5.46,Federal Bank,0.9,0.55,reg
+2024-12,95.75,3.67,Indian Overseas Bank,0.58,0.47,reg
+2024-12,96.33,3.56,UCO Bank,0.1,0.46,reg
+2024-12,95.36,4.6,IndusInd Bank,0.04,0.39,reg
+2024-12,97.36,2.34,IDBI Bank Limited,0.31,0.36,reg
+2024-12,97.11,2.77,Bank of Maharashtra,0.12,0.33,reg
+2024-12,9.15,90.56,Fino Payments Bank,0.29,0.31,reg
+2024-12,96.58,3.32,Karnataka Bank,0.1,0.23,reg
+2024-12,94.22,5.47,Yes Bank Ltd,0.3,0.21,reg
+2024-12,97.03,2.88,IDFC FIRST Bank,0.1,0.21,reg
+2024-12,92.56,6.42,Karur Vysya Bank,1.03,0.17,reg
+2024-12,96.1,3.76,Jammu and Kashmir Bank,0.14,0.16,reg
+2024-12,93.83,5.76,Jio Payments Bank,0.41,0.13,reg
+2024-12,96.5,3.38,South Indian Bank,0.12,0.12,reg
+2024-12,97.26,2.69,AU Small Finance bank,0.05,0.12,reg
+2024-12,96.0,3.92,Punjab and Sind Bank,0.08,0.11,reg
+2024-12,93.0,6.18,City Union Bank,0.82,0.11,reg
+2024-12,87.93,4.4,NSDL Payments Bank,7.67,0.1,reg
+2024-12,71.44,0.01,Equitas Small Finance Bank,28.55,0.09,reg
+2024-12,94.94,4.3,Tamilnad Mercantile Bank,0.77,0.08,reg
+2024-12,98.54,1.32,Standard Chartered,0.14,0.07,reg
+2024-12,97.22,2.75,DBS Bank Ltd,0.03,0.07,reg
+2024-12,95.73,3.64,Rajasthan Marudhara Gramin Bank,0.62,0.06,reg
+2024-12,80.74,6.37,Pragathi Krishna Gramin Bank,12.89,0.06,reg
+2024-12,96.52,3.07,Saraswat Bank,0.41,0.05,reg
+2024-12,91.93,5.53,Kerala Gramin Bank,2.53,0.05,reg
+2024-12,95.27,3.73,Maharashtra Gramin Bank,1.01,0.04,reg
+2024-12,95.65,4.33,Andhra Pragathi Grameena Bank,0.03,0.04,reg
+2024-12,94.99,4.23,Andhra Pradesh Grameena Vikas Bank,0.78,0.04,reg
+2024-12,94.07,5.49,RBL Bank,0.45,0.04,reg
+2024-12,89.5,10.35,Fincare Small Finance Bank,0.15,0.04,reg
+2024-12,98.15,1.45,HSBC Bank,0.39,0.04,reg
+2024-12,95.34,4.44,Karnataka Vikas Grameena Bank,0.22,0.03,reg
+2024-12,52.56,3.81,Jana Small Finance Bank Ltd,43.63,0.02,reg
+2024-12,97.19,2.71,TJSB Sahakari Bank Ltd,0.11,0.02,reg
+2024-12,96.87,2.67,DCB Bank Ltd,0.46,0.02,reg
+2025-01,96.44,3.44,State Bank Of India,0.13,9.4,reg
+2025-01,97.28,2.57,HDFC Bank Ltd,0.15,3.3,reg
+2025-01,81.38,3.31,Punjab National Bank,15.3,2.38,reg
+2025-01,95.96,3.69,Bank of Baroda,0.36,2.35,reg
+2025-01,92.05,7.74,Union Bank of India,0.21,2.04,reg
+2025-01,96.0,3.89,Kotak Mahindra Bank,0.11,1.92,reg
+2025-01,98.48,0.74,Airtel Payments Bank,0.78,1.65,reg
+2025-01,94.26,5.47,Canara Bank,0.28,1.6,reg
+2025-01,97.49,2.32,ICICI Bank,0.19,1.58,reg
+2025-01,97.36,2.6,Axis Bank Ltd,0.03,1.54,reg
+2025-01,91.69,7.87,India Post Payment Bank,0.44,1.27,reg
+2025-01,96.04,3.91,Bank of India,0.05,1.03,reg
+2025-01,96.67,3.17,Indian Bank,0.16,1.02,reg
+2025-01,24.59,1.99,Fino Payments Bank,73.42,0.76,reg
+2025-01,83.5,4.46,Central Bank Of India,12.04,0.64,reg
+2025-01,95.46,3.46,Federal Bank,1.08,0.56,reg
+2025-01,96.17,3.68,Indian Overseas Bank,0.15,0.51,reg
+2025-01,96.12,3.69,UCO Bank,0.18,0.49,reg
+2025-01,95.51,4.47,IndusInd Bank,0.02,0.42,reg
+2025-01,96.34,2.97,IDBI Bank Limited,0.69,0.37,reg
+2025-01,96.94,2.95,Bank of Maharashtra,0.12,0.35,reg
+2025-01,96.49,3.25,Karnataka Bank,0.26,0.25,reg
+2025-01,96.6,2.95,IDFC FIRST Bank,0.45,0.22,reg
+2025-01,94.27,5.39,Yes Bank Ltd,0.34,0.22,reg
+2025-01,95.99,3.69,Jammu and Kashmir Bank,0.32,0.17,reg
+2025-01,92.23,6.73,Karur Vysya Bank,1.04,0.17,reg
+2025-01,93.36,6.25,Jio Payments Bank,0.39,0.16,reg
+2025-01,96.41,2.97,AU Small Finance bank,0.62,0.15,reg
+2025-01,96.29,3.59,South Indian Bank,0.12,0.13,reg
+2025-01,95.93,3.92,Punjab and Sind Bank,0.15,0.12,reg
+2025-01,89.02,4.28,NSDL Payments Bank,6.69,0.12,reg
+2025-01,92.84,6.16,City Union Bank,1.0,0.11,reg
+2025-01,94.13,4.24,Tamilnad Mercantile Bank,1.64,0.09,reg
+2025-01,69.27,0.01,Equitas Small Finance Bank,30.72,0.08,reg
+2025-01,98.57,1.32,Standard Chartered,0.11,0.07,reg
+2025-01,96.83,3.02,DBS Bank Ltd,0.16,0.07,reg
+2025-01,92.83,3.58,Rajasthan Marudhara Gramin Bank,3.59,0.07,reg
+2025-01,90.67,7.55,Pragathi Krishna Gramin Bank,1.78,0.06,reg
+2025-01,93.59,5.76,Kerala Gramin Bank,0.65,0.06,reg
+2025-01,94.88,3.33,Saraswat Bank,1.79,0.06,reg
+2025-01,96.26,3.71,Maharashtra Gramin Bank,0.03,0.05,reg
+2025-01,95.03,4.63,Andhra Pragathi Grameena Bank,0.34,0.05,reg
+2025-01,94.08,4.95,RBL Bank,0.97,0.04,reg
+2025-01,95.41,4.37,Karnataka Vikas Grameena Bank,0.22,0.04,reg
+2025-01,97.95,1.34,HSBC Bank,0.71,0.04,reg
+2025-01,91.57,8.28,Andhra Pradesh Grameena Vikas Bank,0.15,0.03,reg
+2025-01,50.6,3.1,Jana Small Finance Bank Ltd,46.3,0.02,reg
+2025-01,94.72,3.62,The Gujarat State Cooperative Bank,1.65,0.02,reg
+2025-01,95.83,3.35,DCB Bank Ltd,0.82,0.02,reg
+2025-01,94.52,5.24,Utkarsh Small Finance Bank,0.25,0.02,reg
+2025-02,95.85,3.38,State Bank Of India,0.77,11.332826,reg
+2025-02,97.21,2.65,HDFC Bank Ltd,0.14,3.617096,reg
+2025-02,96.33,3.6,Bank of Baroda,0.06,2.830324,reg
+2025-02,94.78,3.89,Punjab National Bank,1.33,2.654375,reg
+2025-02,95.78,4.17,Union Bank of India,0.05,2.365109,reg
+2025-02,95.39,4.12,Kotak Mahindra Bank,0.49,2.105752,reg
+2025-02,87.57,5.43,Airtel Payments Bank,7.0,2.014762,reg
+2025-02,94.54,5.33,Canara Bank,0.12,1.798959,reg
+2025-02,97.28,2.62,Axis Bank Ltd,0.1,1.733405,reg
+2025-02,97.35,2.36,ICICI Bank,0.29,1.700814,reg
+2025-02,91.66,7.25,India Post Payment Bank,1.09,1.439319,reg
+2025-02,95.65,3.76,Bank of India,0.59,1.28564,reg
+2025-02,96.91,2.91,Indian Bank,0.18,1.15629,reg
+2025-02,87.78,4.52,Central Bank Of India,7.7,0.7731,reg
+2025-02,78.64,2.83,UCO Bank,18.52,0.686037,reg
+2025-02,93.61,5.97,Fino Payments Bank,0.42,0.639034,reg
+2025-02,95.5,3.48,Federal Bank,1.02,0.57524,reg
+2025-02,96.19,3.7,Indian Overseas Bank,0.11,0.549389,reg
+2025-02,95.11,4.86,IndusInd Bank,0.03,0.483071,reg
+2025-02,96.87,2.5,IDBI Bank Limited,0.63,0.437923,reg
+2025-02,96.65,2.97,Bank of Maharashtra,0.38,0.418014,reg
+2025-02,96.58,3.14,Karnataka Bank,0.29,0.265181,reg
+2025-02,94.31,5.11,Yes Bank Ltd,0.59,0.251143,reg
+2025-02,95.9,3.76,Jammu and Kashmir Bank,0.34,0.243247,reg
+2025-02,96.9,3.07,IDFC FIRST Bank,0.03,0.240718,reg
+2025-02,90.59,6.74,Karur Vysya Bank,2.66,0.172996,reg
+2025-02,94.01,5.68,Jio Payments Bank,0.31,0.172478,reg
+2025-02,96.6,3.03,AU Small Finance bank,0.37,0.169548,reg
+2025-02,94.89,4.51,Punjab and Sind Bank,0.59,0.135115,reg
+2025-02,91.55,4.7,NSDL Payments Bank Limited,3.76,0.131419,reg
+2025-02,96.35,3.56,South Indian Bank,0.09,0.128848,reg
+2025-02,94.4,5.46,Ujjivan Small Finance Bank,0.14,0.113403,reg
+2025-02,92.74,6.34,City Union Bank,0.92,0.099855,reg
+2025-02,94.0,3.76,Tamilnad Mercantile Bank,2.24,0.089582,reg
+2025-02,86.34,2.91,Rajasthan Marudhara Gramin Bank,10.75,0.084318,reg
+2025-02,98.68,1.3,Standard Chartered,0.02,0.073155,reg
+2025-02,97.1,2.63,DBS Bank Ltd,0.27,0.068528,reg
+2025-02,96.46,3.42,Maharashtra Gramin Bank,0.11,0.064162,reg
+2025-02,92.35,7.44,Pragathi Krishna Gramin Bank,0.21,0.062846,reg
+2025-02,94.9,3.52,Saraswat Bank,1.58,0.062292,reg
+2025-02,93.42,6.36,Kerala Gramin Bank,0.22,0.061286,reg
+2025-02,92.09,3.1,Equitas Small Finance Bank,4.81,0.059877,reg
+2025-02,95.62,4.36,Andhra Pragathi Grameena Bank,0.02,0.051531,reg
+2025-02,90.22,4.97,RBL Bank,4.81,0.04816,reg
+2025-02,95.56,4.43,Karnataka Vikas Grameena Bank,0.01,0.039954,reg
+2025-02,97.54,1.4,HSBC Bank,1.05,0.037835,reg
+2025-02,38.72,2.39,Jana Small Finance Bank Ltd,58.88,0.03512,reg
+2025-02,95.29,3.8,The Gujarat State Cooperative Bank,0.91,0.030141,reg
+2025-02,90.12,9.8,Andhra Pradesh Grameena Vikas Bank,0.08,0.026285,reg
+2025-02,95.96,3.12,TJSB Sahakari Bank Ltd,0.91,0.024807,reg
+2025-03,95.93,3.39,State Bank Of India,0.68,13.03,reg
+2025-03,96.91,2.86,HDFC Bank Ltd,0.22,4.15,reg
+2025-03,96.35,3.59,Bank of Baroda,0.06,3.33,reg
+2025-03,94.73,4.56,Punjab National Bank,0.7,2.97,reg
+2025-03,95.72,4.23,Union Bank of India,0.05,2.74,reg
+2025-03,95.63,4.15,Kotak Mahindra Bank,0.22,2.37,reg
+2025-03,92.95,5.63,Airtel Payments Bank,1.42,2.13,reg
+2025-03,94.51,5.36,Canara Bank,0.13,2.1,reg
+2025-03,97.25,2.65,Axis Bank Ltd,0.09,1.99,reg
+2025-03,97.34,2.44,ICICI Bank,0.21,1.98,reg
+2025-03,92.81,6.89,India Post Payment Bank,0.3,1.63,reg
+2025-03,95.97,3.83,Bank of India,0.2,1.47,reg
+2025-03,97.04,2.87,Indian Bank,0.1,1.37,reg
+2025-03,91.14,4.95,Central Bank Of India,3.91,0.87,reg
+2025-03,87.62,12.1,Indian Overseas Bank,0.28,0.71,reg
+2025-03,96.13,3.64,UCO Bank,0.23,0.69,reg
+2025-03,94.57,4.87,Fino Payments Bank,0.56,0.68,reg
+2025-03,96.43,3.45,Federal Bank,0.12,0.66,reg
+2025-03,95.01,4.8,IndusInd Bank,0.19,0.55,reg
+2025-03,97.18,2.5,IDBI Bank Limited,0.32,0.51,reg
+2025-03,96.95,2.95,Bank of Maharashtra,0.1,0.49,reg
+2025-03,96.21,3.28,Karnataka Bank,0.52,0.32,reg
+2025-03,94.37,5.05,Yes Bank Ltd,0.58,0.28,reg
+2025-03,96.96,3.02,IDFC FIRST Bank,0.02,0.28,reg
+2025-03,92.6,6.75,Karur Vysya Bank,0.65,0.21,reg
+2025-03,95.99,3.72,Jammu and Kashmir Bank,0.29,0.21,reg
+2025-03,90.63,6.48,Jio Payments Bank,2.89,0.21,reg
+2025-03,96.9,3.0,AU Small Finance bank,0.1,0.2,reg
+2025-03,96.34,3.64,South Indian Bank,0.03,0.15,reg
+2025-03,95.24,3.9,Punjab and Sind Bank,0.87,0.15,reg
+2025-03,91.59,4.75,NSDL Payments Bank,3.66,0.15,reg
+2025-03,93.93,5.64,Ujjivan Small Finance Bank,0.43,0.13,reg
+2025-03,91.28,7.85,City Union Bank,0.87,0.12,reg
+2025-03,93.12,3.6,Tamilnad Mercantile Bank,3.28,0.11,reg
+2025-03,96.28,3.53,Rajasthan Marudhara Gramin Bank,0.19,0.09,reg
+2025-03,88.34,6.86,Pragathi Krishna Gramin Bank,4.8,0.08,reg
+2025-03,96.36,3.37,Maharashtra Gramin Bank,0.26,0.08,reg
+2025-03,98.56,1.37,Standard Chartered,0.07,0.08,reg
+2025-03,97.31,2.6,DBS Bank Ltd,0.09,0.08,reg
+2025-03,93.3,5.68,Kerala Gramin Bank,1.02,0.07,reg
+2025-03,96.01,3.49,Saraswat Bank,0.5,0.07,reg
+2025-03,96.2,3.51,Equitas Small Finance Bank,0.29,0.07,reg
+2025-03,95.32,4.58,Andhra Pragathi Grameena Bank,0.1,0.06,reg
+2025-03,89.87,4.51,RBL Bank,5.62,0.06,reg
+2025-03,95.49,4.26,Karnataka Vikas Grameena Bank,0.25,0.05,reg
+2025-03,97.88,1.42,HSBC Bank,0.7,0.04,reg
+2025-03,39.66,2.11,Jana Small Finance Bank Ltd,58.23,0.04,reg
+2025-03,95.43,3.55,The Gujarat State Cooperative Bank,1.01,0.04,reg
+2025-03,90.49,9.45,Andhra Pradesh Grameena Vikas Bank,0.06,0.03,reg
+2025-03,96.25,3.36,TJSB Sahakari Bank Ltd,0.39,0.03,reg
+2025-04,95.87,3.91,State Bank Of India,0.22,9.76,reg
+2025-04,96.85,2.93,HDFC Bank Ltd,0.22,3.23,reg
+2025-04,91.29,3.81,Bank of Baroda,4.89,2.66,reg
+2025-04,90.79,5.2,Punjab National Bank,4.01,2.29,reg
+2025-04,94.95,4.6,Union Bank of India,0.45,2.08,reg
+2025-04,95.34,4.53,Kotak Mahindra Bank,0.13,1.93,reg
+2025-04,93.05,6.0,Airtel Payments Bank,0.96,1.7,reg
+2025-04,93.26,6.23,Canara Bank,0.51,1.66,reg
+2025-04,97.03,2.93,Axis Bank Ltd,0.04,1.53,reg
+2025-04,97.17,2.68,ICICI Bank,0.15,1.51,reg
+2025-04,92.24,7.24,India Post Payment Bank,0.52,1.29,reg
+2025-04,94.31,4.31,Bank of India,1.37,1.09,reg
+2025-04,96.65,3.23,Indian Bank,0.11,1.07,reg
+2025-04,85.38,5.43,Central Bank Of India,9.19,0.66,reg
+2025-04,96.25,3.7,Federal Bank,0.05,0.56,reg
+2025-04,91.51,8.25,Indian Overseas Bank,0.24,0.55,reg
+2025-04,95.06,4.33,UCO Bank,0.61,0.53,reg
+2025-04,94.12,5.32,Fino Payments Bank,0.55,0.52,reg
+2025-04,94.81,5.11,IndusInd Bank,0.08,0.44,reg
+2025-04,96.6,2.87,IDBI Bank Limited,0.53,0.39,reg
+2025-04,96.5,3.35,Bank of Maharashtra,0.15,0.37,reg
+2025-04,95.72,3.77,Karnataka Bank,0.51,0.26,reg
+2025-04,96.58,3.34,IDFC FIRST Bank,0.08,0.22,reg
+2025-04,93.74,5.55,Yes Bank Ltd,0.7,0.22,reg
+2025-04,93.38,6.34,Jio Payments Bank,0.28,0.18,reg
+2025-04,95.69,4.16,Jammu and Kashmir Bank,0.15,0.17,reg
+2025-04,91.37,7.01,Karur Vysya Bank,1.62,0.17,reg
+2025-04,96.5,3.31,AU Small Finance bank,0.19,0.16,reg
+2025-04,79.93,4.46,NSDL Payments Bank,15.61,0.14,reg
+2025-04,96.33,3.62,South Indian Bank,0.05,0.13,reg
+2025-04,95.17,4.47,Punjab and Sind Bank,0.36,0.12,reg
+2025-04,91.19,7.09,City Union Bank,1.72,0.1,reg
+2025-04,92.93,6.49,Ujjivan Small Finance Bank,0.58,0.1,reg
+2025-04,92.24,4.01,Tamilnad Mercantile Bank,3.75,0.09,reg
+2025-04,95.95,3.93,Rajasthan Marudhara Gramin Bank,0.12,0.07,reg
+2025-04,93.75,5.82,Kerala Gramin Bank,0.44,0.07,reg
+2025-04,96.95,2.96,DBS Bank Ltd,0.08,0.07,reg
+2025-04,91.09,8.59,Pragathi Krishna Gramin Bank,0.31,0.06,reg
+2025-04,98.15,1.4,Standard Chartered,0.45,0.06,reg
+2025-04,96.31,3.55,Equitas Small Finance Bank,0.14,0.06,reg
+2025-04,95.48,3.87,Maharashtra Gramin Bank,0.65,0.05,reg
+2025-04,96.19,3.71,Saraswat Bank,0.1,0.05,reg
+2025-04,94.95,4.88,Andhra Pragathi Grameena Bank,0.17,0.05,reg
+2025-04,87.81,5.42,RBL Bank,6.78,0.04,reg
+2025-04,94.97,4.73,Karnataka Vikas Grameena Bank,0.31,0.04,reg
+2025-04,97.38,1.55,HSBC Bank,1.07,0.04,reg
+2025-04,46.83,3.0,Jana Small Finance Bank Ltd,50.16,0.03,reg
+2025-04,93.79,4.35,The Gujarat State Cooperative Bank,1.86,0.02,reg
+2025-04,86.44,3.0,Cosmos Bank,10.56,0.02,reg
+2025-04,95.8,3.16,DCB Bank Ltd,1.04,0.02,reg
+2025-05,95.79,4.0,State Bank Of India,0.21,10.44,reg
+2025-05,86.97,2.76,HDFC Bank Ltd,10.27,3.71,reg
+2025-05,93.76,4.09,Bank of Baroda,2.15,2.87,reg
+2025-05,93.37,5.47,Punjab National Bank,1.16,2.53,reg
+2025-05,95.38,4.62,Union Bank of India,0.0,2.22,reg
+2025-05,95.31,4.61,Kotak Mahindra Bank,0.09,2.14,reg
+2025-05,92.49,6.18,Airtel Payments Bank,1.33,2.0,reg
+2025-05,93.51,6.41,Canara Bank,0.07,1.73,reg
+2025-05,96.96,3.02,Axis Bank Ltd,0.03,1.65,reg
+2025-05,97.37,2.59,ICICI Bank,0.04,1.63,reg
+2025-05,92.63,7.08,India Post Payment Bank,0.28,1.53,reg
+2025-05,94.51,4.79,Bank of India,0.7,1.19,reg
+2025-05,95.86,3.38,Indian Bank,0.76,1.15,reg
+2025-05,93.34,6.47,Central Bank Of India,0.18,0.7,reg
+2025-05,95.13,4.68,UCO Bank,0.19,0.6,reg
+2025-05,93.72,5.53,Fino Payments Bank,0.75,0.6,reg
+2025-05,96.28,3.67,Federal Bank,0.05,0.6,reg
+2025-05,95.34,4.6,Indian Overseas Bank,0.06,0.58,reg
+2025-05,94.8,5.18,IndusInd Bank,0.02,0.5,reg
+2025-05,96.32,3.05,IDBI Bank Limited,0.63,0.41,reg
+2025-05,96.38,3.53,Bank of Maharashtra,0.1,0.4,reg
+2025-05,95.54,4.01,Karnataka Bank,0.45,0.25,reg
+2025-05,96.57,3.37,IDFC FIRST Bank,0.06,0.25,reg
+2025-05,93.7,5.75,Yes Bank Ltd,0.56,0.24,reg
+2025-05,93.57,6.29,Jio Payments Bank,0.14,0.24,reg
+2025-05,95.4,4.39,Jammu and Kashmir Bank,0.21,0.2,reg
+2025-05,96.45,3.51,AU Small Finance bank,0.04,0.18,reg
+2025-05,92.19,6.99,Karur Vysya Bank,0.82,0.17,reg
+2025-05,82.69,4.67,NSDL Payments Bank,12.64,0.16,reg
+2025-05,94.68,5.16,Punjab and Sind Bank,0.15,0.14,reg
+2025-05,96.29,3.7,South Indian Bank,0.01,0.14,reg
+2025-05,92.79,7.13,Ujjivan Small Finance Bank,0.08,0.11,reg
+2025-05,91.87,6.94,City Union Bank,1.19,0.1,reg
+2025-05,92.02,3.91,Tamilnad Mercantile Bank,4.07,0.09,reg
+2025-05,95.62,4.15,Rajasthan Marudhara Gramin Bank,0.23,0.08,reg
+2025-05,97.01,2.97,DBS Bank Ltd,0.02,0.07,reg
+2025-05,93.57,5.93,Kerala Gramin Bank,0.51,0.07,reg
+2025-05,98.41,1.47,Standard Chartered,0.12,0.07,reg
+2025-05,96.26,3.72,Equitas Small Finance Bank,0.03,0.06,reg
+2025-05,95.63,4.25,Maharashtra Gramin Bank,0.13,0.06,reg
+2025-05,90.84,9.01,Pragathi Krishna Gramin Bank,0.15,0.06,reg
+2025-05,96.18,3.76,Saraswat Bank,0.06,0.06,reg
+2025-05,88.43,4.83,RBL Bank,6.75,0.05,reg
+2025-05,94.88,5.05,Andhra Pragathi Grameena Bank,0.07,0.05,reg
+2025-05,98.19,1.55,HSBC Bank,0.26,0.04,reg
+2025-05,94.61,5.38,Karnataka Vikas Grameena Bank,0.0,0.04,reg
+2025-05,96.38,3.33,Slice Small Finance Bank,0.29,0.03,reg
+2025-05,50.18,3.42,Jana Small Finance Bank Ltd,46.4,0.03,reg
+2025-05,94.23,4.16,The Gujarat State Cooperative Bank,1.61,0.03,reg
+2025-05,96.03,3.43,DCB Bank Ltd,0.55,0.02,reg
+2025-06,95.95,3.98,State Bank Of India,0.07,11.82,reg
+2025-06,96.48,3.39,HDFC Bank Ltd,0.13,3.91,reg
+2025-06,95.7,4.19,Bank of Baroda,0.12,3.29,reg
+2025-06,93.81,5.58,Punjab National Bank,0.61,2.93,reg
+2025-06,95.36,4.5,Union Bank of India,0.14,2.54,reg
+2025-06,95.35,4.58,Kotak Mahindra Bank,0.07,2.46,reg
+2025-06,93.43,6.36,Airtel Payments Bank,0.21,2.31,reg
+2025-06,93.33,6.63,Canara Bank,0.04,1.96,reg
+2025-06,96.54,3.02,Axis Bank Ltd,0.44,1.86,reg
+2025-06,92.7,6.76,India Post Payment Bank,0.54,1.82,reg
+2025-06,97.23,2.64,ICICI Bank,0.13,1.81,reg
+2025-06,94.1,4.49,Bank of India,1.41,1.38,reg
+2025-06,96.5,3.34,Indian Bank,0.16,1.29,reg
+2025-06,93.49,6.37,Central Bank Of India,0.14,0.81,reg
+2025-06,94.85,4.59,UCO Bank,0.57,0.7,reg
+2025-06,95.3,4.58,Indian Overseas Bank,0.12,0.69,reg
+2025-06,94.01,5.52,Fino Payments Bank,0.46,0.69,reg
+2025-06,96.17,3.76,Federal Bank,0.07,0.68,reg
+2025-06,94.77,5.13,IndusInd Bank,0.1,0.57,reg
+2025-06,96.61,3.01,IDBI Bank Limited,0.38,0.47,reg
+2025-06,96.5,3.46,Bank of Maharashtra,0.04,0.47,reg
+2025-06,96.58,3.41,IDFC FIRST Bank,0.01,0.28,reg
+2025-06,92.96,6.09,Yes Bank Ltd,0.95,0.28,reg
+2025-06,95.56,4.03,Karnataka Bank,0.42,0.28,reg
+2025-06,92.92,6.88,Jio Payments Bank,0.2,0.27,reg
+2025-06,95.52,4.3,Jammu and Kashmir Bank,0.17,0.23,reg
+2025-06,96.31,3.66,AU Small Finance bank,0.03,0.2,reg
+2025-06,92.55,7.16,Karur Vysya Bank,0.29,0.18,reg
+2025-06,86.4,4.76,NSDL Payments Bank,8.85,0.18,reg
+2025-06,94.5,4.68,Punjab and Sind Bank,0.82,0.16,reg
+2025-06,96.27,3.69,South Indian Bank,0.03,0.15,reg
+2025-06,92.73,7.13,Ujjivan Small Finance Bank,0.14,0.12,reg
+2025-06,92.49,6.57,City Union Bank,0.94,0.11,reg
+2025-06,95.43,4.32,Rajasthan Marudhara Gramin Bank,0.25,0.1,reg
+2025-06,90.95,4.0,Tamilnad Mercantile Bank,5.05,0.1,reg
+2025-06,91.85,6.78,Kerala Gramin Bank,1.37,0.09,reg
+2025-06,96.69,3.26,DBS Bank Ltd,0.06,0.08,reg
+2025-06,95.42,4.36,Maharashtra Gramin Bank,0.22,0.07,reg
+2025-06,95.95,4.0,Equitas Small Finance Bank,0.06,0.07,reg
+2025-06,98.5,1.47,Standard Chartered,0.03,0.07,reg
+2025-06,88.64,8.43,Pragathi Krishna Gramin Bank,2.93,0.06,reg
+2025-06,96.29,3.64,Saraswat Bank,0.07,0.06,reg
+2025-06,94.95,4.62,Andhra Pragathi Grameena Bank,0.43,0.06,reg
+2025-06,89.9,4.65,RBL Bank,5.46,0.05,reg
+2025-06,94.46,5.16,Karnataka Vikas Grameena Bank,0.39,0.04,reg
+2025-06,98.27,1.51,HSBC Bank,0.22,0.04,reg
+2025-06,90.48,3.15,Slice Small Finance Bank,6.37,0.04,reg
+2025-06,50.9,3.38,Jana Small Finance Bank Ltd,45.72,0.04,reg
+2025-06,94.64,3.97,The Gujarat State Cooperative Bank,1.39,0.03,reg
+2025-06,93.12,6.57,Utkarsh Small Finance Bank,0.31,0.03,reg
+2025-07,95.69,3.79,State Bank Of India,0.52,13.06,reg
+2025-07,96.85,3.03,HDFC Bank Ltd,0.13,4.1,reg
+2025-07,95.74,3.96,Bank of Baroda,0.3,3.69,reg
+2025-07,94.02,5.06,Punjab National Bank,0.92,3.18,reg
+2025-07,95.65,4.29,Union Bank of India,0.06,2.8,reg
+2025-07,95.36,4.54,Kotak Mahindra Bank,0.09,2.73,reg
+2025-07,93.97,5.92,Airtel Payments Bank,0.11,2.7,reg
+2025-07,92.79,6.59,India Post Payment Bank,0.62,2.16,reg
+2025-07,93.18,6.71,Canara Bank,0.11,2.15,reg
+2025-07,96.99,2.94,Axis Bank Ltd,0.07,1.99,reg
+2025-07,97.08,2.68,ICICI Bank,0.24,1.91,reg
+2025-07,95.46,4.21,Bank of India,0.33,1.5,reg
+2025-07,96.58,3.18,Indian Bank,0.25,1.45,reg
+2025-07,93.29,6.42,Central Bank Of India,0.29,0.9,reg
+2025-07,95.35,4.23,Indian Overseas Bank,0.42,0.89,reg
+2025-07,94.05,5.45,Fino Payments Bank,0.51,0.79,reg
+2025-07,95.28,4.48,UCO Bank,0.24,0.78,reg
+2025-07,96.28,3.65,Federal Bank,0.08,0.72,reg
+2025-07,94.97,5.01,IndusInd Bank,0.02,0.64,reg
+2025-07,96.67,3.31,Bank of Maharashtra,0.02,0.52,reg
+2025-07,96.72,2.84,IDBI Bank Limited,0.44,0.51,reg
+2025-07,100.0,0.0,PPIW,0.0,0.45,reg
+2025-07,92.68,6.93,Jio Payments Bank,0.39,0.32,reg
+2025-07,96.66,3.32,IDFC FIRST Bank,0.02,0.31,reg
+2025-07,92.25,7.05,Yes Bank Ltd,0.7,0.31,reg
+2025-07,95.36,3.93,Karnataka Bank,0.71,0.3,reg
+2025-07,95.67,4.07,Jammu and Kashmir Bank,0.27,0.28,reg
+2025-07,96.18,3.57,AU Small Finance bank,0.26,0.23,reg
+2025-07,87.69,4.66,NSDL Payments Bank,7.65,0.21,reg
+2025-07,91.76,6.89,Karur Vysya Bank,1.35,0.2,reg
+2025-07,94.82,4.72,Punjab and Sind Bank,0.46,0.17,reg
+2025-07,96.41,3.58,South Indian Bank,0.01,0.16,reg
+2025-07,92.75,6.99,Ujjivan Small Finance Bank,0.26,0.14,reg
+2025-07,92.65,6.44,City Union Bank,0.91,0.12,reg
+2025-07,95.49,4.14,Rajasthan Marudhara Gramin Bank,0.36,0.12,reg
+2025-07,90.35,4.04,Tamilnad Mercantile Bank,5.61,0.11,reg
+2025-07,96.55,3.31,DBS Bank Ltd,0.14,0.09,reg
+2025-07,93.95,5.42,Kerala Gramin Bank,0.63,0.09,reg
+2025-07,95.91,4.01,Maharashtra Gramin Bank,0.08,0.08,reg
+2025-07,95.97,4.0,Equitas Small Finance Bank,0.03,0.07,reg
+2025-07,92.31,7.67,Pragathi Krishna Gramin Bank,0.02,0.07,reg
+2025-07,96.38,3.57,Saraswat Bank,0.04,0.07,reg
+2025-07,98.25,1.57,Standard Chartered,0.18,0.07,reg
+2025-07,94.87,4.86,Andhra Pragathi Grameena Bank,0.27,0.06,reg
+2025-07,96.8,2.99,Slice Small Finance Bank,0.21,0.06,reg
+2025-07,90.87,4.69,RBL Bank,4.44,0.06,reg
+2025-07,95.02,4.87,Karnataka Vikas Grameena Bank,0.11,0.05,reg
+2025-07,97.83,1.41,HSBC Bank,0.76,0.04,reg
+2025-07,50.21,3.3,Jana Small Finance Bank Ltd,46.5,0.04,reg
+2025-07,81.78,18.19,Andhra Pradesh Grameena Vikas Bank,0.03,0.04,reg
+2025-08,95.85,4.07,State Bank of India,0.08,14.91,reg
+2025-08,96.72,3.17,HDFC Bank Ltd,0.1,4.4,reg
+2025-08,95.29,4.22,Bank of Baroda,0.49,4.31,reg
+2025-08,94.54,4.96,Punjab National Bank,0.5,3.74,reg
+2025-08,93.87,5.96,Airtel Payments Bank,0.17,3.55,reg
+2025-08,94.92,4.46,Union Bank of India,0.61,3.28,reg
+2025-08,95.28,4.6,Kotak Mahindra Bank,0.12,3.1,reg
+2025-08,94.06,5.64,India Post Payment Bank,0.31,2.73,reg
+2025-08,92.8,7.08,Canara Bank,0.12,2.46,reg
+2025-08,96.84,3.14,Axis Bank Ltd,0.03,2.2,reg
+2025-08,96.97,2.85,ICICI Bank,0.17,2.02,reg
+2025-08,96.56,3.39,Indian Bank,0.05,1.73,reg
+2025-08,94.12,4.52,Bank of India,1.36,1.72,reg
+2025-08,92.85,6.87,Central Bank of India,0.28,1.08,reg
+2025-08,93.99,5.36,Fino Payments Bank,0.65,1.07,reg
+2025-08,78.42,0.69,Indian Overseas Bank,20.9,0.95,reg
+2025-08,94.87,4.87,UCO Bank,0.25,0.93,reg
+2025-08,100.0,0.0,PPI Wallets,0.0,0.87,reg
+2025-08,95.48,3.8,Federal Bank,0.72,0.81,reg
+2025-08,94.87,5.07,IndusInd Bank,0.06,0.77,reg
+2025-08,96.44,3.54,Bank of Maharashtra,0.01,0.58,reg
+2025-08,96.33,2.99,IDBI Bank Limited,0.67,0.57,reg
+2025-08,92.17,7.31,Jio Payments Bank,0.53,0.41,reg
+2025-08,96.07,3.92,IDFC FIRST Bank,0.01,0.35,reg
+2025-08,91.84,7.32,Yes Bank Ltd,0.84,0.34,reg
+2025-08,95.31,4.32,Karnataka Bank,0.37,0.33,reg
+2025-08,93.99,5.86,Jammu and Kashmir Bank,0.14,0.32,reg
+2025-08,87.98,4.58,NSDL Payments Bank,7.45,0.29,reg
+2025-08,95.0,3.71,AU Small Finance bank,1.29,0.27,reg
+2025-08,91.86,7.9,Karur Vysya Bank,0.24,0.22,reg
+2025-08,94.26,5.5,Punjab and Sind Bank,0.24,0.2,reg
+2025-08,96.17,3.82,South Indian Bank,0.01,0.18,reg
+2025-08,92.02,7.67,Ujjivan Small Finance Bank,0.31,0.16,reg
+2025-08,92.33,6.4,City Union Bank,1.27,0.13,reg
+2025-08,95.02,4.26,Rajasthan Marudhara Gramin Bank,0.73,0.13,reg
+2025-08,89.17,4.39,Tamilnad Mercantile Bank,6.44,0.12,reg
+2025-08,90.84,7.05,Kerala Gramin Bank,2.11,0.11,reg
+2025-08,95.54,4.18,Maharashtra Gramin Bank,0.28,0.1,reg
+2025-08,96.35,3.23,DBS Bank Ltd,0.42,0.09,reg
+2025-08,96.86,2.92,Slice Small Finance Bank,0.22,0.09,reg
+2025-08,91.69,8.09,Pragathi Krishna Gramin Bank,0.21,0.08,reg
+2025-08,95.63,4.3,Equitas Small Finance Bank,0.07,0.08,reg
+2025-08,94.96,4.67,Andhra Pragathi Grameena Bank,0.37,0.07,reg
+2025-08,59.99,39.94,Karnataka Vikas Grameena Bank,0.07,0.07,reg
+2025-08,95.81,3.7,Saraswat Bank,0.49,0.07,reg
+2025-08,98.18,1.63,Standard Chartered,0.19,0.07,reg
+2025-08,91.17,4.84,RBL Bank,3.99,0.07,reg
+2025-08,46.53,3.01,Jana Small Finance Bank Ltd,50.45,0.05,reg
+2025-08,76.81,16.06,Andhra Pradesh Grameena Vikas Bank,7.12,0.05,reg
+2025-08,97.96,1.82,HSBC Bank,0.22,0.05,reg
+2025-09,96.05,3.77,State Bank of India,0.18,16.78,reg
+2025-09,96.94,2.96,HDFC Bank,0.1,5.0,reg
+2025-09,95.78,3.9,Bank of Baroda,0.32,4.75,reg
+2025-09,94.85,4.64,Punjab National Bank,0.51,4.1,reg
+2025-09,94.32,5.61,Airtel Payments Bank,0.06,3.77,reg
+2025-09,95.59,4.32,Union Bank of India,0.1,3.68,reg
+2025-09,95.4,4.5,Kotak Mahindra Bank,0.1,3.46,reg
+2025-09,92.95,5.11,India Post Payment Bank,1.94,2.99,reg
+2025-09,92.76,7.13,Canara Bank,0.11,2.77,reg
+2025-09,96.92,2.94,Axis Bank Ltd,0.14,2.5,reg
+2025-09,96.91,2.99,ICICI Bank,0.09,2.3,reg
+2025-09,96.56,3.23,Indian Bank,0.21,1.93,reg
+2025-09,95.78,4.16,Bank of India,0.07,1.89,reg
+2025-09,93.52,6.17,Central Bank of India,0.31,1.2,reg
+2025-09,94.06,5.31,Fino Payments Bank,0.63,1.14,reg
+2025-09,94.81,4.38,UCO Bank,0.8,1.03,reg
+2025-09,91.7,1.57,Indian Overseas Bank,6.73,0.98,reg
+2025-09,96.31,3.63,Federal Bank,0.06,0.91,reg
+2025-09,95.12,4.72,IndusInd Bank,0.16,0.83,reg
+2025-09,75.76,2.13,IDBI Bank Limited,22.12,0.74,reg
+2025-09,96.59,3.32,Bank of Maharashtra,0.09,0.66,reg
+2025-09,93.57,6.15,Jio Payments Bank,0.28,0.46,reg
+2025-09,94.55,5.35,IDFC FIRST Bank,0.1,0.4,reg
+2025-09,92.06,7.75,Yes Bank Ltd,0.2,0.38,reg
+2025-09,95.61,3.89,Karnataka Bank,0.5,0.37,reg
+2025-09,95.89,3.85,Jammu and Kashmir Bank,0.25,0.35,reg
+2025-09,88.04,4.39,NSDL Payments Bank,7.57,0.31,reg
+2025-09,96.4,3.48,AU Small Finance bank,0.11,0.3,reg
+2025-09,91.86,7.84,Karur Vysya Bank,0.3,0.24,reg
+2025-09,95.2,4.51,Punjab and Sind Bank,0.28,0.22,reg
+2025-09,96.33,3.59,South Indian Bank,0.08,0.2,reg
+2025-09,95.63,3.86,Rajasthan Marudhara Gramin Bank,0.51,0.19,reg
+2025-09,92.67,7.23,Ujjivan Small Finance Bank,0.1,0.17,reg
+2025-09,92.65,5.84,City Union Bank,1.51,0.15,reg
+2025-09,85.2,4.83,Kerala Gramin Bank,9.97,0.13,reg
+2025-09,94.78,3.77,Tamilnad Mercantile Bank,1.45,0.13,reg
+2025-09,97.23,2.62,Slice Small Finance Bank Limited,0.15,0.12,reg
+2025-09,97.0,2.93,DBS Bank Ltd,0.07,0.1,reg
+2025-09,95.36,3.78,Maharashtra Gramin Bank,0.86,0.09,reg
+2025-09,90.41,7.53,Pragathi Krishna Gramin Bank,2.07,0.08,reg
+2025-09,95.92,3.56,Saraswat Bank,0.53,0.08,reg
+2025-09,95.8,4.03,Equitas Small Finance Bank,0.16,0.08,reg
+2025-09,98.36,1.54,Standard Chartered,0.1,0.07,reg
+2025-09,92.38,4.2,RBL Bank,3.41,0.07,reg
+2025-09,46.19,2.79,Jana Small Finance Bank Ltd,51.03,0.06,reg
+2025-09,98.24,1.48,HSBC Bank,0.28,0.05,reg
+2025-09,94.21,3.91,The Gujarat State Cooperative Bank,1.88,0.05,reg
+2025-09,93.97,5.96,Utkarsh Small Finance Bank,0.07,0.04,reg
+2025-09,96.66,2.86,DCB Bank Ltd,0.48,0.04,reg
+2025-09,95.55,4.08,Suryoday Small Finance Bank Ltd.,0.37,0.04,reg
+2025-10,95.81,3.93,State Bank Of India,0.26,18.55,reg
+2025-10,96.74,3.06,HDFC Bank Ltd,0.2,5.3,reg
+2025-10,95.64,3.95,Bank of Baroda,0.41,5.29,reg
+2025-10,94.82,4.73,Punjab National Bank,0.45,4.47,reg
+2025-10,94.31,5.64,Airtel Payments Bank,0.06,4.23,reg
+2025-10,91.97,7.1,Union Bank of India,0.93,4.23,reg
+2025-10,95.39,4.57,Kotak Mahindra Bank,0.03,3.8,reg
+2025-10,94.96,4.85,India Post Payment Bank,0.18,3.39,reg
+2025-10,92.46,7.5,Canara Bank,0.05,3.15,reg
+2025-10,97.02,2.95,Axis Bank Ltd,0.03,2.66,reg
+2025-10,96.95,3.01,ICICI Bank,0.04,2.4,reg
+2025-10,96.77,3.15,Indian Bank,0.08,2.28,reg
+2025-10,95.68,4.24,Bank of India,0.09,2.09,reg
+2025-10,92.17,6.58,Central Bank Of India,1.25,1.34,reg
+2025-10,94.19,5.41,Fino Payments Bank,0.4,1.23,reg
+2025-10,91.32,4.6,UCO Bank,4.08,1.18,reg
+2025-10,93.94,4.18,Indian Overseas Bank,1.88,1.16,reg
+2025-10,48.78,1.43,IDBI Bank Limited,49.8,1.05,reg
+2025-10,96.21,3.78,Federal Bank,0.01,0.96,reg
+2025-10,95.03,4.84,IndusInd Bank,0.13,0.9,reg
+2025-10,96.52,3.39,Bank of Maharashtra,0.09,0.74,reg
+2025-10,92.91,6.78,Jio Payments Bank,0.31,0.53,reg
+2025-10,91.94,4.25,Karnataka Bank,3.81,0.44,reg
+2025-10,94.84,5.14,IDFC FIRST Bank,0.02,0.43,reg
+2025-10,92.48,7.34,Yes Bank Ltd,0.18,0.41,reg
+2025-10,95.51,4.26,Jammu and Kashmir Bank,0.24,0.37,reg
+2025-10,87.12,4.22,NSDL Payments Bank,8.66,0.36,reg
+2025-10,95.9,3.69,AU Small Finance bank,0.41,0.32,reg
+2025-10,90.67,8.83,Karur Vysya Bank,0.5,0.28,reg
+2025-10,93.36,4.83,Punjab and Sind Bank,1.8,0.25,reg
+2025-10,95.83,4.1,Rajasthan Marudhara Gramin Bank,0.06,0.22,reg
+2025-10,96.19,3.79,South Indian Bank,0.02,0.21,reg
+2025-10,92.61,7.17,Ujjivan Small Finance Bank,0.22,0.19,reg
+2025-10,93.09,6.03,City Union Bank,0.88,0.18,reg
+2025-10,93.07,3.59,Tamilnad Mercantile Bank,3.35,0.16,reg
+2025-10,88.98,7.71,Pragathi Krishna Gramin Bank,3.31,0.16,reg
+2025-10,97.07,2.76,Slice Small Finance Bank,0.17,0.15,reg
+2025-10,96.44,3.16,Maharashtra Gramin Bank,0.39,0.15,reg
+2025-10,86.22,4.94,Kerala Gramin Bank,8.85,0.13,reg
+2025-10,96.89,3.08,DBS Bank Ltd,0.03,0.11,reg
+2025-10,95.57,3.8,Saraswat Bank,0.63,0.09,reg
+2025-10,95.86,3.99,Equitas Small Finance Bank,0.14,0.08,reg
+2025-10,90.98,4.49,RBL Bank,4.52,0.08,reg
+2025-10,98.29,1.66,Standard Chartered,0.05,0.08,reg
+2025-10,43.63,2.82,Jana Small Finance Bank Ltd,53.55,0.07,reg
+2025-10,98.39,1.44,HSBC Bank,0.17,0.06,reg
+2025-10,92.47,4.4,The Gujarat State Cooperative Bank,3.13,0.06,reg
+2025-10,93.62,6.35,Utkarsh Small Finance Bank,0.02,0.04,reg
+2025-10,95.4,4.55,Suryoday Small Finance Bank Ltd.,0.05,0.04,reg
+2025-10,96.59,3.01,DCB Bank Ltd,0.39,0.04,reg
+2025-11,96.07,3.79,State Bank Of India,0.15,18.96,reg
+2025-11,97.03,2.85,HDFC Bank Ltd,0.13,5.48,reg
+2025-11,95.86,3.78,Bank of Baroda,0.36,5.39,reg
+2025-11,94.53,4.58,Punjab National Bank,0.89,4.47,reg
+2025-11,94.07,5.73,Airtel Payments Bank,0.21,4.34,reg
+2025-11,95.76,3.84,Union Bank of India,0.41,4.24,reg
+2025-11,94.79,4.41,Kotak Mahindra Bank,0.8,4.03,reg
+2025-11,91.27,4.69,India Post Payment Bank,4.05,3.76,reg
+2025-11,92.11,7.48,Canara Bank,0.41,3.3,reg
+2025-11,97.15,2.83,Axis Bank Ltd,0.02,2.7,reg
+2025-11,97.13,2.82,ICICI Bank,0.05,2.56,reg
+2025-11,96.75,3.09,Indian Bank,0.16,2.35,reg
+2025-11,95.62,3.99,Bank of India,0.39,2.09,reg
+2025-11,71.5,4.27,Fino Payments Bank,24.23,1.41,reg
+2025-11,92.74,6.66,Central Bank Of India,0.59,1.37,reg
+2025-11,78.7,3.65,Indian Overseas Bank,17.65,1.37,reg
+2025-11,93.82,4.83,UCO Bank,1.35,1.16,reg
+2025-11,96.4,3.56,Federal Bank,0.04,1.04,reg
+2025-11,55.05,1.5,IDBI Bank Limited,43.45,0.97,reg
+2025-11,95.2,4.72,IndusInd Bank,0.08,0.9,reg
+2025-11,96.69,3.23,Bank of Maharashtra,0.08,0.76,reg
+2025-11,92.22,7.41,Jio Payments Bank,0.37,0.61,reg
+2025-11,96.31,3.67,IDFC FIRST Bank,0.01,0.45,reg
+2025-11,94.33,4.59,Karnataka Bank,1.09,0.44,reg
+2025-11,92.27,7.43,Yes Bank Ltd,0.3,0.42,reg
+2025-11,95.58,3.94,Jammu and Kashmir Bank,0.49,0.41,reg
+2025-11,88.8,4.25,NSDL Payments Bank,6.95,0.38,reg
+2025-11,96.11,3.64,AU Small Finance bank,0.25,0.33,reg
+2025-11,92.18,7.51,Karur Vysya Bank,0.31,0.29,reg
+2025-11,95.57,4.39,Punjab and Sind Bank,0.04,0.24,reg
+2025-11,96.02,3.84,Rajasthan Marudhara Gramin Bank,0.13,0.23,reg
+2025-11,95.88,3.88,South Indian Bank,0.24,0.22,reg
+2025-11,97.24,2.61,Slice Small Finance Bank,0.15,0.21,reg
+2025-11,93.24,5.72,City Union Bank,1.04,0.19,reg
+2025-11,92.68,7.22,Ujjivan Small Finance Bank,0.1,0.19,reg
+2025-11,95.42,3.65,Tamilnad Mercantile Bank,0.93,0.16,reg
+2025-11,91.73,7.58,Pragathi Krishna Gramin Bank,0.69,0.16,reg
+2025-11,94.43,5.4,Kerala Gramin Bank,0.17,0.14,reg
+2025-11,96.96,2.99,DBS Bank Ltd,0.05,0.12,reg
+2025-11,95.75,3.87,Maharashtra Gramin Bank,0.37,0.11,reg
+2025-11,95.72,4.22,Equitas Small Finance Bank,0.05,0.1,reg
+2025-11,56.45,2.22,RBL Bank,41.33,0.1,reg
+2025-11,96.22,3.45,Saraswat Bank,0.33,0.09,reg
+2025-11,98.36,1.51,Standard Chartered,0.13,0.08,reg
+2025-11,50.28,3.35,Jana Small Finance Bank Ltd,46.37,0.07,reg
+2025-11,97.79,1.41,HSBC Bank,0.8,0.06,reg
+2025-11,92.87,4.22,The Gujarat State Cooperative Bank,2.91,0.06,reg
+2025-11,96.75,2.97,DCB Bank Ltd,0.28,0.04,reg
+2025-11,94.15,5.83,Utkarsh Small Finance Bank,0.02,0.04,reg
+2025-11,94.83,5.06,Telangana Grameena Bank,0.12,0.04,reg
+2025-12,95.9,3.92,State Bank of India,0.18,20.09,reg
+2025-12,96.04,3.84,Bank of Baroda,0.12,5.91,reg
+2025-12,96.77,3.07,HDFC Bank Ltd,0.16,5.58,reg
+2025-12,94.75,4.56,Punjab National Bank,0.69,5.05,reg
+2025-12,93.96,5.68,Airtel Payments Bank,0.36,5.04,reg
+2025-12,94.27,3.8,Union Bank of India,1.94,4.68,reg
+2025-12,95.4,4.58,Kotak Mahindra Bank,0.02,4.19,reg
+2025-12,94.4,4.77,India Post Payment Bank,0.82,4.17,reg
+2025-12,91.48,8.21,Canara Bank,0.31,3.46,reg
+2025-12,96.67,2.94,Axis Bank Ltd,0.39,2.84,reg
+2025-12,97.14,2.79,ICICI Bank,0.07,2.53,reg
+2025-12,96.66,3.09,Indian Bank,0.25,2.5,reg
+2025-12,95.88,4.06,Bank of India,0.06,2.24,reg
+2025-12,93.81,5.94,Central Bank of India,0.24,1.52,reg
+2025-12,91.31,5.27,Fino Payments Bank,3.42,1.5,reg
+2025-12,94.73,4.0,UCO Bank,1.27,1.29,reg
+2025-12,90.46,3.86,Indian Overseas Bank,5.67,1.29,reg
+2025-12,95.34,4.58,Federal Bank,0.08,1.06,reg
+2025-12,95.23,4.68,IndusInd Bank,0.09,0.99,reg
+2025-12,74.54,2.17,IDBI Bank Limited,23.29,0.88,reg
+2025-12,96.49,3.33,Bank of Maharashtra,0.18,0.78,reg
+2025-12,90.94,8.54,Jio Payments Bank,0.52,0.68,reg
+2025-12,95.7,4.05,Jammu and Kashmir Bank,0.24,0.48,reg
+2025-12,96.71,3.27,IDFC FIRST Bank,0.03,0.47,reg
+2025-12,85.65,4.16,NSDL Payments Bank,10.18,0.46,reg
+2025-12,95.01,3.96,Karnataka Bank,1.04,0.45,reg
+2025-12,92.19,7.61,Yes Bank Ltd,0.21,0.44,reg
+2025-12,96.26,3.66,AU Small Finance bank,0.08,0.36,reg
+2025-12,52.7,2.01,Rajasthan Marudhara Gramin Bank,45.29,0.36,reg
+2025-12,92.25,7.43,Karur Vysya Bank,0.32,0.29,reg
+2025-12,93.43,5.32,Punjab and Sind Bank,1.24,0.28,reg
+2025-12,96.72,2.89,Slice Small Finance Bank,0.39,0.24,reg
+2025-12,96.27,3.72,South Indian Bank,0.01,0.22,reg
+2025-12,92.52,7.44,Ujjivan Small Finance Bank,0.04,0.21,reg
+2025-12,93.08,5.86,City Union Bank,1.06,0.19,reg
+2025-12,91.59,8.37,Pragathi Krishna Gramin Bank,0.04,0.18,reg
+2025-12,95.58,3.9,Tamilnad Mercantile Bank,0.51,0.16,reg
+2025-12,94.48,5.4,Kerala Gramin Bank,0.13,0.14,reg
+2025-12,96.88,3.09,DBS Bank Ltd,0.03,0.12,reg
+2025-12,96.2,3.66,Maharashtra Gramin Bank,0.14,0.12,reg
+2025-12,95.6,4.34,Equitas Small Finance Bank,0.05,0.12,reg
+2025-12,96.04,3.61,Saraswat Bank,0.35,0.09,reg
+2025-12,85.21,3.89,RBL Bank,10.9,0.09,reg
+2025-12,98.27,1.7,Standard Chartered,0.03,0.08,reg
+2025-12,46.88,3.09,Jana Small Finance Bank Ltd,50.03,0.08,reg
+2025-12,94.64,4.05,The Gujarat State Cooperative Bank,1.31,0.06,reg
+2025-12,97.97,1.49,HSBC Bank,0.54,0.06,reg
+2025-12,94.47,4.88,Telangana Grameena Bank,0.65,0.05,reg
+2025-12,93.58,6.36,Utkarsh Small Finance Bank,0.06,0.05,reg
+2025-12,95.84,4.07,Suryoday Small Finance Bank Ltd.,0.09,0.05,reg
+2026-01,95.66,3.97,State Bank of India,0.37,22.5,reg
+2026-01,96.1,3.85,Bank of Baroda,0.05,6.79,reg
+2026-01,96.69,3.12,HDFC Bank Ltd,0.19,6.15,reg
+2026-01,94.37,5.57,Airtel Payments Bank,0.06,5.88,reg
+2026-01,94.25,4.6,Punjab National Bank,1.15,5.84,reg
+2026-01,95.85,3.9,Union Bank of India,0.25,5.19,reg
+2026-01,93.73,4.92,India Post Payment Bank,1.35,4.95,reg
+2026-01,95.4,4.58,Kotak Mahindra Bank,0.02,4.7,reg
+2026-01,91.33,8.6,Canara Bank,0.07,3.84,reg
+2026-01,96.95,2.96,Axis Bank Ltd,0.08,3.15,reg
+2026-01,96.6,3.06,Indian Bank,0.34,2.8,reg
+2026-01,96.7,2.81,ICICI Bank,0.49,2.76,reg
+2026-01,95.92,3.98,Bank of India,0.11,2.56,reg
+2026-01,93.73,5.64,Central Bank of India,0.63,1.78,reg
+2026-01,92.94,5.15,Fino Payments Bank,1.91,1.57,reg
+2026-01,95.57,3.87,UCO Bank,0.55,1.48,reg
+2026-01,84.82,3.51,Indian Overseas Bank,11.67,1.47,reg
+2026-01,95.31,4.59,Indusind Bank,0.1,1.13,reg
+2026-01,96.14,3.78,Federal Bank,0.07,1.1,reg
+2026-01,96.57,3.25,Bank of Maharashtra,0.18,0.9,reg
+2026-01,96.74,2.9,IDBI Bank,0.36,0.84,reg
+2026-01,91.51,8.02,Jio Payments Bank,0.47,0.79,reg
+2026-01,89.95,4.28,NSDL Payments Bank Limited,5.77,0.55,reg
+2026-01,95.69,4.2,Jammu And Kashmir Bank,0.11,0.55,reg
+2026-01,96.62,3.37,IDFC First Bank Ltd,0.01,0.53,reg
+2026-01,95.19,3.96,Karnataka Bank,0.85,0.51,reg
+2026-01,93.88,5.93,Yes Bank Ltd,0.19,0.49,reg
+2026-01,96.04,3.68,AU Small Finance Bank,0.27,0.41,reg
+2026-01,67.12,2.49,Rajasthan Marudhara Gramin Bank,30.39,0.4,reg
+2026-01,96.98,2.72,Slice Small Finance Bank,0.3,0.32,reg
+2026-01,95.42,4.51,Punjab And Sind Bank,0.07,0.31,reg
+2026-01,92.52,7.29,Karur Vysya Bank,0.19,0.31,reg
+2026-01,92.56,7.35,Ujjivan Small Finance Bank,0.09,0.24,reg
+2026-01,96.29,3.66,South Indian Bank,0.05,0.23,reg
+2026-01,91.84,8.03,Pragathi Krishna Gramin Bank,0.13,0.22,reg
+2026-01,93.13,5.88,City Union Bank,0.99,0.19,reg
+2026-01,95.54,3.99,Tamilnad Mercantile Bank,0.47,0.17,reg
+2026-01,96.16,3.53,Maharashtra Gramin Bank,0.31,0.14,reg
+2026-01,94.38,5.43,Kerala Gramin Bank,0.19,0.14,reg
+2026-01,95.33,4.49,Equitas Small Finance Bank,0.18,0.13,reg
+2026-01,96.66,3.14,DBS Bank Ltd,0.2,0.13,reg
+2026-01,96.26,3.6,Saraswat Bank,0.14,0.1,reg
+2026-01,93.29,4.37,RBL Bank,2.34,0.09,reg
+2026-01,97.84,1.63,Standard Chartered,0.53,0.09,reg
+2026-01,70.47,4.73,Jana Small Finance Bank Ltd,24.8,0.08,reg
+2026-01,94.85,3.92,The Gujarat State Cooperative Bank,1.24,0.07,reg
+2026-01,98.16,1.59,HSBC Bank,0.25,0.07,reg
+2026-01,92.42,4.84,Telangana Grameena Bank,2.74,0.07,reg
+2026-01,93.81,6.12,Utkarsh Small Finance Bank,0.06,0.06,reg
+2026-01,95.82,4.1,Suryoday Small Finance Bank Ltd,0.08,0.06,reg
+2026-02,95.93,3.95,State Bank of India,0.12,21.2,reg
+2026-02,95.69,3.78,Bank of Baroda,0.52,6.48,reg
+2026-02,96.25,3.24,HDFC Bank,0.51,5.56,reg
+2026-02,94.73,4.51,Punjab National Bank,0.76,5.44,reg
+2026-02,94.2,5.64,Airtel Payments Bank Ltd,0.17,5.37,reg
+2026-02,96.04,3.86,Union Bank Of India,0.1,4.95,reg
+2026-02,94.68,4.31,India Post Payments Bank,1.01,4.56,reg
+2026-02,95.11,4.65,Kotak Mahindra Bank,0.24,4.36,reg
+2026-02,91.13,8.75,Canara Bank,0.11,3.6,reg
+2026-02,96.81,2.92,Axis Bank,0.27,2.89,reg
+2026-02,96.82,3.04,Indian Bank,0.14,2.65,reg
+2026-02,96.96,2.85,ICICI Bank,0.19,2.49,reg
+2026-02,95.39,3.96,Bank Of India,0.65,2.42,reg
+2026-02,93.95,5.68,Central Bank of India,0.37,1.69,reg
+2026-02,94.45,5.21,Fino Payments Bank Limited,0.34,1.58,reg
+2026-02,95.28,4.07,UCO Bank,0.65,1.4,reg
+2026-02,93.32,4.62,Indian Overseas Bank,2.07,1.33,reg
+2026-02,95.25,4.51,Indusind Bank,0.23,1.07,reg
+2026-02,96.19,3.75,Federal Bank,0.06,1.03,reg
+2026-02,96.71,3.22,Bank of Maharashtra,0.07,0.85,reg
+2026-02,96.87,2.81,IDBI Bank,0.32,0.79,reg
+2026-02,92.67,7.2,Jio Payments Bank Ltd,0.12,0.76,reg
+2026-02,95.31,4.61,Jammu And Kashmir Bank,0.08,0.62,reg
+2026-02,90.0,4.25,NSDL Payments Bank,5.75,0.51,reg
+2026-02,96.45,3.37,IDFC First Bank Ltd,0.18,0.49,reg
+2026-02,95.38,4.19,Karnataka Bank,0.43,0.46,reg
+2026-02,94.0,5.71,Yes Bank,0.29,0.45,reg
+2026-02,95.89,3.81,AU Small Finance Bank,0.3,0.39,reg
+2026-02,95.6,2.73,Slice Small Finance Bank Ltd,1.68,0.32,reg
+2026-02,95.94,3.57,Rajasthan Gramin Bank,0.49,0.32,reg
+2026-02,92.04,7.43,Karur Vysya Bank,0.53,0.29,reg
+2026-02,95.2,4.64,Punjab And Sind Bank,0.15,0.28,reg
+2026-02,92.59,7.33,Ujjivan Small Finance Bank Limited,0.08,0.23,reg
+2026-02,96.5,3.46,South Indian Bank,0.04,0.22,reg
+2026-02,92.15,7.61,Karnataka Grameena Bank,0.24,0.2,reg
+2026-02,92.75,5.88,City Union Bank Ltd,1.36,0.18,reg
+2026-02,95.56,4.11,Tamilnad Mercantile Bank Ltd,0.33,0.16,reg
+2026-02,96.24,3.44,Maharashtra Gramin Bank,0.32,0.14,reg
+2026-02,94.69,4.93,Kerala Gramin Bank,0.38,0.14,reg
+2026-02,96.43,3.23,DBS Bank India Limited,0.34,0.12,reg
+2026-02,95.45,4.43,Equitas Small Finance Bank Ltd,0.12,0.12,reg
+2026-02,96.21,3.58,Saraswat Bank,0.21,0.1,reg
+2026-02,89.54,4.37,RBL Bank Limited,6.09,0.09,reg
+2026-02,98.35,1.6,Standard Chartered,0.05,0.08,reg
+2026-02,94.73,3.88,The Gujarat State Cooperative Bank,1.39,0.07,reg
+2026-02,94.91,4.8,Telangana Grameena Bank,0.29,0.07,reg
+2026-02,93.32,6.52,Jana Small Finance Bank Ltd,0.16,0.07,reg
+2026-02,98.14,1.78,HSBC Bank,0.07,0.06,reg
+2026-02,95.87,4.07,Suryoday Small Finance Bank Ltd.,0.06,0.05,reg
+2026-02,94.16,5.79,Utkarsh Small Finance Bank Ltd,0.04,0.05,reg
+2026-03,95.52,4.31,State Bank of India,0.17,24.06,reg
+2026-03,95.04,4.14,Bank of Baroda,0.82,7.34,reg
+2026-03,94.2,5.38,Punjab National Bank,0.42,6.19,reg
+2026-03,96.1,3.6,HDFC Bank,0.3,6.13,reg
+2026-03,91.98,7.78,Airtel Payments Bank Ltd,0.24,6.05,reg
+2026-03,95.37,4.13,Union Bank Of India,0.51,5.58,reg
+2026-03,95.01,4.69,India Post Payments Bank,0.29,5.08,reg
+2026-03,94.86,5.0,Kotak Mahindra Bank,0.14,4.75,reg
+2026-03,90.57,9.25,Canara Bank,0.18,4.09,reg
+2026-03,96.35,3.34,Axis Bank,0.32,3.16,reg
+2026-03,96.29,3.34,Indian Bank,0.37,3.0,reg
+2026-03,95.33,4.43,Bank Of India,0.24,2.75,reg
+2026-03,96.08,3.62,ICICI Bank,0.3,2.71,reg
+2026-03,93.49,5.96,Central Bank of India,0.55,1.94,reg
+2026-03,93.66,5.73,Fino Payments Bank Limited,0.61,1.75,reg
+2026-03,95.4,4.28,UCO Bank,0.31,1.57,reg
+2026-03,92.82,5.22,Indian Overseas Bank,1.96,1.52,reg
+2026-03,94.6,4.9,Indusind Bank,0.49,1.18,reg
+2026-03,94.57,5.34,Federal Bank,0.09,1.18,reg
+2026-03,95.99,3.65,Bank of Maharashtra,0.36,0.98,reg
+2026-03,91.1,2.78,IDBI Bank,6.12,0.92,reg
+2026-03,91.76,8.08,Jio Payments Bank Ltd,0.16,0.79,reg
+2026-03,89.64,5.05,NSDL Payments Bank,5.31,0.58,reg
+2026-03,95.03,4.48,IDFC First Bank Ltd,0.49,0.54,reg
+2026-03,95.44,4.26,Karnataka Bank,0.3,0.52,reg
+2026-03,95.53,4.26,Jammu And Kashmir Bank,0.21,0.5,reg
+2026-03,91.25,6.78,Yes Bank,1.97,0.49,reg
+2026-03,95.43,4.45,AU Small Finance Bank,0.13,0.43,reg
+2026-03,95.31,4.34,Slice Small Finance Bank Ltd,0.35,0.36,reg
+2026-03,95.64,3.97,Rajasthan Gramin Bank,0.4,0.35,reg
+2026-03,95.15,4.55,Punjab And Sind Bank,0.31,0.33,reg
+2026-03,89.16,9.71,Karur Vysya Bank,1.13,0.33,reg
+2026-03,91.9,7.91,Ujjivan Small Finance Bank Limited,0.19,0.26,reg
+2026-03,95.79,4.09,South Indian Bank,0.12,0.26,reg
+2026-03,91.1,8.74,Karnataka Grameena Bank,0.16,0.23,reg
+2026-03,92.14,6.74,City Union Bank Ltd,1.12,0.2,reg
+2026-03,95.7,4.08,Tamilnad Mercantile Bank Ltd,0.22,0.18,reg
+2026-03,93.44,6.36,Kerala Gramin Bank,0.19,0.17,reg
+2026-03,57.07,2.84,DBS Bank India Limited,40.09,0.17,reg
+2026-03,94.77,3.62,Maharashtra Gramin Bank,1.61,0.17,reg
+2026-03,94.35,4.94,Equitas Small Finance Bank Ltd,0.7,0.13,reg
+2026-03,95.66,3.83,Saraswat Bank,0.51,0.11,reg
+2026-03,84.71,4.54,RBL Bank Limited,10.76,0.1,reg
+2026-03,92.64,4.0,The Gujarat State Cooperative Bank,3.37,0.08,reg
+2026-03,94.32,5.25,Telangana Grameena Bank,0.44,0.08,reg
+2026-03,97.96,1.89,Standard Chartered,0.14,0.08,reg
+2026-03,93.1,6.65,Jana Small Finance Bank Ltd,0.26,0.08,reg
+2026-03,97.97,1.87,HSBC Bank,0.16,0.07,reg
+2026-03,91.56,6.45,Utkarsh Small Finance Bank Ltd,1.99,0.06,reg
+2026-03,94.82,5.03,Suryoday Small Finance Bank Ltd.,0.15,0.06,reg
+2026-04,95.61,4.28,State Bank of India,0.11,23.234276,reg
+2026-04,95.85,4.04,Bank of Baroda,0.11,6.894819,reg
+2026-04,92.85,7.15,Airtel Payments Bank,0.0,5.942594,reg
+2026-04,94.7,4.98,Punjab National Bank,0.32,5.860996,reg
+2026-04,96.79,3.19,HDFC Bank,0.01,5.715222,reg
+2026-04,95.88,4.09,Union Bank of India,0.03,5.254097,reg
+2026-04,95.51,4.49,India Post Payments Bank,0.0,4.95546,reg
+2026-04,95.0,4.97,Kotak Mahindra Bank,0.03,4.61864,reg
+2026-04,90.52,9.42,Canara Bank,0.06,4.091896,reg
+2026-04,96.96,3.04,Axis Bank,0.01,2.984592,reg
+2026-04,96.43,3.25,Indian Bank,0.32,2.968287,reg
+2026-04,96.07,3.85,Bank Of India,0.08,2.69059,reg
+2026-04,97.12,2.88,ICICI Bank,0.0,2.523387,reg
+2026-04,93.71,6.01,Central Bank of India,0.28,1.889078,reg
+2026-04,94.58,5.42,Fino Payments Bank Limited,0.0,1.656385,reg
+2026-04,91.68,5.44,Indian Overseas Bank,2.88,1.550078,reg
+2026-04,95.54,4.25,UCO Bank,0.21,1.531286,reg
+2026-04,95.19,4.68,Indusind Bank,0.13,1.15996,reg
+2026-04,95.11,4.88,Federal Bank,0.02,1.137228,reg
+2026-04,96.48,3.46,Bank of Maharashtra,0.06,0.96064,reg
+2026-04,83.35,2.48,IDBI Bank,14.17,0.924633,reg
+2026-04,92.72,7.24,Jio Payments Bank Ltd,0.04,0.752615,reg
+2026-04,89.79,3.97,NSDL Payments Bank,6.24,0.577733,reg
+2026-04,95.48,4.33,Karnataka Bank,0.19,0.524086,reg
+2026-04,95.67,3.59,IDFC First Bank,0.74,0.517843,reg
+2026-04,96.14,3.81,Jammu and Kashmir Bank,0.05,0.481653,reg
+2026-04,93.02,6.39,Yes Bank,0.59,0.447796,reg
+2026-04,95.28,4.47,AU Small Finance Bank,0.25,0.405903,reg
+2026-04,92.59,3.23,Slice Small Finance Bank Ltd,4.19,0.378038,reg
+2026-04,93.16,3.49,Rajasthan Gramin Bank,3.36,0.351673,reg
+2026-04,91.83,7.8,Karur Vysya Bank,0.37,0.319289,reg
+2026-04,95.69,4.23,Punjab and Sind Bank,0.08,0.315905,reg
+2026-04,92.04,7.86,Ujjivan Small Finance Bank Limited,0.1,0.25906,reg
+2026-04,90.0,9.94,Karnataka Grameena Bank,0.06,0.258075,reg
+2026-04,96.14,3.84,South Indian Bank,0.02,0.248003,reg
+2026-04,24.8,2.28,DBS Bank India Limited,72.92,0.216586,reg
+2026-04,93.17,6.82,City Union Bank Ltd,0.01,0.192888,reg
+2026-04,93.34,3.73,Uttar Pradesh Gramin Bank,2.94,0.191988,reg
+2026-04,93.55,5.98,Andhra Pradesh Grameena Bank,0.48,0.186074,reg
+2026-04,95.65,4.17,Tamilnad Mercantile Bank Ltd,0.18,0.180906,reg
+2026-04,93.19,6.7,Kerala Gramin Bank,0.11,0.166104,reg
+2026-04,96.26,3.58,Maharashtra Gramin Bank,0.16,0.165161,reg
+2026-04,95.01,4.78,Equitas Small Finance Bank Ltd,0.21,0.126174,reg
+2026-04,95.94,3.76,Saraswat Bank,0.3,0.105419,reg
+2026-04,95.09,4.91,Telangana Grameena Bank,0.0,0.104905,reg
+2026-04,72.97,3.65,RBL Bank Limited,23.38,0.096327,reg
+2026-04,95.61,4.27,Chhattisgarh Rajya Gramin Bank,0.13,0.087003,reg
+2026-04,93.15,6.8,Jana Small Finance Bank Ltd,0.05,0.078763,reg
+2026-04,97.88,1.65,Standard Chartered,0.47,0.076266,reg
+2026-04,84.78,13.34,Haryana Gramin Bank,1.87,0.0731,reg
+2026-05,95.32,4.44,State Bank of India,0.24,25.581597,reg
+2026-05,95.66,4.15,Bank of Baroda,0.19,7.640684,reg
+2026-05,93.27,4.95,Punjab National Bank,1.78,6.53089,reg
+2026-05,97.0,2.99,HDFC Bank,0.01,6.268054,reg
+2026-05,92.09,7.41,Airtel Payments Bank,0.5,6.178792,reg
+2026-05,95.65,4.09,Union Bank of India,0.26,5.763805,reg
+2026-05,92.38,4.16,India Post Payments Bank,3.46,5.35019,reg
+2026-05,95.29,4.71,Kotak Mahindra Bank,0.0,4.952875,reg
+2026-05,90.21,9.72,Canara Bank,0.07,4.457752,reg
+2026-05,97.11,2.87,Axis Bank,0.02,3.23698,reg
+2026-05,96.44,3.21,Indian Bank,0.35,3.232964,reg
+2026-05,96.32,3.65,Bank Of India,0.03,2.9137,reg
+2026-05,97.61,2.37,ICICI Bank,0.03,2.809409,reg
+2026-05,93.89,5.76,Central Bank of India,0.35,2.097097,reg
+2026-05,94.53,5.34,Fino Payments Bank Limited,0.13,1.773236,reg
+2026-05,92.59,5.5,Indian Overseas Bank,1.91,1.688103,reg
+2026-05,96.02,3.87,UCO Bank,0.11,1.645249,reg
+2026-05,96.24,3.76,Federal Bank,0.0,1.218556,reg
+2026-05,95.82,4.13,Indusind Bank,0.05,1.212822,reg
+2026-05,90.92,2.77,Bank of Maharashtra,6.31,1.046542,reg
+2026-05,97.47,2.51,IDBI Bank,0.02,0.903867,reg
+2026-05,94.01,5.98,Jio Payments Bank Ltd,0.01,0.774316,reg
+2026-05,91.4,3.72,NSDL Payments Bank,4.88,0.611223,reg
+2026-05,96.33,3.36,Karnataka Bank,0.3,0.551692,reg
+2026-05,97.07,2.93,IDFC First Bank,0.0,0.53671,reg
+2026-05,97.31,2.69,Jammu and Kashmir Bank,0.0,0.475208,reg
+2026-05,94.83,4.81,Yes Bank,0.36,0.459752,reg
+2026-05,96.09,3.89,AU Small Finance Bank,0.02,0.443035,reg
+2026-05,97.74,2.26,Slice Small Finance Bank Ltd,0.0,0.407297,reg
+2026-05,96.84,3.16,Rajasthan Gramin Bank,0.0,0.38718,reg
+2026-05,96.54,3.43,Punjab and Sind Bank,0.03,0.342159,reg
+2026-05,94.51,5.46,Karur Vysya Bank,0.03,0.328836,reg
+2026-05,88.37,11.63,Ujjivan Small Finance Bank Limited,0.0,0.274989,reg
+2026-05,90.78,9.22,Karnataka Grameena Bank,0.0,0.26679,reg
+2026-05,96.78,3.22,South Indian Bank,0.0,0.257792,reg
+2026-05,94.48,5.39,Andhra Pradesh Grameena Bank,0.13,0.199322,reg
+2026-05,94.31,5.48,City Union Bank Ltd,0.21,0.196279,reg
+2026-05,97.42,2.58,Tamilnad Mercantile Bank Ltd,0.0,0.182244,reg
+2026-05,94.57,5.43,Kerala Gramin Bank,0.0,0.177094,reg
+2026-05,96.94,3.06,Maharashtra Gramin Bank,0.0,0.166202,reg
+2026-05,95.28,2.34,Uttar Pradesh Gramin Bank,2.38,0.156673,reg
+2026-05,96.99,3.01,Equitas Small Finance Bank Ltd,0.0,0.125641,reg
+2026-05,95.75,2.02,Bandhan Bank,2.23,0.124758,reg
+2026-05,98.89,1.11,DBS Bank India Limited,0.0,0.122707,reg
+2026-05,76.74,23.26,Saraswat Bank,0.0,0.121026,reg
+2026-05,96.39,3.61,Telangana Grameena Bank,0.0,0.11138,reg
+2026-05,96.54,3.46,Chhattisgarh Rajya Gramin Bank,0.0,0.093655,reg
+2026-05,94.84,5.16,Jana Small Finance Bank Ltd,0.0,0.0829,reg
+2026-05,97.76,2.24,RBL Bank Limited,0.0,0.078438,reg
+2026-05,99.69,0.31,Standard Chartered,0.0,0.077912,reg
+2026-06,95.52,4.35,State Bank of India,0.13,24.933889,reg
+2026-06,94.52,3.87,Bank of Baroda,1.61,7.39627,reg
+2026-06,97.2,2.79,HDFC Bank,0.01,6.441318,reg
+2026-06,94.45,4.23,Punjab National Bank,1.32,6.239408,reg
+2026-06,92.69,7.25,Airtel Payments Bank,0.05,5.693054,reg
+2026-06,95.66,3.83,Union Bank of India,0.51,5.550354,reg
+2026-06,95.87,4.1,India Post Payments Bank,0.03,4.877077,reg
+2026-06,95.47,4.5,Kotak Mahindra Bank,0.03,4.872664,reg
+2026-06,90.69,9.21,Canara Bank,0.11,4.370644,reg
+2026-06,97.28,2.7,Axis Bank,0.02,3.271473,reg
+2026-06,96.72,3.1,Indian Bank,0.18,3.098868,reg
+2026-06,97.78,2.21,ICICI Bank,0.01,2.972171,reg
+2026-06,96.45,3.48,Bank Of India,0.07,2.786375,reg
+2026-06,93.95,5.49,Central Bank of India,0.55,2.013599,reg
+2026-06,92.21,5.54,Indian Overseas Bank,2.25,1.687125,reg
+2026-06,94.09,5.14,Fino Payments Bank Limited,0.76,1.641282,reg
+2026-06,96.23,3.66,UCO Bank,0.11,1.585015,reg
+2026-06,95.68,4.32,Federal Bank,0.0,1.316856,reg
+2026-06,96.09,3.87,Indusind Bank,0.04,1.169546,reg
+2026-06,97.13,2.86,Bank of Maharashtra,0.01,0.982952,reg
+2026-06,97.18,2.27,IDBI Bank,0.55,0.882385,reg
+2026-06,94.5,5.48,Jio Payments Bank Ltd,0.02,0.746058,reg
+2026-06,91.69,3.74,NSDL Payments Bank,4.57,0.565489,reg
+2026-06,97.29,2.71,IDFC First Bank,0.0,0.53255,reg
+2026-06,97.03,2.72,Karnataka Bank,0.25,0.526597,reg
+2026-06,97.56,2.44,Jammu and Kashmir Bank,0.0,0.468698,reg
+2026-06,95.23,4.73,Yes Bank,0.03,0.446866,reg
+2026-06,98.07,1.93,Slice Small Finance Bank Ltd,0.0,0.437963,reg
+2026-06,96.3,3.66,AU Small Finance Bank,0.04,0.427889,reg
+2026-06,96.87,3.13,Rajasthan Gramin Bank,0.0,0.388117,reg
+2026-06,96.14,3.83,Bandhan Bank,0.02,0.383028,reg
+2026-06,95.27,2.94,Punjab and Sind Bank,1.78,0.328983,reg
+2026-06,95.67,4.25,Karur Vysya Bank,0.08,0.328849,reg
+2026-06,93.46,4.27,Uttar Pradesh Gramin Bank,2.27,0.326858,reg
+2026-06,97.22,2.78,South Indian Bank,0.0,0.295067,reg
+2026-06,93.33,6.67,Ujjivan Small Finance Bank Limited,0.0,0.247937,reg
+2026-06,92.31,7.69,Karnataka Grameena Bank,0.0,0.233086,reg
+2026-06,95.28,4.72,Kerala Gramin Bank,0.0,0.213202,reg
+2026-06,95.23,4.66,City Union Bank Ltd,0.11,0.20003,reg
+2026-06,98.2,1.8,Tamilnad Mercantile Bank Ltd,0.0,0.183176,reg
+2026-06,95.24,4.76,Andhra Pradesh Grameena Bank,0.0,0.181794,reg
+2026-06,97.19,2.81,Maharashtra Gramin Bank,0.0,0.154067,reg
+2026-06,91.87,7.97,Sarva Haryana Gramin Bank,0.16,0.131129,reg
+2026-06,99.34,0.66,DBS Bank India Limited,0.0,0.125395,reg
+2026-06,97.46,2.54,Equitas Small Finance Bank Ltd,0.0,0.120792,reg
+2026-06,89.18,10.82,Saraswat Bank,0.0,0.110209,reg
+2026-06,96.62,3.38,Telangana Grameena Bank,0.0,0.101817,reg
+2026-06,99.86,0.14,Standard Chartered,0.0,0.084411,reg
+2026-06,96.74,3.26,Chhattisgarh Rajya Gramin Bank,0.0,0.080852,reg
+2026-06,97.06,1.36,RBL Bank Limited,1.58,0.076528,reg
+2026-07,95.44,4.24,State Bank of India,0.32,26.333146,reg
+2026-07,95.53,3.83,Bank of Baroda,0.64,7.879795,reg
+2026-07,97.33,2.66,HDFC Bank,0.01,6.766949,reg
+2026-07,94.67,4.3,Punjab National Bank,1.03,6.730546,reg
+2026-07,92.39,7.44,Airtel Payments Bank,0.18,6.026091,reg
+2026-07,96.15,3.75,Union Bank of India,0.11,5.911851,reg
+2026-07,95.72,4.12,India Post Payments Bank,0.16,5.357896,reg
+2026-07,95.5,4.42,Kotak Mahindra Bank,0.08,5.172777,reg
+2026-07,90.8,9.16,Canara Bank,0.04,4.661924,reg
+2026-07,97.41,2.59,Axis Bank,0.0,3.43887,reg
+2026-07,97.04,2.84,Indian Bank,0.12,3.309948,reg
+2026-07,97.93,2.07,ICICI Bank,0.0,3.110308,reg
+2026-07,96.78,3.18,Bank Of India,0.04,2.974889,reg
+2026-07,92.71,6.45,Central Bank of India,0.84,2.173951,reg
+2026-07,92.75,5.32,Indian Overseas Bank,1.93,1.88519,reg
+2026-07,94.0,5.55,Fino Payments Bank,0.45,1.793206,reg
+2026-07,96.39,3.33,UCO Bank,0.28,1.669797,reg
+2026-07,95.48,4.51,Federal Bank,0.01,1.290246,reg
+2026-07,95.81,4.08,Indusind Bank,0.11,1.265619,reg
+2026-07,97.59,2.41,Bank of Maharashtra,0.0,1.062913,reg
+2026-07,96.26,2.15,IDBI Bank,1.59,0.947083,reg
+2026-07,95.04,4.96,Jio Payments Bank,0.0,0.727249,reg
+2026-07,91.99,3.74,NSDL Payments Bank,4.27,0.595925,reg
+2026-07,97.44,2.56,IDFC First Bank,0.0,0.556123,reg
+2026-07,96.99,2.72,Karnataka Bank,0.29,0.551825,reg
+2026-07,97.64,2.36,Jammu and Kashmir Bank,0.0,0.517112,reg
+2026-07,98.13,1.87,Slice Small Finance Bank,0.0,0.50004,reg
+2026-07,94.75,4.49,Uttar Pradesh Gramin Bank,0.76,0.469206,reg
+2026-07,95.51,4.49,Yes Bank,0.0,0.468671,reg
+2026-07,96.83,3.17,AU Small Finance Bank,0.0,0.447947,reg
+2026-07,96.11,2.85,Rajasthan Gramin Bank,1.04,0.432288,reg
+2026-07,96.63,3.31,Bandhan Bank,0.06,0.361933,reg
+2026-07,96.24,3.76,Karur Vysya Bank,0.0,0.340897,reg
+2026-07,97.2,2.75,Punjab and Sind Bank,0.05,0.333588,reg
+2026-07,96.52,3.48,South Indian Bank,0.0,0.276222,reg
+2026-07,93.46,6.54,Ujjivan Small Finance Bank,0.0,0.264703,reg
+2026-07,92.37,7.57,Karnataka Grameena Bank,0.07,0.255104,reg
+2026-07,95.45,4.55,City Union Bank,0.0,0.207568,reg
+2026-07,95.86,4.14,Kerala Gramin Bank,0.0,0.204929,reg
+2026-07,95.66,4.34,Andhra Pradesh Grameena Bank,0.0,0.20459,reg
+2026-07,97.86,2.14,Tamilnad Mercantile Bank,0.0,0.194406,reg
+2026-07,97.64,2.25,Haryana Gramin Bank,0.11,0.175008,reg
+2026-07,97.67,2.25,Maharashtra Gramin Bank,0.09,0.165657,reg
+2026-07,93.12,0.42,DBS Bank India,6.45,0.120265,reg
+2026-07,97.83,2.17,Equitas Small Finance Bank,0.0,0.119657,reg
+2026-07,96.84,2.92,Telangana Grameena Bank,0.24,0.118452,reg
+2026-07,99.5,0.5,Saraswat Co-operative Bank,0.0,0.112253,reg
+2026-07,100.0,0.0,Standard Chartered,0.0,0.084903,reg
+2026-07,97.81,2.01,Gujarat Gramin Bank,0.18,0.083824,reg
+2026-07,97.35,2.42,Chhattisgarh Rajya Gramin Bank,0.23,0.083091,reg
+2026-08,95.32,4.66,State Bank of India,0.02,25.258471,reg
+2026-08,95.35,4.33,Bank of Baroda,0.32,7.601541,reg
+2026-08,96.91,3.06,HDFC Bank,0.02,6.4813,reg
+2026-08,94.85,4.55,Punjab National Bank,0.6,6.475449,reg
+2026-08,91.55,8.25,Airtel Payments Bank,0.2,5.740275,reg
+2026-08,95.89,4.04,Union Bank of India,0.06,5.712551,reg
+2026-08,94.43,5.13,Kotak Mahindra Bank,0.45,4.955347,reg
+2026-08,95.42,4.45,India Post Payments Bank,0.13,4.92362,reg
+2026-08,90.73,8.89,Canara Bank,0.38,4.534779,reg
+2026-08,96.98,2.94,Axis Bank,0.08,3.303421,reg
+2026-08,96.3,3.3,Indian Bank,0.4,3.212441,reg
+2026-08,97.47,2.53,ICICI Bank,0.0,2.983906,reg
+2026-08,96.21,3.74,Bank Of India,0.05,2.852326,reg
+2026-08,87.39,5.53,Central Bank of India,7.09,2.193101,reg
+2026-08,93.23,6.57,Indian Overseas Bank,0.2,1.794539,reg
+2026-08,93.01,6.22,Fino Payments Bank,0.77,1.67642,reg
+2026-08,95.68,3.97,UCO Bank,0.35,1.61231,reg
+2026-08,94.71,5.21,Federal Bank,0.08,1.267627,reg
+2026-08,95.23,4.61,Indusind Bank,0.16,1.240074,reg
+2026-08,93.26,3.05,Bank of Maharashtra,3.7,1.031149,reg
+2026-08,97.34,2.6,IDBI Bank,0.06,0.902325,reg
+2026-08,97.01,2.99,IDFC First Bank,0.01,0.554989,reg
+2026-08,96.48,3.13,Karnataka Bank,0.39,0.538554,reg
+2026-08,97.17,2.81,Slice Small Finance Bank,0.02,0.528458,reg
+2026-08,95.59,3.44,Jammu and Kashmir Bank,0.97,0.505101,reg
+2026-08,95.59,4.33,AU Small Finance Bank,0.08,0.473995,reg
+2026-08,92.94,5.68,Uttar Pradesh Gramin Bank,1.38,0.453612,reg
+2026-08,94.46,5.52,Yes Bank,0.02,0.450984,reg
+2026-08,96.12,3.64,Rajasthan Gramin Bank,0.24,0.435797,reg
+2026-08,94.92,4.98,Bandhan Bank,0.1,0.383661,reg
+2026-08,95.37,4.52,Karur Vysya Bank,0.11,0.350591,reg
+2026-08,94.51,3.9,Punjab and Sind Bank,1.59,0.344601,reg
+2026-08,96.19,3.81,South Indian Bank,0.0,0.286143,reg
+2026-08,92.43,7.57,Ujjivan Small Finance Bank,0.0,0.257689,reg
+2026-08,91.09,8.74,Karnataka Grameena Bank,0.17,0.252678,reg
+2026-08,94.63,5.32,Andhra Pradesh Grameena Bank,0.04,0.221478,reg
+2026-08,93.92,5.76,City Union Bank,0.32,0.216409,reg
+2026-08,94.47,5.48,Kerala Gramin Bank,0.05,0.20483,reg
+2026-08,96.99,2.94,Tamilnad Mercantile Bank,0.07,0.196968,reg
+2026-08,96.0,3.5,Haryana Gramin Bank,0.5,0.168255,reg
+2026-08,96.63,3.34,Maharashtra Gramin Bank,0.03,0.157852,reg
+2026-08,98.32,1.68,DBS Bank India,0.0,0.130238,reg
+2026-08,96.51,3.45,Equitas Small Finance Bank,0.03,0.125564,reg
+2026-08,95.74,4.26,Telangana Grameena Bank,0.0,0.124466,reg
+2026-08,97.77,2.23,Saraswat Co-operative Bank,0.0,0.112244,reg
+2026-08,95.35,4.24,Gujarat Gramin Bank,0.41,0.085083,reg
+2026-08,93.97,2.92,RBL Bank,3.11,0.085024,reg
+2026-08,95.66,3.95,Chhattisgarh Rajya Gramin Bank,0.4,0.083679,reg
+2026-08,99.47,0.53,Standard Chartered,0.0,0.082895,reg
+2026-08,94.03,5.97,Jana Small Finance Bank,0.0,0.080295,reg
+2026-09,95.14,4.8,State Bank of India,0.05,24.394612,reg
+2026-09,95.06,4.42,Bank of Baroda,0.53,7.258189,reg
+2026-09,96.87,3.1,HDFC Bank,0.03,6.317717,reg
+2026-09,94.95,4.76,Punjab National Bank,0.29,6.244724,reg
+2026-09,95.87,4.11,Union Bank of India,0.03,5.555579,reg
+2026-09,91.43,8.4,Airtel Payments Bank,0.16,5.385433,reg
+2026-09,94.81,5.09,Kotak Mahindra Bank,0.1,4.838893,reg
+2026-09,95.4,4.49,India Post Payments Bank,0.12,4.61563,reg
+2026-09,90.96,9.0,Canara Bank,0.05,4.476195,reg
+2026-09,97.0,3.0,Axis Bank,0.0,3.217172,reg
+2026-09,96.04,3.41,Indian Bank,0.55,3.157233,reg
+2026-09,97.56,2.44,ICICI Bank,0.0,2.928699,reg
+2026-09,96.12,3.77,Bank Of India,0.1,2.745136,reg
+2026-09,95.28,4.62,Central Bank of India,0.1,2.017191,reg
+2026-09,92.93,6.79,Indian Overseas Bank,0.28,1.790957,reg
+2026-09,92.7,6.44,Fino Payments Bank,0.87,1.550634,reg
+2026-09,95.63,4.13,UCO Bank,0.24,1.541154,reg
+2026-09,94.96,5.04,Federal Bank,0.0,1.228334,reg
+2026-09,95.11,4.76,Indusind Bank,0.14,1.181875,reg
+2026-09,96.74,3.25,Bank of Maharashtra,0.01,0.963271,reg
+2026-09,96.5,2.85,IDBI Bank,0.66,0.863664,reg
+2026-09,92.93,6.19,Jio Payments Bank,0.89,0.567179,reg
+2026-09,96.84,3.15,IDFC First Bank,0.02,0.546613,reg
+2026-09,97.26,2.74,Slice Small Finance Bank,0.0,0.543897,reg
+2026-09,96.72,3.08,Karnataka Bank,0.21,0.533552,reg
+2026-09,95.54,4.44,AU Small Finance Bank,0.03,0.452296,reg
+2026-09,96.7,3.3,Jammu and Kashmir Bank,0.0,0.448434,reg
+2026-09,92.63,5.77,Uttar Pradesh Gramin Bank,1.6,0.439151,reg
+2026-09,94.38,5.6,Yes Bank,0.01,0.438539,reg
+2026-09,96.28,3.64,Rajasthan Gramin Bank,0.08,0.402515,reg
+2026-09,95.38,4.34,Karur Vysya Bank,0.28,0.353372,reg
+2026-09,94.64,3.58,Punjab and Sind Bank,1.78,0.34159,reg
+2026-09,96.28,3.72,South Indian Bank,0.0,0.289326,reg
+2026-09,92.46,7.54,Ujjivan Small Finance Bank,0.0,0.253054,reg
+2026-09,91.91,8.06,Karnataka Grameena Bank,0.02,0.246128,reg
+2026-09,94.08,5.58,City Union Bank,0.34,0.215728,reg
+2026-09,94.22,5.57,Andhra Pradesh Grameena Bank,0.21,0.212455,reg
+2026-09,94.77,5.23,Kerala Gramin Bank,0.0,0.200228,reg
+2026-09,97.16,2.81,Tamilnad Mercantile Bank,0.02,0.199257,reg
+2026-09,96.42,3.23,Haryana Gramin Bank,0.35,0.16264,reg
+2026-09,96.32,3.66,Maharashtra Gramin Bank,0.02,0.148602,reg
+2026-09,96.09,3.91,Telangana Grameena Bank,0.0,0.123248,reg
+2026-09,96.69,3.31,Equitas Small Finance Bank,0.0,0.119931,reg
+2026-09,97.81,2.19,Saraswat Co-operative Bank,0.0,0.107128,reg
+2026-09,94.32,2.86,RBL Bank,2.82,0.082137,reg
+2026-09,94.74,4.16,Gujarat Gramin Bank,1.09,0.082077,reg
+2026-09,99.54,0.46,Standard Chartered,0.0,0.079702,reg
+2026-09,99.54,0.46,HSBC,0.0,0.07657,reg
+2026-09,94.12,5.88,Jana Small Finance Bank,0.0,0.075574,reg
+2026-09,95.69,4.04,Chhattisgarh Rajya Gramin Bank,0.27,0.074139,reg
+2026-10,92.36,4.88,State Bank of India,2.76,26.210295,reg
+2026-10,95.24,4.62,Bank of Baroda,0.13,7.485699,reg
+2026-10,96.74,3.23,HDFC Bank,0.03,6.538415,reg
+2026-10,93.85,4.89,Punjab National Bank,1.26,6.523139,reg
+2026-10,95.5,4.34,Union Bank of India,0.15,5.810169,reg
+2026-10,91.27,8.62,Airtel Payments Bank,0.11,5.4916,reg
+2026-10,94.57,5.26,Kotak Mahindra Bank,0.17,5.061302,reg
+2026-10,94.41,5.15,India Post Payments Bank,0.44,4.840989,reg
+2026-10,90.31,9.65,Canara Bank,0.04,4.772299,reg
+2026-10,95.97,3.6,Indian Bank,0.43,3.344697,reg
+2026-10,96.81,3.18,Axis Bank,0.01,3.343772,reg
+2026-10,97.41,2.51,ICICI Bank,0.08,3.030519,reg
+2026-10,96.01,3.91,Bank Of India,0.07,2.933714,reg
+2026-10,95.26,4.73,Central Bank of India,0.01,2.098723,reg
+2026-10,92.85,7.02,Indian Overseas Bank,0.13,1.933669,reg
+2026-10,95.35,4.46,UCO Bank,0.19,1.617569,reg
+2026-10,93.12,6.57,Fino Payments Bank,0.32,1.609967,reg
+2026-10,94.36,5.29,Federal Bank,0.36,1.30538,reg
+2026-10,94.9,4.91,Indusind Bank,0.2,1.239261,reg
+2026-10,96.78,3.22,Bank of Maharashtra,0.0,1.027924,reg
+2026-10,97.09,2.74,IDBI Bank,0.17,0.900549,reg
+2026-10,93.2,6.15,Jio Payments Bank,0.65,0.658317,reg
+2026-10,97.02,2.98,Slice Small Finance Bank,0.0,0.613107,reg
+2026-10,96.67,3.3,IDFC First Bank,0.03,0.560473,reg
+2026-10,96.5,3.19,Karnataka Bank,0.3,0.553739,reg
+2026-10,96.59,3.41,Jammu and Kashmir Bank,0.0,0.477894,reg
+2026-10,95.39,4.58,AU Small Finance Bank,0.03,0.472039,reg
+2026-10,90.16,5.76,Uttar Pradesh Gramin Bank,4.07,0.462855,reg
+2026-10,93.98,6.01,Yes Bank,0.02,0.451346,reg
+2026-10,95.8,3.63,Rajasthan Gramin Bank,0.57,0.401284,reg
+2026-10,95.41,4.54,Karur Vysya Bank,0.06,0.373587,reg
+2026-10,96.15,3.73,Punjab and Sind Bank,0.12,0.341737,reg
+2026-10,95.98,4.02,South Indian Bank,0.0,0.318067,reg
+2026-10,90.69,9.03,Karnataka Grameena Bank,0.28,0.26487,reg
+2026-10,92.03,7.95,Ujjivan Small Finance Bank,0.02,0.262009,reg
+2026-10,93.36,6.62,Andhra Pradesh Grameena Bank,0.02,0.232277,reg
+2026-10,94.06,5.65,Kerala Gramin Bank,0.29,0.229212,reg
+2026-10,93.94,5.92,City Union Bank,0.14,0.228912,reg
+2026-10,96.77,3.21,Tamilnad Mercantile Bank,0.02,0.21311,reg
+2026-10,96.29,3.37,Haryana Gramin Bank,0.34,0.168194,reg
+2026-10,96.41,3.59,Maharashtra Gramin Bank,0.0,0.153822,reg
+2026-10,96.4,3.6,Bandhan Bank,0.0,0.144419,reg
+2026-10,95.32,4.68,Telangana Grameena Bank,0.0,0.137089,reg
+2026-10,96.89,3.11,Equitas Small Finance Bank,0.0,0.122261,reg
+2026-10,98.03,1.97,Saraswat Co-operative Bank,0.0,0.115221,reg
+2026-10,91.34,2.76,NSDL Payments Bank,5.9,0.09547,reg
+2026-10,94.38,2.83,RBL Bank,2.79,0.085134,reg
+2026-10,94.64,4.1,Gujarat Gramin Bank,1.26,0.084078,reg
+2026-10,99.57,0.43,HSBC,0.0,0.081836,reg
+2026-10,99.53,0.47,Standard Chartered,0.0,0.079994,reg

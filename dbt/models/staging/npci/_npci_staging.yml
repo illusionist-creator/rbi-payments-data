@@ -42,3 +42,30 @@ models:
           # NPCI has listed Slice Small Finance Bank twice in some 2026 months; flag it, don't block the build
           config:
             severity: warn
+
+  - name: stg_npci__autopay_banks
+    description: >
+      UPI AutoPay per remitter bank per month, executions and registrations in one table (stage), volumes in
+      millions whatever unit NPCI used that month, a bank listed twice in a month merged (volume-weighted rates).
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: [stage, period, bank_name]
+    columns:
+      - name: stage
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [execution, registration]
+      - name: volume_mn
+        data_tests: [not_null]
+
+  - name: stg_npci__atm_declines
+    description: ATM transactions on NPCI's shared network per card-issuing bank per month, with approval and decline rates.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: [period, bank_name]
+    columns:
+      - name: volume_mn
+        data_tests: [not_null]

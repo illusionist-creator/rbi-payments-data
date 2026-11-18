@@ -40,6 +40,8 @@ step. `.github/workflows/dbt.yml` runs the same build on pull requests that touc
 | | `stg_npci__upi_apps` | Per-app volumes across NPCI's two layouts (the table was redesigned in Dec 2020) |
 | | `stg_npci__upi_member_banks` | Top-50 member banks, with NPCI's Total row dropped by flag *and* by name (it arrived unflagged Oct-Dec 2025) |
 | | `stg_npci__upi_remitter_banks` | Approval, business-decline and technical-decline rates per remitter bank |
+| | `stg_npci__autopay_banks` | UPI AutoPay executions and registrations per remitter bank, volumes rescaled to millions across NPCI's Dec 2024 unit change |
+| | `stg_npci__atm_declines` | NFS (shared ATM network) approval and decline rates per card issuer |
 
 RBI changed its layout three times (Jul 2019, May 2020, Mar 2022) and its value unit twice. The
 `continuity_metrics` macro keeps `atm_total`, `pos_terminals` and card payments comparable across
@@ -57,6 +59,9 @@ other, so payments become the sum of the three.
 | `assert_upi_p2p_plus_p2m_equals_total` | NPCI's P2P and P2M series not adding up to its UPI total (0.1%) |
 | `assert_upi_member_banks_within_national_total` | NPCI's Total row slipping into the bank list and doubling a month |
 | `assert_upi_decline_rates_sum_to_100` | A bank's approved + declined rates not summing to 100% (half a point of rounding allowed) |
+| `assert_autopay_volume_unit_is_consistent` | A 20x month-on-month jump in AutoPay volume: NPCI changing its unit again (it moved from counts to millions in Dec 2024) |
+| `assert_autopay_rates_sum_to_100` (warn) | AutoPay rows whose rates don't add up; about 20 known (Mar 2022, Dec 2023) |
+| `assert_atm_decline_rates_within_range` (warn) | NFS rows outside 95-100.5%; May 2025 is off at almost every bank |
 | relationships, accepted values, not null, unique | Unknown layouts or units, orphan banks, unmapped bank types |
 
 Two checks are set to warn rather than fail, because they describe NPCI's own data and not a bug here:
